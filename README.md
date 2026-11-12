@@ -22,6 +22,14 @@ LitGraph 驱动的研究 idea 生成系统及评测代码。此仓库整理了�
 
 Multi 的讨论和修订合为一轮。Top1 取外部评审之前 selector 选择的第一名，不根据裁判分数事后择优。每个系统每域交付五张完整 idea card；可再运行 Blueprint 阶段。
 
+## 直接复制 Prompt 使用
+
+[中文 Single API Prompt](docs/single_api_copyable_zh.md) 已填入公开 LitGraph 地址。只需修改“领域”一行，即可交给支持联网 HTTP 请求的 agent；无需下载数据库或安装本仓库的专用脚本。它按需检索领域材料，保留六种探索视角、前作核查和五条完整 idea 的交付要求。
+
+当前 LitGraph 公开只读入口：<https://kevin-wake-stuffed-anti.trycloudflare.com>，无需 LitGraph API key。[接口说明](https://kevin-wake-stuffed-anti.trycloudflare.com/llms.txt) 可直接提供给 agent。该入口于 2026-11-12 验证可用，使用临时隧道域名，后续可能变化；模型调用仍由使用者自己的 agent 环境提供。
+
+该复制版仅适配直接 HTTP 调用、领域填写和输出目录；实验使用的原始 prompt 保留在 `system/single-api/prompts/generation.md`，没有替换其内容或哈希。完整领域预加载版见 [英文 Full Prompt](docs/single_full_copyable_en.txt)，使用 Full 时仍须提供对应领域的完整材料。
+
 ## 安装与配置
 
 需要 Linux、Python 3.12、`bubblewrap` 和支持当前模型/effort 参数的 Codex、Claude CLI。生成使用原生 Codex 会话，评分使用独立的 Codex / Claude 会话。默认模型为 Astra / xhigh 与 Opus 5.5 / xhigh。

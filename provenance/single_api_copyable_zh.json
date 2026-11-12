@@ -1,0 +1,14 @@
+{
+  "source_commit": "804ba2151472f28051f33c00f7b4c57478dd30e5",
+  "source": "system/single-api/prompts/generation.md",
+  "source_sha256": "d94255591c1d84336ffbd95c8b994f92d21743ed4c41920beff033eaadc3bf9b",
+  "output_sha256": "ec089d93d805ed4ebce7e9451119c9a3135c528fa2e9b5007fce084b085cc33b",
+  "adaptations": [
+    "public endpoint prefilled",
+    "domain placeholder with ID discovery",
+    "direct HTTP instead of workspace-specific scripts",
+    "portable output directory and no-file fallback"
+  ],
+  "scientific_instructions": "retained from Single API; no forced full-domain preload",
+  "output": "docs/single_api_copyable_zh.md"
+}

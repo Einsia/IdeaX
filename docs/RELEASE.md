@@ -39,3 +39,13 @@ present in the release is marked `omitted`; helpers reduced to reusable
 functions are marked `adapted`. `provenance/release_files.json` records the
 published artifact hashes. The release excludes Web, Mixed and no-tools
 generation conditions from its supported system list.
+
+## Standalone Single API prompt — 2026-11-12
+
+`docs/single_api_copyable_zh.md` derives from the original Chinese Single API
+prompt and preserves its research requirements. It replaces workspace-specific
+client commands with direct HTTP instructions, supplies the current public
+LitGraph endpoint, and makes the domain and output location portable. Its source
+and output hashes are recorded in `provenance/single_api_copyable_zh.json`.
+The original experiment prompts and their release hashes are unchanged. The
+public endpoint requires no LitGraph credential but is a temporary tunnel URL.
