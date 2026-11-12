@@ -16,11 +16,11 @@ python system/run.py single-full export --execution runs/single-full-38
 python system/run.py single-api prepare --domains all --out runs/single-api-38
 python system/run.py single-api run --execution runs/single-api-38 --gpt-budget 38 --external-gpt-reserved 0
 
-python system/run.py light-multi-full prepare --domains all --out runs/multi-full-38
-python system/run.py light-multi-full run --execution runs/multi-full-38 --gpt-budget 12 --external-gpt-reserved 0
+python system/run.py multi-full prepare --domains all --out runs/multi-full-38
+python system/run.py multi-full run --execution runs/multi-full-38 --gpt-budget 12 --external-gpt-reserved 0
 
-python system/run.py light-multi-api prepare --domains all --out runs/multi-api-38
-python system/run.py light-multi-api run --execution runs/multi-api-38 --gpt-budget 12 --external-gpt-reserved 0
+python system/run.py multi-api prepare --domains all --out runs/multi-api-38
+python system/run.py multi-api run --execution runs/multi-api-38 --gpt-budget 12 --external-gpt-reserved 0
 ```
 
 These are separate example commands, not a recommendation to run all four at

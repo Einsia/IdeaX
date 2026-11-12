@@ -26,7 +26,7 @@ def prepare_domain(source_run, output, domain):
     if temp.exists():shutil.rmtree(temp)
     temp.mkdir(parents=True)
     evidence=temp/'evidence';evidence.mkdir();index={};logs=[]
-    if RELEASE['kind']=='light-multi':
+    if RELEASE['kind']=='multi':
         if not read(source_run/'completion_check.json')['ok']:raise ValueError('Multi phase barriers not complete')
         roots=[(a,source_run/'authors'/a/'work/out') for a in AUTHORS]
         for name in ('generation.json','discussions.json','responses.json','final_pool.json'):
@@ -78,7 +78,7 @@ def valid(root, item):
 
 def worker(root, ident):
     import single
-    from light import invoke
+    from multi import invoke
     root=Path(root);manifest=read(root/'manifest.json');item=next(x for x in manifest['items'] if x['id']==ident)
     if valid(root,item):return
     if manifest['condition']!=CONDITION or manifest['access']!=ACCESS:raise ValueError('Blueprint condition mismatch')

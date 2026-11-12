@@ -1,6 +1,6 @@
 # IdeaX
 
-LitGraph 驱动的研究 idea 生成系统及评测代码。此仓库整理了当前使用的 **Single Full / API、Light Multi Full / API、IdeaScientist、CoI**，包含原始 prompt、38 个领域任务、生成流程、Research Blueprint 写作阶段和四套 benchmark。
+LitGraph 驱动的研究 idea 生成系统及评测代码。此仓库整理了当前使用的 **Single Full / Single API、Multi Full / Multi API、IdeaScientist、CoI**，包含原始 prompt、38 个领域任务、生成流程、Research Blueprint 写作阶段和四套 benchmark。
 
 ## 目录
 
@@ -8,8 +8,8 @@ LitGraph 驱动的研究 idea 生成系统及评测代码。此仓库整理了�
 |---|---|
 | `system/single-full/` | 单个独立研究者；完整领域 insights/problems + LitGraph API + 联网 |
 | `system/single-api/` | 单个独立研究者；自主检索 LitGraph，联网可选，不预注入领域材料 |
-| `system/light-multi-full/` | 6 位 Full 作者，每人 5 个候选；讨论 → 修订一轮 → 独立选 Top5 |
-| `system/light-multi-api/` | 相同协作流程；作者使用 API 访问方式 |
+| `system/multi-full/` | 6 位 Full 作者，每人 5 个候选；讨论 → 修订一轮 → 独立选 Top5 |
+| `system/multi-api/` | 相同协作流程；作者使用 API 访问方式 |
 | `system/runtime/` | 共享原生执行、阶段检查、失败重试、来源验证及 Blueprint 写作 |
 | `baselines/ideascientist/` | IdeaScientist 原生多角色流程与适配源码 |
 | `baselines/coi/` | CoI 论文链、查新及内部审阅流程与适配源码 |
@@ -20,7 +20,7 @@ LitGraph 驱动的研究 idea 生成系统及评测代码。此仓库整理了�
 | `data/` | 38 个领域定义及 Full 使用的 7,641 条领域材料快照 |
 | `provenance/` | 源文件与发布文件的校验信息 |
 
-这里的 Multi 指当前 **light multi**，讨论和修订合为一轮。Top1 取外部评审之前 selector 选择的第一名，不根据裁判分数事后择优。每个系统每域交付五张完整 idea card；可再运行 Blueprint 阶段。
+Multi 的讨论和修订合为一轮。Top1 取外部评审之前 selector 选择的第一名，不根据裁判分数事后择优。每个系统每域交付五张完整 idea card；可再运行 Blueprint 阶段。
 
 ## 安装与配置
 
@@ -54,7 +54,7 @@ python system/run.py single-full status --execution runs/single-full
 python system/run.py single-full export --execution runs/single-full
 ```
 
-将 `single-full` 换为其他三个目录名即可切换系统。Light multi 的预算以 6 位作者的完整领域 run 为单位，`--gpt-budget` 至少为 6；阶段验证未通过时不推进下一阶段。`--external-gpt-reserved` 需填写同一账号在其他任务中已经占用的额度。运行会保存 prompt、工具访问、失败尝试、原生会话和来源校验。
+将 `single-full` 换为其他三个目录名即可切换系统。Multi 的预算以 6 位作者的完整领域 run 为单位，`--gpt-budget` 至少为 6；阶段验证未通过时不推进下一阶段。`--external-gpt-reserved` 需填写同一账号在其他任务中已经占用的额度。运行会保存 prompt、工具访问、失败尝试、原生会话和来源校验。
 
 可直接复制的英文 Full prompt 在 [docs/single_full_copyable_en.txt](docs/single_full_copyable_en.txt)。实际实验使用的中文原文在各系统 `prompts/generation.md`。英文版是便于使用的翻译，未作为单独实验条件测评。
 

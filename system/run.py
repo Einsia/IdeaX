@@ -7,7 +7,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent.parent
-CONDITIONS = ('single-full', 'single-api', 'light-multi-full', 'light-multi-api')
+CONDITIONS = ('single-full', 'single-api', 'multi-full', 'multi-api')
 
 
 def main():

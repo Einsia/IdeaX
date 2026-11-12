@@ -3,7 +3,7 @@ from common import *
 
 def select(root, domain):
     import single
-    from light import invoke, validate_selection
+    from multi import invoke, validate_selection
     from multi_source import validate_source
     source = read(root/'evaluation_source.json'); validate_source(source)
     saved = root/'selector_top1.json'

@@ -6,7 +6,7 @@ It does not overwrite or restart the original experiments.
 * Four IdeaX configurations come from `current-six-v4-20261108`. Their Chinese
   generation prompts retain their original bytes and hashes. Multi uses six
   authors, one discussion/revision round and independent selection. The heavy
-  v10 workflow is not substituted for light multi.
+  v10 workflow is not substituted for multi.
 * The two Full configurations share an 8.3 MB snapshot containing 7,641
   domain-specific insights/problems. Each verifies its original per-domain
   hashes. This is not the complete LitGraph paper database. API configurations

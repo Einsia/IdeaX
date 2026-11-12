@@ -1,4 +1,4 @@
-"""Explicit workers; domain barriers remain inside each light-multi run."""
+"""Explicit workers; domain barriers remain inside each multi run."""
 import argparse
 import fcntl
 import sys
@@ -25,7 +25,7 @@ def main():
             if code:sys.exit(code)
             select(a.root,a.domain)
         else:
-            import light
-            light.domain_worker(a.root,a.domain)
+            import multi
+            multi.domain_worker(a.root,a.domain)
 
 if __name__=='__main__':main()

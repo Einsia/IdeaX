@@ -1,4 +1,4 @@
-"""Current single/light releases. Preparation is offline; run is explicit."""
+"""Current single/multi releases. Preparation is offline; run is explicit."""
 import argparse
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
@@ -35,10 +35,10 @@ def check():
     for path in (os.environ['IDEAX_CODEX_RAW_BIN'],single.isolate.PY_PREFIX):
         if not Path(path).exists(): raise ValueError('Runtime dependency missing: '+str(path))
     if not shutil.which('bwrap'): raise ValueError('bubblewrap is required')
-    import light
+    import multi
     for name in ('DISCUSS','RESPOND','SELECT'):
-        getattr(light.prompts,name).format(author='author-01',own='c-001',domain='Efficiency')
-        if r['kind']=='light-multi' and (SYSTEM/'prompts'/f'{name.lower()}.md').read_text()!=getattr(light.prompts,name):
+        getattr(multi.prompts,name).format(author='author-01',own='c-001',domain='Efficiency')
+        if r['kind']=='multi' and (SYSTEM/'prompts'/f'{name.lower()}.md').read_text()!=getattr(multi.prompts,name):
             raise ValueError('Published collaboration prompt differs from runtime: '+name)
     return dict(ok=True,version=r['version'],domain_count=len(r['domains']),context_entries=total,
                 author_prompt_sha256=r['template_sha256'],benchmark=r['benchmark'],model_calls=0)
@@ -139,8 +139,8 @@ def export(out, dest):
     for domain in m['domains']:
         root=out/'runs'/domain;source=read(root/'evaluation_source.json')
         validate_source(source)
-        if m['kind']=='light-multi' and not read(root/'completion_check.json').get('ok'):
-            raise ValueError('Light pipeline has not completed')
+        if m['kind']=='multi' and not read(root/'completion_check.json').get('ok'):
+            raise ValueError('Multi pipeline has not completed')
         items=read(source['ideas'])
         if len(items)!=5: raise ValueError('Five accepted ideas per domain required')
         task=read(SYSTEM/'domains'/domain/'task.json')
@@ -174,8 +174,8 @@ def main():
         if not a.root or not a.domain: p.error('Internal worker requires root and domain')
         if a.action=='author':
             if not a.author or not a.phase: p.error('Author and phase required')
-            import light
-            light.author_worker(a.root,a.author,a.phase)
+            import multi
+            multi.author_worker(a.root,a.author,a.phase)
         elif release()['kind']=='single':
             import single
             code=single.worker(a.root)
@@ -183,9 +183,9 @@ def main():
             from single_selector import select
             select(a.root,a.domain)
         else:
-            import light
+            import multi
             with (a.root/'domain.lock').open('a') as lock:
-                fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB);light.domain_worker(a.root,a.domain)
+                fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB);multi.domain_worker(a.root,a.domain)
         result={'ok':True}
     else:
         if not a.execution: p.error('This action requires --execution')
@@ -197,7 +197,7 @@ def main():
             result=read(a.execution/'state.json')
             for j in result['jobs'].values():
                 root=Path(j['run']);j['detail']=read(root/('session.json' if release()['kind']=='single' else 'domain_state.json'),{})
-                if release()['kind']=='light-multi':
+                if release()['kind']=='multi':
                     j['detail']['authors']={author:dict(generation=read(root/'authors'/author/'session.json',{}),
                         collaboration=read(root/'authors'/author/'collaboration/state.json',{}),
                         recovery_blocker=read(root/'authors'/author/'recovery_blocked.json',{})) for author in AUTHORS}

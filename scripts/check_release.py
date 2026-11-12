@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-CONDITIONS=('single-full','single-api','light-multi-full','light-multi-api')
+CONDITIONS=('single-full','single-api','multi-full','multi-api')
 SKIP={'.git','.venv','.scratch','.state','__pycache__','runs','outputs'}
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

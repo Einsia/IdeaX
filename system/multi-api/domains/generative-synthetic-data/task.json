@@ -1,0 +1,17 @@
+{
+  "id": "generative-synthetic-data",
+  "name": "生成模型合成训练数据与标注",
+  "ideas": 5,
+  "condition": "current-six-v4-multi-api",
+  "agent": "multi",
+  "information": "api",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "litgraph_domain_ids": [
+    "generative-synthetic-data"
+  ],
+  "full_initial_context": false,
+  "litgraph_api": true,
+  "public_web_allowed": true,
+  "generation_enabled": true,
+  "status": "prepared"
+}

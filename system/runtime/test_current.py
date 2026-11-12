@@ -6,7 +6,7 @@ from unittest.mock import patch
 import os
 from pathlib import Path
 import single
-import light
+import multi
 import cli
 from common import *
 
@@ -30,34 +30,34 @@ class Contracts(unittest.TestCase):
         return dict(author=AUTHORS[0],responses=[dict(critic=a,response='Reasoned response') for a in AUTHORS[1:]],
             decisions=[dict(card_id=c['card_id'],action='retain',reason='Retained with evidence',idea=c['idea']) for c in self.pool[:5]])
     def test_new_schema_without_old_candidate_id(self):
-        light.validate_response(self.response(),AUTHORS[0],self.pool)
+        multi.validate_response(self.response(),AUTHORS[0],self.pool)
         run=self.root/'run';(run/'work').mkdir(parents=True)
         (run/'work/full_domain_context.jsonl').write_text(json.dumps(dict(id='domain-P001',kind='problem'))+'\n')
         save(self.root/'ideas.json',[c['idea'] for c in self.pool[:5]])
         single.validate_cards(self.root/'ideas.json',run)
     def test_retain_cannot_mutate(self):
         r=copy.deepcopy(self.response());r['decisions'][0]['idea']['mechanism']='changed'
-        with self.assertRaises(ValueError): light.validate_response(r,AUTHORS[0],self.pool)
+        with self.assertRaises(ValueError): multi.validate_response(r,AUTHORS[0],self.pool)
     def test_cross_author_edit_rejected(self):
         r=self.response();r['decisions'][0]['card_id']='c-006'
-        with self.assertRaises(ValueError): light.validate_response(r,AUTHORS[0],self.pool)
+        with self.assertRaises(ValueError): multi.validate_response(r,AUTHORS[0],self.pool)
     def test_missing_author_blocks_generation(self):
-        with self.assertRaises(ValueError): light.accepted_generation(self.root)
+        with self.assertRaises(ValueError): multi.accepted_generation(self.root)
         self.assertFalse((self.root/'generation.json').exists())
     def test_missing_peer_blocks_discussion(self):
         rows=[dict(peer=a,card_ids=[next(c['card_id'] for c in self.pool if c['author']==a)],assessment='x',suggestion='y') for a in AUTHORS[1:]]
-        light.validate_discussion(dict(author=AUTHORS[0],peer_notes=rows),AUTHORS[0],self.pool)
-        with self.assertRaises(ValueError): light.validate_discussion(dict(author=AUTHORS[0],peer_notes=rows[:-1]),AUTHORS[0],self.pool)
+        multi.validate_discussion(dict(author=AUTHORS[0],peer_notes=rows),AUTHORS[0],self.pool)
+        with self.assertRaises(ValueError): multi.validate_discussion(dict(author=AUTHORS[0],peer_notes=rows[:-1]),AUTHORS[0],self.pool)
     def test_withdrawn_or_invented_selection_rejected(self):
         pool=[dict(id=c['card_id'],**c['idea']) for c in self.pool[:5]]
         data=dict(top5=[dict(rank=i+1,card=c['id'],reason='value') for i,c in enumerate(pool)])
-        light.validate_selection(data,pool)
+        multi.validate_selection(data,pool)
         data['top5'][0]['card']='c-006'
-        with self.assertRaises(ValueError): light.validate_selection(data,pool)
+        with self.assertRaises(ValueError): multi.validate_selection(data,pool)
     def test_failed_author_never_advances(self):
         (self.root/'logs').mkdir()
-        with patch.object(light.subprocess,'call',return_value=1),patch.object(light,'accepted_generation') as advance:
-            with self.assertRaises(ValueError): light.domain_worker(self.root,'latent-reasoning')
+        with patch.object(multi.subprocess,'call',return_value=1),patch.object(multi,'accepted_generation') as advance:
+            with self.assertRaises(ValueError): multi.domain_worker(self.root,'latent-reasoning')
         advance.assert_not_called()
         state=read(self.root/'domain_state.json')
         self.assertEqual(state['phase'],'generate');self.assertEqual(state['status'],'needs_review')
@@ -72,14 +72,14 @@ class Contracts(unittest.TestCase):
             return dict(ok=True,session='original-session')
         def validator(data):
             if not data.get('valid'): raise ValueError('Incomplete output')
-        with patch.object(light,'engine',return_value=single),patch.object(single.R,'recover_call',side_effect=fake_call),patch.object(single.isolate,'Gate'),patch.object(single,'audit'):
-            light.invoke(run,'discuss','task',output,validator,'original-session')
+        with patch.object(multi,'engine',return_value=single),patch.object(single.R,'recover_call',side_effect=fake_call),patch.object(single.isolate,'Gate'),patch.object(single,'audit'):
+            multi.invoke(run,'discuss','task',output,validator,'original-session')
         self.assertEqual(calls,[('original-session',True)]*2)
         self.assertTrue(read(run/'collaboration/discuss/accepted.json')['ok'])
     def test_changed_session_rejected(self):
         run=self.root/'author';output=run/'work/out/result.json'
-        with patch.object(light,'engine',return_value=single),patch.object(single.R,'recover_call',return_value=dict(ok=True,session='other')),patch.object(single.isolate,'Gate'):
-            with self.assertRaises(ValueError): light.invoke(run,'discuss','task',output,lambda _:None,'original')
+        with patch.object(multi,'engine',return_value=single),patch.object(single.R,'recover_call',return_value=dict(ok=True,session='other')),patch.object(single.isolate,'Gate'):
+            with self.assertRaises(ValueError): multi.invoke(run,'discuss','task',output,lambda _:None,'original')
     def test_context_complete_and_prompt_unchanged(self):
         domain='latent-reasoning';run=self.root/'single'
         single.prepare(run,domain)
@@ -120,7 +120,7 @@ class Contracts(unittest.TestCase):
             self.assertEqual(read(out/'inputs'/item['id']/'original_idea.json'),cards[i])
         verify({out/k:v for k,v in manifest['files'].items()})
 
-    def test_full_light_cycle_exact_top5_and_source_binding(self):
+    def test_full_multi_cycle_exact_top5_and_source_binding(self):
         root=self.root/'domain';domain='latent-reasoning';(root/'logs').mkdir(parents=True)
         def fake_author(command,**kwargs):
             author=command[command.index('--author')+1];phase=command[command.index('--phase')+1]
@@ -134,22 +134,22 @@ class Contracts(unittest.TestCase):
             elif phase=='discuss':
                 pool=read(root/'generation.json')
                 data=dict(author=author,peer_notes=[dict(peer=a,card_ids=[next(c['card_id'] for c in pool if c['author']==a)],assessment='mechanism assessment',suggestion='clarification') for a in AUTHORS if a!=author])
-                light.validate_discussion(data,author,pool)
+                multi.validate_discussion(data,author,pool)
                 output=run/'work/out/debate/DISCUSSION.json';save(output,data)
                 save(run/'collaboration/discuss/accepted.json',dict(protected=read(run/'generation_seal.json')['files'],output_sha256=sha(output)))
             else:
                 pool=read(root/'generation.json')
                 data=dict(author=author,responses=[dict(critic=a,response='reasoned response') for a in AUTHORS if a!=author],
                     decisions=[dict(card_id=c['card_id'],action='retain',reason='mechanism retained',idea=c['idea']) for c in pool if c['author']==author])
-                light.validate_response(data,author,pool)
+                multi.validate_response(data,author,pool)
                 output=run/'work/out/debate/FINAL.json';save(output,data)
                 save(run/'collaboration/respond/accepted.json',dict(protected=read(run/'generation_seal.json')['files'],output_sha256=sha(output)))
             return 0
         def fake_select(run,phase,prompt,output,validator):
             data=dict(top5=[dict(rank=i+1,card=f'c-{n:03d}',reason='independent value') for i,n in enumerate((2,8,13,23,30))])
             validator(data);save(output,data);return dict(session='independent-selector')
-        with patch.object(light.subprocess,'call',side_effect=fake_author),patch.object(light,'engine',return_value=single),patch.object(light,'invoke',side_effect=fake_select):
-            light.domain_worker(root,domain)
+        with patch.object(multi.subprocess,'call',side_effect=fake_author),patch.object(multi,'engine',return_value=single),patch.object(multi,'invoke',side_effect=fake_select):
+            multi.domain_worker(root,domain)
         self.assertEqual(read(root/'domain_state.json')['status'],'selected')
         final={c['id']:c for c in read(root/'final_pool.json')}
         selected=read(root/'selected/IDEAS.json')
