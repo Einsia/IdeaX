@@ -1,0 +1,36 @@
+{
+  "id": "continual-learning",
+  "name": "持续学习与灾难性遗忘",
+  "native_name": "持续学习与灾难性遗忘",
+  "category": "学习与适配",
+  "prompt": "研究领域：持续学习与灾难性遗忘。\n研究范围：连续数据或任务下的知识更新、遗忘与能力保持。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦随时间更新参数所产生的稳定性与适应性；不将纯外部记忆维护作为唯一贡献。\n可考虑的验证维度：时间顺序合法的数据划分、前后向迁移、遗忘、存储和更新预算。",
+  "generation_focus": [
+    "连续数据或任务下的知识更新、遗忘与能力保持"
+  ],
+  "why_for_generation": "持续更新是长期部署的基础问题，成熟度不等于缺少研究价值。",
+  "scope_boundary": "聚焦随时间更新参数所产生的稳定性与适应性；不将纯外部记忆维护作为唯一贡献。",
+  "validation_focus": "时间顺序合法的数据划分、前后向迁移、遗忘、存储和更新预算",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "完整导出，数量不代表新颖性",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "continual-learning",
+        "name": "持续学习与灾难性遗忘",
+        "problems": 196,
+        "insights": 246,
+        "papers": 1837,
+        "source_cards": 1837
+      }
+    ],
+    "counts": {
+      "problems": 196,
+      "insights": 246,
+      "papers": 1837,
+      "source_cards": 1837
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "3c4c2f2340888bde6b6bf6e85a184bd3a7a07e9bf5c0dd60bf17241afe341765"
+}

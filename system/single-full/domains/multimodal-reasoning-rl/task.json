@@ -1,0 +1,17 @@
+{
+  "id": "multimodal-reasoning-rl",
+  "name": "多模态推理的强化学习后训练",
+  "ideas": 5,
+  "condition": "current-six-v4-single-full",
+  "agent": "single",
+  "information": "full",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "litgraph_domain_ids": [
+    "multimodal-reasoning-rl"
+  ],
+  "full_initial_context": true,
+  "litgraph_api": true,
+  "public_web_allowed": true,
+  "generation_enabled": true,
+  "status": "prepared"
+}

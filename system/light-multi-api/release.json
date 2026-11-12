@@ -1,0 +1,176 @@
+{
+  "version": "current-six-v4-light-multi-api",
+  "kind": "light-multi",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "template_sha256": "d94255591c1d84336ffbd95c8b994f92d21743ed4c41920beff033eaadc3bf9b",
+  "domains": [
+    {
+      "id": "agent-memory",
+      "name": "智能体记忆与经验积累"
+    },
+    {
+      "id": "agentic-rl",
+      "name": "多轮智能体强化学习与长程决策"
+    },
+    {
+      "id": "swe-agent",
+      "name": "软件工程智能体"
+    },
+    {
+      "id": "multi-agent-coordination",
+      "name": "LLM 多智能体协作与失败归因"
+    },
+    {
+      "id": "agent-env-benchmark",
+      "name": "大模型智能体的真实环境评测"
+    },
+    {
+      "id": "rlvr-reasoning",
+      "name": "可验证奖励强化学习（LLM 推理 RL）"
+    },
+    {
+      "id": "process-verification-search",
+      "name": "过程验证与测试时搜索"
+    },
+    {
+      "id": "adaptive-compute-termination",
+      "name": "输入自适应的计算终止与动态推理"
+    },
+    {
+      "id": "latent-reasoning",
+      "name": "隐空间连续推理"
+    },
+    {
+      "id": "llm-formal-logic-reasoning",
+      "name": "语言模型的形式逻辑演绎推理"
+    },
+    {
+      "id": "in-context-learning",
+      "name": "上下文学习"
+    },
+    {
+      "id": "continual-learning",
+      "name": "持续学习与灾难性遗忘"
+    },
+    {
+      "id": "knowledge-distillation",
+      "name": "知识蒸馏与紧凑学生模型构建"
+    },
+    {
+      "id": "peft-structural-sparse-adaptation",
+      "name": "参数高效微调的结构化参数化与稀疏更新"
+    },
+    {
+      "id": "generative-synthetic-data",
+      "name": "生成模型合成训练数据与标注"
+    },
+    {
+      "id": "practical-adaptive-optimizers",
+      "name": "实用自适应优化器与学习率、批大小自动设置"
+    },
+    {
+      "id": "training-dynamics-feature-learning",
+      "name": "神经网络训练动力学与特征学习"
+    },
+    {
+      "id": "network-expressivity",
+      "name": "神经网络与Transformer的表达能力 / 循环（权重共享深度）Transformer"
+    },
+    {
+      "id": "neural-scaling-laws",
+      "name": "神经缩放律"
+    },
+    {
+      "id": "speculative-decoding",
+      "name": "投机解码与 LLM 解码加速"
+    },
+    {
+      "id": "multi-llm-routing-ensemble",
+      "name": "多模型路由、级联与集成"
+    },
+    {
+      "id": "network-pruning",
+      "name": "网络剪枝与稀疏化"
+    },
+    {
+      "id": "dl-compilers-kernels",
+      "name": "深度学习编译、高性能算子与快速卷积算法"
+    },
+    {
+      "id": "discrete-diffusion",
+      "name": "离散扩散与离散流（含扩散语言模型）"
+    },
+    {
+      "id": "diffusion-guidance",
+      "name": "扩散模型的条件引导"
+    },
+    {
+      "id": "consistent-local-editing",
+      "name": "局部一致编辑：二维图像与已重建三维场景"
+    },
+    {
+      "id": "dynamic-scene-reconstruction",
+      "name": "动态场景神经重建"
+    },
+    {
+      "id": "generative-evaluation",
+      "name": "生成模型评价与创造力度量"
+    },
+    {
+      "id": "cross-modal-retrieval",
+      "name": "跨模态检索（图文与文本-视频）"
+    },
+    {
+      "id": "mllm-benchmarking",
+      "name": "多模态大模型能力评测基准与方法学"
+    },
+    {
+      "id": "multimodal-reasoning-rl",
+      "name": "多模态推理的强化学习后训练"
+    },
+    {
+      "id": "vision-language-action",
+      "name": "视觉-语言-动作模型（VLA）"
+    },
+    {
+      "id": "learned-legged-musculoskeletal-control",
+      "name": "学习式足式与肌骨系统运动控制"
+    },
+    {
+      "id": "generative-policies",
+      "name": "以序列和生成模型做决策"
+    },
+    {
+      "id": "preference-reward-alignment",
+      "name": "生成模型的偏好与奖励对齐（语言模型 RLHF/DPO 与扩散模型微调）"
+    },
+    {
+      "id": "ai-control-deception",
+      "name": "AI 控制与欺骗性失准监控"
+    },
+    {
+      "id": "llm-evolutionary-heuristic-design",
+      "name": "LLM 引导的启发式与程序进化"
+    },
+    {
+      "id": "efficient_inference_long_context_serving",
+      "name": "LLM Efficiency：高效推理、长上下文与模型 serving"
+    }
+  ],
+  "benchmark": "reviewer-three-axis-v1",
+  "launched_runs": 0,
+  "prepared_only": true,
+  "authors_per_domain": 6,
+  "discussion_rounds": 1,
+  "ideas_per_domain": 5,
+  "access": "api",
+  "blueprint_scope": "IdeaX-only; frozen core idea and condition-specific evidence",
+  "prompt_files": {
+    "discuss.md": "5ea88967ee6a5e76995fd42465bdf9854f9449fb0f43d64606f5582c2a07f668",
+    "blueprint.md": "1ae10e3267b1beb3565ec2effe29be9c82b0a0471895f15f3bbc438c6187f87a",
+    "generation.md": "d94255591c1d84336ffbd95c8b994f92d21743ed4c41920beff033eaadc3bf9b",
+    "respond.md": "31244a3168f4c125384cdd3ad66cb199fe8f8cefef49c6d0e96acfcb3d372011",
+    "select.md": "39bc127e12a7c64ddfc640374945f7bcc39366098101678b68e856ede2252186"
+  },
+  "packaging_revision": "portable-20261112"
+}

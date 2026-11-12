@@ -1,0 +1,20 @@
+{
+  "id": "efficient_inference_long_context_serving",
+  "name": "LLM Efficiency：高效推理、长上下文与模型 serving",
+  "ideas": 5,
+  "condition": "current-six-v4-single-full",
+  "agent": "single",
+  "information": "full",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "litgraph_domain_ids": [
+    "efficient-long-context-attention",
+    "neural-quantization",
+    "efficient-model-compression",
+    "llm-serving"
+  ],
+  "full_initial_context": true,
+  "litgraph_api": true,
+  "public_web_allowed": true,
+  "generation_enabled": true,
+  "status": "prepared"
+}

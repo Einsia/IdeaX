@@ -1,0 +1,328 @@
+{
+  "version": "current-six-v4-light-multi-full",
+  "kind": "light-multi",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "template_sha256": "51f4ad41b231f86cf6751888b50ffa954a3102720a207fe3aa485354a43fcd63",
+  "domains": [
+    {
+      "id": "agent-memory",
+      "name": "智能体记忆与经验积累",
+      "entries": 157,
+      "insights": 85,
+      "problems": 72,
+      "context_sha256": "9b4c3ea5a2c7e8eb0f4a781430ec7d29d133cd460bed5edf8007f1dc7aa4a27d"
+    },
+    {
+      "id": "agentic-rl",
+      "name": "多轮智能体强化学习与长程决策",
+      "entries": 111,
+      "insights": 53,
+      "problems": 58,
+      "context_sha256": "cd7506c1a7ed13f1d834e1f6aa3d042bc0295bf656f81cf8419380c463f80e49"
+    },
+    {
+      "id": "swe-agent",
+      "name": "软件工程智能体",
+      "entries": 108,
+      "insights": 41,
+      "problems": 67,
+      "context_sha256": "826afcd6dc232ca62bbd86e0a7ce80613817fd05c3f9a25c1332180fac9e7d16"
+    },
+    {
+      "id": "multi-agent-coordination",
+      "name": "LLM 多智能体协作与失败归因",
+      "entries": 222,
+      "insights": 114,
+      "problems": 108,
+      "context_sha256": "9ea60d958a533f0e48cc1e2e813637d42e78f7a260317d8f8fee007e9218215b"
+    },
+    {
+      "id": "agent-env-benchmark",
+      "name": "大模型智能体的真实环境评测",
+      "entries": 314,
+      "insights": 172,
+      "problems": 142,
+      "context_sha256": "b3a9a9e1f88f823c37a9b7e2eba194529af19a282c96fec4bbaa4a13f10a7e2c"
+    },
+    {
+      "id": "rlvr-reasoning",
+      "name": "可验证奖励强化学习（LLM 推理 RL）",
+      "entries": 220,
+      "insights": 124,
+      "problems": 96,
+      "context_sha256": "ca80a7302a02f49ba7cddf0a564d0837ccfa7b2186204c7f784dea03ee152639"
+    },
+    {
+      "id": "process-verification-search",
+      "name": "过程验证与测试时搜索",
+      "entries": 84,
+      "insights": 35,
+      "problems": 49,
+      "context_sha256": "5b01922d3c69b6a015dad54a03677bbc3fa6dff1fd7a6936ebe4aaf6d132bfa0"
+    },
+    {
+      "id": "adaptive-compute-termination",
+      "name": "输入自适应的计算终止与动态推理",
+      "entries": 163,
+      "insights": 71,
+      "problems": 92,
+      "context_sha256": "120524b769e42ed3f609f62ec6681530e5a0407fc77f917ced7b71e8e0feb144"
+    },
+    {
+      "id": "latent-reasoning",
+      "name": "隐空间连续推理",
+      "entries": 31,
+      "insights": 14,
+      "problems": 17,
+      "context_sha256": "a4811e40a01228a76fe09fdbe4299bd8220a0854605a3e2ae8cc1801df2ea0aa"
+    },
+    {
+      "id": "llm-formal-logic-reasoning",
+      "name": "语言模型的形式逻辑演绎推理",
+      "entries": 111,
+      "insights": 69,
+      "problems": 42,
+      "context_sha256": "f15dc69421a91cc6bc3cc25f8f5043b11f9981690641ec1500413615afb442a3"
+    },
+    {
+      "id": "in-context-learning",
+      "name": "上下文学习",
+      "entries": 220,
+      "insights": 108,
+      "problems": 112,
+      "context_sha256": "d7298ffcd7db1e8d0bbacd726ea043929a4d61cf2967e5a8e81d7c578b5cd93b"
+    },
+    {
+      "id": "continual-learning",
+      "name": "持续学习与灾难性遗忘",
+      "entries": 442,
+      "insights": 246,
+      "problems": 196,
+      "context_sha256": "3c4c2f2340888bde6b6bf6e85a184bd3a7a07e9bf5c0dd60bf17241afe341765"
+    },
+    {
+      "id": "knowledge-distillation",
+      "name": "知识蒸馏与紧凑学生模型构建",
+      "entries": 366,
+      "insights": 191,
+      "problems": 175,
+      "context_sha256": "785ca39782799c04c3033da446e040ec59b63d3ea1e5ba6b8791cc4c1420ab01"
+    },
+    {
+      "id": "peft-structural-sparse-adaptation",
+      "name": "参数高效微调的结构化参数化与稀疏更新",
+      "entries": 166,
+      "insights": 65,
+      "problems": 101,
+      "context_sha256": "5cd269e2bff973125b4e319ca8b95f2b9b6e837edeaab056a4cea92df9fdc137"
+    },
+    {
+      "id": "generative-synthetic-data",
+      "name": "生成模型合成训练数据与标注",
+      "entries": 502,
+      "insights": 276,
+      "problems": 226,
+      "context_sha256": "ba1a34dcb6a943ca3b243ebb749f389cf3b308f5d3878104c3bffbb4328970b6"
+    },
+    {
+      "id": "practical-adaptive-optimizers",
+      "name": "实用自适应优化器与学习率、批大小自动设置",
+      "entries": 241,
+      "insights": 96,
+      "problems": 145,
+      "context_sha256": "d3c03a2a7d2beba56ba10ea275c09ad9ef6b7e179b6723f22b7bb2c889ab814a"
+    },
+    {
+      "id": "training-dynamics-feature-learning",
+      "name": "神经网络训练动力学与特征学习",
+      "entries": 200,
+      "insights": 110,
+      "problems": 90,
+      "context_sha256": "c8bfb43a83bafa7acb2f9b2ba9c90cc1787eec7abfc3d82e704b606cce4dd1f1"
+    },
+    {
+      "id": "network-expressivity",
+      "name": "神经网络与Transformer的表达能力 / 循环（权重共享深度）Transformer",
+      "entries": 275,
+      "insights": 137,
+      "problems": 138,
+      "context_sha256": "9822597a045fbf109342057546fbde83edcc5faa2c60241cef1ede2a54068f78"
+    },
+    {
+      "id": "neural-scaling-laws",
+      "name": "神经缩放律",
+      "entries": 119,
+      "insights": 68,
+      "problems": 51,
+      "context_sha256": "8cda00626b99d290456a10558ca80eb5f30790000436b78b9bd36217b39bd84e"
+    },
+    {
+      "id": "speculative-decoding",
+      "name": "投机解码与 LLM 解码加速",
+      "entries": 60,
+      "insights": 25,
+      "problems": 35,
+      "context_sha256": "aa62a6420689904dda856230407f5d295d1aa88bfbafc04ee2cac95e65ffb59f"
+    },
+    {
+      "id": "multi-llm-routing-ensemble",
+      "name": "多模型路由、级联与集成",
+      "entries": 40,
+      "insights": 27,
+      "problems": 13,
+      "context_sha256": "83afc7c0d059bdf6934a04a973cbb1852561800fe9bc6f0a9fb91c61f4cbc62b"
+    },
+    {
+      "id": "network-pruning",
+      "name": "网络剪枝与稀疏化",
+      "entries": 218,
+      "insights": 103,
+      "problems": 115,
+      "context_sha256": "737dd6cd27dc078002a73df693407cd1b2f23e224944cbb323420f99119251e7"
+    },
+    {
+      "id": "dl-compilers-kernels",
+      "name": "深度学习编译、高性能算子与快速卷积算法",
+      "entries": 70,
+      "insights": 33,
+      "problems": 37,
+      "context_sha256": "5297575db5d639dcdebd91ae1ee7e1d361ce049ad8bf0305b7cc6248395fd0aa"
+    },
+    {
+      "id": "discrete-diffusion",
+      "name": "离散扩散与离散流（含扩散语言模型）",
+      "entries": 180,
+      "insights": 88,
+      "problems": 92,
+      "context_sha256": "2edbcbdb79c7ae775260214a53bdf73ab968d5cb6e1d10dc303994dba262d3f8"
+    },
+    {
+      "id": "diffusion-guidance",
+      "name": "扩散模型的条件引导",
+      "entries": 78,
+      "insights": 36,
+      "problems": 42,
+      "context_sha256": "15b93cfce959920712736a9af99680bf575e776c05ed1900c1da76dc63c53488"
+    },
+    {
+      "id": "consistent-local-editing",
+      "name": "局部一致编辑：二维图像与已重建三维场景",
+      "entries": 171,
+      "insights": 70,
+      "problems": 101,
+      "context_sha256": "a703abc45cead2c930966a706bafcf28b705f136376e407cae45cdc1bf9cfeff"
+    },
+    {
+      "id": "dynamic-scene-reconstruction",
+      "name": "动态场景神经重建",
+      "entries": 191,
+      "insights": 98,
+      "problems": 93,
+      "context_sha256": "4621f76d80ea5dbe9338b680367927d2f4523c50d84791c6601008dd3b425c9e"
+    },
+    {
+      "id": "generative-evaluation",
+      "name": "生成模型评价与创造力度量",
+      "entries": 198,
+      "insights": 93,
+      "problems": 105,
+      "context_sha256": "451862aa67e193683f44c3cc38a8ea14450572c842e224b26ea6822c18ae738e"
+    },
+    {
+      "id": "cross-modal-retrieval",
+      "name": "跨模态检索（图文与文本-视频）",
+      "entries": 304,
+      "insights": 178,
+      "problems": 126,
+      "context_sha256": "9f3afa349389bffa3a71167dfb6be1483e9fd3d425ccb802c76b35d2b2800331"
+    },
+    {
+      "id": "mllm-benchmarking",
+      "name": "多模态大模型能力评测基准与方法学",
+      "entries": 651,
+      "insights": 351,
+      "problems": 300,
+      "context_sha256": "72bc6be318e4516e90196c3edf5ce3c6f2f05c2be823cc91f6fbad537f0c6a18"
+    },
+    {
+      "id": "multimodal-reasoning-rl",
+      "name": "多模态推理的强化学习后训练",
+      "entries": 95,
+      "insights": 35,
+      "problems": 60,
+      "context_sha256": "333e1c4454b77c41c81216b1b85a8ca7bc18ab237e70d4e5ad6a04feece89595"
+    },
+    {
+      "id": "vision-language-action",
+      "name": "视觉-语言-动作模型（VLA）",
+      "entries": 142,
+      "insights": 78,
+      "problems": 64,
+      "context_sha256": "e329c2928f3524722b89a049dd422c210e2ea730fc44f9c4ebbd126aed43c6ee"
+    },
+    {
+      "id": "learned-legged-musculoskeletal-control",
+      "name": "学习式足式与肌骨系统运动控制",
+      "entries": 167,
+      "insights": 104,
+      "problems": 63,
+      "context_sha256": "7d5be2de9e98a314f96094bf454d565c906fcaa46d863c7c48d0ba06aac79b01"
+    },
+    {
+      "id": "generative-policies",
+      "name": "以序列和生成模型做决策",
+      "entries": 97,
+      "insights": 41,
+      "problems": 56,
+      "context_sha256": "11b0e8cf40315710c398bdf6721914f2e6e8ece4095dce7b2c844d75647eb14b"
+    },
+    {
+      "id": "preference-reward-alignment",
+      "name": "生成模型的偏好与奖励对齐（语言模型 RLHF/DPO 与扩散模型微调）",
+      "entries": 214,
+      "insights": 81,
+      "problems": 133,
+      "context_sha256": "616f9f0f97e3092a61ce6d08b0aff0a81d6159251a745a84fde4d6d7ca0febb5"
+    },
+    {
+      "id": "ai-control-deception",
+      "name": "AI 控制与欺骗性失准监控",
+      "entries": 24,
+      "insights": 21,
+      "problems": 3,
+      "context_sha256": "2b1c57ecdbfbe03d4115e35f1a1a02dec07c835d92582634f44f950bab0689f3"
+    },
+    {
+      "id": "llm-evolutionary-heuristic-design",
+      "name": "LLM 引导的启发式与程序进化",
+      "entries": 6,
+      "insights": 5,
+      "problems": 1,
+      "context_sha256": "9e342c889bdc4461ca4e406ccee55cf652fc676732fd13aaa0acda9ed79ebd5a"
+    },
+    {
+      "id": "efficient_inference_long_context_serving",
+      "name": "LLM Efficiency：高效推理、长上下文与模型 serving",
+      "entries": 683,
+      "insights": 401,
+      "problems": 282,
+      "context_sha256": "b38332bfec506bf202eaf76ceea62bc27e390c5868445af6ebb5652fcd45121d"
+    }
+  ],
+  "benchmark": "reviewer-three-axis-v1",
+  "launched_runs": 0,
+  "prepared_only": true,
+  "authors_per_domain": 6,
+  "discussion_rounds": 1,
+  "ideas_per_domain": 5,
+  "access": "full",
+  "blueprint_scope": "IdeaX-only; frozen core idea and condition-specific evidence",
+  "prompt_files": {
+    "discuss.md": "dbd4f71b8387670f44f92d7497eb0cbc538bf30225d98b8144de5ed9fb0f7600",
+    "blueprint.md": "c718cf9507710005aed929d6b53fd9808b56ae12e6bfd47e3df9559f72b7c181",
+    "generation.md": "51f4ad41b231f86cf6751888b50ffa954a3102720a207fe3aa485354a43fcd63",
+    "respond.md": "fe1a44dde0483424384b2e12f131a4354970d396d3e93cb8f3846e8cc0d60977",
+    "select.md": "a3ecbf0c2d23f1a62f62343c8d911c30bc95e553dbd20996a270cbd071a9f6b3"
+  },
+  "packaging_revision": "portable-20261112"
+}

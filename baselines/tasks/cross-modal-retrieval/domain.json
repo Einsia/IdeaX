@@ -1,0 +1,36 @@
+{
+  "id": "cross-modal-retrieval",
+  "name": "跨模态检索（图文与文本-视频）",
+  "native_name": "跨模态检索（图文与文本-视频）",
+  "category": "多模态",
+  "prompt": "研究领域：跨模态检索（图文与文本-视频）。\n研究范围：图文和文本—视频之间的检索、表示对齐与细粒度匹配。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：研究对象是检索相关证据或对象；回答推理的奖励训练归 multimodal-reasoning-rl，通用能力测量归 mllm-benchmarking。\n可考虑的验证维度：细粒度与组合查询、错配鲁棒性、召回/排序表现、索引与检索成本。",
+  "generation_focus": [
+    "图文和文本—视频之间的检索、表示对齐与细粒度匹配"
+  ],
+  "why_for_generation": "跨模态对应关系、噪声配对和索引效率构成独立的检索问题。",
+  "scope_boundary": "研究对象是检索相关证据或对象；回答推理的奖励训练归 multimodal-reasoning-rl，通用能力测量归 mllm-benchmarking。",
+  "validation_focus": "细粒度与组合查询、错配鲁棒性、召回/排序表现、索引与检索成本",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "完整导出，数量不代表新颖性",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "cross-modal-retrieval",
+        "name": "跨模态检索（图文与文本-视频）",
+        "problems": 126,
+        "insights": 178,
+        "papers": 892,
+        "source_cards": 889
+      }
+    ],
+    "counts": {
+      "problems": 126,
+      "insights": 178,
+      "papers": 892,
+      "source_cards": 889
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "9f3afa349389bffa3a71167dfb6be1483e9fd3d425ccb802c76b35d2b2800331"
+}

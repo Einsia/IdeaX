@@ -1,0 +1,17 @@
+{
+  "id": "agentic-rl",
+  "name": "多轮智能体强化学习与长程决策",
+  "ideas": 5,
+  "condition": "current-six-v4-light-multi-full",
+  "agent": "light-multi",
+  "information": "full",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "litgraph_domain_ids": [
+    "agentic-rl"
+  ],
+  "full_initial_context": true,
+  "litgraph_api": true,
+  "public_web_allowed": true,
+  "generation_enabled": true,
+  "status": "prepared"
+}

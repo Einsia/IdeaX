@@ -1,0 +1,36 @@
+{
+  "id": "multimodal-reasoning-rl",
+  "name": "多模态推理的强化学习后训练",
+  "native_name": "多模态推理的强化学习后训练",
+  "category": "多模态",
+  "prompt": "研究领域：多模态推理的强化学习后训练。\n研究范围：视觉或视频证据参与的推理强化学习后训练。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：需以视觉/时序证据的使用为关键变量；纯文本可验证推理归 rlvr-reasoning，能力诊断本身归 mllm-benchmarking。\n可考虑的验证维度：视觉和时间证据干预、奖励投机、训练预算及未见任务泛化。",
+  "generation_focus": [
+    "视觉或视频证据参与的推理强化学习后训练"
+  ],
+  "why_for_generation": "视觉证据可被语言捷径绕过，奖励与感知接地有区别于纯文本 RL 的难点。",
+  "scope_boundary": "需以视觉/时序证据的使用为关键变量；纯文本可验证推理归 rlvr-reasoning，能力诊断本身归 mllm-benchmarking。",
+  "validation_focus": "视觉和时间证据干预、奖励投机、训练预算及未见任务泛化",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "完整导出，数量不代表新颖性",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "multimodal-reasoning-rl",
+        "name": "多模态推理的强化学习后训练",
+        "problems": 60,
+        "insights": 35,
+        "papers": 296,
+        "source_cards": 295
+      }
+    ],
+    "counts": {
+      "problems": 60,
+      "insights": 35,
+      "papers": 296,
+      "source_cards": 295
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "333e1c4454b77c41c81216b1b85a8ca7bc18ab237e70d4e5ad6a04feece89595"
+}

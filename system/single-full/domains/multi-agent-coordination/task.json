@@ -1,0 +1,17 @@
+{
+  "id": "multi-agent-coordination",
+  "name": "LLM 多智能体协作与失败归因",
+  "ideas": 5,
+  "condition": "current-six-v4-single-full",
+  "agent": "single",
+  "information": "full",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "litgraph_domain_ids": [
+    "multi-agent-coordination"
+  ],
+  "full_initial_context": true,
+  "litgraph_api": true,
+  "public_web_allowed": true,
+  "generation_enabled": true,
+  "status": "prepared"
+}

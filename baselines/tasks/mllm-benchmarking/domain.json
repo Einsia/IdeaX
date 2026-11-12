@@ -1,0 +1,36 @@
+{
+  "id": "mllm-benchmarking",
+  "name": "多模态大模型能力评测基准与方法学",
+  "native_name": "多模态大模型能力评测基准与方法学",
+  "category": "多模态",
+  "prompt": "研究领域：多模态大模型能力评测基准与方法学。\n研究范围：多模态大模型能力测量、视觉依赖与评测有效性。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：贡献是多模态理解的测量方法；生成作品质量归 generative-evaluation，提升模型的奖励训练归 multimodal-reasoning-rl。\n可考虑的验证维度：模态消融、证据干预、污染与捷径检查、人工一致性和跨模型效度。",
+  "generation_focus": [
+    "多模态大模型能力测量、视觉依赖与评测有效性"
+  ],
+  "why_for_generation": "高分可能来自语言捷径，诊断真实跨模态能力有直接研究价值。",
+  "scope_boundary": "贡献是多模态理解的测量方法；生成作品质量归 generative-evaluation，提升模型的奖励训练归 multimodal-reasoning-rl。",
+  "validation_focus": "模态消融、证据干预、污染与捷径检查、人工一致性和跨模型效度",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "完整导出，数量不代表新颖性",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "mllm-benchmarking",
+        "name": "多模态大模型能力评测基准与方法学",
+        "problems": 300,
+        "insights": 351,
+        "papers": 939,
+        "source_cards": 939
+      }
+    ],
+    "counts": {
+      "problems": 300,
+      "insights": 351,
+      "papers": 939,
+      "source_cards": 939
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "72bc6be318e4516e90196c3edf5ce3c6f2f05c2be823cc91f6fbad537f0c6a18"
+}

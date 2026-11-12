@@ -1,0 +1,146 @@
+{
+  "2025-09-01": {
+    "ideax_api": {
+      "library": "EXTERNAL_DATA/before-2025-09-01",
+      "api": "http://127.0.0.1:8931"
+    },
+    "plain": {
+      "corpus": "EXTERNAL_DATA/plain_corpus.jsonl",
+      "fields": "title, abstract (same paper set as the IdeaX library)"
+    },
+    "ideascientist": {
+      "vault_api": "http://127.0.0.1:8901 (Svalbard technique vault) behind founder_recon.isci_proxy",
+      "date_before": "2025-09-01"
+    },
+    "coi": {
+      "library": "EXTERNAL_DATA/abstract + v1 full text)",
+      "server_ceiling": "2025-09-01"
+    }
+  },
+  "2025-10-01": {
+    "ideax_api": {
+      "library": "EXTERNAL_DATA/before-2025-10-01",
+      "api": "http://127.0.0.1:8935"
+    },
+    "plain": {
+      "corpus": "EXTERNAL_DATA/plain_corpus.jsonl",
+      "fields": "title, abstract (same paper set as the IdeaX library)"
+    },
+    "ideascientist": {
+      "vault_api": "http://127.0.0.1:8901 (Svalbard technique vault) behind founder_recon.isci_proxy",
+      "date_before": "2025-10-01"
+    },
+    "coi": {
+      "library": "EXTERNAL_DATA/abstract + v1 full text)",
+      "server_ceiling": "2025-10-01"
+    }
+  },
+  "2025-11-01": {
+    "ideax_api": {
+      "library": "EXTERNAL_DATA/before-2025-11-01",
+      "api": "http://127.0.0.1:8936"
+    },
+    "plain": {
+      "corpus": "EXTERNAL_DATA/plain_corpus.jsonl",
+      "fields": "title, abstract (same paper set as the IdeaX library)"
+    },
+    "ideascientist": {
+      "vault_api": "http://127.0.0.1:8901 (Svalbard technique vault) behind founder_recon.isci_proxy",
+      "date_before": "2025-11-01"
+    },
+    "coi": {
+      "library": "EXTERNAL_DATA/abstract + v1 full text)",
+      "server_ceiling": "2025-11-01"
+    }
+  },
+  "2025-12-01": {
+    "ideax_api": {
+      "library": "EXTERNAL_DATA/before-2025-12-01",
+      "api": "http://127.0.0.1:8932"
+    },
+    "plain": {
+      "corpus": "EXTERNAL_DATA/plain_corpus.jsonl",
+      "fields": "title, abstract (same paper set as the IdeaX library)"
+    },
+    "ideascientist": {
+      "vault_api": "http://127.0.0.1:8901 (Svalbard technique vault) behind founder_recon.isci_proxy",
+      "date_before": "2025-12-01"
+    },
+    "coi": {
+      "library": "EXTERNAL_DATA/abstract + v1 full text)",
+      "server_ceiling": "2025-12-01"
+    }
+  },
+  "2026-01-01": {
+    "ideax_api": {
+      "library": "EXTERNAL_DATA/before-2026-01-01",
+      "api": "http://127.0.0.1:8937"
+    },
+    "plain": {
+      "corpus": "EXTERNAL_DATA/plain_corpus.jsonl",
+      "fields": "title, abstract (same paper set as the IdeaX library)"
+    },
+    "ideascientist": {
+      "vault_api": "http://127.0.0.1:8901 (Svalbard technique vault) behind founder_recon.isci_proxy",
+      "date_before": "2026-01-01"
+    },
+    "coi": {
+      "library": "EXTERNAL_DATA/abstract + v1 full text)",
+      "server_ceiling": "2026-01-01"
+    }
+  },
+  "2026-02-01": {
+    "ideax_api": {
+      "library": "EXTERNAL_DATA/before-2026-02-01",
+      "api": "http://127.0.0.1:8938"
+    },
+    "plain": {
+      "corpus": "EXTERNAL_DATA/plain_corpus.jsonl",
+      "fields": "title, abstract (same paper set as the IdeaX library)"
+    },
+    "ideascientist": {
+      "vault_api": "http://127.0.0.1:8901 (Svalbard technique vault) behind founder_recon.isci_proxy",
+      "date_before": "2026-02-01"
+    },
+    "coi": {
+      "library": "EXTERNAL_DATA/abstract + v1 full text)",
+      "server_ceiling": "2026-02-01"
+    }
+  },
+  "2026-03-01": {
+    "ideax_api": {
+      "library": "EXTERNAL_DATA/before-2026-03-01",
+      "api": "http://127.0.0.1:8933"
+    },
+    "plain": {
+      "corpus": "EXTERNAL_DATA/plain_corpus.jsonl",
+      "fields": "title, abstract (same paper set as the IdeaX library)"
+    },
+    "ideascientist": {
+      "vault_api": "http://127.0.0.1:8901 (Svalbard technique vault) behind founder_recon.isci_proxy",
+      "date_before": "2026-03-01"
+    },
+    "coi": {
+      "library": "EXTERNAL_DATA/abstract + v1 full text)",
+      "server_ceiling": "2026-03-01"
+    }
+  },
+  "2026-04-01": {
+    "ideax_api": {
+      "library": "EXTERNAL_DATA/before-2026-04-01",
+      "api": "http://127.0.0.1:8939"
+    },
+    "plain": {
+      "corpus": "EXTERNAL_DATA/plain_corpus.jsonl",
+      "fields": "title, abstract (same paper set as the IdeaX library)"
+    },
+    "ideascientist": {
+      "vault_api": "http://127.0.0.1:8901 (Svalbard technique vault) behind founder_recon.isci_proxy",
+      "date_before": "2026-04-01"
+    },
+    "coi": {
+      "library": "EXTERNAL_DATA/abstract + v1 full text)",
+      "server_ceiling": "2026-04-01"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "mllm-benchmarking",
+  "name": "多模态大模型能力评测基准与方法学",
+  "ideas": 5,
+  "condition": "current-six-v4-single-full",
+  "agent": "single",
+  "information": "full",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "litgraph_domain_ids": [
+    "mllm-benchmarking"
+  ],
+  "full_initial_context": true,
+  "litgraph_api": true,
+  "public_web_allowed": true,
+  "generation_enabled": true,
+  "status": "prepared"
+}

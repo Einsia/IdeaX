@@ -1,0 +1,36 @@
+{
+  "id": "multi-llm-routing-ensemble",
+  "name": "多模型路由、级联与集成",
+  "native_name": "多模型路由、级联与集成",
+  "category": "效率与系统",
+  "prompt": "研究领域：多模型路由、级联与集成。\n研究范围：多模型路由、级联、集成与按查询选择能力。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦模型选择和响应组合；有状态团队通信归 multi-agent-coordination，单模型停止归 adaptive-compute-termination。\n可考虑的验证维度：质量—成本曲线、路由开销、模型池变动、查询分布偏移和强简单基线。",
+  "generation_focus": [
+    "多模型路由、级联、集成与按查询选择能力"
+  ],
+  "why_for_generation": "模型池的能力和成本异质性引出选择与组合问题，有别于多主体协作。",
+  "scope_boundary": "聚焦模型选择和响应组合；有状态团队通信归 multi-agent-coordination，单模型停止归 adaptive-compute-termination。",
+  "validation_focus": "质量—成本曲线、路由开销、模型池变动、查询分布偏移和强简单基线",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "材料偏少，结论需额外核验",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "multi-llm-routing-ensemble",
+        "name": "多模型路由、级联与集成",
+        "problems": 13,
+        "insights": 27,
+        "papers": 214,
+        "source_cards": 214
+      }
+    ],
+    "counts": {
+      "problems": 13,
+      "insights": 27,
+      "papers": 214,
+      "source_cards": 214
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "83afc7c0d059bdf6934a04a973cbb1852561800fe9bc6f0a9fb91c61f4cbc62b"
+}

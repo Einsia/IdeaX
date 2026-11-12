@@ -1,0 +1,9 @@
+is_azure: false
+OPENAI_BASE_URL: https://sbtunnel.xiaoaojianghu.fun/v1
+OPENAI_WIRE_API: responses
+MAIN_LLM_MODEL: gpt-6-astra
+CHEAP_LLM_MODEL: gpt-6-astra
+COI_REASONING_EFFORT: xhigh
+COI_RETRIEVAL_BACKEND: arxiv_openalex
+COI_PAPER_PARSER: pymupdf
+COI_RERANKER: lexical

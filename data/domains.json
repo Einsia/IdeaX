@@ -1,0 +1,1447 @@
+{
+  "format": "ideax.generation_domain_selection.v4",
+  "selection_id": "recon37-plus-efficiency-20261105",
+  "created_at": "2026-11-05T13:00:21.254875+08:00",
+  "evaluation_target": "Interesting and Reviewer research idea generation",
+  "not_a_reconstruction_benchmark": true,
+  "domain_count": 38,
+  "selection_basis": {
+    "candidate_source_sha256": "6feb0e16d1fb745b1fe369364be32606f884760828b1c6f1230d4a1dfc02b466",
+    "candidate_source": "Founder/Recon task domain list (37 domains), plus Efficiency",
+    "criteria": [
+      "保留独立研究对象和验证方式，不设强制数量上限。",
+      "按核心贡献区分相邻方向，允许真实交叉。",
+      "核验当前原生领域与完整导出，材料数量不当作研究价值排名。"
+    ],
+    "decision": "保留全部 37 个 Recon 原生领域，按用户要求另加一个 Efficiency 综合领域。",
+    "library_api_configuration": "LITGRAPH_API_BASE_URL; historical service URL omitted from the public release",
+    "library_snapshot": {
+      "entries": 105062,
+      "by_kind": {
+        "insight": 53250,
+        "problem": 51812
+      },
+      "units": 856,
+      "domains": 856,
+      "papers": 256227,
+      "source_cards": 255435,
+      "snapshot_modified_at": 1793066838
+    },
+    "catalog_count": 856,
+    "scope": "只借用 Recon 领域集合，不沿用历史日期截断、任务答案、排名或生成结果。",
+    "entry_review": "检查候选条目样本并制定领域边界；未宣称逐条人工读完或核验全部原论文。",
+    "efficiency_addition": {
+      "added_at": "2026-11-05T05:57:22.929107+00:00",
+      "task_id": "efficient_inference_long_context_serving",
+      "native_domain_ids": [
+        "efficient-long-context-attention",
+        "neural-quantization",
+        "efficient-model-compression",
+        "llm-serving"
+      ],
+      "prior_selection_id": "recon37-native-20261105"
+    }
+  },
+  "domains": [
+    {
+      "id": "agent-memory",
+      "name": "智能体记忆与经验积累",
+      "native_name": "智能体记忆与经验积累",
+      "category": "智能体",
+      "prompt": "研究领域：智能体记忆与经验积累。\n研究范围：跨任务记忆的形成、更新、检索与经验复用。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献应是记忆表示或生命周期；多轮策略训练归 agentic-rl，团队通信归 multi-agent-coordination。\n可考虑的验证维度：长期任务成功率、陈旧信息干扰、迁移收益与记忆成本。",
+      "generation_focus": [
+        "跨任务记忆的形成、更新、检索与经验复用"
+      ],
+      "why_for_generation": "持续工作的智能体需要处理过时知识与经验迁移，问题具有独立的状态管理机制。",
+      "scope_boundary": "核心贡献应是记忆表示或生命周期；多轮策略训练归 agentic-rl，团队通信归 multi-agent-coordination。",
+      "validation_focus": "长期任务成功率、陈旧信息干扰、迁移收益与记忆成本",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "agent-memory",
+            "name": "智能体记忆与经验积累",
+            "problems": 72,
+            "insights": 85,
+            "papers": 375,
+            "source_cards": 367
+          }
+        ],
+        "counts": {
+          "problems": 72,
+          "insights": 85,
+          "papers": 375,
+          "source_cards": 367
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "9b4c3ea5a2c7e8eb0f4a781430ec7d29d133cd460bed5edf8007f1dc7aa4a27d"
+    },
+    {
+      "id": "agentic-rl",
+      "name": "多轮智能体强化学习与长程决策",
+      "native_name": "多轮智能体强化学习与长程决策",
+      "category": "智能体",
+      "prompt": "研究领域：多轮智能体强化学习与长程决策。\n研究范围：多轮工具交互中的强化学习、信用分配与长程决策。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心对象是交互策略的学习；静态文本可验证奖励归 rlvr-reasoning，部署阶段纯搜索归 process-verification-search。\n可考虑的验证维度：交互预算匹配的成功率、奖励归因、训练稳定性与新环境泛化。",
+      "generation_focus": [
+        "多轮工具交互中的强化学习、信用分配与长程决策"
+      ],
+      "why_for_generation": "动作会改变后续观察和奖励，不能直接化约为单轮答案评分。",
+      "scope_boundary": "核心对象是交互策略的学习；静态文本可验证奖励归 rlvr-reasoning，部署阶段纯搜索归 process-verification-search。",
+      "validation_focus": "交互预算匹配的成功率、奖励归因、训练稳定性与新环境泛化",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "agentic-rl",
+            "name": "多轮智能体强化学习与长程决策",
+            "problems": 58,
+            "insights": 53,
+            "papers": 303,
+            "source_cards": 303
+          }
+        ],
+        "counts": {
+          "problems": 58,
+          "insights": 53,
+          "papers": 303,
+          "source_cards": 303
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "cd7506c1a7ed13f1d834e1f6aa3d042bc0295bf656f81cf8419380c463f80e49"
+    },
+    {
+      "id": "swe-agent",
+      "name": "软件工程智能体",
+      "native_name": "软件工程智能体",
+      "category": "智能体",
+      "prompt": "研究领域：软件工程智能体。\n研究范围：真实代码仓库中的问题定位、修改、测试与任务完成。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦软件仓库任务；通用算法适应度搜索归 llm-evolutionary-heuristic-design，内核编译优化归 dl-compilers-kernels。\n可考虑的验证维度：独立测试、回归缺陷、真实任务完成率及执行成本。",
+      "generation_focus": [
+        "真实代码仓库中的问题定位、修改、测试与任务完成"
+      ],
+      "why_for_generation": "仓库依赖和回归约束提供明确且有实际价值的执行验证。",
+      "scope_boundary": "聚焦软件仓库任务；通用算法适应度搜索归 llm-evolutionary-heuristic-design，内核编译优化归 dl-compilers-kernels。",
+      "validation_focus": "独立测试、回归缺陷、真实任务完成率及执行成本",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "swe-agent",
+            "name": "软件工程智能体",
+            "problems": 67,
+            "insights": 41,
+            "papers": 168,
+            "source_cards": 167
+          }
+        ],
+        "counts": {
+          "problems": 67,
+          "insights": 41,
+          "papers": 168,
+          "source_cards": 167
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "826afcd6dc232ca62bbd86e0a7ce80613817fd05c3f9a25c1332180fac9e7d16"
+    },
+    {
+      "id": "multi-agent-coordination",
+      "name": "LLM 多智能体协作与失败归因",
+      "native_name": "LLM 多智能体协作与失败归因",
+      "category": "智能体",
+      "prompt": "研究领域：LLM 多智能体协作与失败归因。\n研究范围：多个语言模型智能体的任务分工、通信、协调与失败归因。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：需要研究多主体交互机制；单次查询选择一个模型归 multi-llm-routing-ensemble，单体记忆归 agent-memory。\n可考虑的验证维度：总计算预算匹配的单体基线、通信消融、协作收益与错误传播。",
+      "generation_focus": [
+        "多个语言模型智能体的任务分工、通信、协调与失败归因"
+      ],
+      "why_for_generation": "团队收益与通信开销、相关错误和责任分配相互制约，具有独立研究对象。",
+      "scope_boundary": "需要研究多主体交互机制；单次查询选择一个模型归 multi-llm-routing-ensemble，单体记忆归 agent-memory。",
+      "validation_focus": "总计算预算匹配的单体基线、通信消融、协作收益与错误传播",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "multi-agent-coordination",
+            "name": "LLM 多智能体协作与失败归因",
+            "problems": 108,
+            "insights": 114,
+            "papers": 388,
+            "source_cards": 386
+          }
+        ],
+        "counts": {
+          "problems": 108,
+          "insights": 114,
+          "papers": 388,
+          "source_cards": 386
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "9ea60d958a533f0e48cc1e2e813637d42e78f7a260317d8f8fee007e9218215b"
+    },
+    {
+      "id": "agent-env-benchmark",
+      "name": "大模型智能体的真实环境评测",
+      "native_name": "大模型智能体的真实环境评测",
+      "category": "智能体",
+      "prompt": "研究领域：大模型智能体的真实环境评测。\n研究范围：真实动态环境中智能体能力的测量、任务有效性与结果核验。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：贡献应是测量或验证方法及其有效性；直接提升某类任务策略不自动构成评测方法创新。\n可考虑的验证维度：可复现状态核验、构念有效性、抗捷径性、人工判断一致性与跨环境效度。",
+      "generation_focus": [
+        "真实动态环境中智能体能力的测量、任务有效性与结果核验"
+      ],
+      "why_for_generation": "任务完成、轨迹合法性和组件贡献常被混淆，可靠测量是可复用的方法学问题。",
+      "scope_boundary": "贡献应是测量或验证方法及其有效性；直接提升某类任务策略不自动构成评测方法创新。",
+      "validation_focus": "可复现状态核验、构念有效性、抗捷径性、人工判断一致性与跨环境效度",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "agent-env-benchmark",
+            "name": "大模型智能体的真实环境评测",
+            "problems": 142,
+            "insights": 172,
+            "papers": 449,
+            "source_cards": 447
+          }
+        ],
+        "counts": {
+          "problems": 142,
+          "insights": 172,
+          "papers": 449,
+          "source_cards": 447
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "b3a9a9e1f88f823c37a9b7e2eba194529af19a282c96fec4bbaa4a13f10a7e2c"
+    },
+    {
+      "id": "rlvr-reasoning",
+      "name": "可验证奖励强化学习（LLM 推理 RL）",
+      "native_name": "可验证奖励强化学习（LLM 推理 RL）",
+      "category": "推理",
+      "prompt": "研究领域：可验证奖励强化学习（LLM 推理 RL）。\n研究范围：可验证奖励驱动的语言模型推理训练。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦有客观判据的文本推理后训练；偏好奖励归 preference-reward-alignment，视觉证据奖励归 multimodal-reasoning-rl。\n可考虑的验证维度：独立验证器、训练与采样预算匹配、未见任务泛化和奖励投机诊断。",
+      "generation_focus": [
+        "可验证奖励驱动的语言模型推理训练"
+      ],
+      "why_for_generation": "验证器质量、探索多样性和分布外推理提供可证伪的训练机制问题。",
+      "scope_boundary": "聚焦有客观判据的文本推理后训练；偏好奖励归 preference-reward-alignment，视觉证据奖励归 multimodal-reasoning-rl。",
+      "validation_focus": "独立验证器、训练与采样预算匹配、未见任务泛化和奖励投机诊断",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "rlvr-reasoning",
+            "name": "可验证奖励强化学习（LLM 推理 RL）",
+            "problems": 96,
+            "insights": 124,
+            "papers": 555,
+            "source_cards": 555
+          }
+        ],
+        "counts": {
+          "problems": 96,
+          "insights": 124,
+          "papers": 555,
+          "source_cards": 555
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "ca80a7302a02f49ba7cddf0a564d0837ccfa7b2186204c7f784dea03ee152639"
+    },
+    {
+      "id": "process-verification-search",
+      "name": "过程验证与测试时搜索",
+      "native_name": "过程验证与测试时搜索",
+      "category": "推理",
+      "prompt": "研究领域：过程验证与测试时搜索。\n研究范围：中间推理步骤的验证、候选路径搜索与错误回退。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献是过程评价或搜索算子；只决定算多久归 adaptive-compute-termination，改变隐状态表示归 latent-reasoning。\n可考虑的验证维度：搜索预算匹配、步骤错误定位、验证器失效条件与最终答案准确率。",
+      "generation_focus": [
+        "中间推理步骤的验证、候选路径搜索与错误回退"
+      ],
+      "why_for_generation": "过程信号是否真正改善最终答案可以通过固定预算和错误定位实验验证。",
+      "scope_boundary": "核心贡献是过程评价或搜索算子；只决定算多久归 adaptive-compute-termination，改变隐状态表示归 latent-reasoning。",
+      "validation_focus": "搜索预算匹配、步骤错误定位、验证器失效条件与最终答案准确率",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "process-verification-search",
+            "name": "过程验证与测试时搜索",
+            "problems": 49,
+            "insights": 35,
+            "papers": 454,
+            "source_cards": 453
+          }
+        ],
+        "counts": {
+          "problems": 49,
+          "insights": 35,
+          "papers": 454,
+          "source_cards": 453
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "5b01922d3c69b6a015dad54a03677bbc3fa6dff1fd7a6936ebe4aaf6d132bfa0"
+    },
+    {
+      "id": "adaptive-compute-termination",
+      "name": "输入自适应的计算终止与动态推理",
+      "native_name": "输入自适应的计算终止与动态推理",
+      "category": "推理",
+      "prompt": "研究领域：输入自适应的计算终止与动态推理。\n研究范围：按输入分配推理计算、动态深度与停止决策。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦何时继续或停止及计算分配；多模型选择归 multi-llm-routing-ensemble，搜索机制归 process-verification-search。\n可考虑的验证维度：完整质量—成本曲线、难度分布变化、决策开销及边际计算收益。",
+      "generation_focus": [
+        "按输入分配推理计算、动态深度与停止决策"
+      ],
+      "why_for_generation": "避免简单任务浪费和困难任务过早停止，有清楚的质量与成本权衡。",
+      "scope_boundary": "聚焦何时继续或停止及计算分配；多模型选择归 multi-llm-routing-ensemble，搜索机制归 process-verification-search。",
+      "validation_focus": "完整质量—成本曲线、难度分布变化、决策开销及边际计算收益",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "adaptive-compute-termination",
+            "name": "输入自适应的计算终止与动态推理",
+            "problems": 92,
+            "insights": 71,
+            "papers": 609,
+            "source_cards": 609
+          }
+        ],
+        "counts": {
+          "problems": 92,
+          "insights": 71,
+          "papers": 609,
+          "source_cards": 609
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "120524b769e42ed3f609f62ec6681530e5a0407fc77f917ced7b71e8e0feb144"
+    },
+    {
+      "id": "latent-reasoning",
+      "name": "隐空间连续推理",
+      "native_name": "隐空间连续推理",
+      "category": "推理",
+      "prompt": "研究领域：隐空间连续推理。\n研究范围：连续隐状态中的多步推理及显式与隐式推理转换。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献是推理状态的表示与转换；固定表示的搜索或停止策略分别归其他推理领域。\n可考虑的验证维度：任务准确率、实际算力与延迟、隐步骤因果干预和长度外推。",
+      "generation_focus": [
+        "连续隐状态中的多步推理及显式与隐式推理转换"
+      ],
+      "why_for_generation": "推理表示本身是否需要语言化是独立问题，不能仅用输出词元减少证明成功。",
+      "scope_boundary": "核心贡献是推理状态的表示与转换；固定表示的搜索或停止策略分别归其他推理领域。",
+      "validation_focus": "任务准确率、实际算力与延迟、隐步骤因果干预和长度外推",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "材料偏少，结论需额外核验",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "latent-reasoning",
+            "name": "隐空间连续推理",
+            "problems": 17,
+            "insights": 14,
+            "papers": 90,
+            "source_cards": 90
+          }
+        ],
+        "counts": {
+          "problems": 17,
+          "insights": 14,
+          "papers": 90,
+          "source_cards": 90
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "a4811e40a01228a76fe09fdbe4299bd8220a0854605a3e2ae8cc1801df2ea0aa"
+    },
+    {
+      "id": "llm-formal-logic-reasoning",
+      "name": "语言模型的形式逻辑演绎推理",
+      "native_name": "语言模型的形式逻辑演绎推理",
+      "category": "推理",
+      "prompt": "研究领域：语言模型的形式逻辑演绎推理。\n研究范围：语言模型基于明确前提和规则的演绎推理与证明构造。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦前提接地、逻辑有效性及忠实证明；不要扩大成所有数学推理或一般奖励训练。\n可考虑的验证维度：机器可检验有效性、前提扰动、组合外推与捷径排除。",
+      "generation_focus": [
+        "语言模型基于明确前提和规则的演绎推理与证明构造"
+      ],
+      "why_for_generation": "能以规则和证明完整性核验推理，补充只看自然语言答案的测量。",
+      "scope_boundary": "聚焦前提接地、逻辑有效性及忠实证明；不要扩大成所有数学推理或一般奖励训练。",
+      "validation_focus": "机器可检验有效性、前提扰动、组合外推与捷径排除",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "llm-formal-logic-reasoning",
+            "name": "语言模型的形式逻辑演绎推理",
+            "problems": 42,
+            "insights": 69,
+            "papers": 259,
+            "source_cards": 259
+          }
+        ],
+        "counts": {
+          "problems": 42,
+          "insights": 69,
+          "papers": 259,
+          "source_cards": 259
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "f15dc69421a91cc6bc3cc25f8f5043b11f9981690641ec1500413615afb442a3"
+    },
+    {
+      "id": "in-context-learning",
+      "name": "上下文学习",
+      "native_name": "上下文学习",
+      "category": "学习与适配",
+      "prompt": "研究领域：上下文学习。\n研究范围：通过上下文示例完成任务学习、泛化与信息组合。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心机制发生在当前上下文内；跨任务持久记忆归 agent-memory，参数持续更新归 continual-learning。\n可考虑的验证维度：固定上下文预算、示例顺序和相关性干预、分布外查询与先验控制。",
+      "generation_focus": [
+        "通过上下文示例完成任务学习、泛化与信息组合"
+      ],
+      "why_for_generation": "不更新模型参数时如何从示例获取可迁移规则，具有独立的学习机制。",
+      "scope_boundary": "核心机制发生在当前上下文内；跨任务持久记忆归 agent-memory，参数持续更新归 continual-learning。",
+      "validation_focus": "固定上下文预算、示例顺序和相关性干预、分布外查询与先验控制",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "in-context-learning",
+            "name": "上下文学习",
+            "problems": 112,
+            "insights": 108,
+            "papers": 509,
+            "source_cards": 509
+          }
+        ],
+        "counts": {
+          "problems": 112,
+          "insights": 108,
+          "papers": 509,
+          "source_cards": 509
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "d7298ffcd7db1e8d0bbacd726ea043929a4d61cf2967e5a8e81d7c578b5cd93b"
+    },
+    {
+      "id": "continual-learning",
+      "name": "持续学习与灾难性遗忘",
+      "native_name": "持续学习与灾难性遗忘",
+      "category": "学习与适配",
+      "prompt": "研究领域：持续学习与灾难性遗忘。\n研究范围：连续数据或任务下的知识更新、遗忘与能力保持。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦随时间更新参数所产生的稳定性与适应性；不将纯外部记忆维护作为唯一贡献。\n可考虑的验证维度：时间顺序合法的数据划分、前后向迁移、遗忘、存储和更新预算。",
+      "generation_focus": [
+        "连续数据或任务下的知识更新、遗忘与能力保持"
+      ],
+      "why_for_generation": "持续更新是长期部署的基础问题，成熟度不等于缺少研究价值。",
+      "scope_boundary": "聚焦随时间更新参数所产生的稳定性与适应性；不将纯外部记忆维护作为唯一贡献。",
+      "validation_focus": "时间顺序合法的数据划分、前后向迁移、遗忘、存储和更新预算",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "continual-learning",
+            "name": "持续学习与灾难性遗忘",
+            "problems": 196,
+            "insights": 246,
+            "papers": 1837,
+            "source_cards": 1837
+          }
+        ],
+        "counts": {
+          "problems": 196,
+          "insights": 246,
+          "papers": 1837,
+          "source_cards": 1837
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "3c4c2f2340888bde6b6bf6e85a184bd3a7a07e9bf5c0dd60bf17241afe341765"
+    },
+    {
+      "id": "knowledge-distillation",
+      "name": "知识蒸馏与紧凑学生模型构建",
+      "native_name": "知识蒸馏与紧凑学生模型构建",
+      "category": "学习与适配",
+      "prompt": "研究领域：知识蒸馏与紧凑学生模型构建。\n研究范围：教师知识向紧凑学生模型的迁移与监督选择。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：需要明确教师—学生知识传递机制；无教师删参数归 network-pruning，只改变更新子空间归 peft-structural-sparse-adaptation。\n可考虑的验证维度：同训练数据与预算的无蒸馏基线、学生实际效率、教师错误继承和跨分布表现。",
+      "generation_focus": [
+        "教师知识向紧凑学生模型的迁移与监督选择"
+      ],
+      "why_for_generation": "教师信号可靠性、跨架构差异和学生容量决定迁移收益。",
+      "scope_boundary": "需要明确教师—学生知识传递机制；无教师删参数归 network-pruning，只改变更新子空间归 peft-structural-sparse-adaptation。",
+      "validation_focus": "同训练数据与预算的无蒸馏基线、学生实际效率、教师错误继承和跨分布表现",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "knowledge-distillation",
+            "name": "知识蒸馏与紧凑学生模型构建",
+            "problems": 175,
+            "insights": 191,
+            "papers": 1063,
+            "source_cards": 1062
+          }
+        ],
+        "counts": {
+          "problems": 175,
+          "insights": 191,
+          "papers": 1063,
+          "source_cards": 1062
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "785ca39782799c04c3033da446e040ec59b63d3ea1e5ba6b8791cc4c1420ab01"
+    },
+    {
+      "id": "peft-structural-sparse-adaptation",
+      "name": "参数高效微调的结构化参数化与稀疏更新",
+      "native_name": "参数高效微调的结构化参数化与稀疏更新",
+      "category": "学习与适配",
+      "prompt": "研究领域：参数高效微调的结构化参数化与稀疏更新。\n研究范围：预训练模型适配中的结构化参数化、低维或稀疏更新。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦更新哪些参数及如何参数化；永久压缩推理网络归 network-pruning，多阶段遗忘机制归 continual-learning。\n可考虑的验证维度：可训练参数与优化器内存、全量微调基线、适配泛化和能力保持。",
+      "generation_focus": [
+        "预训练模型适配中的结构化参数化、低维或稀疏更新"
+      ],
+      "why_for_generation": "在少量可训练参数下保留表达力与迁移能力，有独立的约束优化对象。",
+      "scope_boundary": "聚焦更新哪些参数及如何参数化；永久压缩推理网络归 network-pruning，多阶段遗忘机制归 continual-learning。",
+      "validation_focus": "可训练参数与优化器内存、全量微调基线、适配泛化和能力保持",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "peft-structural-sparse-adaptation",
+            "name": "参数高效微调的结构化参数化与稀疏更新",
+            "problems": 101,
+            "insights": 65,
+            "papers": 972,
+            "source_cards": 971
+          }
+        ],
+        "counts": {
+          "problems": 101,
+          "insights": 65,
+          "papers": 972,
+          "source_cards": 971
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "5cd269e2bff973125b4e319ca8b95f2b9b6e837edeaab056a4cea92df9fdc137"
+    },
+    {
+      "id": "generative-synthetic-data",
+      "name": "生成模型合成训练数据与标注",
+      "native_name": "生成模型合成训练数据与标注",
+      "category": "学习与适配",
+      "prompt": "研究领域：生成模型合成训练数据与标注。\n研究范围：生成训练数据和标注的有效性、覆盖、多样性与反馈循环。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献应是训练数据的产生、选择或利用；通用生成质量评价归 generative-evaluation。\n可考虑的验证维度：冻结的真实测试集、污染检查、等预算真实数据基线和多轮生成反馈。",
+      "generation_focus": [
+        "生成训练数据和标注的有效性、覆盖、多样性与反馈循环"
+      ],
+      "why_for_generation": "合成样本数量不等于学习收益，数据质量和分布覆盖仍需直接实验。",
+      "scope_boundary": "核心贡献应是训练数据的产生、选择或利用；通用生成质量评价归 generative-evaluation。",
+      "validation_focus": "冻结的真实测试集、污染检查、等预算真实数据基线和多轮生成反馈",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "generative-synthetic-data",
+            "name": "生成模型合成训练数据与标注",
+            "problems": 226,
+            "insights": 276,
+            "papers": 663,
+            "source_cards": 659
+          }
+        ],
+        "counts": {
+          "problems": 226,
+          "insights": 276,
+          "papers": 663,
+          "source_cards": 659
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "ba1a34dcb6a943ca3b243ebb749f389cf3b308f5d3878104c3bffbb4328970b6"
+    },
+    {
+      "id": "practical-adaptive-optimizers",
+      "name": "实用自适应优化器与学习率、批大小自动设置",
+      "native_name": "实用自适应优化器与学习率、批大小自动设置",
+      "category": "训练与理论",
+      "prompt": "研究领域：实用自适应优化器与学习率、批大小自动设置。\n研究范围：自适应优化器及学习率、批大小的自动设置。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献是可执行的优化或超参数适应规则；仅解释学习路径归 training-dynamics-feature-learning。\n可考虑的验证维度：强优化器基线、公平调参预算、不同架构迁移、实际耗时与稳定性。",
+      "generation_focus": [
+        "自适应优化器及学习率、批大小的自动设置"
+      ],
+      "why_for_generation": "减少调参并改善实际训练效率具有明确价值，需区分步数与墙钟成本。",
+      "scope_boundary": "核心贡献是可执行的优化或超参数适应规则；仅解释学习路径归 training-dynamics-feature-learning。",
+      "validation_focus": "强优化器基线、公平调参预算、不同架构迁移、实际耗时与稳定性",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "practical-adaptive-optimizers",
+            "name": "实用自适应优化器与学习率、批大小自动设置",
+            "problems": 145,
+            "insights": 96,
+            "papers": 524,
+            "source_cards": 524
+          }
+        ],
+        "counts": {
+          "problems": 145,
+          "insights": 96,
+          "papers": 524,
+          "source_cards": 524
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "d3c03a2a7d2beba56ba10ea275c09ad9ef6b7e179b6723f22b7bb2c889ab814a"
+    },
+    {
+      "id": "training-dynamics-feature-learning",
+      "name": "神经网络训练动力学与特征学习",
+      "native_name": "神经网络训练动力学与特征学习",
+      "category": "训练与理论",
+      "prompt": "研究领域：神经网络训练动力学与特征学习。\n研究范围：神经网络训练过程、特征形成及其可学习性。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦优化轨迹、特征演化或收敛条件；纯表示存在性归 network-expressivity，规模经验外推归 neural-scaling-laws。\n可考虑的验证维度：可检验假设、受控机制实验、理论条件及有限宽度或真实模型适用边界。",
+      "generation_focus": [
+        "神经网络训练过程、特征形成及其可学习性"
+      ],
+      "why_for_generation": "模型能表达一个函数不说明训练会学到它，训练路径是独立研究层次。",
+      "scope_boundary": "聚焦优化轨迹、特征演化或收敛条件；纯表示存在性归 network-expressivity，规模经验外推归 neural-scaling-laws。",
+      "validation_focus": "可检验假设、受控机制实验、理论条件及有限宽度或真实模型适用边界",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "training-dynamics-feature-learning",
+            "name": "神经网络训练动力学与特征学习",
+            "problems": 90,
+            "insights": 110,
+            "papers": 485,
+            "source_cards": 485
+          }
+        ],
+        "counts": {
+          "problems": 90,
+          "insights": 110,
+          "papers": 485,
+          "source_cards": 485
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "c8bfb43a83bafa7acb2f9b2ba9c90cc1787eec7abfc3d82e704b606cce4dd1f1"
+    },
+    {
+      "id": "network-expressivity",
+      "name": "神经网络与Transformer的表达能力 / 循环（权重共享深度）Transformer",
+      "native_name": "神经网络与Transformer的表达能力 / 循环（权重共享深度）Transformer",
+      "category": "训练与理论",
+      "prompt": "研究领域：神经网络与Transformer的表达能力 / 循环（权重共享深度）Transformer。\n研究范围：神经网络和 Transformer 的表达能力、深宽权衡与权重共享。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦函数或算法的可表示性；训练可达性归 training-dynamics-feature-learning，经验算力配置归 neural-scaling-laws。\n可考虑的验证维度：明确函数类与误差标准、构造或上下界、反例及规模受控的验证。",
+      "generation_focus": [
+        "神经网络和 Transformer 的表达能力、深宽权衡与权重共享"
+      ],
+      "why_for_generation": "容量边界与结构优势可以用构造、下界或反例进行严格研究。",
+      "scope_boundary": "聚焦函数或算法的可表示性；训练可达性归 training-dynamics-feature-learning，经验算力配置归 neural-scaling-laws。",
+      "validation_focus": "明确函数类与误差标准、构造或上下界、反例及规模受控的验证",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "network-expressivity",
+            "name": "神经网络与Transformer的表达能力 / 循环（权重共享深度）Transformer",
+            "problems": 138,
+            "insights": 137,
+            "papers": 412,
+            "source_cards": 412
+          }
+        ],
+        "counts": {
+          "problems": 138,
+          "insights": 137,
+          "papers": 412,
+          "source_cards": 412
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "9822597a045fbf109342057546fbde83edcc5faa2c60241cef1ede2a54068f78"
+    },
+    {
+      "id": "neural-scaling-laws",
+      "name": "神经缩放律",
+      "native_name": "神经缩放律",
+      "category": "训练与理论",
+      "prompt": "研究领域：神经缩放律。\n研究范围：模型、数据和计算规模变化下的性能规律与外推。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦跨规模统计规律和预算分配；不把单个优化器改进或纯容量定理作为缩放规律。\n可考虑的验证维度：留出规模外推、拟合不确定性、数据与架构混杂控制及训练/推理成本。",
+      "generation_focus": [
+        "模型、数据和计算规模变化下的性能规律与外推"
+      ],
+      "why_for_generation": "小规模实验能否可靠指导更大规模决策具有独立实用和科学价值。",
+      "scope_boundary": "聚焦跨规模统计规律和预算分配；不把单个优化器改进或纯容量定理作为缩放规律。",
+      "validation_focus": "留出规模外推、拟合不确定性、数据与架构混杂控制及训练/推理成本",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "neural-scaling-laws",
+            "name": "神经缩放律",
+            "problems": 51,
+            "insights": 68,
+            "papers": 203,
+            "source_cards": 202
+          }
+        ],
+        "counts": {
+          "problems": 51,
+          "insights": 68,
+          "papers": 203,
+          "source_cards": 202
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "8cda00626b99d290456a10558ca80eb5f30790000436b78b9bd36217b39bd84e"
+    },
+    {
+      "id": "speculative-decoding",
+      "name": "投机解码与 LLM 解码加速",
+      "native_name": "投机解码与 LLM 解码加速",
+      "category": "效率与系统",
+      "prompt": "研究领域：投机解码与 LLM 解码加速。\n研究范围：自回归生成中的草稿、验证与并行解码加速。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦解码算法与分布保持；决定是否继续思考归 adaptive-compute-termination，内核实现归 dl-compilers-kernels。\n可考虑的验证维度：分布或质量保持、端到端延迟、负载与批量变化及草稿额外成本。",
+      "generation_focus": [
+        "自回归生成中的草稿、验证与并行解码加速"
+      ],
+      "why_for_generation": "目标是缩短解码关键路径，收益依赖接受率和硬件开销而非词元数。",
+      "scope_boundary": "聚焦解码算法与分布保持；决定是否继续思考归 adaptive-compute-termination，内核实现归 dl-compilers-kernels。",
+      "validation_focus": "分布或质量保持、端到端延迟、负载与批量变化及草稿额外成本",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "speculative-decoding",
+            "name": "投机解码与 LLM 解码加速",
+            "problems": 35,
+            "insights": 25,
+            "papers": 261,
+            "source_cards": 261
+          }
+        ],
+        "counts": {
+          "problems": 35,
+          "insights": 25,
+          "papers": 261,
+          "source_cards": 261
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "aa62a6420689904dda856230407f5d295d1aa88bfbafc04ee2cac95e65ffb59f"
+    },
+    {
+      "id": "multi-llm-routing-ensemble",
+      "name": "多模型路由、级联与集成",
+      "native_name": "多模型路由、级联与集成",
+      "category": "效率与系统",
+      "prompt": "研究领域：多模型路由、级联与集成。\n研究范围：多模型路由、级联、集成与按查询选择能力。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦模型选择和响应组合；有状态团队通信归 multi-agent-coordination，单模型停止归 adaptive-compute-termination。\n可考虑的验证维度：质量—成本曲线、路由开销、模型池变动、查询分布偏移和强简单基线。",
+      "generation_focus": [
+        "多模型路由、级联、集成与按查询选择能力"
+      ],
+      "why_for_generation": "模型池的能力和成本异质性引出选择与组合问题，有别于多主体协作。",
+      "scope_boundary": "聚焦模型选择和响应组合；有状态团队通信归 multi-agent-coordination，单模型停止归 adaptive-compute-termination。",
+      "validation_focus": "质量—成本曲线、路由开销、模型池变动、查询分布偏移和强简单基线",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "材料偏少，结论需额外核验",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "multi-llm-routing-ensemble",
+            "name": "多模型路由、级联与集成",
+            "problems": 13,
+            "insights": 27,
+            "papers": 214,
+            "source_cards": 214
+          }
+        ],
+        "counts": {
+          "problems": 13,
+          "insights": 27,
+          "papers": 214,
+          "source_cards": 214
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "83afc7c0d059bdf6934a04a973cbb1852561800fe9bc6f0a9fb91c61f4cbc62b"
+    },
+    {
+      "id": "network-pruning",
+      "name": "网络剪枝与稀疏化",
+      "native_name": "网络剪枝与稀疏化",
+      "category": "效率与系统",
+      "prompt": "研究领域：网络剪枝与稀疏化。\n研究范围：网络结构或连接的裁剪、稀疏化及可兑现的压缩收益。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦推理网络结构的删除或稀疏化；仅限制训练更新归 PEFT，教师监督迁移归蒸馏。\n可考虑的验证维度：真实延迟和内存、稀疏内核支持、重训练预算与质量下降。",
+      "generation_focus": [
+        "网络结构或连接的裁剪、稀疏化及可兑现的压缩收益"
+      ],
+      "why_for_generation": "参数或 FLOPs 减少常不能转化成真实加速，结构约束与质量保持仍值得研究。",
+      "scope_boundary": "聚焦推理网络结构的删除或稀疏化；仅限制训练更新归 PEFT，教师监督迁移归蒸馏。",
+      "validation_focus": "真实延迟和内存、稀疏内核支持、重训练预算与质量下降",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "network-pruning",
+            "name": "网络剪枝与稀疏化",
+            "problems": 115,
+            "insights": 103,
+            "papers": 1002,
+            "source_cards": 1002
+          }
+        ],
+        "counts": {
+          "problems": 115,
+          "insights": 103,
+          "papers": 1002,
+          "source_cards": 1002
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "737dd6cd27dc078002a73df693407cd1b2f23e224944cbb323420f99119251e7"
+    },
+    {
+      "id": "dl-compilers-kernels",
+      "name": "深度学习编译、高性能算子与快速卷积算法",
+      "native_name": "深度学习编译、高性能算子与快速卷积算法",
+      "category": "效率与系统",
+      "prompt": "研究领域：深度学习编译、高性能算子与快速卷积算法。\n研究范围：深度学习编译、算子实现、张量程序搜索与硬件适配。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献是编译或算子执行性能；高层仓库修复归 swe-agent，通用算法演化归 llm-evolutionary-heuristic-design。\n可考虑的验证维度：数值正确性、强库实现基线、真实硬件测量、编译搜索成本与形状泛化。",
+      "generation_focus": [
+        "深度学习编译、算子实现、张量程序搜索与硬件适配"
+      ],
+      "why_for_generation": "数据移动、调度和硬件依赖为实际系统效率提供独立研究对象。",
+      "scope_boundary": "核心贡献是编译或算子执行性能；高层仓库修复归 swe-agent，通用算法演化归 llm-evolutionary-heuristic-design。",
+      "validation_focus": "数值正确性、强库实现基线、真实硬件测量、编译搜索成本与形状泛化",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "dl-compilers-kernels",
+            "name": "深度学习编译、高性能算子与快速卷积算法",
+            "problems": 37,
+            "insights": 33,
+            "papers": 119,
+            "source_cards": 119
+          }
+        ],
+        "counts": {
+          "problems": 37,
+          "insights": 33,
+          "papers": 119,
+          "source_cards": 119
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "5297575db5d639dcdebd91ae1ee7e1d361ce049ad8bf0305b7cc6248395fd0aa"
+    },
+    {
+      "id": "discrete-diffusion",
+      "name": "离散扩散与离散流（含扩散语言模型）",
+      "native_name": "离散扩散与离散流（含扩散语言模型）",
+      "category": "生成与三维视觉",
+      "prompt": "研究领域：离散扩散与离散流（含扩散语言模型）。\n研究范围：离散扩散和离散流的生成建模、训练与推断。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦离散状态生成过程；连续图像条件引导归 diffusion-guidance，局部编辑任务归 consistent-local-editing。\n可考虑的验证维度：质量与并行速度、依赖一致性、采样成本及匹配预算的自回归基线。",
+      "generation_focus": [
+        "离散扩散和离散流的生成建模、训练与推断"
+      ],
+      "why_for_generation": "离散状态上的非自回归生成具有与连续视觉扩散不同的依赖和概率结构。",
+      "scope_boundary": "聚焦离散状态生成过程；连续图像条件引导归 diffusion-guidance，局部编辑任务归 consistent-local-editing。",
+      "validation_focus": "质量与并行速度、依赖一致性、采样成本及匹配预算的自回归基线",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "discrete-diffusion",
+            "name": "离散扩散与离散流（含扩散语言模型）",
+            "problems": 92,
+            "insights": 88,
+            "papers": 393,
+            "source_cards": 393
+          }
+        ],
+        "counts": {
+          "problems": 92,
+          "insights": 88,
+          "papers": 393,
+          "source_cards": 393
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "2edbcbdb79c7ae775260214a53bdf73ab968d5cb6e1d10dc303994dba262d3f8"
+    },
+    {
+      "id": "diffusion-guidance",
+      "name": "扩散模型的条件引导",
+      "native_name": "扩散模型的条件引导",
+      "category": "生成与三维视觉",
+      "prompt": "研究领域：扩散模型的条件引导。\n研究范围：扩散和流模型的条件引导、目标分布与采样轨迹控制。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献是引导规则或目标分布控制；特定图像区域的保持与编辑归 consistent-local-editing。\n可考虑的验证维度：条件遵循、质量、多样性、实际采样成本与分布偏差。",
+      "generation_focus": [
+        "扩散和流模型的条件引导、目标分布与采样轨迹控制"
+      ],
+      "why_for_generation": "条件遵循与分布覆盖之间的偏差有清楚的采样机制与可检验权衡。",
+      "scope_boundary": "核心贡献是引导规则或目标分布控制；特定图像区域的保持与编辑归 consistent-local-editing。",
+      "validation_focus": "条件遵循、质量、多样性、实际采样成本与分布偏差",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "diffusion-guidance",
+            "name": "扩散模型的条件引导",
+            "problems": 42,
+            "insights": 36,
+            "papers": 194,
+            "source_cards": 194
+          }
+        ],
+        "counts": {
+          "problems": 42,
+          "insights": 36,
+          "papers": 194,
+          "source_cards": 194
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "15b93cfce959920712736a9af99680bf575e776c05ed1900c1da76dc63c53488"
+    },
+    {
+      "id": "consistent-local-editing",
+      "name": "局部一致编辑：二维图像与已重建三维场景",
+      "native_name": "局部一致编辑：二维图像与已重建三维场景",
+      "category": "生成与三维视觉",
+      "prompt": "研究领域：局部一致编辑：二维图像与已重建三维场景。\n研究范围：二维图像和已重建三维场景的局部可控编辑与非目标区域保持。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦编辑后的局部保持和一致性；从观测恢复原场景归 dynamic-scene-reconstruction，通用采样引导归 diffusion-guidance。\n可考虑的验证维度：目标修改成功率、非目标区域变化、身份/结构保持及多视角一致性。",
+      "generation_focus": [
+        "二维图像和已重建三维场景的局部可控编辑与非目标区域保持"
+      ],
+      "why_for_generation": "修改目标同时保持身份、结构和背景，是清楚且应用相关的约束问题。",
+      "scope_boundary": "聚焦编辑后的局部保持和一致性；从观测恢复原场景归 dynamic-scene-reconstruction，通用采样引导归 diffusion-guidance。",
+      "validation_focus": "目标修改成功率、非目标区域变化、身份/结构保持及多视角一致性",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "consistent-local-editing",
+            "name": "局部一致编辑：二维图像与已重建三维场景",
+            "problems": 101,
+            "insights": 70,
+            "papers": 934,
+            "source_cards": 934
+          }
+        ],
+        "counts": {
+          "problems": 101,
+          "insights": 70,
+          "papers": 934,
+          "source_cards": 934
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "a703abc45cead2c930966a706bafcf28b705f136376e407cae45cdc1bf9cfeff"
+    },
+    {
+      "id": "dynamic-scene-reconstruction",
+      "name": "动态场景神经重建",
+      "native_name": "动态场景神经重建",
+      "category": "生成与三维视觉",
+      "prompt": "研究领域：动态场景神经重建。\n研究范围：从时变观测恢复动态三维几何、运动和外观。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心对象是恢复观测场景；编辑已有场景归 consistent-local-editing，不扩展为通用世界模型生成。\n可考虑的验证维度：留出视角和时间、几何及运动误差、位姿条件、训练与渲染成本。",
+      "generation_focus": [
+        "从时变观测恢复动态三维几何、运动和外观"
+      ],
+      "why_for_generation": "观测欠约束、运动与几何耦合，使重建具有独立的逆问题结构。",
+      "scope_boundary": "核心对象是恢复观测场景；编辑已有场景归 consistent-local-editing，不扩展为通用世界模型生成。",
+      "validation_focus": "留出视角和时间、几何及运动误差、位姿条件、训练与渲染成本",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "dynamic-scene-reconstruction",
+            "name": "动态场景神经重建",
+            "problems": 93,
+            "insights": 98,
+            "papers": 556,
+            "source_cards": 555
+          }
+        ],
+        "counts": {
+          "problems": 93,
+          "insights": 98,
+          "papers": 556,
+          "source_cards": 555
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "4621f76d80ea5dbe9338b680367927d2f4523c50d84791c6601008dd3b425c9e"
+    },
+    {
+      "id": "generative-evaluation",
+      "name": "生成模型评价与创造力度量",
+      "native_name": "生成模型评价与创造力度量",
+      "category": "生成与三维视觉",
+      "prompt": "研究领域：生成模型评价与创造力度量。\n研究范围：生成模型质量、多样性、记忆和创造性的测量方法。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献是度量效度或评价协议；多模态理解能力测试归 mllm-benchmarking，合成数据训练收益归 generative-synthetic-data。\n可考虑的验证维度：人工或任务外部效标、排名稳定性、样本量敏感性、可操纵性与测量成本。",
+      "generation_focus": [
+        "生成模型质量、多样性、记忆和创造性的测量方法"
+      ],
+      "why_for_generation": "生成模型排名会受表示、样本数及指标聚合影响，可靠评价是独立研究问题。",
+      "scope_boundary": "核心贡献是度量效度或评价协议；多模态理解能力测试归 mllm-benchmarking，合成数据训练收益归 generative-synthetic-data。",
+      "validation_focus": "人工或任务外部效标、排名稳定性、样本量敏感性、可操纵性与测量成本",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "generative-evaluation",
+            "name": "生成模型评价与创造力度量",
+            "problems": 105,
+            "insights": 93,
+            "papers": 299,
+            "source_cards": 298
+          }
+        ],
+        "counts": {
+          "problems": 105,
+          "insights": 93,
+          "papers": 299,
+          "source_cards": 298
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "451862aa67e193683f44c3cc38a8ea14450572c842e224b26ea6822c18ae738e"
+    },
+    {
+      "id": "cross-modal-retrieval",
+      "name": "跨模态检索（图文与文本-视频）",
+      "native_name": "跨模态检索（图文与文本-视频）",
+      "category": "多模态",
+      "prompt": "研究领域：跨模态检索（图文与文本-视频）。\n研究范围：图文和文本—视频之间的检索、表示对齐与细粒度匹配。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：研究对象是检索相关证据或对象；回答推理的奖励训练归 multimodal-reasoning-rl，通用能力测量归 mllm-benchmarking。\n可考虑的验证维度：细粒度与组合查询、错配鲁棒性、召回/排序表现、索引与检索成本。",
+      "generation_focus": [
+        "图文和文本—视频之间的检索、表示对齐与细粒度匹配"
+      ],
+      "why_for_generation": "跨模态对应关系、噪声配对和索引效率构成独立的检索问题。",
+      "scope_boundary": "研究对象是检索相关证据或对象；回答推理的奖励训练归 multimodal-reasoning-rl，通用能力测量归 mllm-benchmarking。",
+      "validation_focus": "细粒度与组合查询、错配鲁棒性、召回/排序表现、索引与检索成本",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "cross-modal-retrieval",
+            "name": "跨模态检索（图文与文本-视频）",
+            "problems": 126,
+            "insights": 178,
+            "papers": 892,
+            "source_cards": 889
+          }
+        ],
+        "counts": {
+          "problems": 126,
+          "insights": 178,
+          "papers": 892,
+          "source_cards": 889
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "9f3afa349389bffa3a71167dfb6be1483e9fd3d425ccb802c76b35d2b2800331"
+    },
+    {
+      "id": "mllm-benchmarking",
+      "name": "多模态大模型能力评测基准与方法学",
+      "native_name": "多模态大模型能力评测基准与方法学",
+      "category": "多模态",
+      "prompt": "研究领域：多模态大模型能力评测基准与方法学。\n研究范围：多模态大模型能力测量、视觉依赖与评测有效性。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：贡献是多模态理解的测量方法；生成作品质量归 generative-evaluation，提升模型的奖励训练归 multimodal-reasoning-rl。\n可考虑的验证维度：模态消融、证据干预、污染与捷径检查、人工一致性和跨模型效度。",
+      "generation_focus": [
+        "多模态大模型能力测量、视觉依赖与评测有效性"
+      ],
+      "why_for_generation": "高分可能来自语言捷径，诊断真实跨模态能力有直接研究价值。",
+      "scope_boundary": "贡献是多模态理解的测量方法；生成作品质量归 generative-evaluation，提升模型的奖励训练归 multimodal-reasoning-rl。",
+      "validation_focus": "模态消融、证据干预、污染与捷径检查、人工一致性和跨模型效度",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "mllm-benchmarking",
+            "name": "多模态大模型能力评测基准与方法学",
+            "problems": 300,
+            "insights": 351,
+            "papers": 939,
+            "source_cards": 939
+          }
+        ],
+        "counts": {
+          "problems": 300,
+          "insights": 351,
+          "papers": 939,
+          "source_cards": 939
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "72bc6be318e4516e90196c3edf5ce3c6f2f05c2be823cc91f6fbad537f0c6a18"
+    },
+    {
+      "id": "multimodal-reasoning-rl",
+      "name": "多模态推理的强化学习后训练",
+      "native_name": "多模态推理的强化学习后训练",
+      "category": "多模态",
+      "prompt": "研究领域：多模态推理的强化学习后训练。\n研究范围：视觉或视频证据参与的推理强化学习后训练。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：需以视觉/时序证据的使用为关键变量；纯文本可验证推理归 rlvr-reasoning，能力诊断本身归 mllm-benchmarking。\n可考虑的验证维度：视觉和时间证据干预、奖励投机、训练预算及未见任务泛化。",
+      "generation_focus": [
+        "视觉或视频证据参与的推理强化学习后训练"
+      ],
+      "why_for_generation": "视觉证据可被语言捷径绕过，奖励与感知接地有区别于纯文本 RL 的难点。",
+      "scope_boundary": "需以视觉/时序证据的使用为关键变量；纯文本可验证推理归 rlvr-reasoning，能力诊断本身归 mllm-benchmarking。",
+      "validation_focus": "视觉和时间证据干预、奖励投机、训练预算及未见任务泛化",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "multimodal-reasoning-rl",
+            "name": "多模态推理的强化学习后训练",
+            "problems": 60,
+            "insights": 35,
+            "papers": 296,
+            "source_cards": 295
+          }
+        ],
+        "counts": {
+          "problems": 60,
+          "insights": 35,
+          "papers": 296,
+          "source_cards": 295
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "333e1c4454b77c41c81216b1b85a8ca7bc18ab237e70d4e5ad6a04feece89595"
+    },
+    {
+      "id": "vision-language-action",
+      "name": "视觉-语言-动作模型（VLA）",
+      "native_name": "视觉-语言-动作模型（VLA）",
+      "category": "机器人与决策",
+      "prompt": "研究领域：视觉-语言-动作模型（VLA）。\n研究范围：视觉语言语义到机器人动作的对齐、泛化与闭环控制。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献需涉及语言/视觉到动作的接口；纯运动动力学归 learned-legged-musculoskeletal-control，通用动作分布学习归 generative-policies。\n可考虑的验证维度：未见指令和场景、闭环任务成功率、动作延迟、示范预算及仿真/实机证据区分。",
+      "generation_focus": [
+        "视觉语言语义到机器人动作的对齐、泛化与闭环控制"
+      ],
+      "why_for_generation": "高层意图与低层动作的对应是多模态能力落到真实操作的独立问题。",
+      "scope_boundary": "核心贡献需涉及语言/视觉到动作的接口；纯运动动力学归 learned-legged-musculoskeletal-control，通用动作分布学习归 generative-policies。",
+      "validation_focus": "未见指令和场景、闭环任务成功率、动作延迟、示范预算及仿真/实机证据区分",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "vision-language-action",
+            "name": "视觉-语言-动作模型（VLA）",
+            "problems": 64,
+            "insights": 78,
+            "papers": 421,
+            "source_cards": 420
+          }
+        ],
+        "counts": {
+          "problems": 64,
+          "insights": 78,
+          "papers": 421,
+          "source_cards": 420
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "e329c2928f3524722b89a049dd422c210e2ea730fc44f9c4ebbd126aed43c6ee"
+    },
+    {
+      "id": "learned-legged-musculoskeletal-control",
+      "name": "学习式足式与肌骨系统运动控制",
+      "native_name": "学习式足式与肌骨系统运动控制",
+      "category": "机器人与决策",
+      "prompt": "研究领域：学习式足式与肌骨系统运动控制。\n研究范围：足式和肌骨系统的运动学习、接触控制与仿真到真实迁移。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦身体动力学、接触和稳定运动；语义指令到操作归 vision-language-action。\n可考虑的验证维度：地形与扰动泛化、稳定性和能耗、真实观测限制及仿真/实机差距。",
+      "generation_focus": [
+        "足式和肌骨系统的运动学习、接触控制与仿真到真实迁移"
+      ],
+      "why_for_generation": "接触动力学、稳定性和感知误差具有具体物理约束，不能用通用 VLA 任务替代。",
+      "scope_boundary": "聚焦身体动力学、接触和稳定运动；语义指令到操作归 vision-language-action。",
+      "validation_focus": "地形与扰动泛化、稳定性和能耗、真实观测限制及仿真/实机差距",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "learned-legged-musculoskeletal-control",
+            "name": "学习式足式与肌骨系统运动控制",
+            "problems": 63,
+            "insights": 104,
+            "papers": 448,
+            "source_cards": 448
+          }
+        ],
+        "counts": {
+          "problems": 63,
+          "insights": 104,
+          "papers": 448,
+          "source_cards": 448
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "7d5be2de9e98a314f96094bf454d565c906fcaa46d863c7c48d0ba06aac79b01"
+    },
+    {
+      "id": "generative-policies",
+      "name": "以序列和生成模型做决策",
+      "native_name": "以序列和生成模型做决策",
+      "category": "机器人与决策",
+      "prompt": "研究领域：以序列和生成模型做决策。\n研究范围：以序列、扩散或流模型表示和学习动作策略。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献是策略表示或学习算法；语言视觉接地归 VLA，特定足式动力学归运动控制。\n可考虑的验证维度：等交互预算的非生成策略基线、动作分布覆盖、在线控制延迟和任务迁移。",
+      "generation_focus": [
+        "以序列、扩散或流模型表示和学习动作策略"
+      ],
+      "why_for_generation": "多模态动作分布与奖励优化的相容性是独立的决策算法问题。",
+      "scope_boundary": "核心贡献是策略表示或学习算法；语言视觉接地归 VLA，特定足式动力学归运动控制。",
+      "validation_focus": "等交互预算的非生成策略基线、动作分布覆盖、在线控制延迟和任务迁移",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "generative-policies",
+            "name": "以序列和生成模型做决策",
+            "problems": 56,
+            "insights": 41,
+            "papers": 253,
+            "source_cards": 253
+          }
+        ],
+        "counts": {
+          "problems": 56,
+          "insights": 41,
+          "papers": 253,
+          "source_cards": 253
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "11b0e8cf40315710c398bdf6721914f2e6e8ece4095dce7b2c844d75647eb14b"
+    },
+    {
+      "id": "preference-reward-alignment",
+      "name": "生成模型的偏好与奖励对齐（语言模型 RLHF/DPO 与扩散模型微调）",
+      "native_name": "生成模型的偏好与奖励对齐（语言模型 RLHF/DPO 与扩散模型微调）",
+      "category": "对齐与安全",
+      "prompt": "研究领域：生成模型的偏好与奖励对齐（语言模型 RLHF/DPO 与扩散模型微调）。\n研究范围：生成模型偏好数据、奖励学习与偏好优化。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦偏好来源和优化机制；客观可验证文本奖励归 rlvr-reasoning，部署期对抗监控归 ai-control-deception。\n可考虑的验证维度：独立偏好判断、奖励过优化、群体差异、质量/多样性权衡和分布外评估。",
+      "generation_focus": [
+        "生成模型偏好数据、奖励学习与偏好优化"
+      ],
+      "why_for_generation": "主观偏好噪声、群体差异和代理奖励失配区别于客观正确性奖励。",
+      "scope_boundary": "聚焦偏好来源和优化机制；客观可验证文本奖励归 rlvr-reasoning，部署期对抗监控归 ai-control-deception。",
+      "validation_focus": "独立偏好判断、奖励过优化、群体差异、质量/多样性权衡和分布外评估",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "完整导出，数量不代表新颖性",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "preference-reward-alignment",
+            "name": "生成模型的偏好与奖励对齐（语言模型 RLHF/DPO 与扩散模型微调）",
+            "problems": 133,
+            "insights": 81,
+            "papers": 1118,
+            "source_cards": 1118
+          }
+        ],
+        "counts": {
+          "problems": 133,
+          "insights": 81,
+          "papers": 1118,
+          "source_cards": 1118
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "616f9f0f97e3092a61ce6d08b0aff0a81d6159251a745a84fde4d6d7ca0febb5"
+    },
+    {
+      "id": "ai-control-deception",
+      "name": "AI 控制与欺骗性失准监控",
+      "native_name": "AI 控制与欺骗性失准监控",
+      "category": "对齐与安全",
+      "prompt": "研究领域：AI 控制与欺骗性失准监控。\n研究范围：自主 AI 的控制、欺骗行为测量和对抗规避下的监控。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦控制协议和监控的可靠性；偏好拟合归 preference-reward-alignment，普通 agent 能力评测归 agent-env-benchmark。\n可考虑的验证维度：明确行为判据、受控环境、监控规避测试、误报与漏报、审查预算和任务效用。",
+      "generation_focus": [
+        "自主 AI 的控制、欺骗行为测量和对抗规避下的监控"
+      ],
+      "why_for_generation": "监控对象可能策略性改变行为，部署控制不能只由普通任务准确率代表。",
+      "scope_boundary": "聚焦控制协议和监控的可靠性；偏好拟合归 preference-reward-alignment，普通 agent 能力评测归 agent-env-benchmark。",
+      "validation_focus": "明确行为判据、受控环境、监控规避测试、误报与漏报、审查预算和任务效用",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "材料较少，后续需补充检索；不视为低价值",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "ai-control-deception",
+            "name": "AI 控制与欺骗性失准监控",
+            "problems": 3,
+            "insights": 21,
+            "papers": 89,
+            "source_cards": 89
+          }
+        ],
+        "counts": {
+          "problems": 3,
+          "insights": 21,
+          "papers": 89,
+          "source_cards": 89
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "2b1c57ecdbfbe03d4115e35f1a1a02dec07c835d92582634f44f950bab0689f3"
+    },
+    {
+      "id": "llm-evolutionary-heuristic-design",
+      "name": "LLM 引导的启发式与程序进化",
+      "native_name": "LLM 引导的启发式与程序进化",
+      "category": "算法发现",
+      "prompt": "研究领域：LLM 引导的启发式与程序进化。\n研究范围：利用语言模型和执行反馈进行算法、程序与启发式的演化搜索。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：需以可执行候选及适应度搜索为核心；仓库问题修复归 swe-agent，固定算子实现优化归 dl-compilers-kernels。\n可考虑的验证维度：未见实例、等适应度评估预算、简单采样和经典搜索基线及生成程序可靠性。",
+      "generation_focus": [
+        "利用语言模型和执行反馈进行算法、程序与启发式的演化搜索"
+      ],
+      "why_for_generation": "算法发现可依赖外部适应度检验，研究对象是搜索新算法而非完成既有代码修改。",
+      "scope_boundary": "需以可执行候选及适应度搜索为核心；仓库问题修复归 swe-agent，固定算子实现优化归 dl-compilers-kernels。",
+      "validation_focus": "未见实例、等适应度评估预算、简单采样和经典搜索基线及生成程序可靠性",
+      "selection_class": "recon_native_reviewed",
+      "decision": "retain",
+      "coverage_note": "材料较少，后续需补充检索；不视为低价值",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "llm-evolutionary-heuristic-design",
+            "name": "LLM 引导的启发式与程序进化",
+            "problems": 1,
+            "insights": 5,
+            "papers": 50,
+            "source_cards": 50
+          }
+        ],
+        "counts": {
+          "problems": 1,
+          "insights": 5,
+          "papers": 50,
+          "source_cards": 50
+        },
+        "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+      },
+      "source_export_sha256": "9e342c889bdc4461ca4e406ccee55cf652fc676732fd13aaa0acda9ed79ebd5a"
+    },
+    {
+      "id": "efficient_inference_long_context_serving",
+      "name": "LLM Efficiency：高效推理、长上下文与模型 serving",
+      "category": "效率与系统",
+      "prompt": "研究领域：LLM Efficiency：高效推理、长上下文与模型 serving。\n研究范围：LLM 推理的端到端效率，重点包括 KV cache、长上下文高效注意力、量化与压缩、批处理与 serving 调度及其相互作用。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献应是质量约束下的端到端资源收益或跨层机制。单独改进投机解码归 speculative-decoding，多模型选择归 multi-llm-routing-ensemble，单独剪枝归 network-pruning，单算子实现归 dl-compilers-kernels；与这些机制结合时，需要说明系统交互带来的独立研究问题，避免重复生成同一 idea。\n可考虑的验证维度：在质量约束与匹配硬件、请求负载下，衡量首 token 延迟、逐 token 延迟、尾延迟、吞吐、峰值显存和单位请求成本；验证不同上下文长度与并发下的收益及退化。",
+      "generation_focus": [
+        "LLM 推理的端到端效率，重点包括 KV cache、长上下文高效注意力、量化与压缩、批处理与 serving 调度及其相互作用"
+      ],
+      "why_for_generation": "用户要求保留一个独立 Efficiency 综合领域，研究单一细分机制无法覆盖的质量、显存、延迟与服务负载相互作用。",
+      "scope_boundary": "核心贡献应是质量约束下的端到端资源收益或跨层机制。单独改进投机解码归 speculative-decoding，多模型选择归 multi-llm-routing-ensemble，单独剪枝归 network-pruning，单算子实现归 dl-compilers-kernels；与这些机制结合时，需要说明系统交互带来的独立研究问题，避免重复生成同一 idea。",
+      "validation_focus": "在质量约束与匹配硬件、请求负载下，衡量首 token 延迟、逐 token 延迟、尾延迟、吞吐、峰值显存和单位请求成本；验证不同上下文长度与并发下的收益及退化",
+      "selection_class": "user_requested_composite",
+      "decision": "add",
+      "coverage_note": "由四个已核验的 LitGraph 原生领域组成；任务 ID 为本地综合任务 ID，不冒充单个原生领域。完整导出不代表新颖性。",
+      "litgraph_support": {
+        "subdomains": [
+          {
+            "id": "efficient-long-context-attention",
+            "name": "长上下文高效注意力：稀疏保留、线性化与可证明近似",
+            "problems": 103,
+            "insights": 134,
+            "papers": 1163,
+            "source_cards": 1161
+          },
+          {
+            "id": "neural-quantization",
+            "name": "神经网络量化",
+            "problems": 49,
+            "insights": 119,
+            "papers": 979,
+            "source_cards": 978
+          },
+          {
+            "id": "efficient-model-compression",
+            "name": "深度模型压缩与高效训练推理",
+            "problems": 107,
+            "insights": 105,
+            "papers": 607,
+            "source_cards": 607
+          },
+          {
+            "id": "llm-serving",
+            "name": "大模型推理服务系统 / AI 能耗与碳排放的度量与核算",
+            "problems": 23,
+            "insights": 43,
+            "papers": 218,
+            "source_cards": 218
+          }
+        ],
+        "counts": {
+          "insights": 401,
+          "problems": 282
+        },
+        "aggregation_note": "四个原生领域的完整 insights/problems 按条目 ID 合并；同一论文可能支持多个条目，不将论文计数简单相加。"
+      },
+      "source_export_sha256": "b38332bfec506bf202eaf76ceea62bc27e390c5868445af6ebb5652fcd45121d"
+    }
+  ],
+  "excluded_from_primary_set": [],
+  "generation_suite": {
+    "cards_per_domain": 5,
+    "total_cards_target": 190,
+    "conditions": 6,
+    "total_cards_all_conditions": 1140,
+    "aggregation": "同领域同任务比较，按领域等权汇总；领域有交叉，不视为完全独立样本。"
+  },
+  "generation_enabled": false,
+  "scoring_enabled": false,
+  "updated_at": "2026-11-05T05:57:22.929107+00:00"
+}

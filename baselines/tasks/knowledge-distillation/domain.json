@@ -1,0 +1,36 @@
+{
+  "id": "knowledge-distillation",
+  "name": "知识蒸馏与紧凑学生模型构建",
+  "native_name": "知识蒸馏与紧凑学生模型构建",
+  "category": "学习与适配",
+  "prompt": "研究领域：知识蒸馏与紧凑学生模型构建。\n研究范围：教师知识向紧凑学生模型的迁移与监督选择。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：需要明确教师—学生知识传递机制；无教师删参数归 network-pruning，只改变更新子空间归 peft-structural-sparse-adaptation。\n可考虑的验证维度：同训练数据与预算的无蒸馏基线、学生实际效率、教师错误继承和跨分布表现。",
+  "generation_focus": [
+    "教师知识向紧凑学生模型的迁移与监督选择"
+  ],
+  "why_for_generation": "教师信号可靠性、跨架构差异和学生容量决定迁移收益。",
+  "scope_boundary": "需要明确教师—学生知识传递机制；无教师删参数归 network-pruning，只改变更新子空间归 peft-structural-sparse-adaptation。",
+  "validation_focus": "同训练数据与预算的无蒸馏基线、学生实际效率、教师错误继承和跨分布表现",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "完整导出，数量不代表新颖性",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "knowledge-distillation",
+        "name": "知识蒸馏与紧凑学生模型构建",
+        "problems": 175,
+        "insights": 191,
+        "papers": 1063,
+        "source_cards": 1062
+      }
+    ],
+    "counts": {
+      "problems": 175,
+      "insights": 191,
+      "papers": 1063,
+      "source_cards": 1062
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "785ca39782799c04c3033da446e040ec59b63d3ea1e5ba6b8791cc4c1420ab01"
+}

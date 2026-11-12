@@ -1,0 +1,17 @@
+{
+  "id": "consistent-local-editing",
+  "name": "局部一致编辑：二维图像与已重建三维场景",
+  "ideas": 5,
+  "condition": "current-six-v4-light-multi-full",
+  "agent": "light-multi",
+  "information": "full",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "litgraph_domain_ids": [
+    "consistent-local-editing"
+  ],
+  "full_initial_context": true,
+  "litgraph_api": true,
+  "public_web_allowed": true,
+  "generation_enabled": true,
+  "status": "prepared"
+}

@@ -1,0 +1,4 @@
+Research area: {domain_name} ({domain_id}).
+Today is {today}; only literature published before {cutoff} is available.
+
+Propose {if_single:one new research idea}{if_multi:{k} new research ideas} that you judge most likely to appear in the next few months and to grow into a sustained research line in this area: {if_multi:each }the core contribution of a paper (a new mechanism, method or problem setting), not an incremental improvement, a survey or an added benchmark. Be specific about the problem, the core mechanism and why it is feasible now given the pre-cutoff literature.{if_multi: Rank the ideas from most to least likely to appear (idea 1 is the most likely); they must differ substantively.}

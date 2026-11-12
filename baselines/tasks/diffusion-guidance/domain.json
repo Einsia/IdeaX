@@ -1,0 +1,36 @@
+{
+  "id": "diffusion-guidance",
+  "name": "扩散模型的条件引导",
+  "native_name": "扩散模型的条件引导",
+  "category": "生成与三维视觉",
+  "prompt": "研究领域：扩散模型的条件引导。\n研究范围：扩散和流模型的条件引导、目标分布与采样轨迹控制。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献是引导规则或目标分布控制；特定图像区域的保持与编辑归 consistent-local-editing。\n可考虑的验证维度：条件遵循、质量、多样性、实际采样成本与分布偏差。",
+  "generation_focus": [
+    "扩散和流模型的条件引导、目标分布与采样轨迹控制"
+  ],
+  "why_for_generation": "条件遵循与分布覆盖之间的偏差有清楚的采样机制与可检验权衡。",
+  "scope_boundary": "核心贡献是引导规则或目标分布控制；特定图像区域的保持与编辑归 consistent-local-editing。",
+  "validation_focus": "条件遵循、质量、多样性、实际采样成本与分布偏差",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "完整导出，数量不代表新颖性",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "diffusion-guidance",
+        "name": "扩散模型的条件引导",
+        "problems": 42,
+        "insights": 36,
+        "papers": 194,
+        "source_cards": 194
+      }
+    ],
+    "counts": {
+      "problems": 42,
+      "insights": 36,
+      "papers": 194,
+      "source_cards": 194
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "15b93cfce959920712736a9af99680bf575e776c05ed1900c1da76dc63c53488"
+}

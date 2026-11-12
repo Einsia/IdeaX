@@ -1,0 +1,17 @@
+{
+  "id": "generative-policies",
+  "name": "以序列和生成模型做决策",
+  "ideas": 5,
+  "condition": "current-six-v4-single-full",
+  "agent": "single",
+  "information": "full",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "litgraph_domain_ids": [
+    "generative-policies"
+  ],
+  "full_initial_context": true,
+  "litgraph_api": true,
+  "public_web_allowed": true,
+  "generation_enabled": true,
+  "status": "prepared"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "process-verification-search",
+  "name": "过程验证与测试时搜索",
+  "native_name": "过程验证与测试时搜索",
+  "category": "推理",
+  "prompt": "研究领域：过程验证与测试时搜索。\n研究范围：中间推理步骤的验证、候选路径搜索与错误回退。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献是过程评价或搜索算子；只决定算多久归 adaptive-compute-termination，改变隐状态表示归 latent-reasoning。\n可考虑的验证维度：搜索预算匹配、步骤错误定位、验证器失效条件与最终答案准确率。",
+  "generation_focus": [
+    "中间推理步骤的验证、候选路径搜索与错误回退"
+  ],
+  "why_for_generation": "过程信号是否真正改善最终答案可以通过固定预算和错误定位实验验证。",
+  "scope_boundary": "核心贡献是过程评价或搜索算子；只决定算多久归 adaptive-compute-termination，改变隐状态表示归 latent-reasoning。",
+  "validation_focus": "搜索预算匹配、步骤错误定位、验证器失效条件与最终答案准确率",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "完整导出，数量不代表新颖性",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "process-verification-search",
+        "name": "过程验证与测试时搜索",
+        "problems": 49,
+        "insights": 35,
+        "papers": 454,
+        "source_cards": 453
+      }
+    ],
+    "counts": {
+      "problems": 49,
+      "insights": 35,
+      "papers": 454,
+      "source_cards": 453
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "5b01922d3c69b6a015dad54a03677bbc3fa6dff1fd7a6936ebe4aaf6d132bfa0"
+}

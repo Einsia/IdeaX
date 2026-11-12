@@ -1,0 +1,36 @@
+{
+  "id": "preference-reward-alignment",
+  "name": "生成模型的偏好与奖励对齐（语言模型 RLHF/DPO 与扩散模型微调）",
+  "native_name": "生成模型的偏好与奖励对齐（语言模型 RLHF/DPO 与扩散模型微调）",
+  "category": "对齐与安全",
+  "prompt": "研究领域：生成模型的偏好与奖励对齐（语言模型 RLHF/DPO 与扩散模型微调）。\n研究范围：生成模型偏好数据、奖励学习与偏好优化。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦偏好来源和优化机制；客观可验证文本奖励归 rlvr-reasoning，部署期对抗监控归 ai-control-deception。\n可考虑的验证维度：独立偏好判断、奖励过优化、群体差异、质量/多样性权衡和分布外评估。",
+  "generation_focus": [
+    "生成模型偏好数据、奖励学习与偏好优化"
+  ],
+  "why_for_generation": "主观偏好噪声、群体差异和代理奖励失配区别于客观正确性奖励。",
+  "scope_boundary": "聚焦偏好来源和优化机制；客观可验证文本奖励归 rlvr-reasoning，部署期对抗监控归 ai-control-deception。",
+  "validation_focus": "独立偏好判断、奖励过优化、群体差异、质量/多样性权衡和分布外评估",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "完整导出，数量不代表新颖性",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "preference-reward-alignment",
+        "name": "生成模型的偏好与奖励对齐（语言模型 RLHF/DPO 与扩散模型微调）",
+        "problems": 133,
+        "insights": 81,
+        "papers": 1118,
+        "source_cards": 1118
+      }
+    ],
+    "counts": {
+      "problems": 133,
+      "insights": 81,
+      "papers": 1118,
+      "source_cards": 1118
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "616f9f0f97e3092a61ce6d08b0aff0a81d6159251a745a84fde4d6d7ca0febb5"
+}

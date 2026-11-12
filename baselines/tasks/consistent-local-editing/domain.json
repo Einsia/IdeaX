@@ -1,0 +1,36 @@
+{
+  "id": "consistent-local-editing",
+  "name": "局部一致编辑：二维图像与已重建三维场景",
+  "native_name": "局部一致编辑：二维图像与已重建三维场景",
+  "category": "生成与三维视觉",
+  "prompt": "研究领域：局部一致编辑：二维图像与已重建三维场景。\n研究范围：二维图像和已重建三维场景的局部可控编辑与非目标区域保持。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦编辑后的局部保持和一致性；从观测恢复原场景归 dynamic-scene-reconstruction，通用采样引导归 diffusion-guidance。\n可考虑的验证维度：目标修改成功率、非目标区域变化、身份/结构保持及多视角一致性。",
+  "generation_focus": [
+    "二维图像和已重建三维场景的局部可控编辑与非目标区域保持"
+  ],
+  "why_for_generation": "修改目标同时保持身份、结构和背景，是清楚且应用相关的约束问题。",
+  "scope_boundary": "聚焦编辑后的局部保持和一致性；从观测恢复原场景归 dynamic-scene-reconstruction，通用采样引导归 diffusion-guidance。",
+  "validation_focus": "目标修改成功率、非目标区域变化、身份/结构保持及多视角一致性",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "完整导出，数量不代表新颖性",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "consistent-local-editing",
+        "name": "局部一致编辑：二维图像与已重建三维场景",
+        "problems": 101,
+        "insights": 70,
+        "papers": 934,
+        "source_cards": 934
+      }
+    ],
+    "counts": {
+      "problems": 101,
+      "insights": 70,
+      "papers": 934,
+      "source_cards": 934
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "a703abc45cead2c930966a706bafcf28b705f136376e407cae45cdc1bf9cfeff"
+}

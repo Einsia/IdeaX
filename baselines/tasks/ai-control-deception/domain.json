@@ -1,0 +1,36 @@
+{
+  "id": "ai-control-deception",
+  "name": "AI 控制与欺骗性失准监控",
+  "native_name": "AI 控制与欺骗性失准监控",
+  "category": "对齐与安全",
+  "prompt": "研究领域：AI 控制与欺骗性失准监控。\n研究范围：自主 AI 的控制、欺骗行为测量和对抗规避下的监控。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：聚焦控制协议和监控的可靠性；偏好拟合归 preference-reward-alignment，普通 agent 能力评测归 agent-env-benchmark。\n可考虑的验证维度：明确行为判据、受控环境、监控规避测试、误报与漏报、审查预算和任务效用。",
+  "generation_focus": [
+    "自主 AI 的控制、欺骗行为测量和对抗规避下的监控"
+  ],
+  "why_for_generation": "监控对象可能策略性改变行为，部署控制不能只由普通任务准确率代表。",
+  "scope_boundary": "聚焦控制协议和监控的可靠性；偏好拟合归 preference-reward-alignment，普通 agent 能力评测归 agent-env-benchmark。",
+  "validation_focus": "明确行为判据、受控环境、监控规避测试、误报与漏报、审查预算和任务效用",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "材料较少，后续需补充检索；不视为低价值",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "ai-control-deception",
+        "name": "AI 控制与欺骗性失准监控",
+        "problems": 3,
+        "insights": 21,
+        "papers": 89,
+        "source_cards": 89
+      }
+    ],
+    "counts": {
+      "problems": 3,
+      "insights": 21,
+      "papers": 89,
+      "source_cards": 89
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "2b1c57ecdbfbe03d4115e35f1a1a02dec07c835d92582634f44f950bab0689f3"
+}

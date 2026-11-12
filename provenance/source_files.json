@@ -1,0 +1,3103 @@
+[
+  {
+    "file": "baselines/coi/LICENSE",
+    "source": "upstream/CoI-Agent/LICENSE",
+    "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "release_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/normalize.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-recovery-v2/coi_normalize.py",
+    "source_sha256": "7be7957144b38250860fcf033b8eed9d929f140f8564f87057184d94715feea0",
+    "release_sha256": "7be7957144b38250860fcf033b8eed9d929f140f8564f87057184d94715feea0",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/LLM.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/LLM.py",
+    "source_sha256": "98c57c78bedc6b3539db74386952a6885d53428311b18df6f78e80cda26854d2",
+    "release_sha256": "98c57c78bedc6b3539db74386952a6885d53428311b18df6f78e80cda26854d2",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/LLM_anthropic.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/LLM_anthropic.py",
+    "source_sha256": "8c5e9fce399e3166165cd4b932fb5999babf2ed2003d52d4f6b2afd8ac5d4753",
+    "release_sha256": "8c5e9fce399e3166165cd4b932fb5999babf2ed2003d52d4f6b2afd8ac5d4753",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/__init__.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/agents.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/agents.py",
+    "source_sha256": "cddab5c95b80510ad94e370272a92c16b0fae30a3f56ea4c01e86762a7620bf6",
+    "release_sha256": "cddab5c95b80510ad94e370272a92c16b0fae30a3f56ea4c01e86762a7620bf6",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/chain_integrity.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/chain_integrity.py",
+    "source_sha256": "0c12700013ed630a0fcd9c459449e04af39786d4f9a92445663ec8407f0b7999",
+    "release_sha256": "0c12700013ed630a0fcd9c459449e04af39786d4f9a92445663ec8407f0b7999",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/checkpoints.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/checkpoints.py",
+    "source_sha256": "3ccfe24bc74c565c6435ea0fc2843d418c0a7dc1ece71cb38cc82c0cecd89280",
+    "release_sha256": "3ccfe24bc74c565c6435ea0fc2843d418c0a7dc1ece71cb38cc82c0cecd89280",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/main.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/main.py",
+    "source_sha256": "67e4095f67e6aae9e6dee2f9936e2f4d7775041260ec29aa6d58b3a413c07694",
+    "release_sha256": "67e4095f67e6aae9e6dee2f9936e2f4d7775041260ec29aa6d58b3a413c07694",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/prompts/__init__.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/prompts/__init__.py",
+    "source_sha256": "22e4af8d85c2147c6457d4a4c454076b5b1f9ef99c3629a674b76b5b722ca2eb",
+    "release_sha256": "22e4af8d85c2147c6457d4a4c454076b5b1f9ef99c3629a674b76b5b722ca2eb",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/prompts/deep_research_agent_prompts.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/prompts/deep_research_agent_prompts.py",
+    "source_sha256": "e0a0e439b8819545a476b528fd59771aec57a5b8c9e80961b923c8e4435c8884",
+    "release_sha256": "e0a0e439b8819545a476b528fd59771aec57a5b8c9e80961b923c8e4435c8884",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/prompts/juder_prompts.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/prompts/juder_prompts.py",
+    "source_sha256": "397e60aff20ce975c51af6fc756fd4f93f6634dd6b9a64ff7984abd2845d91f1",
+    "release_sha256": "397e60aff20ce975c51af6fc756fd4f93f6634dd6b9a64ff7984abd2845d91f1",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/prompts/review_agent_prompts.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/prompts/review_agent_prompts.py",
+    "source_sha256": "6b68538a10b511cb18b7f86453ab2179d219ba414646c88ecc2614afb83c7cc1",
+    "release_sha256": "6b68538a10b511cb18b7f86453ab2179d219ba414646c88ecc2614afb83c7cc1",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/run_coi_batch.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/run_coi_batch.py",
+    "source_sha256": "aa8d18d717d59be70349ee9d3889aa6acf9ecf9ec0af52c4f7de5613582ff1f4",
+    "release_sha256": "aa8d18d717d59be70349ee9d3889aa6acf9ecf9ec0af52c4f7de5613582ff1f4",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/searcher/__init__.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/searcher/__init__.py",
+    "source_sha256": "2058931317f193934ec33a39a3eb2e57380c477094226d04277671e6fdee41f1",
+    "release_sha256": "2058931317f193934ec33a39a3eb2e57380c477094226d04277671e6fdee41f1",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/searcher/sementic_search.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/searcher/sementic_search.py",
+    "source_sha256": "ab05157cc40c9e45e911368a244128ba1f04e04dd903d5b97de64ec2d4da6a06",
+    "release_sha256": "ab05157cc40c9e45e911368a244128ba1f04e04dd903d5b97de64ec2d4da6a06",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/sitecustomize.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/sitecustomize.py",
+    "source_sha256": "2a72285be039d968b400e4f7cd1812607aad9685a13980623bcf81efa5071116",
+    "release_sha256": "2a72285be039d968b400e4f7cd1812607aad9685a13980623bcf81efa5071116",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/coi/source/utils.py",
+    "source": "benchmarks/baselines-full38-20261107/sources-coi-chain-recovery-v4/utils.py",
+    "source_sha256": "024325f527b02af96ea4d7d476ed3c426633c0a87158a7b40ebfcdd474e4ce44",
+    "release_sha256": "024325f527b02af96ea4d7d476ed3c426633c0a87158a7b40ebfcdd474e4ce44",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/LICENSE",
+    "source": "upstream/IdeaScientist/LICENSE",
+    "source_sha256": "6c239f2fb162fe71782d366a63161f694a624c4e0ecc21154c662a37c8fb490a",
+    "release_sha256": "6c239f2fb162fe71782d366a63161f694a624c4e0ecc21154c662a37c8fb490a",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/README.md",
+    "source": "upstream/IdeaScientist/README.md",
+    "source_sha256": "8909093c263c3d2f9bca902dc5ebfdde3bd860b09acc40622ca2d12b212b7ef2",
+    "release_sha256": "8909093c263c3d2f9bca902dc5ebfdde3bd860b09acc40622ca2d12b212b7ef2",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/__init__.py",
+    "source_sha256": "27e8febb48ada44153ea2add9969a2c50a9831a74d9755fdd53c549a888b1cc2",
+    "release_sha256": "27e8febb48ada44153ea2add9969a2c50a9831a74d9755fdd53c549a888b1cc2",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/__init__.py",
+    "source_sha256": "869f8c49fb146aadc13ad1929457635ae3df90f792d3cee8a5013b010e0f2ff9",
+    "release_sha256": "869f8c49fb146aadc13ad1929457635ae3df90f792d3cee8a5013b010e0f2ff9",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/aggregate.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/aggregate.py",
+    "source_sha256": "2ee60ad2f21f0de349e35913b9f37cbbf1b3b10dd36bf5b716b7a92cc10a2a77",
+    "release_sha256": "2ee60ad2f21f0de349e35913b9f37cbbf1b3b10dd36bf5b716b7a92cc10a2a77",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/blocks.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/blocks.py",
+    "source_sha256": "cef6452f54bfe9d546afb77bfadaefbca2cced2ddb50059211cd7303566f9a3f",
+    "release_sha256": "cef6452f54bfe9d546afb77bfadaefbca2cced2ddb50059211cd7303566f9a3f",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/citations.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/citations.py",
+    "source_sha256": "128a3e85a96be62e7b7f69e0469f36b7d5cdcfbaf4b655840a11e687ab74ea00",
+    "release_sha256": "128a3e85a96be62e7b7f69e0469f36b7d5cdcfbaf4b655840a11e687ab74ea00",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/evaluate.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/evaluate.py",
+    "source_sha256": "10e964ebbb35b9d129e21fa5d56b730d833a26592f1392882a205eb43ed55116",
+    "release_sha256": "10e964ebbb35b9d129e21fa5d56b730d833a26592f1392882a205eb43ed55116",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/llm_judge.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/llm_judge.py",
+    "source_sha256": "2f541087caff4728206e8f34970cb32988ee6fece33b35244767e47047f185b9",
+    "release_sha256": "2f541087caff4728206e8f34970cb32988ee6fece33b35244767e47047f185b9",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/loaders.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/loaders.py",
+    "source_sha256": "6009261a743a1608cb7fcec43225c72f34a34dd5d901cbe7621e8066423234f9",
+    "release_sha256": "6009261a743a1608cb7fcec43225c72f34a34dd5d901cbe7621e8066423234f9",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/novelty.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/novelty.py",
+    "source_sha256": "f2980938bb4ec7404b8cfbe04658db5f88f3625701ba838fb06b398dca8d8158",
+    "release_sha256": "f2980938bb4ec7404b8cfbe04658db5f88f3625701ba838fb06b398dca8d8158",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/novelty_aspects.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/novelty_aspects.py",
+    "source_sha256": "9df9f2270050bfa73be69e19f1b235553b15da0113754513fb4b74d7a8cdd873",
+    "release_sha256": "9df9f2270050bfa73be69e19f1b235553b15da0113754513fb4b74d7a8cdd873",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/prompts.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/prompts.py",
+    "source_sha256": "60f6e3cfae2276eb5d5447003aeebc844d654a551885f0f0c9ea0d2314f0968c",
+    "release_sha256": "60f6e3cfae2276eb5d5447003aeebc844d654a551885f0f0c9ea0d2314f0968c",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/quality.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/quality.py",
+    "source_sha256": "ec824b93d2cd62b71afe7d2596eeeb25e4c5441c32d1e9d39e752f2e830373eb",
+    "release_sha256": "ec824b93d2cd62b71afe7d2596eeeb25e4c5441c32d1e9d39e752f2e830373eb",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/reference_grounded.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/reference_grounded.py",
+    "source_sha256": "b8e7b6194f3e3b2be0c321dcbfb01bf66e08362213935ef7ef5e45da873b2623",
+    "release_sha256": "b8e7b6194f3e3b2be0c321dcbfb01bf66e08362213935ef7ef5e45da873b2623",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/render.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/render.py",
+    "source_sha256": "d73431af73de1c28127a705d008f4b0d1f4b3413f6b314c6c9c84f7efcd0017f",
+    "release_sha256": "d73431af73de1c28127a705d008f4b0d1f4b3413f6b314c6c9c84f7efcd0017f",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/evaluation/similar_papers.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/evaluation/similar_papers.py",
+    "source_sha256": "97a284a9acfb9aaed584354e20bed536e4329731349dbf4770e4e9a157924384",
+    "release_sha256": "97a284a9acfb9aaed584354e20bed536e4329731349dbf4770e4e9a157924384",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/__init__.py",
+    "source_sha256": "13502c813a987479010450e6209b4fdc93bee7667fdb784a709a56d0df612421",
+    "release_sha256": "13502c813a987479010450e6209b4fdc93bee7667fdb784a709a56d0df612421",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/client.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/client.py",
+    "source_sha256": "ee8bb4227446c6847d1bae8aad8518eb169bf58a381b38dac3b12cb72a408afb",
+    "release_sha256": "ee8bb4227446c6847d1bae8aad8518eb169bf58a381b38dac3b12cb72a408afb",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/corpus.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/corpus.py",
+    "source_sha256": "3df0e6c0d74852b060c675eff095c05fa04c57b1e2d1d9516d18e53a6ce478ce",
+    "release_sha256": "3df0e6c0d74852b060c675eff095c05fa04c57b1e2d1d9516d18e53a6ce478ce",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/embedding_spaces.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/embedding_spaces.py",
+    "source_sha256": "c3113b2662ee52478c6281a61e392e9dc1d90a8b66fe3c3459448d8a9f489e4f",
+    "release_sha256": "c3113b2662ee52478c6281a61e392e9dc1d90a8b66fe3c3459448d8a9f489e4f",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/orchestrator.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/orchestrator.py",
+    "source_sha256": "42a50b0b205a8be546bc2bd3ff6a519f31c74b71922f75e085aa881fc95c7217",
+    "release_sha256": "42a50b0b205a8be546bc2bd3ff6a519f31c74b71922f75e085aa881fc95c7217",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/public_reader.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/public_reader.py",
+    "source_sha256": "4a201bc93cc561287d94ff9c56c9babc8bf44fa6e73f4800a2be5f22e5681730",
+    "release_sha256": "4a201bc93cc561287d94ff9c56c9babc8bf44fa6e73f4800a2be5f22e5681730",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/reader_batch.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/reader_batch.py",
+    "source_sha256": "626ae1dde9fbc57f1b448a76e96358adecb82238e88ca9744b1003ad7bceef1b",
+    "release_sha256": "626ae1dde9fbc57f1b448a76e96358adecb82238e88ca9744b1003ad7bceef1b",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/resilience.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/resilience.py",
+    "source_sha256": "42b473625e772af916d581d9b3c1554596134be26283620b56c087173880f353",
+    "release_sha256": "42b473625e772af916d581d9b3c1554596134be26283620b56c087173880f353",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/roles.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/roles.py",
+    "source_sha256": "3fb5384b373149370c7a3639eb5225d582f91642cf3ec746d7576ad0ac0ab157",
+    "release_sha256": "3fb5384b373149370c7a3639eb5225d582f91642cf3ec746d7576ad0ac0ab157",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/runlog.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/runlog.py",
+    "source_sha256": "1c74d1ad2a28681878bfdbd805284e9760941da559badb0d686365944a4b3548",
+    "release_sha256": "1c74d1ad2a28681878bfdbd805284e9760941da559badb0d686365944a4b3548",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/runner.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/runner.py",
+    "source_sha256": "80d09a909601b376d794ebed1df781d1a62e7b4647041ae5edaf276820b21064",
+    "release_sha256": "80d09a909601b376d794ebed1df781d1a62e7b4647041ae5edaf276820b21064",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/thinking.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/thinking.py",
+    "source_sha256": "93a75d16ca358758c6d8d911ff084f93919b16516409aab270bc91e9787f598c",
+    "release_sha256": "93a75d16ca358758c6d8d911ff084f93919b16516409aab270bc91e9787f598c",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/harness/tools.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/harness/tools.py",
+    "source_sha256": "3efa345cd7a498661dbfaaf4e894e61f29eac0b4903a6b2a4c9ce10aa0299483",
+    "release_sha256": "3efa345cd7a498661dbfaaf4e894e61f29eac0b4903a6b2a4c9ce10aa0299483",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/__init__.py",
+    "source_sha256": "82ad048a29db2f345ee54277a621964f33f9727c3913a09efe27a03912b18ee4",
+    "release_sha256": "82ad048a29db2f345ee54277a621964f33f9727c3913a09efe27a03912b18ee4",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/common.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/common.py",
+    "source_sha256": "b63c7ae89b63e822b6cc2dd9f1e8d91a17f3910c60784a4d5f783f6a01f7b5e4",
+    "release_sha256": "b63c7ae89b63e822b6cc2dd9f1e8d91a17f3910c60784a4d5f783f6a01f7b5e4",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/gap_finder/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/gap_finder/__init__.py",
+    "source_sha256": "776821f8a097f5c5ef6a9a8540b5613e3dd53188ef6091dd0fb94b1b56cff4c2",
+    "release_sha256": "776821f8a097f5c5ef6a9a8540b5613e3dd53188ef6091dd0fb94b1b56cff4c2",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/gap_finder/parser.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/gap_finder/parser.py",
+    "source_sha256": "888c9327a3e944eeb9c012e8abea4d4b1dad2a572337076e6f2728675251f58f",
+    "release_sha256": "888c9327a3e944eeb9c012e8abea4d4b1dad2a572337076e6f2728675251f58f",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/gap_finder/reference_rubric.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/gap_finder/reference_rubric.py",
+    "source_sha256": "050f3880109036b33cea8816c6b497f74e5beb4a63e77d7c219f48a36ff42011",
+    "release_sha256": "050f3880109036b33cea8816c6b497f74e5beb4a63e77d7c219f48a36ff42011",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/gap_finder/reward.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/gap_finder/reward.py",
+    "source_sha256": "ad1fecffc14762d5b0866ffe873d3cef095ede48b5bbe35a657a42938c82657e",
+    "release_sha256": "ad1fecffc14762d5b0866ffe873d3cef095ede48b5bbe35a657a42938c82657e",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/gap_finder/rubric.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/gap_finder/rubric.py",
+    "source_sha256": "3a1b8b9db76aaa8b881a2805f80c93a645b9f55f4d4be59e31a3729195e51623",
+    "release_sha256": "3a1b8b9db76aaa8b881a2805f80c93a645b9f55f4d4be59e31a3729195e51623",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/innovator/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/innovator/__init__.py",
+    "source_sha256": "ff71db27a2d9d7e83c42cfc3df8ccbc837bfe8cc60e9bcacd9a379902cf96e9c",
+    "release_sha256": "ff71db27a2d9d7e83c42cfc3df8ccbc837bfe8cc60e9bcacd9a379902cf96e9c",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/innovator/parser.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/innovator/parser.py",
+    "source_sha256": "f4fa8a6a666bad98a3975ca50ebdf58a1e9ecbd00e89ed9a5ece7fdf229fbb09",
+    "release_sha256": "f4fa8a6a666bad98a3975ca50ebdf58a1e9ecbd00e89ed9a5ece7fdf229fbb09",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/innovator/reference_rubric.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/innovator/reference_rubric.py",
+    "source_sha256": "b3240f7ca8afacda97cccb0b1dd07af30cfe908e2ace0b7c84a5d7896e79f85d",
+    "release_sha256": "b3240f7ca8afacda97cccb0b1dd07af30cfe908e2ace0b7c84a5d7896e79f85d",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/innovator/reward.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/innovator/reward.py",
+    "source_sha256": "69c0fc7303ea44a3615874c23ce241d495f9f3d225a2e6283e33fab4575b7800",
+    "release_sha256": "69c0fc7303ea44a3615874c23ce241d495f9f3d225a2e6283e33fab4575b7800",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/innovator/rubric.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/innovator/rubric.py",
+    "source_sha256": "dced23774036eeaf5f420bafb24bb7e2ef5352228ba20d383b407f415a5d9ddb",
+    "release_sha256": "dced23774036eeaf5f420bafb24bb7e2ef5352228ba20d383b407f415a5d9ddb",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/judge.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/judge.py",
+    "source_sha256": "4d650bf003cb7c7a5d5201bb18ec21d3b83d6424bf036720eda80c35c2918f55",
+    "release_sha256": "4d650bf003cb7c7a5d5201bb18ec21d3b83d6424bf036720eda80c35c2918f55",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/report_writer/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/report_writer/__init__.py",
+    "source_sha256": "3f42792df31dd184eebd2ef64159e842a9449b7fbb6c48803dbf89e6afefa649",
+    "release_sha256": "3f42792df31dd184eebd2ef64159e842a9449b7fbb6c48803dbf89e6afefa649",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/report_writer/parser.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/report_writer/parser.py",
+    "source_sha256": "17216f5b1d2b677094e1d7117b3d1818cbc97f1b1acc438ae45d53f627e1fbde",
+    "release_sha256": "17216f5b1d2b677094e1d7117b3d1818cbc97f1b1acc438ae45d53f627e1fbde",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/report_writer/reference_rubric.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/report_writer/reference_rubric.py",
+    "source_sha256": "e153019ea2c9995dc59199e863bed4595ed71c8a30622bb021b21c90457bd380",
+    "release_sha256": "e153019ea2c9995dc59199e863bed4595ed71c8a30622bb021b21c90457bd380",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/report_writer/reward.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/report_writer/reward.py",
+    "source_sha256": "aee874f024b6f9d2b43263975bc91872524271493b22228c8475e6d7db8eb2b0",
+    "release_sha256": "aee874f024b6f9d2b43263975bc91872524271493b22228c8475e6d7db8eb2b0",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/rewards/report_writer/rubric.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/rewards/report_writer/rubric.py",
+    "source_sha256": "f8b4f6f241942a26a640365e5fa3a534df2c386c1a9f11b9336b0eaa58135919",
+    "release_sha256": "f8b4f6f241942a26a640365e5fa3a534df2c386c1a9f11b9336b0eaa58135919",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/serving/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/serving/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/serving/query_server.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/serving/query_server.py",
+    "source_sha256": "31a77fef6c469fd3b333b888aaf3691d057f9e5bdf3fe81a589c53355824fce7",
+    "release_sha256": "31a77fef6c469fd3b333b888aaf3691d057f9e5bdf3fe81a589c53355824fce7",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/serving/qwen3_embedder.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/serving/qwen3_embedder.py",
+    "source_sha256": "dfea324036df4d7c47d7325b03b131a58f9caef6eb2578449805c845a6c67bba",
+    "release_sha256": "dfea324036df4d7c47d7325b03b131a58f9caef6eb2578449805c845a6c67bba",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/serving/technique_index.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/serving/technique_index.py",
+    "source_sha256": "93d89c08ac5d208eb91e06b70a5fd8530a55f8a7c11a578ed8becc1546105315",
+    "release_sha256": "93d89c08ac5d208eb91e06b70a5fd8530a55f8a7c11a578ed8becc1546105315",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/serving/vault_api.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/serving/vault_api.py",
+    "source_sha256": "3481e42d7e00038f37139c3eda1f20da511c1647b25f0749e806aca697f1bf76",
+    "release_sha256": "3481e42d7e00038f37139c3eda1f20da511c1647b25f0749e806aca697f1bf76",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/training/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/training/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "omitted"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/training/data.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/training/data.py",
+    "source_sha256": "8375326e8dfefe64d060b509228eee9a1a5fc0cdf12b8214e013740dc702f956",
+    "status": "omitted"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/training/datasets/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/training/datasets/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "omitted"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/training/datasets/gap_finder.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/training/datasets/gap_finder.py",
+    "source_sha256": "eca820c77165e3fcbfe40599d287c47397ddfb1a4b9a55573adb3e780f3648e3",
+    "status": "omitted"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/training/datasets/innovator.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/training/datasets/innovator.py",
+    "source_sha256": "72e89a43762aec80857c169b84391f3af6032a2867261b31b3eb3554767687c2",
+    "status": "omitted"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/training/datasets/report_writer.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/training/datasets/report_writer.py",
+    "source_sha256": "4790ac5924c4e3a8623e2cf765b3bc802c0e33f3c07884dfa079169d2e35618c",
+    "status": "omitted"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/training/environment.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/training/environment.py",
+    "source_sha256": "41b302aa0226eb3d231424d693ead212df07b1ce1d3f33c85e1500dcbb55fde8",
+    "status": "omitted"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/training/environments.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/training/environments.py",
+    "source_sha256": "59e44d66d97ee043db31496d21d99f4989260848146677acbc5e60a7161fe69a",
+    "status": "omitted"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/training/run_grpo.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/training/run_grpo.py",
+    "source_sha256": "9ab5beded33189abf2b46edc178abf70326cb31ee46c539188e7bd7bcf1ebb1b",
+    "status": "omitted"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/training/tp_plan.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/training/tp_plan.py",
+    "source_sha256": "5f87de9495ddf1a6fccd21abd65898116e56d20d0af359304fe554dd8cc1d1dc",
+    "status": "omitted"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/utils/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/utils/__init__.py",
+    "source_sha256": "0d97f5dc5a58517838e8b793f06bdab4b0348ced779a4c93aa4ee09565cdf042",
+    "release_sha256": "0d97f5dc5a58517838e8b793f06bdab4b0348ced779a4c93aa4ee09565cdf042",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/utils/db.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/utils/db.py",
+    "source_sha256": "6a2cb5bc33a396d95659d32430288a690a277f5cc9922779a32a08b2aabcb01b",
+    "release_sha256": "6a2cb5bc33a396d95659d32430288a690a277f5cc9922779a32a08b2aabcb01b",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/utils/judge_parsing.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/utils/judge_parsing.py",
+    "source_sha256": "1a52f13f6a48869abd939cc707d1fd470c409dc9a1725b0852d8f73d2ec87729",
+    "release_sha256": "1a52f13f6a48869abd939cc707d1fd470c409dc9a1725b0852d8f73d2ec87729",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/utils/llm.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/utils/llm.py",
+    "source_sha256": "6cffdaa3c56083ce1d1fc460a0e3b63d384c1f3328c9be9fb1c69dadc7aa6a41",
+    "release_sha256": "6cffdaa3c56083ce1d1fc460a0e3b63d384c1f3328c9be9fb1c69dadc7aa6a41",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/__init__.py",
+    "source_sha256": "fbd4c153a51a23034ae16cf1be8ec25274706a5bf40a8a2195913476e6f28c86",
+    "release_sha256": "fbd4c153a51a23034ae16cf1be8ec25274706a5bf40a8a2195913476e6f28c86",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/arxiv/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/arxiv/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/arxiv/crawl.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/arxiv/crawl.py",
+    "source_sha256": "8ca59d53e481169035a2f3c93834899cd49d8f15b33efa7d841c73c3e75203ee",
+    "release_sha256": "8ca59d53e481169035a2f3c93834899cd49d8f15b33efa7d841c73c3e75203ee",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/arxiv/ingest.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/arxiv/ingest.py",
+    "source_sha256": "36f20e11d1a6568507ae1ddf1d62342ff9fe72612f987c26560f3c41fbb2b610",
+    "release_sha256": "36f20e11d1a6568507ae1ddf1d62342ff9fe72612f987c26560f3c41fbb2b610",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/citations/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/citations/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/citations/canonical.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/citations/canonical.py",
+    "source_sha256": "6344d2b4648c3bab2cb016561c4dbb9e44929a2e924164110e623914f48d217c",
+    "release_sha256": "6344d2b4648c3bab2cb016561c4dbb9e44929a2e924164110e623914f48d217c",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/citations/expand.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/citations/expand.py",
+    "source_sha256": "1e57732a6c62d90bd3bcf86d17a260aafdd2628f79f791047687c2027489da86",
+    "release_sha256": "1e57732a6c62d90bd3bcf86d17a260aafdd2628f79f791047687c2027489da86",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/citations/extract.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/citations/extract.py",
+    "source_sha256": "87202ac5413ebd374926c3678b41e0699d46670f36ef68b2b0b59fe1e6583c67",
+    "release_sha256": "87202ac5413ebd374926c3678b41e0699d46670f36ef68b2b0b59fe1e6583c67",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/citations/models.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/citations/models.py",
+    "source_sha256": "93bf076bd306bb83506844fe46fddfffb9ae786a6147ae6ba0494570794baa7a",
+    "release_sha256": "93bf076bd306bb83506844fe46fddfffb9ae786a6147ae6ba0494570794baa7a",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/citations/parse.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/citations/parse.py",
+    "source_sha256": "0e50c0a59c24b637bfd95eace9608ed47a3c618477e8e613d525866cda69823e",
+    "release_sha256": "0e50c0a59c24b637bfd95eace9608ed47a3c618477e8e613d525866cda69823e",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/decompose.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/decompose.py",
+    "source_sha256": "6f57bd6047b58b9337c0c4eb4ed4965b3cd04999ebf2d380276b7d8bf8d19994",
+    "release_sha256": "6f57bd6047b58b9337c0c4eb4ed4965b3cd04999ebf2d380276b7d8bf8d19994",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/fields.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/fields.py",
+    "source_sha256": "28e12cba6ba10417561eb667840e387649fc617586ef1be44d02d1418ea1140f",
+    "release_sha256": "28e12cba6ba10417561eb667840e387649fc617586ef1be44d02d1418ea1140f",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/index.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/index.py",
+    "source_sha256": "15c11ba784ce1d1d85278b3242639e1aa0fef53f6e2909bc7200ed4623064207",
+    "release_sha256": "15c11ba784ce1d1d85278b3242639e1aa0fef53f6e2909bc7200ed4623064207",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/references/__init__.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/references/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/references/gap_finder.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/references/gap_finder.py",
+    "source_sha256": "f5d269bb3e5702cdb57c9f11953996b503694765797baadd360997bb9b033617",
+    "release_sha256": "f5d269bb3e5702cdb57c9f11953996b503694765797baadd360997bb9b033617",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/references/gap_finder_prompts.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/references/gap_finder_prompts.py",
+    "source_sha256": "747466c3ee1193b1a905c5493e77920117d977731a63c5f763ece62c913371f5",
+    "release_sha256": "747466c3ee1193b1a905c5493e77920117d977731a63c5f763ece62c913371f5",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/references/innovator.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/references/innovator.py",
+    "source_sha256": "33099cccf04ed1d98a77b6431a5d8c1ce892b8f40f72fd4134c4912e007a5bd2",
+    "release_sha256": "33099cccf04ed1d98a77b6431a5d8c1ce892b8f40f72fd4134c4912e007a5bd2",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/references/innovator_prompts.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/references/innovator_prompts.py",
+    "source_sha256": "0033e204ce0566600bdb261c16bdc5afdeaca64c251b7570d8f93f1d614a75e7",
+    "release_sha256": "0033e204ce0566600bdb261c16bdc5afdeaca64c251b7570d8f93f1d614a75e7",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/references/report_writer.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/references/report_writer.py",
+    "source_sha256": "c0b4bff1b19aa75f25d4d07290e8a27e0f64a82d104727f1a1c7a4d58d07fcfd",
+    "release_sha256": "c0b4bff1b19aa75f25d4d07290e8a27e0f64a82d104727f1a1c7a4d58d07fcfd",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/references/report_writer_prompts.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/references/report_writer_prompts.py",
+    "source_sha256": "01c565afb3add120753875b992b3fcfcd5c27ef225e124d2428640aa3d0500fa",
+    "release_sha256": "01c565afb3add120753875b992b3fcfcd5c27ef225e124d2428640aa3d0500fa",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/schema.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/schema.py",
+    "source_sha256": "4168e03976dd0d26a2fd5fc3baef36c1491906a18d9a6626d310da589c13e407",
+    "release_sha256": "4168e03976dd0d26a2fd5fc3baef36c1491906a18d9a6626d310da589c13e407",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/splits.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/splits.py",
+    "source_sha256": "94916f462b360ae9cb72976c42bc61def5c8a6c795333742170712d47ff9371c",
+    "release_sha256": "94916f462b360ae9cb72976c42bc61def5c8a6c795333742170712d47ff9371c",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/ideascientist/vault/text.py",
+    "source": "benchmarks/baselines/ideascientist/source/ideascientist/vault/text.py",
+    "source_sha256": "9da121a87aa4a094a1785325e10a4aff95d6a6d9257a48bacb57ea96fe8e0210",
+    "release_sha256": "9da121a87aa4a094a1785325e10a4aff95d6a6d9257a48bacb57ea96fe8e0210",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/pyproject.toml",
+    "source": "upstream/IdeaScientist/pyproject.toml",
+    "source_sha256": "350092ce3d3fe13158f1940a66561ec579bc00912135b2069693294104e18e30",
+    "release_sha256": "350092ce3d3fe13158f1940a66561ec579bc00912135b2069693294104e18e30",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/scripts/import_hf_vault.py",
+    "source": "upstream/IdeaScientist/scripts/import_hf_vault.py",
+    "source_sha256": "87fe12fe8578c82cab45e9ffac8ed997f204875347bf9a9f45784cbb3113a086",
+    "release_sha256": "87fe12fe8578c82cab45e9ffac8ed997f204875347bf9a9f45784cbb3113a086",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/ideascientist/source/scripts/run_gpt_ideation.py",
+    "source": "benchmarks/baselines/ideascientist/source/scripts/run_gpt_ideation.py",
+    "source_sha256": "7f9ceebcf08e16a99477b101753f764caca61ad4dc47c0977c5046f3506457c8",
+    "release_sha256": "7f9ceebcf08e16a99477b101753f764caca61ad4dc47c0977c5046f3506457c8",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/runtime/citations.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/citations.py",
+    "source_sha256": "28872648a1b70803faebe862bbc0e7b0be606277fbf2ef9e1e960df3e25911ac",
+    "release_sha256": "28872648a1b70803faebe862bbc0e7b0be606277fbf2ef9e1e960df3e25911ac",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/runtime/coi_worker.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/coi_worker.py",
+    "source_sha256": "c777c4ed2d42aa583c5ad169b79366d08e64975544898b0efb8d3e50b474b429",
+    "release_sha256": "6963a70c8f76cbf9ca308452d5d74fd5a5053eaf3b16ce86974884e798fb60ca",
+    "status": "adapted"
+  },
+  {
+    "file": "baselines/runtime/continuation.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/continuation.py",
+    "source_sha256": "fd6812ebfeb03897077e102ce1aa55ed8de15de8f5d295c2ace36fc7f5eca533",
+    "release_sha256": "fd6812ebfeb03897077e102ce1aa55ed8de15de8f5d295c2ace36fc7f5eca533",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/runtime/continuation_runner.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/continuation_runner.py",
+    "source_sha256": "09c972d0450a355a4dfb0341a63449815722aa555e7d83ea039eb2718537b688",
+    "release_sha256": "09c972d0450a355a4dfb0341a63449815722aa555e7d83ea039eb2718537b688",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/runtime/delivery_worker.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/delivery_worker.py",
+    "source_sha256": "3bbb1401facb61f5d063283fce8716b363c0d85638b175a43776a395dc1a3574",
+    "release_sha256": "b6c1c30359410f6cc3ae0abce3c24f9ea2342f6e0a44a77011a7035b68558dc2",
+    "status": "adapted"
+  },
+  {
+    "file": "baselines/runtime/isci_delivery.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/isci_delivery.py",
+    "source_sha256": "acebf63de1f6e0ecb49b8121d1c370488443b22c88d88fdecc104b98b9b8eb46",
+    "release_sha256": "acebf63de1f6e0ecb49b8121d1c370488443b22c88d88fdecc104b98b9b8eb46",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/runtime/native_delivery.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/native_delivery.py",
+    "source_sha256": "b9971312b6448b7507371a1b3a5d0b48d483c182a1206d343c57416d19a08fed",
+    "release_sha256": "b9971312b6448b7507371a1b3a5d0b48d483c182a1206d343c57416d19a08fed",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/runtime/native_worker.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/native_worker.py",
+    "source_sha256": "41f815263508ca0dc411c9d0d6b008f060495e946b6f13a8a0ccdbad80eed2d2",
+    "release_sha256": "bb2166647f9f612c15afc27b84069335bdecffe5937f4198f2b6f1361ad088c0",
+    "status": "adapted"
+  },
+  {
+    "file": "baselines/runtime/outcomes.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/outcomes.py",
+    "source_sha256": "84c5339160650614f31ceeb6fe945f695f763b084fb52aaf33ce952ff36b325e",
+    "release_sha256": "84c5339160650614f31ceeb6fe945f695f763b084fb52aaf33ce952ff36b325e",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/runtime/replay_recovery.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/replay_recovery.py",
+    "source_sha256": "282b76e8df8ed47a4e5cc1a0093d816cac0be08e3706aaeb0c2719dbe7544377",
+    "release_sha256": "282b76e8df8ed47a4e5cc1a0093d816cac0be08e3706aaeb0c2719dbe7544377",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/runtime/retrieval_recovery.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-recovery-v3/retrieval_recovery.py",
+    "source_sha256": "a5332efe0fcbb1c5826a6b091d2ac0dd510baaf28791136771eee2e925d8bfbd",
+    "release_sha256": "0bdef7c2e27533984f25cd615441f1ab83004570fb0f53391a2ddf16c4955787",
+    "status": "adapted"
+  },
+  {
+    "file": "baselines/runtime/test_chain_recovery.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/test_chain_recovery.py",
+    "source_sha256": "e074f01e9a0e6bb52141820569af0098b33018916058e83babe2631374150bb6",
+    "release_sha256": "9795ec0989d5608329a57496a064d405804d3d7488146383fd280845033376da",
+    "status": "adapted"
+  },
+  {
+    "file": "baselines/runtime/test_matrix_citations.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/test_matrix_citations.py",
+    "source_sha256": "3da52c6debf4fbe5f4f811567a1540cee54c60386f19467e6f50375f9b1d529a",
+    "release_sha256": "3da52c6debf4fbe5f4f811567a1540cee54c60386f19467e6f50375f9b1d529a",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/runtime/test_program_arrays.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/test_program_arrays.py",
+    "source_sha256": "716c5ed65a8aa57e29374e8ab87e96079cd5c165458eca499812ea914831cfb4",
+    "release_sha256": "716c5ed65a8aa57e29374e8ab87e96079cd5c165458eca499812ea914831cfb4",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/runtime/test_recovery.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/test_recovery.py",
+    "source_sha256": "2d213ad96c36649f198ce9ce75cd696c29bf1c886a936e801782437075bb8448",
+    "release_sha256": "8bbbeba1c997ad2dae66cbc5af5f4e3a12a86290c0bf131ef8d78120e297e4fb",
+    "status": "adapted"
+  },
+  {
+    "file": "baselines/runtime/test_validation_metadata.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/test_validation_metadata.py",
+    "source_sha256": "0ae0d427a830ab2d4f2b6141a771b0723c9580c548d736f3ce0729749cd694b5",
+    "release_sha256": "0ae0d427a830ab2d4f2b6141a771b0723c9580c548d736f3ce0729749cd694b5",
+    "status": "unchanged"
+  },
+  {
+    "file": "baselines/runtime/validation_metadata.py",
+    "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/validation_metadata.py",
+    "source_sha256": "5958ae6695dd7431239205885bd8b0004ac5c3fbe50329b535e21564b5350607",
+    "release_sha256": "5958ae6695dd7431239205885bd8b0004ac5c3fbe50329b535e21564b5350607",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/data/libraries.json",
+    "source": "benchmarks/founder_bench_v1/data/libraries.json",
+    "source_sha256": "e399a533eaa942bdca58753c1a2b30ebb75867a47c383e460a8e4ba4b991977a",
+    "release_sha256": "3507e4482c03d047e8f02510f70f80a2c6e6520bdbf6801e48660ae917002a76",
+    "status": "adapted"
+  },
+  {
+    "file": "benchmarks/founder/data/plans/efficiency_per_target_plan.jsonl",
+    "source": "benchmarks/founder_bench_v1/data/plans/efficiency_per_target_plan.jsonl",
+    "source_sha256": "9793569d5c7db05fe0d01fe115f783f140b9d9b1a37520bf3ad128531ac8cb84",
+    "release_sha256": "09a5eb1b378eafe74398dfdb9066cb7d04ef80a8d4eb348642a396277896d888",
+    "status": "adapted"
+  },
+  {
+    "file": "benchmarks/founder/data/plans/main_min2_per_target_plan.jsonl",
+    "source": "benchmarks/founder_bench_v1/data/plans/main_min2_per_target_plan.jsonl",
+    "source_sha256": "06419e227156811381e738b42a8477a2c12b4d40a68d44019cce155bf0bbaa8e",
+    "release_sha256": "ca5cf445dde4191ab101bbaa8eaa34b4e20f7dbff2849fae950f65b2823fce56",
+    "status": "adapted"
+  },
+  {
+    "file": "benchmarks/founder/data/splits/tuning_tasks_22.txt",
+    "source": "benchmarks/founder_bench_v1/data/splits/tuning_tasks_22.txt",
+    "source_sha256": "827d8bf4d30377a57e42f7fa332fbcad6f028d55f8a329db21fa01384ca57754",
+    "release_sha256": "827d8bf4d30377a57e42f7fa332fbcad6f028d55f8a329db21fa01384ca57754",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/data/splits/v7r_dev_tasks_6.txt",
+    "source": "benchmarks/founder_bench_v1/data/splits/v7r_dev_tasks_6.txt",
+    "source_sha256": "0f989db9e5360ea6d643004ad8cf26b0adaa8c9a7cab856eb6b460b185a57667",
+    "release_sha256": "0f989db9e5360ea6d643004ad8cf26b0adaa8c9a7cab856eb6b460b185a57667",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/data/targets.jsonl",
+    "source": "benchmarks/founder_bench_v1/data/targets.jsonl",
+    "source_sha256": "01ee0e7e0a0873811c55b4e1ecf5d3c30efbe3003f78086755dc8cf8c871c9de",
+    "release_sha256": "01ee0e7e0a0873811c55b4e1ecf5d3c30efbe3003f78086755dc8cf8c871c9de",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/data/tasks.jsonl",
+    "source": "benchmarks/founder_bench_v1/data/tasks.jsonl",
+    "source_sha256": "e613a85d082c2b50406279553b13c531fce24807e412a1aabf6f80bb3c7bc1cd",
+    "release_sha256": "e613a85d082c2b50406279553b13c531fce24807e412a1aabf6f80bb3c7bc1cd",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/prompts/PROMPTS.md",
+    "source": "benchmarks/founder_bench_v1/prompts/PROMPTS.md",
+    "source_sha256": "4e672662c58c85c856a07b384ec8b13ce860a37231b77308d364054b74cc9ffe",
+    "release_sha256": "19bb724ac6479f6934a446b8c3418a231dd4e4f0cbe5930e2915a49b43a9cf28",
+    "status": "adapted"
+  },
+  {
+    "file": "benchmarks/founder/prompts/ideax_single_r_api.zh.txt",
+    "source": "benchmarks/founder_bench_v1/prompts/ideax_single_r_api.zh.txt",
+    "source_sha256": "161af26aef03ca21c99943545e2b4ae67030c8891e981a1b11f05371067d5152",
+    "release_sha256": "161af26aef03ca21c99943545e2b4ae67030c8891e981a1b11f05371067d5152",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/prompts/ideax_system.zh.txt",
+    "source": "benchmarks/founder_bench_v1/prompts/ideax_system.zh.txt",
+    "source_sha256": "38f67e749a8c6cf3849f72016bfb3edf651bbc9292dd343b6a4411d20a68a950",
+    "release_sha256": "38f67e749a8c6cf3849f72016bfb3edf651bbc9292dd343b6a4411d20a68a950",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/prompts/ideax_system_api.zh.txt",
+    "source": "benchmarks/founder_bench_v1/prompts/ideax_system_api.zh.txt",
+    "source_sha256": "133825f8dd16a524adbeb84bb8af46c1460a6fb57780d5a3030e46e9cc5ea64b",
+    "release_sha256": "133825f8dd16a524adbeb84bb8af46c1460a6fb57780d5a3030e46e9cc5ea64b",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/prompts/ideax_v7_recon.md",
+    "source": "benchmarks/founder_bench_v1/prompts/ideax_v7_recon.md",
+    "source_sha256": "c2370c7cd47678414bfcfa51a02f43524d4a534739ddd3b6d03a15eacb1e9665",
+    "release_sha256": "c2370c7cd47678414bfcfa51a02f43524d4a534739ddd3b6d03a15eacb1e9665",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/prompts/ideax_v7g_recon.md",
+    "source": "benchmarks/founder_bench_v1/prompts/ideax_v7g_recon.md",
+    "source_sha256": "31c363cfbc2fd7822e3f312d3bd570d34aaf022cdffe7aba9937ae307489a92c",
+    "release_sha256": "31c363cfbc2fd7822e3f312d3bd570d34aaf022cdffe7aba9937ae307489a92c",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/prompts/ideax_v7r_recon.md",
+    "source": "benchmarks/founder_bench_v1/prompts/ideax_v7r_recon.md",
+    "source_sha256": "f004cff4666e4697748649cc9524fda22d314aa6ebb1084dd45fd17d03dac5fc",
+    "release_sha256": "f004cff4666e4697748649cc9524fda22d314aa6ebb1084dd45fd17d03dac5fc",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/prompts/task.en.txt",
+    "source": "benchmarks/founder_bench_v1/prompts/task.en.txt",
+    "source_sha256": "aa79f78e77c0ddee6dae12298b3b1ab82fb3b2efba4c90255e4936c8dc31f417",
+    "release_sha256": "aa79f78e77c0ddee6dae12298b3b1ab82fb3b2efba4c90255e4936c8dc31f417",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/founder/source/export_founder_bench.py",
+    "source": "benchmarks/founder_bench_v1/code/export_founder_bench.py",
+    "source_sha256": "3b208c5dcd8c633324a6108ac16bb7fb8f163c4f994d32c61a90baff8af7f3f3",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/__init__.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/bench.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/bench.py",
+    "source_sha256": "100666873bcd48f8c96d6f6f5c3c2469857ecd595ea08b7f6ea096766100b203",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/claude.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/claude.py",
+    "source_sha256": "ae4c35a9b784ce08a36d4a2389afd24c27554b9c8c69c51679d4a235f553985a",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/diag_funnel.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/diag_funnel.py",
+    "source_sha256": "b04fd503f0f7d18425103289b8d846856daab822550805d7c453b19d48817d2a",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/generate.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/generate.py",
+    "source_sha256": "350239d1a57b919c0d2edb6d1651fbc33cf4e2a114162065e3a528bcb1fa0c81",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/ideax_gate.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/ideax_gate.py",
+    "source_sha256": "a115e0298f04f2595ff1677b68836ecc75930e15561a8b8bdda4aca502b1472e",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/ideax_light.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/ideax_light.py",
+    "source_sha256": "6378420e3848a94017df93238e3910a6ace0b364b1f11fc122d43cc7b1dc6769",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/ideax_sandbox.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/ideax_sandbox.py",
+    "source_sha256": "783bf415eb8f1d7dac1ece4a82903588348cd5121da036d80280bf7051a8de65",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/ideax_single.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/ideax_single.py",
+    "source_sha256": "8eaf8fbff1e81d1c2e8d4fa9ee53ca6f35846e50ad7da403c66ed2491c8d8b58",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/ideax_v10.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/ideax_v10.py",
+    "source_sha256": "f8f1dfd4655408f84285499dd7237cc8b9ff64116263086cec98f9827ceb07f2",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/ideax_v7.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/ideax_v7.py",
+    "source_sha256": "a87c47627bde355db9f135ca7780fed4dff6a9f846af92c00f37dfc8391eef0c",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/isci_cell.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/isci_cell.py",
+    "source_sha256": "d29cb529defb7ced728c3eb464159bcc3e821d32b03e28c2ccbaeb23af960340",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/isci_proxy.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/isci_proxy.py",
+    "source_sha256": "72259ba4f2bc571b8241f1ec624e142a9dbca2d8052e46c534c82d8634e849c6",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/isci_runner.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/isci_runner.py",
+    "source_sha256": "c31d08a402aa799d89fea465ac60c72ad4712f0f4fa707428814e694cbe4d58d",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/judge.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/judge.py",
+    "source_sha256": "82b2090c45a82b2871cb04dbcf1cd027a6969111c284c79d07988386110b078c",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/judge2.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/judge2.py",
+    "source_sha256": "9e45badade7f428f23178bfd73f365db9f64724bcbccbacd6be3590d2b493f6c",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/judge_v3.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/judge_v3.py",
+    "source_sha256": "ff38e0b7ef9b03706669c97a4ffea65c4b363c439819b679fafbe43c74cc9328",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/l2.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/l2.py",
+    "source_sha256": "23dee0903919039f3a3015e5db702a69e55b158c36e3f1c3f1b1ff6b0e48bc1e",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/merge_four.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/merge_four.py",
+    "source_sha256": "0d8c3f4bb34735be6cf42aca84339e77ca0a278ef8f4f3c484c264e27cf25ad6",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/pilot.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/pilot.py",
+    "source_sha256": "022d5a0d71f59d0310bda3ec545cc5cb929d17ca56bff6b085c8180a502706c8",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/prompts_v2.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/prompts_v2.py",
+    "source_sha256": "294db0f3ad37ca2beb718ec87cc98d8b6ce04851eefc438b2c50c6a9bd1338db",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/run_all.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/run_all.py",
+    "source_sha256": "6f82d3e143f12e2bb0c70b2ef62d5c531452f0ed52a77e9f7acbcceb3ff2a6b5",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/run_coi.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/run_coi.py",
+    "source_sha256": "fd3ccee9cc0369695b0edbd3f53682f15fe2d653330f6a232ab4260a99bcb16d",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/run_ideax_v7_batch.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/run_ideax_v7_batch.py",
+    "source_sha256": "1332abb436c1f7aae8a9ded6d4f44869c83e2a860acdd9df9d005c173ccff616",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/run_isci.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/run_isci.py",
+    "source_sha256": "8a87211624c8970e83c50c3a44dc4d0a2bde2c0e64c9a25e3272d2a40cb0358c",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/founder_recon/topup.py",
+    "source": "benchmarks/founder_bench_v1/code/founder_recon/topup.py",
+    "source_sha256": "b6b748d5fe89d8b98294ecc3ab46d3c02623c28402ccccdba71b7e4836b45ce7",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/founder/source/recon_bench/adapters/relay_slots.py",
+    "source": "benchmarks/founder_bench_v1/code/recon_bench/adapters/relay_slots.py",
+    "source_sha256": "b82b478c2395c8c0c5c8396c11c286096434e7716c165fd9b7ec7a4be7db4ba9",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/ideascientist/rescore.py",
+    "source": "benchmarks/ideascientist_rescore_v1/rescore.py",
+    "source_sha256": "f2a60a84706508fd828631632707b05038e049e99dcf9cf4adcf2ff90747efcf",
+    "release_sha256": "a99fc6559356512f8651270247266557a3281eaed65ef78245640d088f90b53b",
+    "status": "adapted"
+  },
+  {
+    "file": "benchmarks/ideascientist/test_rescore.py",
+    "source": "benchmarks/ideascientist_rescore_v1/test_rescore.py",
+    "source_sha256": "ec56e29b8eb380ba618f9b3288d7bbed2fb3c56294447a03fa25f5610ce44db2",
+    "release_sha256": "0b3d36fcee5ea4e428f9dcbd0121dabcabed18a2d1d363c294ee16d2726ba2b8",
+    "status": "adapted"
+  },
+  {
+    "file": "benchmarks/ideascientist/vendor/prompts.py",
+    "source": "benchmarks/ideascientist_rescore_v1/vendor/prompts.py",
+    "source_sha256": "60f6e3cfae2276eb5d5447003aeebc844d654a551885f0f0c9ea0d2314f0968c",
+    "release_sha256": "60f6e3cfae2276eb5d5447003aeebc844d654a551885f0f0c9ea0d2314f0968c",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/__init__.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/__init__.py",
+    "source_sha256": "aa10ac55de0b4cc7caf040fd73d93c95e54af94b4a736840ff1e1dbaa88ffff0",
+    "release_sha256": "aa10ac55de0b4cc7caf040fd73d93c95e54af94b4a736840ff1e1dbaa88ffff0",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/core.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/core.py",
+    "source_sha256": "e36478b6155dfbbf350e427312cae9648a01707ffb24d2b542192a0157bd5eee",
+    "release_sha256": "e36478b6155dfbbf350e427312cae9648a01707ffb24d2b542192a0157bd5eee",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/input.schema.json",
+    "source": "benchmarks/idea_gen/idea_benchmark/input.schema.json",
+    "source_sha256": "85b8586015dd807d139a1d8905d660e99292a265799c003945314dac5040f648",
+    "release_sha256": "85b8586015dd807d139a1d8905d660e99292a265799c003945314dac5040f648",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/panel/SEQUENTIAL_PROTOCOL.md",
+    "source": "benchmarks/idea_gen/idea_benchmark/panel/SEQUENTIAL_PROTOCOL.md",
+    "source_sha256": "04f9228bcc0f9982778963ec4972fc17d7abf850d56c6e8513d9d0035275d96c",
+    "release_sha256": "04f9228bcc0f9982778963ec4972fc17d7abf850d56c6e8513d9d0035275d96c",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/panel/__init__.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/panel/__init__.py",
+    "source_sha256": "5a80a34cb54905b1e67c711ade637d9d6bcaae6779f101e0a6589354bd834901",
+    "release_sha256": "5a80a34cb54905b1e67c711ade637d9d6bcaae6779f101e0a6589354bd834901",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/panel/audit_focused60_coi.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/panel/audit_focused60_coi.py",
+    "source_sha256": "9f786d8bc3d9a6001402612a65e3c43d30ee4ab9a6f7b49693e39530a6175ad4",
+    "release_sha256": "9f786d8bc3d9a6001402612a65e3c43d30ee4ab9a6f7b49693e39530a6175ad4",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/panel/audit_interesting_sequential.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/panel/audit_interesting_sequential.py",
+    "source_sha256": "1b2e7c05e926816b5deabde1a7a119f58c801518220dfefcacffa65b99429bce",
+    "release_sha256": "1b2e7c05e926816b5deabde1a7a119f58c801518220dfefcacffa65b99429bce",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/panel/focused60_coi.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/panel/focused60_coi.py",
+    "source_sha256": "c59e1cdbc79fc3a0fa04f8636984be67bdddba06a57a9540307fd7383669a554",
+    "release_sha256": "c59e1cdbc79fc3a0fa04f8636984be67bdddba06a57a9540307fd7383669a554",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/panel/interesting_sequential.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/panel/interesting_sequential.py",
+    "source_sha256": "e7aad993c0f29e52a15867e63a7741fb9a7bf2528c723de980f39d844be966ff",
+    "release_sha256": "e7aad993c0f29e52a15867e63a7741fb9a7bf2528c723de980f39d844be966ff",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/panel/pilot.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/panel/pilot.py",
+    "source_sha256": "3d4e0877a40f16483db62d52c3427c90af409dd7699ef618660c4b29539a66eb",
+    "release_sha256": "3d4e0877a40f16483db62d52c3427c90af409dd7699ef618660c4b29539a66eb",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/panel/sequential.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/panel/sequential.py",
+    "source_sha256": "f8586802301d8d9abe5cb08bbb085ab6789b6bd6e98ca6ab421dd25d9a6435a7",
+    "release_sha256": "f8586802301d8d9abe5cb08bbb085ab6789b6bd6e98ca6ab421dd25d9a6435a7",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/panel/test_audit_interesting_sequential.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/panel/test_audit_interesting_sequential.py",
+    "source_sha256": "e22998e0945b1cabae8aa9e92f416ea9ed4b2a6b31b7c7d59f0d8b6840b22b60",
+    "release_sha256": "e22998e0945b1cabae8aa9e92f416ea9ed4b2a6b31b7c7d59f0d8b6840b22b60",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/panel/test_interesting_sequential.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/panel/test_interesting_sequential.py",
+    "source_sha256": "adff1fcd9190f8083cc37db701c3049c56c22e6a8ca23c78ebc824b33f93b971",
+    "release_sha256": "adff1fcd9190f8083cc37db701c3049c56c22e6a8ca23c78ebc824b33f93b971",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/panel/test_sequential.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/panel/test_sequential.py",
+    "source_sha256": "a65f7b87c7cee1470924406711299e305137f4cb0ed6b47ab28eb0f12d7996f2",
+    "release_sha256": "a65f7b87c7cee1470924406711299e305137f4cb0ed6b47ab28eb0f12d7996f2",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/prompts/judge.md",
+    "source": "benchmarks/idea_gen/idea_benchmark/prompts/judge.md",
+    "source_sha256": "c04d905bbdf29aa3193748debd8588eddd5ac4de208b065be79d97bba1093bea",
+    "release_sha256": "c04d905bbdf29aa3193748debd8588eddd5ac4de208b065be79d97bba1093bea",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/requirements.txt",
+    "source": "benchmarks/idea_gen/idea_benchmark/requirements.txt",
+    "source_sha256": "77007b97796fb8fe0f3dd48c545b5fe95706ce39cd0900dde0c17bfa812751c4",
+    "release_sha256": "77007b97796fb8fe0f3dd48c545b5fe95706ce39cd0900dde0c17bfa812751c4",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/interesting/idea_benchmark/runner.py",
+    "source": "benchmarks/idea_gen/idea_benchmark/runner.py",
+    "source_sha256": "d7bf0db3631d6a4aa7154601578f8af5ab6651ff1a26f58efa884b2898ef4d2c",
+    "release_sha256": "d7bf0db3631d6a4aa7154601578f8af5ab6651ff1a26f58efa884b2898ef4d2c",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/reviewer/README.md",
+    "source": "benchmarks/reviewer_three_axis_once_v1/README.md",
+    "source_sha256": "83e17c3b2ecabab0f2abf7266f973fa67620b1cb18cb29e52a5bf20d3681d5a5",
+    "release_sha256": "83e17c3b2ecabab0f2abf7266f973fa67620b1cb18cb29e52a5bf20d3681d5a5",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/reviewer/__init__.py",
+    "source": "benchmarks/reviewer_three_axis_once_v1/__init__.py",
+    "source_sha256": "50bd9dfe9dd51f12fe9ffc37d3c1e5edd64c6cf305b8ff269bb0b4bc02e6b07b",
+    "release_sha256": "50bd9dfe9dd51f12fe9ffc37d3c1e5edd64c6cf305b8ff269bb0b4bc02e6b07b",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/reviewer/pipeline.py",
+    "source": "benchmarks/reviewer_three_axis_once_v1/pipeline.py",
+    "source_sha256": "fc2a37bd8832f00f0421f42654e3f148973c6026e4a3173b2a363710fa48e761",
+    "release_sha256": "f04ddc4906bd6547706840ccd53385b31f9e6f542b147d7b7f88a6b756649acc",
+    "status": "adapted"
+  },
+  {
+    "file": "benchmarks/reviewer/reviewer_prompt.md",
+    "source": "benchmarks/reviewer_three_axis_once_v1/reviewer_prompt.md",
+    "source_sha256": "30e4d06a5351e39f3611907b645fc69fc4c40bae6d7325bbb77a2eb980f8c1ee",
+    "release_sha256": "30e4d06a5351e39f3611907b645fc69fc4c40bae6d7325bbb77a2eb980f8c1ee",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/reviewer/vendor/api_shapes.py",
+    "source": "benchmarks/reviewer_three_axis_once_v1/vendor/api_shapes.py",
+    "source_sha256": "7b485f0bb2c40b0439c980cafea87cc81e210271ebcab5d5be9a010ea305a08e",
+    "release_sha256": "7b485f0bb2c40b0439c980cafea87cc81e210271ebcab5d5be9a010ea305a08e",
+    "status": "unchanged"
+  },
+  {
+    "file": "benchmarks/reviewer/vendor/evaluate.py",
+    "source": "benchmarks/reviewer_three_axis_once_v1/vendor/evaluate.py",
+    "source_sha256": "110dca4f2b8760d64f17589693f5e8175998dabd708e01919ea529bd080a3cdc",
+    "release_sha256": "89ed61f3a35daf777358859a0b554d27dd4fc67f032ebcd5bb35f0f630a7e487",
+    "status": "adapted"
+  },
+  {
+    "file": "benchmarks/reviewer/vendor/worker.py",
+    "source": "benchmarks/reviewer_three_axis_once_v1/vendor/worker.py",
+    "source_sha256": "ae20831434e8a778cbbef4b5e59a0830352bff533cc43c19c93bcc64d994229a",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/reviewer/vendor/worker_v2.py",
+    "source": "benchmarks/reviewer_three_axis_once_v1/vendor/worker_v2.py",
+    "source_sha256": "abb52caf256bd5dfaf6814970d18acc3353b14177645e2dcfea5bd8ad255d610",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/reviewer/vendor/worker_v3.py",
+    "source": "benchmarks/reviewer_three_axis_once_v1/vendor/worker_v3.py",
+    "source_sha256": "7dfd1f1a837ef10b61d3afcf08d4886542861bc0eb8fd2565cf3ec33cf21be5a",
+    "status": "omitted"
+  },
+  {
+    "file": "benchmarks/reviewer/vendor/worker_v4.py",
+    "source": "benchmarks/reviewer_three_axis_once_v1/vendor/worker_v4.py",
+    "source_sha256": "ab20d0f7ac5cd1db5d22262e989ba86f131cc4ed44229c3168369f99c870086b",
+    "status": "omitted"
+  },
+  {
+    "file": "data/domains.json",
+    "source": "benchmarks/six-condition-live20-20261105/domains.json",
+    "source_sha256": "fc68196f8d38cd51c3995d44646f3b5f20722eaad828310ddf0216be4e299819",
+    "release_sha256": "498a2eb668daa426087f9be2b6122987f4cb090cbb3639f3989b2b665c6295b9",
+    "status": "adapted"
+  },
+  {
+    "file": "data/litgraph-context/adaptive-compute-termination/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/adaptive-compute-termination/full_context.jsonl",
+    "source_sha256": "120524b769e42ed3f609f62ec6681530e5a0407fc77f917ced7b71e8e0feb144",
+    "release_sha256": "120524b769e42ed3f609f62ec6681530e5a0407fc77f917ced7b71e8e0feb144",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/agent-env-benchmark/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/agent-env-benchmark/full_context.jsonl",
+    "source_sha256": "b3a9a9e1f88f823c37a9b7e2eba194529af19a282c96fec4bbaa4a13f10a7e2c",
+    "release_sha256": "b3a9a9e1f88f823c37a9b7e2eba194529af19a282c96fec4bbaa4a13f10a7e2c",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/agent-memory/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/agent-memory/full_context.jsonl",
+    "source_sha256": "9b4c3ea5a2c7e8eb0f4a781430ec7d29d133cd460bed5edf8007f1dc7aa4a27d",
+    "release_sha256": "9b4c3ea5a2c7e8eb0f4a781430ec7d29d133cd460bed5edf8007f1dc7aa4a27d",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/agentic-rl/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/agentic-rl/full_context.jsonl",
+    "source_sha256": "cd7506c1a7ed13f1d834e1f6aa3d042bc0295bf656f81cf8419380c463f80e49",
+    "release_sha256": "cd7506c1a7ed13f1d834e1f6aa3d042bc0295bf656f81cf8419380c463f80e49",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/ai-control-deception/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/ai-control-deception/full_context.jsonl",
+    "source_sha256": "2b1c57ecdbfbe03d4115e35f1a1a02dec07c835d92582634f44f950bab0689f3",
+    "release_sha256": "2b1c57ecdbfbe03d4115e35f1a1a02dec07c835d92582634f44f950bab0689f3",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/consistent-local-editing/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/consistent-local-editing/full_context.jsonl",
+    "source_sha256": "a703abc45cead2c930966a706bafcf28b705f136376e407cae45cdc1bf9cfeff",
+    "release_sha256": "a703abc45cead2c930966a706bafcf28b705f136376e407cae45cdc1bf9cfeff",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/continual-learning/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/continual-learning/full_context.jsonl",
+    "source_sha256": "3c4c2f2340888bde6b6bf6e85a184bd3a7a07e9bf5c0dd60bf17241afe341765",
+    "release_sha256": "3c4c2f2340888bde6b6bf6e85a184bd3a7a07e9bf5c0dd60bf17241afe341765",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/cross-modal-retrieval/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/cross-modal-retrieval/full_context.jsonl",
+    "source_sha256": "9f3afa349389bffa3a71167dfb6be1483e9fd3d425ccb802c76b35d2b2800331",
+    "release_sha256": "9f3afa349389bffa3a71167dfb6be1483e9fd3d425ccb802c76b35d2b2800331",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/diffusion-guidance/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/diffusion-guidance/full_context.jsonl",
+    "source_sha256": "15b93cfce959920712736a9af99680bf575e776c05ed1900c1da76dc63c53488",
+    "release_sha256": "15b93cfce959920712736a9af99680bf575e776c05ed1900c1da76dc63c53488",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/discrete-diffusion/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/discrete-diffusion/full_context.jsonl",
+    "source_sha256": "2edbcbdb79c7ae775260214a53bdf73ab968d5cb6e1d10dc303994dba262d3f8",
+    "release_sha256": "2edbcbdb79c7ae775260214a53bdf73ab968d5cb6e1d10dc303994dba262d3f8",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/dl-compilers-kernels/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/dl-compilers-kernels/full_context.jsonl",
+    "source_sha256": "5297575db5d639dcdebd91ae1ee7e1d361ce049ad8bf0305b7cc6248395fd0aa",
+    "release_sha256": "5297575db5d639dcdebd91ae1ee7e1d361ce049ad8bf0305b7cc6248395fd0aa",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/dynamic-scene-reconstruction/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/dynamic-scene-reconstruction/full_context.jsonl",
+    "source_sha256": "4621f76d80ea5dbe9338b680367927d2f4523c50d84791c6601008dd3b425c9e",
+    "release_sha256": "4621f76d80ea5dbe9338b680367927d2f4523c50d84791c6601008dd3b425c9e",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/efficient_inference_long_context_serving/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/efficient_inference_long_context_serving/full_context.jsonl",
+    "source_sha256": "b38332bfec506bf202eaf76ceea62bc27e390c5868445af6ebb5652fcd45121d",
+    "release_sha256": "b38332bfec506bf202eaf76ceea62bc27e390c5868445af6ebb5652fcd45121d",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/generative-evaluation/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/generative-evaluation/full_context.jsonl",
+    "source_sha256": "451862aa67e193683f44c3cc38a8ea14450572c842e224b26ea6822c18ae738e",
+    "release_sha256": "451862aa67e193683f44c3cc38a8ea14450572c842e224b26ea6822c18ae738e",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/generative-policies/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/generative-policies/full_context.jsonl",
+    "source_sha256": "11b0e8cf40315710c398bdf6721914f2e6e8ece4095dce7b2c844d75647eb14b",
+    "release_sha256": "11b0e8cf40315710c398bdf6721914f2e6e8ece4095dce7b2c844d75647eb14b",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/generative-synthetic-data/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/generative-synthetic-data/full_context.jsonl",
+    "source_sha256": "ba1a34dcb6a943ca3b243ebb749f389cf3b308f5d3878104c3bffbb4328970b6",
+    "release_sha256": "ba1a34dcb6a943ca3b243ebb749f389cf3b308f5d3878104c3bffbb4328970b6",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/in-context-learning/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/in-context-learning/full_context.jsonl",
+    "source_sha256": "d7298ffcd7db1e8d0bbacd726ea043929a4d61cf2967e5a8e81d7c578b5cd93b",
+    "release_sha256": "d7298ffcd7db1e8d0bbacd726ea043929a4d61cf2967e5a8e81d7c578b5cd93b",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/knowledge-distillation/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/knowledge-distillation/full_context.jsonl",
+    "source_sha256": "785ca39782799c04c3033da446e040ec59b63d3ea1e5ba6b8791cc4c1420ab01",
+    "release_sha256": "785ca39782799c04c3033da446e040ec59b63d3ea1e5ba6b8791cc4c1420ab01",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/latent-reasoning/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/latent-reasoning/full_context.jsonl",
+    "source_sha256": "a4811e40a01228a76fe09fdbe4299bd8220a0854605a3e2ae8cc1801df2ea0aa",
+    "release_sha256": "a4811e40a01228a76fe09fdbe4299bd8220a0854605a3e2ae8cc1801df2ea0aa",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/learned-legged-musculoskeletal-control/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/learned-legged-musculoskeletal-control/full_context.jsonl",
+    "source_sha256": "7d5be2de9e98a314f96094bf454d565c906fcaa46d863c7c48d0ba06aac79b01",
+    "release_sha256": "7d5be2de9e98a314f96094bf454d565c906fcaa46d863c7c48d0ba06aac79b01",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/llm-evolutionary-heuristic-design/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/llm-evolutionary-heuristic-design/full_context.jsonl",
+    "source_sha256": "9e342c889bdc4461ca4e406ccee55cf652fc676732fd13aaa0acda9ed79ebd5a",
+    "release_sha256": "9e342c889bdc4461ca4e406ccee55cf652fc676732fd13aaa0acda9ed79ebd5a",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/llm-formal-logic-reasoning/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/llm-formal-logic-reasoning/full_context.jsonl",
+    "source_sha256": "f15dc69421a91cc6bc3cc25f8f5043b11f9981690641ec1500413615afb442a3",
+    "release_sha256": "f15dc69421a91cc6bc3cc25f8f5043b11f9981690641ec1500413615afb442a3",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/mllm-benchmarking/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/mllm-benchmarking/full_context.jsonl",
+    "source_sha256": "72bc6be318e4516e90196c3edf5ce3c6f2f05c2be823cc91f6fbad537f0c6a18",
+    "release_sha256": "72bc6be318e4516e90196c3edf5ce3c6f2f05c2be823cc91f6fbad537f0c6a18",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/multi-agent-coordination/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/multi-agent-coordination/full_context.jsonl",
+    "source_sha256": "9ea60d958a533f0e48cc1e2e813637d42e78f7a260317d8f8fee007e9218215b",
+    "release_sha256": "9ea60d958a533f0e48cc1e2e813637d42e78f7a260317d8f8fee007e9218215b",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/multi-llm-routing-ensemble/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/multi-llm-routing-ensemble/full_context.jsonl",
+    "source_sha256": "83afc7c0d059bdf6934a04a973cbb1852561800fe9bc6f0a9fb91c61f4cbc62b",
+    "release_sha256": "83afc7c0d059bdf6934a04a973cbb1852561800fe9bc6f0a9fb91c61f4cbc62b",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/multimodal-reasoning-rl/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/multimodal-reasoning-rl/full_context.jsonl",
+    "source_sha256": "333e1c4454b77c41c81216b1b85a8ca7bc18ab237e70d4e5ad6a04feece89595",
+    "release_sha256": "333e1c4454b77c41c81216b1b85a8ca7bc18ab237e70d4e5ad6a04feece89595",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/network-expressivity/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/network-expressivity/full_context.jsonl",
+    "source_sha256": "9822597a045fbf109342057546fbde83edcc5faa2c60241cef1ede2a54068f78",
+    "release_sha256": "9822597a045fbf109342057546fbde83edcc5faa2c60241cef1ede2a54068f78",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/network-pruning/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/network-pruning/full_context.jsonl",
+    "source_sha256": "737dd6cd27dc078002a73df693407cd1b2f23e224944cbb323420f99119251e7",
+    "release_sha256": "737dd6cd27dc078002a73df693407cd1b2f23e224944cbb323420f99119251e7",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/neural-scaling-laws/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/neural-scaling-laws/full_context.jsonl",
+    "source_sha256": "8cda00626b99d290456a10558ca80eb5f30790000436b78b9bd36217b39bd84e",
+    "release_sha256": "8cda00626b99d290456a10558ca80eb5f30790000436b78b9bd36217b39bd84e",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/peft-structural-sparse-adaptation/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/peft-structural-sparse-adaptation/full_context.jsonl",
+    "source_sha256": "5cd269e2bff973125b4e319ca8b95f2b9b6e837edeaab056a4cea92df9fdc137",
+    "release_sha256": "5cd269e2bff973125b4e319ca8b95f2b9b6e837edeaab056a4cea92df9fdc137",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/practical-adaptive-optimizers/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/practical-adaptive-optimizers/full_context.jsonl",
+    "source_sha256": "d3c03a2a7d2beba56ba10ea275c09ad9ef6b7e179b6723f22b7bb2c889ab814a",
+    "release_sha256": "d3c03a2a7d2beba56ba10ea275c09ad9ef6b7e179b6723f22b7bb2c889ab814a",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/preference-reward-alignment/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/preference-reward-alignment/full_context.jsonl",
+    "source_sha256": "616f9f0f97e3092a61ce6d08b0aff0a81d6159251a745a84fde4d6d7ca0febb5",
+    "release_sha256": "616f9f0f97e3092a61ce6d08b0aff0a81d6159251a745a84fde4d6d7ca0febb5",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/process-verification-search/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/process-verification-search/full_context.jsonl",
+    "source_sha256": "5b01922d3c69b6a015dad54a03677bbc3fa6dff1fd7a6936ebe4aaf6d132bfa0",
+    "release_sha256": "5b01922d3c69b6a015dad54a03677bbc3fa6dff1fd7a6936ebe4aaf6d132bfa0",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/rlvr-reasoning/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/rlvr-reasoning/full_context.jsonl",
+    "source_sha256": "ca80a7302a02f49ba7cddf0a564d0837ccfa7b2186204c7f784dea03ee152639",
+    "release_sha256": "ca80a7302a02f49ba7cddf0a564d0837ccfa7b2186204c7f784dea03ee152639",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/speculative-decoding/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/speculative-decoding/full_context.jsonl",
+    "source_sha256": "aa62a6420689904dda856230407f5d295d1aa88bfbafc04ee2cac95e65ffb59f",
+    "release_sha256": "aa62a6420689904dda856230407f5d295d1aa88bfbafc04ee2cac95e65ffb59f",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/swe-agent/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/swe-agent/full_context.jsonl",
+    "source_sha256": "826afcd6dc232ca62bbd86e0a7ce80613817fd05c3f9a25c1332180fac9e7d16",
+    "release_sha256": "826afcd6dc232ca62bbd86e0a7ce80613817fd05c3f9a25c1332180fac9e7d16",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/training-dynamics-feature-learning/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/training-dynamics-feature-learning/full_context.jsonl",
+    "source_sha256": "c8bfb43a83bafa7acb2f9b2ba9c90cc1787eec7abfc3d82e704b606cce4dd1f1",
+    "release_sha256": "c8bfb43a83bafa7acb2f9b2ba9c90cc1787eec7abfc3d82e704b606cce4dd1f1",
+    "status": "unchanged"
+  },
+  {
+    "file": "data/litgraph-context/vision-language-action/full_context.jsonl",
+    "source": "system/current-six-v4-20261108/single-full/domains/vision-language-action/full_context.jsonl",
+    "source_sha256": "e329c2928f3524722b89a049dd422c210e2ea730fc44f9c4ebbd126aed43c6ee",
+    "release_sha256": "e329c2928f3524722b89a049dd422c210e2ea730fc44f9c4ebbd126aed43c6ee",
+    "status": "unchanged"
+  },
+  {
+    "file": "docs/single_full_copyable_en.txt",
+    "source": "paper/manuscript/prompts_reusable/single_full_en.txt",
+    "source_sha256": "a36456a5a2a4060e6d4c77785817d6289e5f27cbe32bf36ae104f5b0a56c7725",
+    "release_sha256": "a36456a5a2a4060e6d4c77785817d6289e5f27cbe32bf36ae104f5b0a56c7725",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/adaptive-compute-termination/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/adaptive-compute-termination/task.json",
+    "source_sha256": "73a2a33dd503944739d608d54e76c5bc067686f2b1cb34869a60f43ad99f05f3",
+    "release_sha256": "73a2a33dd503944739d608d54e76c5bc067686f2b1cb34869a60f43ad99f05f3",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/agent-env-benchmark/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/agent-env-benchmark/task.json",
+    "source_sha256": "28e6c50935f2f2765f9dcb7a91b09cd8d26e0ff0a1af3260bd76ae5544cc95ba",
+    "release_sha256": "28e6c50935f2f2765f9dcb7a91b09cd8d26e0ff0a1af3260bd76ae5544cc95ba",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/agent-memory/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/agent-memory/task.json",
+    "source_sha256": "1c2348d6a917b53d65868e76b278f40848eb13602ad2fcf3f7ad3cd487ced3e9",
+    "release_sha256": "1c2348d6a917b53d65868e76b278f40848eb13602ad2fcf3f7ad3cd487ced3e9",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/agentic-rl/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/agentic-rl/task.json",
+    "source_sha256": "44ae2d26ac47784493afec9ccd33c557c737cc4e46c1efe434ee6ccd71d69aec",
+    "release_sha256": "44ae2d26ac47784493afec9ccd33c557c737cc4e46c1efe434ee6ccd71d69aec",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/ai-control-deception/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/ai-control-deception/task.json",
+    "source_sha256": "259412efd5cdecf6ffc65854b7dffe5ee2514f53faaf511e21ef8ccc1e0f14bd",
+    "release_sha256": "259412efd5cdecf6ffc65854b7dffe5ee2514f53faaf511e21ef8ccc1e0f14bd",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/consistent-local-editing/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/consistent-local-editing/task.json",
+    "source_sha256": "26c7825301db2a390b7e259b3b6921e1c521f339ee2e3e049dcccdeeb802a0f3",
+    "release_sha256": "26c7825301db2a390b7e259b3b6921e1c521f339ee2e3e049dcccdeeb802a0f3",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/continual-learning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/continual-learning/task.json",
+    "source_sha256": "0a9f688c389b3bd828400fb0fae379c577db95ec9614257bf62b5dfa669446ab",
+    "release_sha256": "0a9f688c389b3bd828400fb0fae379c577db95ec9614257bf62b5dfa669446ab",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/cross-modal-retrieval/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/cross-modal-retrieval/task.json",
+    "source_sha256": "e51abe629f023bfe422899122448f4cf33b836e63d23866618acf15960e731b8",
+    "release_sha256": "e51abe629f023bfe422899122448f4cf33b836e63d23866618acf15960e731b8",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/diffusion-guidance/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/diffusion-guidance/task.json",
+    "source_sha256": "06f19a13c3e286193a1fcbdf5d17d1945445d24c529f3760e26ee39805dca381",
+    "release_sha256": "06f19a13c3e286193a1fcbdf5d17d1945445d24c529f3760e26ee39805dca381",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/discrete-diffusion/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/discrete-diffusion/task.json",
+    "source_sha256": "bb4d3854f30afa8476e95ce83f95e4e0c6ce2a931a1d4729ba7f1313f4bbc57f",
+    "release_sha256": "bb4d3854f30afa8476e95ce83f95e4e0c6ce2a931a1d4729ba7f1313f4bbc57f",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/dl-compilers-kernels/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/dl-compilers-kernels/task.json",
+    "source_sha256": "40feb4087514b32c993ff8252436d9d0b26871e9b842acdb1a25638a8de1c23b",
+    "release_sha256": "40feb4087514b32c993ff8252436d9d0b26871e9b842acdb1a25638a8de1c23b",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/dynamic-scene-reconstruction/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/dynamic-scene-reconstruction/task.json",
+    "source_sha256": "f1c20a756f0578ad5ff695dba21593ab247bc3ca0b6628ed5a43dd4c15c89fa5",
+    "release_sha256": "f1c20a756f0578ad5ff695dba21593ab247bc3ca0b6628ed5a43dd4c15c89fa5",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/efficient_inference_long_context_serving/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/efficient_inference_long_context_serving/task.json",
+    "source_sha256": "7da0492068ff1924b2e928198c49c5d9fa077bc99ebcb23fd9ea8662c2a9d68a",
+    "release_sha256": "7da0492068ff1924b2e928198c49c5d9fa077bc99ebcb23fd9ea8662c2a9d68a",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/generative-evaluation/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/generative-evaluation/task.json",
+    "source_sha256": "19b9e354beb236e50daedef29741cf256e5533be9a186c55017b254f10bc56df",
+    "release_sha256": "19b9e354beb236e50daedef29741cf256e5533be9a186c55017b254f10bc56df",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/generative-policies/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/generative-policies/task.json",
+    "source_sha256": "ee17ce93dbf16daaf2f0d7d8b095d8446bd1593691c4b5c8132c934e54c3a69e",
+    "release_sha256": "ee17ce93dbf16daaf2f0d7d8b095d8446bd1593691c4b5c8132c934e54c3a69e",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/generative-synthetic-data/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/generative-synthetic-data/task.json",
+    "source_sha256": "58d41424dbb03cac1c7dd31f6c823b6af19561cea89af51aa7ee8d3ed4b0acfe",
+    "release_sha256": "58d41424dbb03cac1c7dd31f6c823b6af19561cea89af51aa7ee8d3ed4b0acfe",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/in-context-learning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/in-context-learning/task.json",
+    "source_sha256": "ccb11be00454016ccfe764ec352d72d74bb359e902b2c107d4ceacfe566f5312",
+    "release_sha256": "ccb11be00454016ccfe764ec352d72d74bb359e902b2c107d4ceacfe566f5312",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/knowledge-distillation/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/knowledge-distillation/task.json",
+    "source_sha256": "62a3218c91eeca69af6d23b4edbcc322dd90493aba8386146526bc2719a5dd54",
+    "release_sha256": "62a3218c91eeca69af6d23b4edbcc322dd90493aba8386146526bc2719a5dd54",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/latent-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/latent-reasoning/task.json",
+    "source_sha256": "392138ef495e15dbc89b150e79c8cad4dcdd15f6c8568b5c1ceefe10b62878ac",
+    "release_sha256": "392138ef495e15dbc89b150e79c8cad4dcdd15f6c8568b5c1ceefe10b62878ac",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/learned-legged-musculoskeletal-control/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/learned-legged-musculoskeletal-control/task.json",
+    "source_sha256": "5cb20b4df4811855e82ac0b2971365fdabe2d0dc521f8f9465eb940ae699d9f2",
+    "release_sha256": "5cb20b4df4811855e82ac0b2971365fdabe2d0dc521f8f9465eb940ae699d9f2",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/llm-evolutionary-heuristic-design/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/llm-evolutionary-heuristic-design/task.json",
+    "source_sha256": "024bb1338b7e644f9ce9af471f7af98cbfe0b8868d628e6f1655edaf6ce03cfd",
+    "release_sha256": "024bb1338b7e644f9ce9af471f7af98cbfe0b8868d628e6f1655edaf6ce03cfd",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/llm-formal-logic-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/llm-formal-logic-reasoning/task.json",
+    "source_sha256": "ade1660736912ab9b84ff98156d0320d47dbb6f8ef1974dfd504faad1feda07d",
+    "release_sha256": "ade1660736912ab9b84ff98156d0320d47dbb6f8ef1974dfd504faad1feda07d",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/mllm-benchmarking/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/mllm-benchmarking/task.json",
+    "source_sha256": "53b09e62d45b388844b9d6852d8564736294cbb0a893eb5d527f5e6540256efd",
+    "release_sha256": "53b09e62d45b388844b9d6852d8564736294cbb0a893eb5d527f5e6540256efd",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/multi-agent-coordination/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/multi-agent-coordination/task.json",
+    "source_sha256": "df555296482ad5161910ce0c62d1ba75afd4b67b45a3c37f5777a4f9e3649077",
+    "release_sha256": "df555296482ad5161910ce0c62d1ba75afd4b67b45a3c37f5777a4f9e3649077",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/multi-llm-routing-ensemble/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/multi-llm-routing-ensemble/task.json",
+    "source_sha256": "1f44389b167884f00a5ba2fce73c66574233063145628826f2f0525273a4e0b9",
+    "release_sha256": "1f44389b167884f00a5ba2fce73c66574233063145628826f2f0525273a4e0b9",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/multimodal-reasoning-rl/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/multimodal-reasoning-rl/task.json",
+    "source_sha256": "e4324f8994c4eaa04d1e169e7977334afe9a0201181025d5130e4b7b14ecde59",
+    "release_sha256": "e4324f8994c4eaa04d1e169e7977334afe9a0201181025d5130e4b7b14ecde59",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/network-expressivity/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/network-expressivity/task.json",
+    "source_sha256": "9316f0fae015d559fd03d0c8b7822fa996ee179d73500a06f27cb627de01b5a9",
+    "release_sha256": "9316f0fae015d559fd03d0c8b7822fa996ee179d73500a06f27cb627de01b5a9",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/network-pruning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/network-pruning/task.json",
+    "source_sha256": "6f8efd7272eb9487cbc158a3964c2e89fd30eb4acbae59644e0c25d225f6ff38",
+    "release_sha256": "6f8efd7272eb9487cbc158a3964c2e89fd30eb4acbae59644e0c25d225f6ff38",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/neural-scaling-laws/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/neural-scaling-laws/task.json",
+    "source_sha256": "19d970527f5b93b442355b417216c91743f4978d525ec2f54b09d1ced7191a3b",
+    "release_sha256": "19d970527f5b93b442355b417216c91743f4978d525ec2f54b09d1ced7191a3b",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/peft-structural-sparse-adaptation/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/peft-structural-sparse-adaptation/task.json",
+    "source_sha256": "84db82dddedbcaa42ab2bc67aa9197bed9b94089d7d3ee3c4b63002406cc7d8e",
+    "release_sha256": "84db82dddedbcaa42ab2bc67aa9197bed9b94089d7d3ee3c4b63002406cc7d8e",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/practical-adaptive-optimizers/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/practical-adaptive-optimizers/task.json",
+    "source_sha256": "50ba580f495b2d39459e848206e11120943b140375f540da147f62faa58440e7",
+    "release_sha256": "50ba580f495b2d39459e848206e11120943b140375f540da147f62faa58440e7",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/preference-reward-alignment/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/preference-reward-alignment/task.json",
+    "source_sha256": "c06ff1de9e753a0674e33f3a44636c523d28d8be58929f1f88105678585f037f",
+    "release_sha256": "c06ff1de9e753a0674e33f3a44636c523d28d8be58929f1f88105678585f037f",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/process-verification-search/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/process-verification-search/task.json",
+    "source_sha256": "4ca0727dee0817b2adf664166b8be970a1d2f4bcb8c05ab727156f3555a6326c",
+    "release_sha256": "4ca0727dee0817b2adf664166b8be970a1d2f4bcb8c05ab727156f3555a6326c",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/rlvr-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/rlvr-reasoning/task.json",
+    "source_sha256": "895a5aa9e0e7c6057c0e4cf8ca7c94693d41369cd3ff376481259529ff944b8a",
+    "release_sha256": "895a5aa9e0e7c6057c0e4cf8ca7c94693d41369cd3ff376481259529ff944b8a",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/speculative-decoding/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/speculative-decoding/task.json",
+    "source_sha256": "9ffe0897012c415325cde2f63727294a7c9cbcf53272cab4bb6ea54c3e86bb84",
+    "release_sha256": "9ffe0897012c415325cde2f63727294a7c9cbcf53272cab4bb6ea54c3e86bb84",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/swe-agent/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/swe-agent/task.json",
+    "source_sha256": "b36fc5774e1b4e74dc9b19f119491f833135a258f7018a3d06ad12951f1ae667",
+    "release_sha256": "b36fc5774e1b4e74dc9b19f119491f833135a258f7018a3d06ad12951f1ae667",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/training-dynamics-feature-learning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/training-dynamics-feature-learning/task.json",
+    "source_sha256": "68c891fa5f24ebfe240ea051b253416745b132133b91fd59f0f7d2f138e58f1f",
+    "release_sha256": "68c891fa5f24ebfe240ea051b253416745b132133b91fd59f0f7d2f138e58f1f",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/domains/vision-language-action/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/domains/vision-language-action/task.json",
+    "source_sha256": "13c726f2e2980db3d88d81b684e3af19b51848e1cda97e8f73ddbca07d48ae7e",
+    "release_sha256": "13c726f2e2980db3d88d81b684e3af19b51848e1cda97e8f73ddbca07d48ae7e",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/ideax/scripts/single_web_search.py",
+    "source": "system/current-six-v4-20261108/light-multi-api/ideax/scripts/single_web_search.py",
+    "source_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
+    "release_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/litgraph/tools/idea_provenance.py",
+    "source": "system/current-six-v4-20261108/light-multi-api/litgraph/tools/idea_provenance.py",
+    "source_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
+    "release_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/litgraph/tools/library_client.py",
+    "source": "system/current-six-v4-20261108/light-multi-api/litgraph/tools/library_client.py",
+    "source_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
+    "release_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/prompts/blueprint.md",
+    "source": "system/current-six-v4-20261108/light-multi-api/prompts/blueprint.md",
+    "source_sha256": "ec6e757db9979d2b8f0d62c26ee501168f24901dbd749beb59ad242bad3c1f23",
+    "release_sha256": "1ae10e3267b1beb3565ec2effe29be9c82b0a0471895f15f3bbc438c6187f87a",
+    "status": "adapted"
+  },
+  {
+    "file": "system/light-multi-api/prompts/discuss.md",
+    "source": "system/current-six-v4-20261108/light-multi-api/prompts/discuss.md",
+    "source_sha256": "5ea88967ee6a5e76995fd42465bdf9854f9449fb0f43d64606f5582c2a07f668",
+    "release_sha256": "5ea88967ee6a5e76995fd42465bdf9854f9449fb0f43d64606f5582c2a07f668",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/prompts/generation.md",
+    "source": "system/current-six-v4-20261108/light-multi-api/prompts/generation.md",
+    "source_sha256": "d94255591c1d84336ffbd95c8b994f92d21743ed4c41920beff033eaadc3bf9b",
+    "release_sha256": "d94255591c1d84336ffbd95c8b994f92d21743ed4c41920beff033eaadc3bf9b",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/prompts/respond.md",
+    "source": "system/current-six-v4-20261108/light-multi-api/prompts/respond.md",
+    "source_sha256": "31244a3168f4c125384cdd3ad66cb199fe8f8cefef49c6d0e96acfcb3d372011",
+    "release_sha256": "31244a3168f4c125384cdd3ad66cb199fe8f8cefef49c6d0e96acfcb3d372011",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/prompts/select.md",
+    "source": "system/current-six-v4-20261108/light-multi-api/prompts/select.md",
+    "source_sha256": "39bc127e12a7c64ddfc640374945f7bcc39366098101678b68e856ede2252186",
+    "release_sha256": "39bc127e12a7c64ddfc640374945f7bcc39366098101678b68e856ede2252186",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-api/release.json",
+    "source": "system/current-six-v4-20261108/light-multi-api/release.json",
+    "source_sha256": "73bcb6c0ab6ffbaa63a80b04eb04033397a24194fce42e33e591756d48d4cbcd",
+    "release_sha256": "64e6cd0f300618e3362d29ef7356b6ad706c9ac3c9f506cd09013f9d33a33e14",
+    "status": "adapted"
+  },
+  {
+    "file": "system/light-multi-full/domains/adaptive-compute-termination/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/adaptive-compute-termination/task.json",
+    "source_sha256": "0162c3d3f4ff626bd13b6ec8a5679b6d37f48f51fac597d4b6fd23297a0dee32",
+    "release_sha256": "0162c3d3f4ff626bd13b6ec8a5679b6d37f48f51fac597d4b6fd23297a0dee32",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/agent-env-benchmark/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/agent-env-benchmark/task.json",
+    "source_sha256": "32060a76339e139731a04be74e3ee2838af73fc90476e7b9f6f9f82f9a5bf098",
+    "release_sha256": "32060a76339e139731a04be74e3ee2838af73fc90476e7b9f6f9f82f9a5bf098",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/agent-memory/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/agent-memory/task.json",
+    "source_sha256": "ea1243f11061341292c0079fbe088c0c84ef47be564d054e4458594a8a0ea866",
+    "release_sha256": "ea1243f11061341292c0079fbe088c0c84ef47be564d054e4458594a8a0ea866",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/agentic-rl/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/agentic-rl/task.json",
+    "source_sha256": "5f2ae59a08888d51dee366dd151d6b8ff081107323e2297633a2ddd5f388353a",
+    "release_sha256": "5f2ae59a08888d51dee366dd151d6b8ff081107323e2297633a2ddd5f388353a",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/ai-control-deception/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/ai-control-deception/task.json",
+    "source_sha256": "e7d3c3167ea19c339b51b8cfd0334323109e4129302a1fd00ca41b94f31a9bfd",
+    "release_sha256": "e7d3c3167ea19c339b51b8cfd0334323109e4129302a1fd00ca41b94f31a9bfd",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/consistent-local-editing/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/consistent-local-editing/task.json",
+    "source_sha256": "071d899f594185569f3879b660e7ae567bab599aedf49e92bbf4ea5c3f42a735",
+    "release_sha256": "071d899f594185569f3879b660e7ae567bab599aedf49e92bbf4ea5c3f42a735",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/continual-learning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/continual-learning/task.json",
+    "source_sha256": "ee63aa55dda1c403cce92b7d29ea894d8de6a52b3f98f4b9655e7cf431dd6dfe",
+    "release_sha256": "ee63aa55dda1c403cce92b7d29ea894d8de6a52b3f98f4b9655e7cf431dd6dfe",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/cross-modal-retrieval/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/cross-modal-retrieval/task.json",
+    "source_sha256": "54cacf61c3970b8281898498f947b2d8a7b65453c82a186ffdb3204a3d144955",
+    "release_sha256": "54cacf61c3970b8281898498f947b2d8a7b65453c82a186ffdb3204a3d144955",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/diffusion-guidance/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/diffusion-guidance/task.json",
+    "source_sha256": "f0be4ca1d53fb99e5dfafe9ef83d7845566b22a27139fd29a54878c54491cec0",
+    "release_sha256": "f0be4ca1d53fb99e5dfafe9ef83d7845566b22a27139fd29a54878c54491cec0",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/discrete-diffusion/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/discrete-diffusion/task.json",
+    "source_sha256": "2492294723e78234d0bab2ea0ae75d9c12d7470d2ccee3791ba15280ce98bc1f",
+    "release_sha256": "2492294723e78234d0bab2ea0ae75d9c12d7470d2ccee3791ba15280ce98bc1f",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/dl-compilers-kernels/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/dl-compilers-kernels/task.json",
+    "source_sha256": "46c1e18b3d35d2a9c4064c18820af0d27b2877bca9626444e0989aed048e44d8",
+    "release_sha256": "46c1e18b3d35d2a9c4064c18820af0d27b2877bca9626444e0989aed048e44d8",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/dynamic-scene-reconstruction/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/dynamic-scene-reconstruction/task.json",
+    "source_sha256": "4427c4031fc45281da7ffaa164a45d616a19d0f664f4fd587531a44601ce82d9",
+    "release_sha256": "4427c4031fc45281da7ffaa164a45d616a19d0f664f4fd587531a44601ce82d9",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/efficient_inference_long_context_serving/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/efficient_inference_long_context_serving/task.json",
+    "source_sha256": "736558bf63c10fd8d3ce8ca8b3c05e68fef75c9e85645e298342076fdb0f0363",
+    "release_sha256": "736558bf63c10fd8d3ce8ca8b3c05e68fef75c9e85645e298342076fdb0f0363",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/generative-evaluation/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/generative-evaluation/task.json",
+    "source_sha256": "e5090d9ee38204c5a58e17de22e8dc35bf6347e8f5a9b82eff966b10e4cdc898",
+    "release_sha256": "e5090d9ee38204c5a58e17de22e8dc35bf6347e8f5a9b82eff966b10e4cdc898",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/generative-policies/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/generative-policies/task.json",
+    "source_sha256": "4d76338d9fb304a1835595747d4f4fd4257f6f5e227dfc73871e59ccd06bc607",
+    "release_sha256": "4d76338d9fb304a1835595747d4f4fd4257f6f5e227dfc73871e59ccd06bc607",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/generative-synthetic-data/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/generative-synthetic-data/task.json",
+    "source_sha256": "e34a6e560b9afe17a488e1d5cc1bb16483ef671ee6ba05239b5954408d873f2e",
+    "release_sha256": "e34a6e560b9afe17a488e1d5cc1bb16483ef671ee6ba05239b5954408d873f2e",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/in-context-learning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/in-context-learning/task.json",
+    "source_sha256": "817e60158eaf8e0136aaa5dac56be5f3dbe1628ecb58825a7fb099feb272e2ca",
+    "release_sha256": "817e60158eaf8e0136aaa5dac56be5f3dbe1628ecb58825a7fb099feb272e2ca",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/knowledge-distillation/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/knowledge-distillation/task.json",
+    "source_sha256": "876bb3a5ed8d90f1464f424fb64b146c019dfb12bd7771f05f33a2abf38d4e98",
+    "release_sha256": "876bb3a5ed8d90f1464f424fb64b146c019dfb12bd7771f05f33a2abf38d4e98",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/latent-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/latent-reasoning/task.json",
+    "source_sha256": "523823bb941315a5e7b0113d999aa3028675be7db68132f70eefc6ca3e09b105",
+    "release_sha256": "523823bb941315a5e7b0113d999aa3028675be7db68132f70eefc6ca3e09b105",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/learned-legged-musculoskeletal-control/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/learned-legged-musculoskeletal-control/task.json",
+    "source_sha256": "c507b526baed7235b46d5db541f7c36ad904f1b0cc1a47405610d4e2522756e8",
+    "release_sha256": "c507b526baed7235b46d5db541f7c36ad904f1b0cc1a47405610d4e2522756e8",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/llm-evolutionary-heuristic-design/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/llm-evolutionary-heuristic-design/task.json",
+    "source_sha256": "ad7e61b56aa87ab32be0db454e628e8b1234ac68be80a651e018b5b5ce8f4293",
+    "release_sha256": "ad7e61b56aa87ab32be0db454e628e8b1234ac68be80a651e018b5b5ce8f4293",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/llm-formal-logic-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/llm-formal-logic-reasoning/task.json",
+    "source_sha256": "db600babe0f02f5aa6cd618bdef86f97efc669f4e2c8458ea26ee184b5295537",
+    "release_sha256": "db600babe0f02f5aa6cd618bdef86f97efc669f4e2c8458ea26ee184b5295537",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/mllm-benchmarking/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/mllm-benchmarking/task.json",
+    "source_sha256": "59ff3e6e6f084ef94f795f70be62d07eb67adead63061ac9fc2d1252ba14f0da",
+    "release_sha256": "59ff3e6e6f084ef94f795f70be62d07eb67adead63061ac9fc2d1252ba14f0da",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/multi-agent-coordination/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/multi-agent-coordination/task.json",
+    "source_sha256": "592c6ab82054ef0a87bdf53c6b170d22283a2a7e85a8d0c1241ff3081aeda6d1",
+    "release_sha256": "592c6ab82054ef0a87bdf53c6b170d22283a2a7e85a8d0c1241ff3081aeda6d1",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/multi-llm-routing-ensemble/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/multi-llm-routing-ensemble/task.json",
+    "source_sha256": "62b926044fbd7460c9104c295c737341d7e8fc2f0644cad96b41c8962d152e5c",
+    "release_sha256": "62b926044fbd7460c9104c295c737341d7e8fc2f0644cad96b41c8962d152e5c",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/multimodal-reasoning-rl/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/multimodal-reasoning-rl/task.json",
+    "source_sha256": "b5239ae0aa6ec50fc946db46c7c14c6ab9fbb5749002d7a8ece573001a663e23",
+    "release_sha256": "b5239ae0aa6ec50fc946db46c7c14c6ab9fbb5749002d7a8ece573001a663e23",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/network-expressivity/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/network-expressivity/task.json",
+    "source_sha256": "fe21dcd290570a57ae190cb18b8ebf5946a2cffffd873147e0e59c48679f6eef",
+    "release_sha256": "fe21dcd290570a57ae190cb18b8ebf5946a2cffffd873147e0e59c48679f6eef",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/network-pruning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/network-pruning/task.json",
+    "source_sha256": "61035a79fd06824cdea5da3fbd878e68c9819d3a80cfdad55d6e2720b10accec",
+    "release_sha256": "61035a79fd06824cdea5da3fbd878e68c9819d3a80cfdad55d6e2720b10accec",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/neural-scaling-laws/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/neural-scaling-laws/task.json",
+    "source_sha256": "6bf26a4f7f9b56e7a9795e979f32ba5e3a6bf589eb7afb89ab19663c16856ed3",
+    "release_sha256": "6bf26a4f7f9b56e7a9795e979f32ba5e3a6bf589eb7afb89ab19663c16856ed3",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/peft-structural-sparse-adaptation/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/peft-structural-sparse-adaptation/task.json",
+    "source_sha256": "3ce086d68a8ea3e91f8df67ead1e4b0d3c282741b6297e9393dfd76726885ee4",
+    "release_sha256": "3ce086d68a8ea3e91f8df67ead1e4b0d3c282741b6297e9393dfd76726885ee4",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/practical-adaptive-optimizers/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/practical-adaptive-optimizers/task.json",
+    "source_sha256": "7607607a382973772fc1f65e95fca5e4a4405cd7b1d2cca259761f36223bbeda",
+    "release_sha256": "7607607a382973772fc1f65e95fca5e4a4405cd7b1d2cca259761f36223bbeda",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/preference-reward-alignment/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/preference-reward-alignment/task.json",
+    "source_sha256": "7ebaf9dbbea29d615987b6fdcd27920df1b40464055fd699e77f5eedc2b01186",
+    "release_sha256": "7ebaf9dbbea29d615987b6fdcd27920df1b40464055fd699e77f5eedc2b01186",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/process-verification-search/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/process-verification-search/task.json",
+    "source_sha256": "09eea49e836b6a34674cd6e4f9fd221042cbf846983e536d9e340bbb85b3c290",
+    "release_sha256": "09eea49e836b6a34674cd6e4f9fd221042cbf846983e536d9e340bbb85b3c290",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/rlvr-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/rlvr-reasoning/task.json",
+    "source_sha256": "1e281e33d76a012818b8ef1546112d1cd3ab0f2cbcd7b8ed733ac28156a266e4",
+    "release_sha256": "1e281e33d76a012818b8ef1546112d1cd3ab0f2cbcd7b8ed733ac28156a266e4",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/speculative-decoding/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/speculative-decoding/task.json",
+    "source_sha256": "1a0bec6661d7278254a16500e78a2bab0e95b19fdf0686754e9ae383b7aac55b",
+    "release_sha256": "1a0bec6661d7278254a16500e78a2bab0e95b19fdf0686754e9ae383b7aac55b",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/swe-agent/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/swe-agent/task.json",
+    "source_sha256": "69ba124db2017a7d7c867dfb19e12405f89f241f63efa18ddc9a61ddf285146c",
+    "release_sha256": "69ba124db2017a7d7c867dfb19e12405f89f241f63efa18ddc9a61ddf285146c",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/training-dynamics-feature-learning/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/training-dynamics-feature-learning/task.json",
+    "source_sha256": "025885b04271b3bad9358892d69bc14ae99858c7f47c70c55c9b5a4a1e88f9ba",
+    "release_sha256": "025885b04271b3bad9358892d69bc14ae99858c7f47c70c55c9b5a4a1e88f9ba",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/domains/vision-language-action/task.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/domains/vision-language-action/task.json",
+    "source_sha256": "c223ac270db22b342e2d74ca626b02eb88104c7fd46ac6d5a94fd87bffb9cca9",
+    "release_sha256": "c223ac270db22b342e2d74ca626b02eb88104c7fd46ac6d5a94fd87bffb9cca9",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/ideax/scripts/single_web_search.py",
+    "source": "system/current-six-v4-20261108/light-multi-full/ideax/scripts/single_web_search.py",
+    "source_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
+    "release_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/litgraph/tools/idea_provenance.py",
+    "source": "system/current-six-v4-20261108/light-multi-full/litgraph/tools/idea_provenance.py",
+    "source_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
+    "release_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/litgraph/tools/library_client.py",
+    "source": "system/current-six-v4-20261108/light-multi-full/litgraph/tools/library_client.py",
+    "source_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
+    "release_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/prompts/blueprint.md",
+    "source": "system/current-six-v4-20261108/light-multi-full/prompts/blueprint.md",
+    "source_sha256": "55971f84c71307e2aba2d97ed8763bc5c76a0439d15ebde754c3f86c6ce306a3",
+    "release_sha256": "c718cf9507710005aed929d6b53fd9808b56ae12e6bfd47e3df9559f72b7c181",
+    "status": "adapted"
+  },
+  {
+    "file": "system/light-multi-full/prompts/discuss.md",
+    "source": "system/current-six-v4-20261108/light-multi-full/prompts/discuss.md",
+    "source_sha256": "dbd4f71b8387670f44f92d7497eb0cbc538bf30225d98b8144de5ed9fb0f7600",
+    "release_sha256": "dbd4f71b8387670f44f92d7497eb0cbc538bf30225d98b8144de5ed9fb0f7600",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/prompts/generation.md",
+    "source": "system/current-six-v4-20261108/light-multi-full/prompts/generation.md",
+    "source_sha256": "51f4ad41b231f86cf6751888b50ffa954a3102720a207fe3aa485354a43fcd63",
+    "release_sha256": "51f4ad41b231f86cf6751888b50ffa954a3102720a207fe3aa485354a43fcd63",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/prompts/respond.md",
+    "source": "system/current-six-v4-20261108/light-multi-full/prompts/respond.md",
+    "source_sha256": "fe1a44dde0483424384b2e12f131a4354970d396d3e93cb8f3846e8cc0d60977",
+    "release_sha256": "fe1a44dde0483424384b2e12f131a4354970d396d3e93cb8f3846e8cc0d60977",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/prompts/select.md",
+    "source": "system/current-six-v4-20261108/light-multi-full/prompts/select.md",
+    "source_sha256": "a3ecbf0c2d23f1a62f62343c8d911c30bc95e553dbd20996a270cbd071a9f6b3",
+    "release_sha256": "a3ecbf0c2d23f1a62f62343c8d911c30bc95e553dbd20996a270cbd071a9f6b3",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/light-multi-full/release.json",
+    "source": "system/current-six-v4-20261108/light-multi-full/release.json",
+    "source_sha256": "754807801ad3d2e7b303e4941906d281368c405d8a546dba49a354f1ed3de76c",
+    "release_sha256": "8d771ad23a3eb3a99846a4d58988c925c3267722d6d7a361871cb42dcc1f17c8",
+    "status": "adapted"
+  },
+  {
+    "file": "system/runtime/access_policy.py",
+    "source": "benchmarks/generation_six_v4_20261108/access_policy.py",
+    "source_sha256": "be41c567c192af24dd26115ede332c3cab20c42b02285e1ae8c3a73ea55ede89",
+    "release_sha256": "be41c567c192af24dd26115ede332c3cab20c42b02285e1ae8c3a73ea55ede89",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/blueprint.py",
+    "source": "benchmarks/generation_six_v4_20261108/blueprint.py",
+    "source_sha256": "c8ba2d48a8b3e90b0296d565ce9ece343d5b725b430e25bd1d6daec1a3c1f9bd",
+    "release_sha256": "7b52df1aafdc946d9a9fd53b2180e2edaedf206ed30db71c8e8373bbfb415820",
+    "status": "adapted"
+  },
+  {
+    "file": "system/runtime/cli.py",
+    "source": "benchmarks/generation_six_v4_20261108/cli.py",
+    "source_sha256": "d727e74ad773feb7f83e53cd3766b4a87d8051ab582c4982297c9963eb89398b",
+    "release_sha256": "54d92a0c098cb6546d00ffbea734b4d3f52a3269bc0d351fc4bc6948136af117",
+    "status": "adapted"
+  },
+  {
+    "file": "system/runtime/common.py",
+    "source": "benchmarks/generation_six_v4_20261108/common.py",
+    "source_sha256": "61e513af5021faed2e98649eac8123158126e69d69b9f67e041d5c7afe665ddd",
+    "release_sha256": "5580360f78b62b13aaf50718e27aea54880ae7ab372490f955e92f4985715c8f",
+    "status": "adapted"
+  },
+  {
+    "file": "system/runtime/light.py",
+    "source": "benchmarks/generation_six_v4_20261108/light.py",
+    "source_sha256": "5f0e0ef13a0f61bb8597604341e8f822fac4964f17c5914122d584a1014dd929",
+    "release_sha256": "5f0e0ef13a0f61bb8597604341e8f822fac4964f17c5914122d584a1014dd929",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/log_evidence.py",
+    "source": "benchmarks/generation_six_v4_20261108/log_evidence.py",
+    "source_sha256": "0776f2faa581ba306c894a18271c11783cfa471e8bf6ac632579f965a2cf33bb",
+    "release_sha256": "0776f2faa581ba306c894a18271c11783cfa471e8bf6ac632579f965a2cf33bb",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/multi_source.py",
+    "source": "benchmarks/generation_six_v4_20261108/multi_source.py",
+    "source_sha256": "c14bf9834a35477f3e774d6ed25d97ebe05ecb38c1f31e8537d605cd570c0d4d",
+    "release_sha256": "c14bf9834a35477f3e774d6ed25d97ebe05ecb38c1f31e8537d605cd570c0d4d",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/prompts.py",
+    "source": "benchmarks/generation_six_v4_20261108/prompts.py",
+    "source_sha256": "d55d176a53ca73401510163c97d04dc2dd7e225b07f42e94e2564c75f00dff5e",
+    "release_sha256": "d55d176a53ca73401510163c97d04dc2dd7e225b07f42e94e2564c75f00dff5e",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/recovery.py",
+    "source": "benchmarks/generation_six_v4_20261108/recovery.py",
+    "source_sha256": "aaf299294bec9c2290f9b77f7a47b90e9558e4a651446216622a485eec5020c0",
+    "release_sha256": "aaf299294bec9c2290f9b77f7a47b90e9558e4a651446216622a485eec5020c0",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/retry_runtime_audit.py",
+    "source": "benchmarks/generation_six_v4_20261108/retry_runtime_audit.py",
+    "source_sha256": "0c6fd3b904193ee522c1a6fefd56ae6b286907710fdcd50cc34ace49f7671df3",
+    "release_sha256": "0c6fd3b904193ee522c1a6fefd56ae6b286907710fdcd50cc34ace49f7671df3",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/single.py",
+    "source": "benchmarks/generation_six_v4_20261108/single.py",
+    "source_sha256": "0efd972dab2bae04194563fe3a55323af9cc90620a07633b8bca02eff1e26464",
+    "release_sha256": "0efd972dab2bae04194563fe3a55323af9cc90620a07633b8bca02eff1e26464",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/single_selector.py",
+    "source": "benchmarks/generation_six_v4_20261108/single_selector.py",
+    "source_sha256": "831f8eabec12e80d00f6bc2d5e5c37d4d96b4679487bac3a66773b3adbac9188",
+    "release_sha256": "831f8eabec12e80d00f6bc2d5e5c37d4d96b4679487bac3a66773b3adbac9188",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/test_conditions.py",
+    "source": "benchmarks/generation_six_v4_20261108/test_conditions.py",
+    "source_sha256": "09858ed2c053cfa1dad82124c0d7efd7817c9aef5b0a505ff9afc5da65ac790f",
+    "release_sha256": "94b3a8d6af7032f8e9a95010742be0976a2a10ff82176ee8c30ed01735bb8f2e",
+    "status": "adapted"
+  },
+  {
+    "file": "system/runtime/test_current.py",
+    "source": "benchmarks/generation_six_v4_20261108/test_current.py",
+    "source_sha256": "c6dde836722709df5d2ec1e2f7cc77787ecfbd308e4e4931bf97379c3ca1431e",
+    "release_sha256": "3b9581cbcb1885c31ebf2acb2b688f4ddce446fb9a9df33fe01666cc7d247666",
+    "status": "adapted"
+  },
+  {
+    "file": "system/runtime/transport/api_gate.py",
+    "source": "benchmarks/generation_six_v4_20261108/transport/api_gate.py",
+    "source_sha256": "9730d5d79230437979c0c882262a7f56b4554aae932fed35288b37bfcbb6f451",
+    "release_sha256": "480b7d6016af7f6829e308ac86acbd191131031f42653c8388d5cfbb3b88518f",
+    "status": "adapted"
+  },
+  {
+    "file": "system/runtime/transport/isolate.py",
+    "source": "benchmarks/generation_six_v4_20261108/transport/isolate.py",
+    "source_sha256": "ec6bf7665543636a17336e941ea86a83091dfdaac8347991fb2968332a6c6314",
+    "release_sha256": "df62e8a1fbcd6feb7f90118e870866bdf92562934540c5650f4a647fb16eae37",
+    "status": "adapted"
+  },
+  {
+    "file": "system/runtime/transport/name_templates.py",
+    "source": "benchmarks/generation_six_v4_20261108/transport/name_templates.py",
+    "source_sha256": "b68157396b700c2a8b7097243a545e75a6935d72c4fe8b78a63da0001d4cdced",
+    "release_sha256": "b68157396b700c2a8b7097243a545e75a6935d72c4fe8b78a63da0001d4cdced",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/transport/responses_atomic.py",
+    "source": "benchmarks/generation_six_v4_20261108/transport/responses_atomic.py",
+    "source_sha256": "6fc52c973d969595966eb03908d6bba9ee4f5cf024941f230d8c824702f1a743",
+    "release_sha256": "6fc52c973d969595966eb03908d6bba9ee4f5cf024941f230d8c824702f1a743",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/transport/uds_fwd.py",
+    "source": "benchmarks/generation_six_v4_20261108/transport/uds_fwd.py",
+    "source_sha256": "d7ca0dbe5cc672966b4d36eeef5206039caca0003d039340922d213bec315462",
+    "release_sha256": "d7ca0dbe5cc672966b4d36eeef5206039caca0003d039340922d213bec315462",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/runtime/worker_entry.py",
+    "source": "benchmarks/generation_six_v4_20261108/worker_entry.py",
+    "source_sha256": "8bf7243027e175be934da78d31a53bb9654cf2cb7bb6100b0cfd150402590676",
+    "release_sha256": "8bf7243027e175be934da78d31a53bb9654cf2cb7bb6100b0cfd150402590676",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/adaptive-compute-termination/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/adaptive-compute-termination/task.json",
+    "source_sha256": "a783a84603f0b2f88b7b6758df5dfc5dc79a0010e5ef3204d8851ec965c97a2f",
+    "release_sha256": "a783a84603f0b2f88b7b6758df5dfc5dc79a0010e5ef3204d8851ec965c97a2f",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/agent-env-benchmark/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/agent-env-benchmark/task.json",
+    "source_sha256": "e6acc0429a24258fcef29a89e3774d1eb9f8341ab889133309a30fc69b38c0f7",
+    "release_sha256": "e6acc0429a24258fcef29a89e3774d1eb9f8341ab889133309a30fc69b38c0f7",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/agent-memory/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/agent-memory/task.json",
+    "source_sha256": "6b91e66e6e7e174400fa10d2ed7057c02bf419912ee874aac6e39fd321ddb9dd",
+    "release_sha256": "6b91e66e6e7e174400fa10d2ed7057c02bf419912ee874aac6e39fd321ddb9dd",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/agentic-rl/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/agentic-rl/task.json",
+    "source_sha256": "2bba21013dfb22d1f6db8e54d210fef485eb8b1ae438988565ba684fdd3276a2",
+    "release_sha256": "2bba21013dfb22d1f6db8e54d210fef485eb8b1ae438988565ba684fdd3276a2",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/ai-control-deception/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/ai-control-deception/task.json",
+    "source_sha256": "57dbc469b903387ff2835e318f39eb5f1f16bc3a92ee86c615030f41801b280e",
+    "release_sha256": "57dbc469b903387ff2835e318f39eb5f1f16bc3a92ee86c615030f41801b280e",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/consistent-local-editing/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/consistent-local-editing/task.json",
+    "source_sha256": "027daf58efb092d0fa252cfaeb4d0ae1e2490250f9831b2bdc4c48a42d49550b",
+    "release_sha256": "027daf58efb092d0fa252cfaeb4d0ae1e2490250f9831b2bdc4c48a42d49550b",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/continual-learning/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/continual-learning/task.json",
+    "source_sha256": "7f9e88c6f8f618f95a1c8a9dd89cd03151fb269962680e51e783f42aff6282bb",
+    "release_sha256": "7f9e88c6f8f618f95a1c8a9dd89cd03151fb269962680e51e783f42aff6282bb",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/cross-modal-retrieval/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/cross-modal-retrieval/task.json",
+    "source_sha256": "b7cfa8d895db3fa39eac89dafdcc8b7da77b0e2842d8bf267c846fb09f033dec",
+    "release_sha256": "b7cfa8d895db3fa39eac89dafdcc8b7da77b0e2842d8bf267c846fb09f033dec",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/diffusion-guidance/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/diffusion-guidance/task.json",
+    "source_sha256": "0bebf19d1e92301cdefc6162d6bd493af1d9a7475f7641c67ef8e69c8f26231d",
+    "release_sha256": "0bebf19d1e92301cdefc6162d6bd493af1d9a7475f7641c67ef8e69c8f26231d",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/discrete-diffusion/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/discrete-diffusion/task.json",
+    "source_sha256": "93c7813101e5a4c7afd1a30a084d90616eebe9ecb968e5cfd25ad65e53002248",
+    "release_sha256": "93c7813101e5a4c7afd1a30a084d90616eebe9ecb968e5cfd25ad65e53002248",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/dl-compilers-kernels/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/dl-compilers-kernels/task.json",
+    "source_sha256": "7312d1151d0f6b469ee22c6eb37cde4ce909d5767d21b82a98df046398dc95ee",
+    "release_sha256": "7312d1151d0f6b469ee22c6eb37cde4ce909d5767d21b82a98df046398dc95ee",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/dynamic-scene-reconstruction/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/dynamic-scene-reconstruction/task.json",
+    "source_sha256": "818099b0269e1225113300a2c9a7cedcf565810461718d3c826074ab97dc02f9",
+    "release_sha256": "818099b0269e1225113300a2c9a7cedcf565810461718d3c826074ab97dc02f9",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/efficient_inference_long_context_serving/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/efficient_inference_long_context_serving/task.json",
+    "source_sha256": "3046eb7a0f7d56127512a4c710add24058d5df09e450651e9ba7c2022b44df1a",
+    "release_sha256": "3046eb7a0f7d56127512a4c710add24058d5df09e450651e9ba7c2022b44df1a",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/generative-evaluation/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/generative-evaluation/task.json",
+    "source_sha256": "2262ffcbd016a37979054253697ecaf9cb535f3d71708d20114d467f475dc917",
+    "release_sha256": "2262ffcbd016a37979054253697ecaf9cb535f3d71708d20114d467f475dc917",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/generative-policies/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/generative-policies/task.json",
+    "source_sha256": "7b6e56b5a00aeebe3530b74216ad2be34bf2bea6b9db5b4b7297fe253a4ba7af",
+    "release_sha256": "7b6e56b5a00aeebe3530b74216ad2be34bf2bea6b9db5b4b7297fe253a4ba7af",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/generative-synthetic-data/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/generative-synthetic-data/task.json",
+    "source_sha256": "295971aa6d70c5c928a06a3a377191d5634fab8bcf6d6d20f56ab76ed9f07986",
+    "release_sha256": "295971aa6d70c5c928a06a3a377191d5634fab8bcf6d6d20f56ab76ed9f07986",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/in-context-learning/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/in-context-learning/task.json",
+    "source_sha256": "e1aea3b49f5bf5d8c6b35591823ccff09a2f8f1880a59f4f3bf3cd005f39e747",
+    "release_sha256": "e1aea3b49f5bf5d8c6b35591823ccff09a2f8f1880a59f4f3bf3cd005f39e747",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/knowledge-distillation/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/knowledge-distillation/task.json",
+    "source_sha256": "05bb689813b417afe8aab928c8b589546ba32f7b2ef2244554cf052d2b0a53c8",
+    "release_sha256": "05bb689813b417afe8aab928c8b589546ba32f7b2ef2244554cf052d2b0a53c8",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/latent-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/latent-reasoning/task.json",
+    "source_sha256": "5c655955a3793d75cdc93538fda3661531a17d78921dfa549bc509f9ca9786de",
+    "release_sha256": "5c655955a3793d75cdc93538fda3661531a17d78921dfa549bc509f9ca9786de",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/learned-legged-musculoskeletal-control/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/learned-legged-musculoskeletal-control/task.json",
+    "source_sha256": "e682dec8e41694316970653427ce99c8835f44fd2231cfdcd92519532c092afb",
+    "release_sha256": "e682dec8e41694316970653427ce99c8835f44fd2231cfdcd92519532c092afb",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/llm-evolutionary-heuristic-design/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/llm-evolutionary-heuristic-design/task.json",
+    "source_sha256": "305d92865c0ab7fd2a6967091932f1a37e39d581e8498775c2928d9f406858fc",
+    "release_sha256": "305d92865c0ab7fd2a6967091932f1a37e39d581e8498775c2928d9f406858fc",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/llm-formal-logic-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/llm-formal-logic-reasoning/task.json",
+    "source_sha256": "7bcc655411683440a08d017a223ebe01346f451b2d9d96374f779f007b33454c",
+    "release_sha256": "7bcc655411683440a08d017a223ebe01346f451b2d9d96374f779f007b33454c",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/mllm-benchmarking/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/mllm-benchmarking/task.json",
+    "source_sha256": "9aceb2ff46787210dd4484e203b5bc66f951770e36629c089149499d060d588b",
+    "release_sha256": "9aceb2ff46787210dd4484e203b5bc66f951770e36629c089149499d060d588b",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/multi-agent-coordination/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/multi-agent-coordination/task.json",
+    "source_sha256": "a1f033a3cecaae56f83ed6185971bb42870e02a69e7f7633c3657f545bffa8a0",
+    "release_sha256": "a1f033a3cecaae56f83ed6185971bb42870e02a69e7f7633c3657f545bffa8a0",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/multi-llm-routing-ensemble/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/multi-llm-routing-ensemble/task.json",
+    "source_sha256": "86e627314f416fac6c9d1afcd7e6cb73a8af9e7e833dd0ea7f13fbb706544399",
+    "release_sha256": "86e627314f416fac6c9d1afcd7e6cb73a8af9e7e833dd0ea7f13fbb706544399",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/multimodal-reasoning-rl/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/multimodal-reasoning-rl/task.json",
+    "source_sha256": "0feeb26ead5f4494e840a6a6ad61f970fcbcc1e4b91dcea8cdfe2398883cd341",
+    "release_sha256": "0feeb26ead5f4494e840a6a6ad61f970fcbcc1e4b91dcea8cdfe2398883cd341",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/network-expressivity/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/network-expressivity/task.json",
+    "source_sha256": "7afb2869dcbe346385f538f95bce81ea0d79664373d39c598665d30560175b3c",
+    "release_sha256": "7afb2869dcbe346385f538f95bce81ea0d79664373d39c598665d30560175b3c",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/network-pruning/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/network-pruning/task.json",
+    "source_sha256": "3293fd9fde1e55878331cf4c3fabdbb3652eb3d606c01a3325b51042221a950c",
+    "release_sha256": "3293fd9fde1e55878331cf4c3fabdbb3652eb3d606c01a3325b51042221a950c",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/neural-scaling-laws/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/neural-scaling-laws/task.json",
+    "source_sha256": "896d591d5e3bbcbafc3e1bd2c7ebba269b1834e02b1d96874ecc9feab80f2ccd",
+    "release_sha256": "896d591d5e3bbcbafc3e1bd2c7ebba269b1834e02b1d96874ecc9feab80f2ccd",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/peft-structural-sparse-adaptation/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/peft-structural-sparse-adaptation/task.json",
+    "source_sha256": "ca18fb62fd7eb9c52cc6a99f4c4b56020a298a7915a56c2a1c7205d7a4e90677",
+    "release_sha256": "ca18fb62fd7eb9c52cc6a99f4c4b56020a298a7915a56c2a1c7205d7a4e90677",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/practical-adaptive-optimizers/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/practical-adaptive-optimizers/task.json",
+    "source_sha256": "1e6df976c7fce703be44d7a65e1be184e5a3ffa7ee82f2979b2a7148c3d98ec3",
+    "release_sha256": "1e6df976c7fce703be44d7a65e1be184e5a3ffa7ee82f2979b2a7148c3d98ec3",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/preference-reward-alignment/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/preference-reward-alignment/task.json",
+    "source_sha256": "7343db50c9cd8f4cc3f95dd0e0e55ece83b4902469eb45b7b40b86c88d2aa5f8",
+    "release_sha256": "7343db50c9cd8f4cc3f95dd0e0e55ece83b4902469eb45b7b40b86c88d2aa5f8",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/process-verification-search/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/process-verification-search/task.json",
+    "source_sha256": "97a478dd344aab2f90c7701d775d2be288feedc475072a3e4a9a6d6e5886f7c4",
+    "release_sha256": "97a478dd344aab2f90c7701d775d2be288feedc475072a3e4a9a6d6e5886f7c4",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/rlvr-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/rlvr-reasoning/task.json",
+    "source_sha256": "ff946832685c20cf2ee5b5b222a0de0232565a153104c497ac0f7271fb40a93f",
+    "release_sha256": "ff946832685c20cf2ee5b5b222a0de0232565a153104c497ac0f7271fb40a93f",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/speculative-decoding/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/speculative-decoding/task.json",
+    "source_sha256": "ffd647fd9242a9e68c5225519cec65da8a11f32e0b427044ba4a6f4c4bd8a900",
+    "release_sha256": "ffd647fd9242a9e68c5225519cec65da8a11f32e0b427044ba4a6f4c4bd8a900",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/swe-agent/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/swe-agent/task.json",
+    "source_sha256": "4fae67456f57236b4bc8e48a46e42333b23ac1e643336b1715cbc73030689a6c",
+    "release_sha256": "4fae67456f57236b4bc8e48a46e42333b23ac1e643336b1715cbc73030689a6c",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/training-dynamics-feature-learning/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/training-dynamics-feature-learning/task.json",
+    "source_sha256": "bc65a8d3a60b94080ef22f57a7fabc73c1c8995cfcd8cee7c8cb6633e5c0ab68",
+    "release_sha256": "bc65a8d3a60b94080ef22f57a7fabc73c1c8995cfcd8cee7c8cb6633e5c0ab68",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/domains/vision-language-action/task.json",
+    "source": "system/current-six-v4-20261108/single-api/domains/vision-language-action/task.json",
+    "source_sha256": "323c4c04207d0b7ee57c931e6fc17f253488c51eb60dd83dc1b7c394dfea2f0c",
+    "release_sha256": "323c4c04207d0b7ee57c931e6fc17f253488c51eb60dd83dc1b7c394dfea2f0c",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/ideax/scripts/single_web_search.py",
+    "source": "system/current-six-v4-20261108/single-api/ideax/scripts/single_web_search.py",
+    "source_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
+    "release_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/litgraph/tools/idea_provenance.py",
+    "source": "system/current-six-v4-20261108/single-api/litgraph/tools/idea_provenance.py",
+    "source_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
+    "release_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/litgraph/tools/library_client.py",
+    "source": "system/current-six-v4-20261108/single-api/litgraph/tools/library_client.py",
+    "source_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
+    "release_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/prompts/blueprint.md",
+    "source": "system/current-six-v4-20261108/single-api/prompts/blueprint.md",
+    "source_sha256": "ec6e757db9979d2b8f0d62c26ee501168f24901dbd749beb59ad242bad3c1f23",
+    "release_sha256": "1ae10e3267b1beb3565ec2effe29be9c82b0a0471895f15f3bbc438c6187f87a",
+    "status": "adapted"
+  },
+  {
+    "file": "system/single-api/prompts/discuss.md",
+    "source": "system/current-six-v4-20261108/single-api/prompts/discuss.md",
+    "source_sha256": "5ea88967ee6a5e76995fd42465bdf9854f9449fb0f43d64606f5582c2a07f668",
+    "release_sha256": "5ea88967ee6a5e76995fd42465bdf9854f9449fb0f43d64606f5582c2a07f668",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/prompts/generation.md",
+    "source": "system/current-six-v4-20261108/single-api/prompts/generation.md",
+    "source_sha256": "d94255591c1d84336ffbd95c8b994f92d21743ed4c41920beff033eaadc3bf9b",
+    "release_sha256": "d94255591c1d84336ffbd95c8b994f92d21743ed4c41920beff033eaadc3bf9b",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/prompts/respond.md",
+    "source": "system/current-six-v4-20261108/single-api/prompts/respond.md",
+    "source_sha256": "31244a3168f4c125384cdd3ad66cb199fe8f8cefef49c6d0e96acfcb3d372011",
+    "release_sha256": "31244a3168f4c125384cdd3ad66cb199fe8f8cefef49c6d0e96acfcb3d372011",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/prompts/select.md",
+    "source": "system/current-six-v4-20261108/single-api/prompts/select.md",
+    "source_sha256": "39bc127e12a7c64ddfc640374945f7bcc39366098101678b68e856ede2252186",
+    "release_sha256": "39bc127e12a7c64ddfc640374945f7bcc39366098101678b68e856ede2252186",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-api/release.json",
+    "source": "system/current-six-v4-20261108/single-api/release.json",
+    "source_sha256": "7f0beffe8e277cc40ce34010fc75d19a1ceb8f0078c3dda3b428dfad8f14768e",
+    "release_sha256": "ecdb055525c1c2bbc65d6b3ca7d9d5e78a6ac504773c8a6cb4d1122b6663c246",
+    "status": "adapted"
+  },
+  {
+    "file": "system/single-full/domains/adaptive-compute-termination/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/adaptive-compute-termination/task.json",
+    "source_sha256": "66928eafeb1a6d6e20c011c0dbf5cbcfa54b5f08df2066badfe42f49199709fd",
+    "release_sha256": "66928eafeb1a6d6e20c011c0dbf5cbcfa54b5f08df2066badfe42f49199709fd",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/agent-env-benchmark/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/agent-env-benchmark/task.json",
+    "source_sha256": "1f03a446762534f9039b0bb80aa007da6b090a9db7d0ab831ac621bfed6d3337",
+    "release_sha256": "1f03a446762534f9039b0bb80aa007da6b090a9db7d0ab831ac621bfed6d3337",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/agent-memory/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/agent-memory/task.json",
+    "source_sha256": "39f69859edc8fee1ed1510be8a56c50eaf8c9db55df22b5f5e389745788ef3fc",
+    "release_sha256": "39f69859edc8fee1ed1510be8a56c50eaf8c9db55df22b5f5e389745788ef3fc",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/agentic-rl/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/agentic-rl/task.json",
+    "source_sha256": "b82ef82fd4d5de2a06dbad00e74fb2ef424ef386f8fc899cbfbba8267e24945c",
+    "release_sha256": "b82ef82fd4d5de2a06dbad00e74fb2ef424ef386f8fc899cbfbba8267e24945c",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/ai-control-deception/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/ai-control-deception/task.json",
+    "source_sha256": "78c57240c8c3b1ab73168befa0896007666313ca72fb4a3b3672f99710e351f9",
+    "release_sha256": "78c57240c8c3b1ab73168befa0896007666313ca72fb4a3b3672f99710e351f9",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/consistent-local-editing/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/consistent-local-editing/task.json",
+    "source_sha256": "4685c20ad303267822758bd774709d87d42b47d016b6fa4fb95176116e277516",
+    "release_sha256": "4685c20ad303267822758bd774709d87d42b47d016b6fa4fb95176116e277516",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/continual-learning/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/continual-learning/task.json",
+    "source_sha256": "743aa91939875e601dd51a215156afe8fbeda526a0a1f732437b6be469d6b786",
+    "release_sha256": "743aa91939875e601dd51a215156afe8fbeda526a0a1f732437b6be469d6b786",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/cross-modal-retrieval/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/cross-modal-retrieval/task.json",
+    "source_sha256": "b75925325c61e65a7110047479c0a03525a58c9a235d3a1bca517248724a7783",
+    "release_sha256": "b75925325c61e65a7110047479c0a03525a58c9a235d3a1bca517248724a7783",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/diffusion-guidance/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/diffusion-guidance/task.json",
+    "source_sha256": "c121fc1d0ff5f9b7d7071a599963811db840b82cd78a1172a762ca138d964a2a",
+    "release_sha256": "c121fc1d0ff5f9b7d7071a599963811db840b82cd78a1172a762ca138d964a2a",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/discrete-diffusion/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/discrete-diffusion/task.json",
+    "source_sha256": "1332ed2cba4755b85eeb5949887a8cce0e6c57e6a756fed7e53985ad19ccaf0f",
+    "release_sha256": "1332ed2cba4755b85eeb5949887a8cce0e6c57e6a756fed7e53985ad19ccaf0f",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/dl-compilers-kernels/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/dl-compilers-kernels/task.json",
+    "source_sha256": "c9ad816715e1f558315728396367354aef8bac216500dc1ef44d3e145837831f",
+    "release_sha256": "c9ad816715e1f558315728396367354aef8bac216500dc1ef44d3e145837831f",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/dynamic-scene-reconstruction/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/dynamic-scene-reconstruction/task.json",
+    "source_sha256": "dc6f69a741b5dd726188b232bf45fe9d1747a6e4b5fa64d59dbef9f129558bc3",
+    "release_sha256": "dc6f69a741b5dd726188b232bf45fe9d1747a6e4b5fa64d59dbef9f129558bc3",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/efficient_inference_long_context_serving/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/efficient_inference_long_context_serving/task.json",
+    "source_sha256": "87438e1a99a98e98829eff85611562f39475cff3857abdb044de975513d72cea",
+    "release_sha256": "87438e1a99a98e98829eff85611562f39475cff3857abdb044de975513d72cea",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/generative-evaluation/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/generative-evaluation/task.json",
+    "source_sha256": "9a09518fc9a9dba6bb2fbd2286be9da3ad36d24e5c21da0decb49b4f83c49338",
+    "release_sha256": "9a09518fc9a9dba6bb2fbd2286be9da3ad36d24e5c21da0decb49b4f83c49338",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/generative-policies/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/generative-policies/task.json",
+    "source_sha256": "080d9be858fc198bd219fee0a51bce8abc0f578ec02bd0b962555c4e59b5e346",
+    "release_sha256": "080d9be858fc198bd219fee0a51bce8abc0f578ec02bd0b962555c4e59b5e346",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/generative-synthetic-data/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/generative-synthetic-data/task.json",
+    "source_sha256": "bd0ed3f27f88a20f38d791a8051129176c7986a760f6fdd16f8f41d61c8d0bb6",
+    "release_sha256": "bd0ed3f27f88a20f38d791a8051129176c7986a760f6fdd16f8f41d61c8d0bb6",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/in-context-learning/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/in-context-learning/task.json",
+    "source_sha256": "0a8eaf8cfd2ab502af67ff8d3126f861da3b00d06ace668c3a283a3d8c9486c9",
+    "release_sha256": "0a8eaf8cfd2ab502af67ff8d3126f861da3b00d06ace668c3a283a3d8c9486c9",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/knowledge-distillation/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/knowledge-distillation/task.json",
+    "source_sha256": "33cae11f8bea24d0b673ecd7628839dd1713446050607c8558ecc8f1f807144d",
+    "release_sha256": "33cae11f8bea24d0b673ecd7628839dd1713446050607c8558ecc8f1f807144d",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/latent-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/latent-reasoning/task.json",
+    "source_sha256": "39165005b86837588daba10856c7b248229b85c3b0a485f9e11d32c520fc9d3b",
+    "release_sha256": "39165005b86837588daba10856c7b248229b85c3b0a485f9e11d32c520fc9d3b",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/learned-legged-musculoskeletal-control/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/learned-legged-musculoskeletal-control/task.json",
+    "source_sha256": "339e8cf14454d1552dde9ed4703cb81c8bab017d55773a48628c45e9e3f009ff",
+    "release_sha256": "339e8cf14454d1552dde9ed4703cb81c8bab017d55773a48628c45e9e3f009ff",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/llm-evolutionary-heuristic-design/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/llm-evolutionary-heuristic-design/task.json",
+    "source_sha256": "bc4fe33b774578a4a1d55baa3ad9c3924433e9c7c0020caf196ee45729f34844",
+    "release_sha256": "bc4fe33b774578a4a1d55baa3ad9c3924433e9c7c0020caf196ee45729f34844",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/llm-formal-logic-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/llm-formal-logic-reasoning/task.json",
+    "source_sha256": "1002864cdc60451810e693e1722104f25c69f3170684dd75995265110489ed25",
+    "release_sha256": "1002864cdc60451810e693e1722104f25c69f3170684dd75995265110489ed25",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/mllm-benchmarking/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/mllm-benchmarking/task.json",
+    "source_sha256": "620654cfd9f41af700176547972b80acd12557883b4dc25f91bd0bcbbf0ee1e3",
+    "release_sha256": "620654cfd9f41af700176547972b80acd12557883b4dc25f91bd0bcbbf0ee1e3",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/multi-agent-coordination/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/multi-agent-coordination/task.json",
+    "source_sha256": "49a9f5e88d19a4adab7d0cfb4eb8d00403bd967fb785270a54bfadca4855f70a",
+    "release_sha256": "49a9f5e88d19a4adab7d0cfb4eb8d00403bd967fb785270a54bfadca4855f70a",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/multi-llm-routing-ensemble/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/multi-llm-routing-ensemble/task.json",
+    "source_sha256": "22df3e66ba823ea153a12016340e1c0a5d5ec721a8a9ece0e2d4a0cac0de6f7e",
+    "release_sha256": "22df3e66ba823ea153a12016340e1c0a5d5ec721a8a9ece0e2d4a0cac0de6f7e",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/multimodal-reasoning-rl/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/multimodal-reasoning-rl/task.json",
+    "source_sha256": "6685d6ebae153a7e27a21116a7c99976a9cd746af961442a6fe9483f8d7cb316",
+    "release_sha256": "6685d6ebae153a7e27a21116a7c99976a9cd746af961442a6fe9483f8d7cb316",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/network-expressivity/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/network-expressivity/task.json",
+    "source_sha256": "f380b757f6b2f30a4b5272fae032a7c10a0f1b2da0954be02ca41f4a4dce57a9",
+    "release_sha256": "f380b757f6b2f30a4b5272fae032a7c10a0f1b2da0954be02ca41f4a4dce57a9",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/network-pruning/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/network-pruning/task.json",
+    "source_sha256": "22e931323b0c618d4fee6d7c41e81f92d87064d508e2e5c821907b4bc7055c19",
+    "release_sha256": "22e931323b0c618d4fee6d7c41e81f92d87064d508e2e5c821907b4bc7055c19",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/neural-scaling-laws/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/neural-scaling-laws/task.json",
+    "source_sha256": "1dfba87fa2a7d4f8a7d2af0aa61187c3ecb4f1dd1f05695fc4592600d5308e22",
+    "release_sha256": "1dfba87fa2a7d4f8a7d2af0aa61187c3ecb4f1dd1f05695fc4592600d5308e22",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/peft-structural-sparse-adaptation/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/peft-structural-sparse-adaptation/task.json",
+    "source_sha256": "842f7a5f46e845d033782a220fbda73d92dbfda4a3cc213046ed7ba661cd5daa",
+    "release_sha256": "842f7a5f46e845d033782a220fbda73d92dbfda4a3cc213046ed7ba661cd5daa",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/practical-adaptive-optimizers/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/practical-adaptive-optimizers/task.json",
+    "source_sha256": "bae98cdf0f3a399eb79859c1c9e4a6655bd3e81a13593fa7e8b7ebff263fe33b",
+    "release_sha256": "bae98cdf0f3a399eb79859c1c9e4a6655bd3e81a13593fa7e8b7ebff263fe33b",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/preference-reward-alignment/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/preference-reward-alignment/task.json",
+    "source_sha256": "d265f367cb41ab2d61d24daa4b2eb8352b414677515a6358126cc7fdfa726531",
+    "release_sha256": "d265f367cb41ab2d61d24daa4b2eb8352b414677515a6358126cc7fdfa726531",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/process-verification-search/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/process-verification-search/task.json",
+    "source_sha256": "01abc5d1e0b3a2cbb9b49ca6aeabfb1632b3bfa2fb8c488cacc1a1fd350f5535",
+    "release_sha256": "01abc5d1e0b3a2cbb9b49ca6aeabfb1632b3bfa2fb8c488cacc1a1fd350f5535",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/rlvr-reasoning/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/rlvr-reasoning/task.json",
+    "source_sha256": "19bfaa2f6ce28ce89c612807f9d9c8974c9131b519b1f0787e5d7e751fd05376",
+    "release_sha256": "19bfaa2f6ce28ce89c612807f9d9c8974c9131b519b1f0787e5d7e751fd05376",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/speculative-decoding/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/speculative-decoding/task.json",
+    "source_sha256": "380947322db225113e9760abfdee667ee3a936ee4de8afeb26fc6a2f3bdebef1",
+    "release_sha256": "380947322db225113e9760abfdee667ee3a936ee4de8afeb26fc6a2f3bdebef1",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/swe-agent/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/swe-agent/task.json",
+    "source_sha256": "5a25d93d5454bdb2c147d3c9f6dd32ae7f77fed9c000c8f87f6f9d463945c0bf",
+    "release_sha256": "5a25d93d5454bdb2c147d3c9f6dd32ae7f77fed9c000c8f87f6f9d463945c0bf",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/training-dynamics-feature-learning/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/training-dynamics-feature-learning/task.json",
+    "source_sha256": "88fe4bae2f5b93afb1c2fcccc80608c0586436bc510f536df59a38367d427b90",
+    "release_sha256": "88fe4bae2f5b93afb1c2fcccc80608c0586436bc510f536df59a38367d427b90",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/domains/vision-language-action/task.json",
+    "source": "system/current-six-v4-20261108/single-full/domains/vision-language-action/task.json",
+    "source_sha256": "3d5e50bd97b4f8aac7415c1d00d13aa361dfbc73b07ac433b046159340f4d560",
+    "release_sha256": "3d5e50bd97b4f8aac7415c1d00d13aa361dfbc73b07ac433b046159340f4d560",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/ideax/scripts/single_web_search.py",
+    "source": "system/current-six-v4-20261108/single-full/ideax/scripts/single_web_search.py",
+    "source_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
+    "release_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/litgraph/tools/idea_provenance.py",
+    "source": "system/current-six-v4-20261108/single-full/litgraph/tools/idea_provenance.py",
+    "source_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
+    "release_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/litgraph/tools/library_client.py",
+    "source": "system/current-six-v4-20261108/single-full/litgraph/tools/library_client.py",
+    "source_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
+    "release_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/prompts/blueprint.md",
+    "source": "system/current-six-v4-20261108/single-full/prompts/blueprint.md",
+    "source_sha256": "55971f84c71307e2aba2d97ed8763bc5c76a0439d15ebde754c3f86c6ce306a3",
+    "release_sha256": "c718cf9507710005aed929d6b53fd9808b56ae12e6bfd47e3df9559f72b7c181",
+    "status": "adapted"
+  },
+  {
+    "file": "system/single-full/prompts/discuss.md",
+    "source": "system/current-six-v4-20261108/single-full/prompts/discuss.md",
+    "source_sha256": "dbd4f71b8387670f44f92d7497eb0cbc538bf30225d98b8144de5ed9fb0f7600",
+    "release_sha256": "dbd4f71b8387670f44f92d7497eb0cbc538bf30225d98b8144de5ed9fb0f7600",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/prompts/generation.md",
+    "source": "system/current-six-v4-20261108/single-full/prompts/generation.md",
+    "source_sha256": "51f4ad41b231f86cf6751888b50ffa954a3102720a207fe3aa485354a43fcd63",
+    "release_sha256": "51f4ad41b231f86cf6751888b50ffa954a3102720a207fe3aa485354a43fcd63",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/prompts/respond.md",
+    "source": "system/current-six-v4-20261108/single-full/prompts/respond.md",
+    "source_sha256": "fe1a44dde0483424384b2e12f131a4354970d396d3e93cb8f3846e8cc0d60977",
+    "release_sha256": "fe1a44dde0483424384b2e12f131a4354970d396d3e93cb8f3846e8cc0d60977",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/prompts/select.md",
+    "source": "system/current-six-v4-20261108/single-full/prompts/select.md",
+    "source_sha256": "a3ecbf0c2d23f1a62f62343c8d911c30bc95e553dbd20996a270cbd071a9f6b3",
+    "release_sha256": "a3ecbf0c2d23f1a62f62343c8d911c30bc95e553dbd20996a270cbd071a9f6b3",
+    "status": "unchanged"
+  },
+  {
+    "file": "system/single-full/release.json",
+    "source": "system/current-six-v4-20261108/single-full/release.json",
+    "source_sha256": "44df9fa4fa3fcf8b91071f5d2f7ec80e0dd45fff6ef3402354676a78f9eb4012",
+    "release_sha256": "f879764f173b4c954785f01bac67a0babe77a0f5679894db08af0b5e1869f9ae",
+    "status": "adapted"
+  }
+]

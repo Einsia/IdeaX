@@ -1,0 +1,17 @@
+{
+  "id": "cross-modal-retrieval",
+  "name": "跨模态检索（图文与文本-视频）",
+  "ideas": 5,
+  "condition": "current-six-v4-light-multi-api",
+  "agent": "light-multi",
+  "information": "api",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "litgraph_domain_ids": [
+    "cross-modal-retrieval"
+  ],
+  "full_initial_context": false,
+  "litgraph_api": true,
+  "public_web_allowed": true,
+  "generation_enabled": true,
+  "status": "prepared"
+}

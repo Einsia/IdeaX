@@ -1,0 +1,36 @@
+{
+  "id": "llm-evolutionary-heuristic-design",
+  "name": "LLM 引导的启发式与程序进化",
+  "native_name": "LLM 引导的启发式与程序进化",
+  "category": "算法发现",
+  "prompt": "研究领域：LLM 引导的启发式与程序进化。\n研究范围：利用语言模型和执行反馈进行算法、程序与启发式的演化搜索。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：需以可执行候选及适应度搜索为核心；仓库问题修复归 swe-agent，固定算子实现优化归 dl-compilers-kernels。\n可考虑的验证维度：未见实例、等适应度评估预算、简单采样和经典搜索基线及生成程序可靠性。",
+  "generation_focus": [
+    "利用语言模型和执行反馈进行算法、程序与启发式的演化搜索"
+  ],
+  "why_for_generation": "算法发现可依赖外部适应度检验，研究对象是搜索新算法而非完成既有代码修改。",
+  "scope_boundary": "需以可执行候选及适应度搜索为核心；仓库问题修复归 swe-agent，固定算子实现优化归 dl-compilers-kernels。",
+  "validation_focus": "未见实例、等适应度评估预算、简单采样和经典搜索基线及生成程序可靠性",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "材料较少，后续需补充检索；不视为低价值",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "llm-evolutionary-heuristic-design",
+        "name": "LLM 引导的启发式与程序进化",
+        "problems": 1,
+        "insights": 5,
+        "papers": 50,
+        "source_cards": 50
+      }
+    ],
+    "counts": {
+      "problems": 1,
+      "insights": 5,
+      "papers": 50,
+      "source_cards": 50
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "9e342c889bdc4461ca4e406ccee55cf652fc676732fd13aaa0acda9ed79ebd5a"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "agent-env-benchmark",
+  "name": "大模型智能体的真实环境评测",
+  "native_name": "大模型智能体的真实环境评测",
+  "category": "智能体",
+  "prompt": "研究领域：大模型智能体的真实环境评测。\n研究范围：真实动态环境中智能体能力的测量、任务有效性与结果核验。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：贡献应是测量或验证方法及其有效性；直接提升某类任务策略不自动构成评测方法创新。\n可考虑的验证维度：可复现状态核验、构念有效性、抗捷径性、人工判断一致性与跨环境效度。",
+  "generation_focus": [
+    "真实动态环境中智能体能力的测量、任务有效性与结果核验"
+  ],
+  "why_for_generation": "任务完成、轨迹合法性和组件贡献常被混淆，可靠测量是可复用的方法学问题。",
+  "scope_boundary": "贡献应是测量或验证方法及其有效性；直接提升某类任务策略不自动构成评测方法创新。",
+  "validation_focus": "可复现状态核验、构念有效性、抗捷径性、人工判断一致性与跨环境效度",
+  "selection_class": "recon_native_reviewed",
+  "decision": "retain",
+  "coverage_note": "完整导出，数量不代表新颖性",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "agent-env-benchmark",
+        "name": "大模型智能体的真实环境评测",
+        "problems": 142,
+        "insights": 172,
+        "papers": 449,
+        "source_cards": 447
+      }
+    ],
+    "counts": {
+      "problems": 142,
+      "insights": 172,
+      "papers": 449,
+      "source_cards": 447
+    },
+    "aggregation_note": "单个当前 LitGraph 原生领域；未人工合并，未截断正文。"
+  },
+  "source_export_sha256": "b3a9a9e1f88f823c37a9b7e2eba194529af19a282c96fec4bbaa4a13f10a7e2c"
+}

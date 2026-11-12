@@ -1,0 +1,17 @@
+{
+  "id": "discrete-diffusion",
+  "name": "离散扩散与离散流（含扩散语言模型）",
+  "ideas": 5,
+  "condition": "current-six-v4-single-api",
+  "agent": "single",
+  "information": "api",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "litgraph_domain_ids": [
+    "discrete-diffusion"
+  ],
+  "full_initial_context": false,
+  "litgraph_api": true,
+  "public_web_allowed": true,
+  "generation_enabled": true,
+  "status": "prepared"
+}

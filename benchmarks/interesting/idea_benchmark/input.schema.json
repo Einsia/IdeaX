@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Idea benchmark input record v1",
+  "type": "object",
+  "required": ["task_id", "idea_id", "task_context", "idea_text", "system"],
+  "properties": {
+    "task_id": {"type": "string", "minLength": 1},
+    "idea_id": {"type": "string", "minLength": 1},
+    "task_context": {"type": "string", "minLength": 1},
+    "idea_text": {"type": "string", "minLength": 1},
+    "system": {"type": "string", "minLength": 1},
+    "domain": {"type": "string"},
+    "resource_constraints": {"type": "string"},
+    "knowledge_cutoff": {"type": "string"},
+    "provided_reference_texts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["reference_id", "text"],
+        "properties": {"reference_id": {"type": "string", "minLength": 1}, "text": {"type": "string", "minLength": 1}, "url": {"type": "string"}}
+      }
+    }
+  }
+}

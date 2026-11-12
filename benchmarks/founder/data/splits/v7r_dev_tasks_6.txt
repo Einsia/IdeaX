@@ -1,0 +1,7 @@
+# v7-R dev tasks: every 6th of the 36 main v7 tasks sorted by task id, starting with the first (fixed before any v7-R result)
+2025-09-01:adaptive-compute-termination
+2025-09-01:practical-adaptive-optimizers
+2025-10-01:agentic-rl
+2025-10-01:process-verification-search
+2025-11-01:multimodal-reasoning-rl
+2026-02-01:latent-reasoning

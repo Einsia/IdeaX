@@ -1,0 +1,57 @@
+{
+  "id": "efficient_inference_long_context_serving",
+  "name": "LLM Efficiency：高效推理、长上下文与模型 serving",
+  "category": "效率与系统",
+  "prompt": "研究领域：LLM Efficiency：高效推理、长上下文与模型 serving。\n研究范围：LLM 推理的端到端效率，重点包括 KV cache、长上下文高效注意力、量化与压缩、批处理与 serving 调度及其相互作用。\n提出 5 条彼此有实质区别、值得研究且可检验的 idea。自行选择具体问题和技术路线，说明核心假设、与最近相关工作的差异、可证伪的验证方案及资源需求。核验现有工作后再判断新颖性；不要把文献中的历史问题直接当作仍未解决的问题。证据请给出可核验来源。领域范围内可以探索其他问题，无需逐条覆盖下述评测维度。\n范围边界：核心贡献应是质量约束下的端到端资源收益或跨层机制。单独改进投机解码归 speculative-decoding，多模型选择归 multi-llm-routing-ensemble，单独剪枝归 network-pruning，单算子实现归 dl-compilers-kernels；与这些机制结合时，需要说明系统交互带来的独立研究问题，避免重复生成同一 idea。\n可考虑的验证维度：在质量约束与匹配硬件、请求负载下，衡量首 token 延迟、逐 token 延迟、尾延迟、吞吐、峰值显存和单位请求成本；验证不同上下文长度与并发下的收益及退化。",
+  "generation_focus": [
+    "LLM 推理的端到端效率，重点包括 KV cache、长上下文高效注意力、量化与压缩、批处理与 serving 调度及其相互作用"
+  ],
+  "why_for_generation": "用户要求保留一个独立 Efficiency 综合领域，研究单一细分机制无法覆盖的质量、显存、延迟与服务负载相互作用。",
+  "scope_boundary": "核心贡献应是质量约束下的端到端资源收益或跨层机制。单独改进投机解码归 speculative-decoding，多模型选择归 multi-llm-routing-ensemble，单独剪枝归 network-pruning，单算子实现归 dl-compilers-kernels；与这些机制结合时，需要说明系统交互带来的独立研究问题，避免重复生成同一 idea。",
+  "validation_focus": "在质量约束与匹配硬件、请求负载下，衡量首 token 延迟、逐 token 延迟、尾延迟、吞吐、峰值显存和单位请求成本；验证不同上下文长度与并发下的收益及退化",
+  "selection_class": "user_requested_composite",
+  "decision": "add",
+  "coverage_note": "由四个已核验的 LitGraph 原生领域组成；任务 ID 为本地综合任务 ID，不冒充单个原生领域。完整导出不代表新颖性。",
+  "litgraph_support": {
+    "subdomains": [
+      {
+        "id": "efficient-long-context-attention",
+        "name": "长上下文高效注意力：稀疏保留、线性化与可证明近似",
+        "problems": 103,
+        "insights": 134,
+        "papers": 1163,
+        "source_cards": 1161
+      },
+      {
+        "id": "neural-quantization",
+        "name": "神经网络量化",
+        "problems": 49,
+        "insights": 119,
+        "papers": 979,
+        "source_cards": 978
+      },
+      {
+        "id": "efficient-model-compression",
+        "name": "深度模型压缩与高效训练推理",
+        "problems": 107,
+        "insights": 105,
+        "papers": 607,
+        "source_cards": 607
+      },
+      {
+        "id": "llm-serving",
+        "name": "大模型推理服务系统 / AI 能耗与碳排放的度量与核算",
+        "problems": 23,
+        "insights": 43,
+        "papers": 218,
+        "source_cards": 218
+      }
+    ],
+    "counts": {
+      "insights": 401,
+      "problems": 282
+    },
+    "aggregation_note": "四个原生领域的完整 insights/problems 按条目 ID 合并；同一论文可能支持多个条目，不将论文计数简单相加。"
+  },
+  "source_export_sha256": "b38332bfec506bf202eaf76ceea62bc27e390c5868445af6ebb5652fcd45121d"
+}

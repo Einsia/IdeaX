@@ -1,0 +1,17 @@
+{
+  "id": "process-verification-search",
+  "name": "过程验证与测试时搜索",
+  "ideas": 5,
+  "condition": "current-six-v4-light-multi-full",
+  "agent": "light-multi",
+  "information": "full",
+  "prompt_version": "pre-tuning-novelty-self-review-v4",
+  "litgraph_domain_ids": [
+    "process-verification-search"
+  ],
+  "full_initial_context": true,
+  "litgraph_api": true,
+  "public_web_allowed": true,
+  "generation_enabled": true,
+  "status": "prepared"
+}
