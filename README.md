@@ -19,6 +19,7 @@ LitGraph 驱动的研究 idea 生成系统及评测代码。此仓库整理了�
 | `benchmarks/ideascientist/` | IS 六维质量、新颖性及跨领域结构迁移评分 |
 | `data/` | 38 个领域定义及 Full 使用的 7,641 条领域材料快照 |
 | `provenance/` | 源文件与发布文件的校验信息 |
+| `case_studies/` | 六个模型效率研究提案、机制与实现方案，以及对应的 LitGraph 检索记录 |
 
 Multi 的讨论和修订合为一轮。Top1 取外部评审之前 selector 选择的第一名，不根据裁判分数事后择优。每个系统每域交付五张完整 idea card；可再运行 Blueprint 阶段。
 
@@ -29,6 +30,12 @@ Multi 的讨论和修订合为一轮。Top1 取外部评审之前 selector 选�
 当前 LitGraph 公开只读入口：<https://kevin-wake-stuffed-anti.trycloudflare.com>，无需 LitGraph API key。[接口说明](https://kevin-wake-stuffed-anti.trycloudflare.com/llms.txt) 可直接提供给 agent。该入口于 2026-11-12 验证可用，使用临时隧道域名，后续可能变化；模型调用仍由使用者自己的 agent 环境提供。
 
 该复制版仅适配直接 HTTP 调用、领域填写和输出目录；实验使用的原始 prompt 保留在 `system/single-api/prompts/generation.md`，没有替换其内容或哈希。完整领域预加载版见 [英文 Full Prompt](docs/single_full_copyable_en.txt)，使用 Full 时仍须提供对应领域的完整材料。
+
+## 模型效率案例
+
+[六类研究案例](case_studies/README.md)提供六份完整研究提案和六份探索过程记录，覆盖机制组合、跨领域迁移、重审假设、诊断归因、扩展能力边界及自由探索。提案包含公式、实现方案、前作比较与验证设计；过程记录包含 LitGraph 查询、insight/problem 来源、阅读深度及候选调整。
+
+这些材料用于展示研究构思与文献探索，尚未报告新的模型训练或硬件性能结果；包内不含可执行实现和原始 API 响应。
 
 ## 安装与配置
 
