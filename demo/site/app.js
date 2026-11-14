@@ -59,33 +59,56 @@ function sourceActions(c) {
 function section(title, text) {
   return `<section class="panel-section"><h3>${escapeHTML(title)}</h3><p>${escapeHTML(text)}</p></section>`;
 }
+const stepTeaching = [
+  ['Understand the problem', 'Read domain problems and inspect the setting', 'Start with an obstacle that matters. Make the situation concrete before suggesting a mechanism.'],
+  ['Connect useful evidence', 'Read insights and trace them to source papers', 'Explain what each observation contributes. An insight is a possible ingredient, not proof that the new idea works.'],
+  ['Check what is already done', 'Compare the candidate with the closest prior work', 'Search the mechanism, not just its name. Keep what remains after the overlap is understood, and revise the claim.'],
+  ['Write a specific idea', 'Turn the revised claim into an explicit procedure', 'Say what changes, why that change might help, and what result would show that the idea is wrong.'],
+  ['Plan how to test it', 'Develop the Idea Card into a research plan', 'Choose comparisons that can distinguish the explanation from simpler alternatives. These are proposed tests, not results.'],
+];
+function technicalDetails(title,body) {
+  return `<details class="technical-details"><summary>${escapeHTML(title)}</summary><div>${body}</div></details>`;
+}
 function renderPanel() {
-  const c=currentCase(); let html='';
-  if (state.stage===0) {
-    html=`<p class="panel-kicker">01 / FIND THE PROBLEM</p><h3 class="panel-title">${escapeHTML(c.topic)}<br>has an open question.</h3><p class="panel-copy">${escapeHTML(c.problem)}</p><blockquote class="question-box">${escapeHTML(c.question)}</blockquote><div class="connection-strip"><span aria-hidden="true">↳</span><p>A problem in the library is a starting point. The agent still needs to check what is already solved and what remains.</p></div>${sourceActions(c)}`;
-  } else if (state.stage===1) {
-    html=`<p class="panel-kicker">02 / CONNECT THE INSIGHTS</p><h3 class="panel-title">A useful connection,<br>with the evidence attached.</h3>`;
-    html+=c.insights.map((i,n)=>`<button class="evidence-card" data-insight="${n}" aria-label="Inspect source: ${escapeHTML(i.title)}"><span class="evidence-kind">${i.id.includes('-P') ? 'PROBLEM' : 'INSIGHT'} · LITGRAPH <span aria-hidden="true">↗</span></span><h3>${escapeHTML(i.title)}</h3><p>${escapeHTML(i.text)}</p><span class="evidence-id">${escapeHTML(i.id)}</span></button>`).join('');
-    html+=`<div class="reasoning-bridge"><p class="eyebrow">THE DESIGN MOVE</p>${escapeHTML(c.connection)}</div>`;
-  } else if (state.stage===2) {
-    html=`<p class="panel-kicker">03 / CHECK THE NEAREST WORK</p><h3 class="panel-title">New to us<br>isn’t necessarily new.</h3><div class="review-row"><h3>INITIAL CANDIDATE</h3><p>${escapeHTML(c.initial)}</p></div><div class="review-row"><h3>WHAT THE LITERATURE CHANGED</h3><p>${escapeHTML(c.finding)}</p>${c.neighbors.map(p=>link(p.url,p.title+' ↗','paper-link')).join('')}</div><div class="review-row revision"><h3>REVISED CONTRIBUTION</h3><p>${escapeHTML(c.revision)}</p></div><div class="note-box">This is the recorded revision, not a new novelty verdict. Remaining overlap and reading limits are preserved in the source record.</div>${sourceActions(c)}`;
-  } else if (state.stage===3) {
-    html=`<div class="idea-card-heading"><span>IDEA CARD / ${escapeHTML(c.number)}</span><span class="rule"></span><span>PROPOSAL</span></div><h3 class="panel-title">${escapeHTML(c.card_title)}</h3>`;
-    html+=section('The question',c.question)+section('Why this idea',c.connection)+section('Core mechanism',c.mechanism);
-    html+=`<div class="equation">${escapeHTML(c.equation)}</div>`;
-    html+=section('Remaining contribution',c.contribution)+section('How to test it',c.validation)+section('What would make it fail',c.failure);
-    html+=`<div class="source-actions"><button class="button dark small" data-document="PROPOSAL">Read the complete case ↗</button><button class="button small" id="download-card">Download overview ↓</button><button class="button small" data-document="PROCESS">Full process ↗</button></div><div class="note-box">The overview above is a reading guide. Open the complete original case for every equation, implementation detail, prior-work comparison, and reference.</div>`;
+  const c=currentCase(),g=c.guide,step=stepTeaching[state.stage]; let html='';
+  html+=`<div class="step-purpose"><p class="panel-kicker">STEP ${state.stage+1} / 5</p><h3 class="panel-title">${escapeHTML(step[0])}</h3><p>${escapeHTML(step[2])}</p></div>`;
+  if(state.stage===0) {
+    html+=`<section class="scene-card"><h4>Imagine this situation</h4><p>${escapeHTML(g.scene)}</p></section>`;
+    html+=window.IdeaXExamples.render(c.id);
+    html+=`<div class="stage-task"><p class="eyebrow">WHAT IDEAX DOES HERE</p><p>Uses the domain's problems to turn this setting into a question worth investigating:</p><blockquote class="question-box">${escapeHTML(g.question)}</blockquote></div>`;
+    html+=technicalDetails('See the precise research question',section('Original question',c.question)+section('Technical setting',c.problem));
+  } else if(state.stage===1) {
+    html+=`<div class="stage-task"><p class="eyebrow">WHAT IDEAX DOES HERE</p><p>Looks for observations that can help with the question, including in other domains. Here are two entries from the recorded exploration and how each changes the design.</p></div>`;
+    html+=c.insights.map((i,n)=>`<article class="evidence-explained"><p class="eyebrow">${i.id.includes('-P')?'PROBLEM':'INSIGHT'} ${n+1} · FROM LITGRAPH</p><h4>${escapeHTML(i.title)}</h4><p>${escapeHTML(g.insights[n].plain)}</p><div class="insight-use"><strong>How IdeaX uses it</strong><p>${escapeHTML(g.insights[n].use)}</p></div><button class="text-button" data-insight="${n}">Inspect the source entry ↗</button></article>`).join('');
+    html+=`<div class="reasoning-bridge"><p class="eyebrow">PUT THE OBSERVATIONS TOGETHER</p>${escapeHTML(g.connection)}</div>`;
+    if(c.queries.length)html+=technicalDetails('See recorded literature searches',`<p>These links come from the original process record. The complete record preserves reading scope and candidate revisions.</p>${c.queries.slice(0,3).map(q=>link(q.url,q.label+' ↗','paper-link')).join('')}`);
+  } else if(state.stage===2) {
+    html+=`<div class="stage-task"><p class="eyebrow">WHAT IDEAX DOES HERE</p><p>Checks whether previous papers already do the same thing. The result can change the research question itself.</p></div>`;
+    html+=`<div class="revision-path"><section class="review-row"><span class="path-number">1</span><h4>The first idea</h4><p>${escapeHTML(g.initial)}</p></section><section class="review-row"><span class="path-number">2</span><h4>What reading earlier papers reveals</h4><p>${escapeHTML(g.discovery)}</p><details class="nearby-papers"><summary>Read selected neighboring papers (${c.neighbors.length})</summary>${c.neighbors.map(p=>link(p.url,p.title+' ↗','paper-link')).join('')}<p class="small-note">The complete case includes the broader comparison and actual reading scope.</p></details></section><section class="review-row revision"><span class="path-number">3</span><h4>The revised question</h4><p>${escapeHTML(g.revision)}</p></section></div>`;
+    html+=`<p class="scope-note">This records how the proposal was narrowed. It does not establish that the remaining idea is novel or that it will succeed.</p>`;
+  } else if(state.stage===3) {
+    html+=`<div class="stage-task"><p class="eyebrow">WHAT IDEAX DOES HERE</p><p>Writes an Idea Card: a compact, testable claim with a concrete mechanism, its connection to the evidence, and the closest-work distinction.</p></div>`;
+    html+=`<h4 class="plain-card-title">${escapeHTML(g.title)}</h4><ol class="recipe-list">${g.recipe.map((x,n)=>`<li><span class="recipe-number">${n+1}</span><div><h4>${escapeHTML(x[0])}</h4><p>${escapeHTML(x[1])}</p></div></li>`).join('')}</ol>`;
+    html+=section('What the paper would need to contribute',g.claim);
+    html+=technicalDetails('Open the technical mechanism and formula',section('Core mechanism',c.mechanism)+`<div class="equation">${escapeHTML(c.equation)}</div>`+section('Why this idea',c.connection)+section('Remaining contribution',c.contribution));
+    html+=`<div class="source-actions"><button class="button dark small" data-document="PROPOSAL">Read the complete Idea Card ↗</button><button class="button small" id="download-card">Download technical overview ↓</button></div>`;
   } else {
-    html=`<p class="panel-kicker">05 / DEVELOP THE PROPOSAL</p><h3 class="panel-title">An idea is a beginning.</h3><p class="panel-copy">A Research Blueprint makes the motivation, evidence, design decisions, and tests explicit. Here is the development path described in this source proposal.</p><ol class="blueprint-list">${c.blueprint.map(t=>`<li>${escapeHTML(t)}</li>`).join('')}</ol><div class="note-box">${escapeHTML(c.blueprint_note)}</div><div class="reasoning-bridge"><p class="eyebrow">WHERE YOU COME IN</p>Challenge an assumption, add a constraint, or ask a different question. Export your research brief and let a local agent explore the next version.</div>${sourceActions(c)}`;
+    html+=`<div class="stage-task"><p class="eyebrow">WHAT IDEAX DOES HERE</p><p>Develops the evidence and mechanism into a Research Blueprint: why the idea follows, how to investigate it, what to compare, and what would overturn the claim. Below is the development plan summarized from this case.</p></div>`;
+    html+=`<div class="test-list">${g.tests.map((x,n)=>`<section class="test-step"><p class="eyebrow">TEST ${n+1}</p><h4>${escapeHTML(x[0])}</h4><p>${escapeHTML(x[1])}</p><p class="test-reason"><strong>What this tells us</strong> ${escapeHTML(x[2])}</p></section>`).join('')}</div>`;
+    html+=`<section class="judgment-pair"><div><h4>Evidence that would support it</h4><p>${escapeHTML(g.success)}</p></div><div><h4>A result that would weaken it</h4><p>${escapeHTML(g.failure)}</p></div></section><p class="scope-note">${escapeHTML(c.blueprint_note)}</p>`;
   }
+  html+=`<div class="step-takeaway"><p class="eyebrow">WHAT THIS STEP PRODUCES</p><p>${escapeHTML(g.outputs[state.stage])}</p>${state.stage<4?`<span>Next: ${escapeHTML(stepTeaching[state.stage+1][0].toLowerCase())} →</span>`:'<span>Your turn: add a question or critique and prepare a local research run.</span>'}</div>`;
+  if(state.stage!==3)html+=sourceActions(c);
   $('#stage-panel').innerHTML=`<div class="panel-inner">${html}</div>`;
   $('#stage-panel').setAttribute('aria-labelledby',`stage-${state.stage}`);
-  $('#stage-summary').textContent=`Step ${state.stage+1} of 5 · ${stages[state.stage][1]}`;
+  $('#stage-summary').textContent=`Step ${state.stage+1} of 5 · ${step[1]}`;
   $('#next-stage').innerHTML=state.stage===4 ? 'Prepare my research brief <span aria-hidden="true">↗</span>' : `Next: ${escapeHTML(stages[state.stage+1][0])} <span aria-hidden="true">→</span>`;
   document.querySelectorAll('.stage-tab').forEach((b,n)=>{b.setAttribute('aria-selected',String(n===state.stage));b.tabIndex=n===state.stage?0:-1;});
   document.querySelectorAll('[data-insight]').forEach((b)=>b.addEventListener('click',()=>showInsight(Number(b.dataset.insight))));
   document.querySelectorAll('[data-document]').forEach((b)=>b.addEventListener('click',()=>showDocument(b.dataset.document)));
+  document.querySelectorAll('#stage-panel details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open&&state.playing)stopReplay();}));
   $('#download-card')?.addEventListener('click',()=>download(`ideax-${c.id}-card.md`,cardMarkdown(c)));
+  if(state.stage===0)window.IdeaXExamples.bind(c.id,()=>{if(state.playing)stopReplay();});
   prepareWalkthrough(c);
 }
 function markdownRenderer() {
@@ -163,38 +186,38 @@ function updateHash() {
 }
 function prepareWalkthrough(c) {
   state.cues=[]; state.cue=-1; state.elapsed=0; state.duration=0; state.replayComplete=false;
-  const add=(element,title,note,duration=4800)=>{
+  const add=(element,title,note)=>{
     if(!element)return;
+    const words=element.innerText.trim().split(/\s+/).length;
+    const duration=Math.max(7000,Math.min(24000,words*300+2000));
     element.classList.add('walkthrough-target');
     state.cues.push({element,title,note,start:state.duration,end:state.duration+duration});
     state.duration+=duration;
   };
-  const panel=$('#stage-panel');
-  const find=(s)=>panel.querySelector(s);
+  const panel=$('#stage-panel'),find=(s)=>panel.querySelector(s);
   if(state.stage===0) {
-    add(find('.panel-copy'),'Find the unresolved problem',`Start with the limitation in ${c.topic.toLowerCase()}.`);
-    add(find('.question-box'),'Turn the gap into a research question','This question gives the literature exploration a direction.');
-  } else if(state.stage===1) {
-    panel.querySelectorAll('.evidence-card').forEach((el,i)=>add(el,`Read ${c.insights[i].id.includes('-P')?'problem':'insight'} ${i+1} of ${c.insights.length}`,c.insights[i].title));
-    add(find('.reasoning-bridge'),'Connect the insights to a design choice','The contribution starts with how these observations fit together.',5600);
-  } else if(state.stage===2) {
-    const rows=panel.querySelectorAll('.review-row');
-    add(rows[0],'Start with the initial candidate','An appealing starting point still needs a close prior-work check.');
-    add(rows[1],'Let the nearest papers challenge it','Compare the actual mechanism and conclusions, then identify the overlap.',6200);
-    add(rows[2],'Revise the remaining contribution','See what changes after that comparison. This is the recorded revision.',5600);
-  } else if(state.stage===3) {
-    const sections=panel.querySelectorAll('.panel-section');
-    add(sections[1],'Explain why this idea follows','Connect the literature observations to the proposed intervention.');
-    add(sections[2],'Make the core mechanism explicit','Identify what the proposal actually changes and why it could work.',6200);
-    add(find('.equation'),'Make the design concrete','The compact expression summarizes the proposed operation.');
-    add(sections[3],'State the remaining contribution','Keep the claim distinct from the nearest existing work.');
-    add(sections[4],'Describe a discriminating test','Ask what observation would separate this explanation from alternatives.');
-    add(sections[5],'Keep the failure conditions visible','A useful proposal states what would make its central claim fail.');
+    add(find('.scene-card'),'Start with the situation',c.guide.summary);
+    add(find('.teaching-example'),'Make it concrete','Try the controls to pause and explore this illustrative example.');
+    add(find('.stage-task'),'Form the research question','The setting becomes a specific question to investigate.');
   } else {
-    const steps=panel.querySelectorAll('.blueprint-list li');
-    steps.forEach((el,i)=>add(el,`Develop the plan · ${i+1} of ${steps.length}`,'Follow the development steps recorded in the complete proposal.'));
-    add(find('.reasoning-bridge'),'Your turn: challenge the proposal','Add a question or critique, then export your brief for a local research run.',5600);
+    add(find('.stage-task'),stepTeaching[state.stage][1],'Follow what IdeaX adds at this step.');
+    if(state.stage===1) {
+      panel.querySelectorAll('.evidence-explained').forEach((el,i)=>add(el,`Read the evidence · ${i+1} of ${c.insights.length}`,c.insights[i].title));
+      add(find('.reasoning-bridge'),'Connect evidence to a possible mechanism','Read how each observation contributes to the proposed design.');
+    } else if(state.stage===2) {
+      const rows=panel.querySelectorAll('.review-row');
+      add(rows[0],'The initial candidate','This is the broad idea before accounting for its nearest predecessors.');
+      add(rows[1],'What earlier papers already cover','The agent compares mechanisms and conclusions, not just titles.');
+      add(rows[2],'Revise what the paper would claim','See how the contribution narrows in response to previous work.');
+    } else if(state.stage===3) {
+      panel.querySelectorAll('.recipe-list li').forEach((el,i)=>add(el,`Mechanism · ${i+1} of ${c.guide.recipe.length}`,c.guide.recipe[i][0]));
+      add(find('.panel-section'),'State the contribution','This is a research claim to establish, not a result already obtained.');
+    } else {
+      panel.querySelectorAll('.test-step').forEach((el,i)=>add(el,`Proposed test · ${i+1} of ${c.guide.tests.length}`,c.guide.tests[i][2]));
+      add(find('.judgment-pair'),'Decide what would count as evidence','Both supportive and disappointing outcomes need an honest interpretation.');
+    }
   }
+  add(find('.step-takeaway'),'What we have learned at this step',c.guide.outputs[state.stage]);
   $('#stage-panel').classList.remove('walkthrough-guided');
   updatePlayer();
 }
@@ -294,7 +317,9 @@ function selectCase(id, restore=false, stage=0) {
   if(!state.catalog.cases.some(c=>c.id===id))return;
   stopReplay();state.replayStarted=false;state.caseId=id;state.stage=stage;
   const c=currentCase();
-  $('#case-title').textContent=c.title;$('#case-perspective').textContent=c.perspective.toUpperCase();$('#case-topic').textContent=c.topic;
+  $('#case-title').textContent=c.guide.title;$('#case-perspective').textContent=c.perspective.toUpperCase();$('#case-topic').textContent=c.topic;
+  $('#case-summary').textContent=c.guide.summary;
+  $('#case-glossary').innerHTML='<summary>New to this topic? Four terms, explained</summary><dl>'+c.guide.terms.map(([term,definition])=>`<div><dt>${escapeHTML(term)}</dt><dd>${escapeHTML(definition)}</dd></div>`).join('')+'</dl>';
   document.querySelectorAll('.case-choice').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.case===id)));
   fillBrief(c,restore);renderPanel();updateHash();
 }
@@ -339,6 +364,7 @@ function installEvents() {
   $('#play-replay').addEventListener('click',play);
   $('#reset-replay').addEventListener('click',()=>setStage(0,state.playing));
   $('#skip-replay').addEventListener('click',()=>state.stage===4?openBrief():setStage(state.stage+1,state.playing));
+  $('#case-glossary').addEventListener('toggle',()=>{if($('#case-glossary').open&&state.playing)stopReplay();});
   $('#replay-speed').addEventListener('change',()=>{accumulatePlayback();state.speed=Number($('#replay-speed').value);updatePlayer();});
   $('#next-stage').addEventListener('click',()=>state.stage===4?openBrief():setStage(state.stage+1));
   $('#brief-form').addEventListener('submit',openBrief);
@@ -363,9 +389,9 @@ function installEvents() {
 }
 async function init() {
   try {
-    const response=await fetch('catalog.json'); if(!response.ok)throw new Error('Unable to load the case library.');
+    const response=await fetch('catalog.json?v=20261114-guide'); if(!response.ok)throw new Error('Unable to load the case library.');
     state.catalog=await response.json();
-    $('#case-list').innerHTML=state.catalog.cases.map(c=>`<button class="case-choice" data-case="${escapeHTML(c.id)}" aria-pressed="false"><span class="case-number">${escapeHTML(c.number)}</span><span><strong>${escapeHTML(c.perspective)}</strong><small>${escapeHTML(c.topic)}</small></span></button>`).join('');
+    $('#case-list').innerHTML=state.catalog.cases.map(c=>`<button class="case-choice" data-case="${escapeHTML(c.id)}" aria-pressed="false"><span class="case-number">${escapeHTML(c.number)}</span><span><strong>${escapeHTML(c.guide.title)}</strong><small>${escapeHTML(c.perspective)}</small></span></button>`).join('');
     document.querySelectorAll('.case-choice').forEach(b=>b.addEventListener('click',()=>selectCase(b.dataset.case)));
     $('#stage-tabs').innerHTML=stages.map(([name],n)=>`<button class="stage-tab" id="stage-${n}" role="tab" aria-controls="stage-panel" aria-selected="false" data-stage="${n}"><span class="step-index">${n+1}</span>${escapeHTML(name)}</button>`).join('');
     document.querySelectorAll('.stage-tab').forEach(b=>{

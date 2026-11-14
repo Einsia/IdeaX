@@ -7,11 +7,12 @@
   <meta name="theme-color" content="#f6f5f0">
   <title>IdeaX — From literature to a research idea</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261114-walkthrough">
+  <link rel="stylesheet" href="style.css?v=20261114-guide">
   <link rel="stylesheet" href="vendor/katex.min.css">
   <script src="vendor/markdown-it.min.js" defer></script>
   <script src="vendor/katex.min.js" defer></script>
-  <script src="app.js?v=20261114-walkthrough" defer></script>
+  <script src="examples.js?v=20261114-guide" defer></script>
+  <script src="app.js?v=20261114-guide" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -28,12 +29,12 @@
       <div>
         <p class="eyebrow"><span class="dot"></span> AN OPEN WORKSPACE FOR RESEARCH IDEATION</p>
         <h1>Good ideas start with<br><em>better connections.</em></h1>
-        <p class="intro-copy">Follow a problem into the literature. Connect useful insights.<br class="desktop-break"> Watch a research idea take shape—and challenge it along the way.</p>
+        <p class="intro-copy">How does a research idea grow out of papers? Follow a concrete example,<br class="desktop-break"> see what each step adds, and watch earlier work change the proposal.</p>
       </div>
       <div class="intro-aside">
         <span class="small-diagram" aria-hidden="true"><i>P</i><span>↗</span><i>I</i><span>↗</span><i>?</i></span>
-        <p>Problems → Insights → Ideas</p>
-        <span>Six real cases. Every connection has a source.</span>
+        <p>A question. Evidence. A better proposal.</p>
+        <span>Six real cases, explained from the beginning.</span>
       </div>
     </section>
 
@@ -41,7 +42,7 @@
       <aside class="case-sidebar">
         <div class="sidebar-heading"><span class="eyebrow">THE CASE LIBRARY</span><span class="count">06</span></div>
         <h2>Six complete cases.</h2>
-        <p class="muted">One field: model efficiency.<br>Choose a research perspective.</p>
+        <p class="muted">New here? Start with the cache example.<br>Each case explains the same five steps.</p>
         <div id="case-list" class="case-list" aria-label="Case selection"></div>
         <div class="source-note"><span class="dot"></span><strong>Recorded cases</strong><p>These are literature checks and proposal revisions from November 13, 2026. No model or hardware results are claimed.</p></div>
       </aside>
@@ -49,6 +50,9 @@
       <div class="stage-workspace">
         <div class="replay-meta"><span class="pill"><span class="dot"></span> SOURCE-LINKED REPLAY</span><span id="case-topic"></span></div>
         <div class="case-heading"><div><p class="eyebrow" id="case-perspective"></p><h2 id="case-title">Loading the case library…</h2></div><button class="icon-button" id="share-case" aria-label="Copy a link to this case" title="Copy case link">↗</button></div>
+        <p id="case-summary" class="case-summary"></p>
+        <details id="case-glossary" class="case-glossary"></details>
+        <div class="method-primer"><p><strong>What IdeaX does</strong> · Read a problem → connect literature insights → check and revise → write an idea → plan how to test it.</p><p><strong>LitGraph</strong> organizes papers into <em>problems</em> (obstacles worth solving) and <em>insights</em> (observations that may help). These guide exploration; the agent still checks the source papers.</p></div>
         <div class="stage-tabs" id="stage-tabs" role="tablist" aria-label="Research stages"></div>
         <div class="stage-controls"><p id="stage-summary" aria-live="polite"></p><div><button class="text-button" id="reset-replay">Restart</button></div></div>
         <section class="walkthrough-guide" id="walkthrough-guide" aria-label="Guided walkthrough">

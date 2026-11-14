@@ -17,9 +17,14 @@ def sha(path):
 
 def build():
     stories = json.loads((HERE / 'stories.json').read_text())
+    guides = json.loads((HERE / 'guides.json').read_text())
     case_root = ROOT / 'case_studies/model_efficiency'
     targets = []
     for story in stories:
+        guide = guides[story['id']]
+        if len(guide['insights']) != len(story['insights']) or len(guide['outputs']) != 5:
+            raise ValueError('Incomplete walkthrough guide: ' + story['id'])
+        story['guide'] = guide
         folder = case_root / story['folder']
         proposal, process = folder / 'PROPOSAL.md', folder / 'PROCESS.md'
         raw = proposal.read_text()

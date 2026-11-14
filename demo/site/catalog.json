@@ -62,6 +62,85 @@
         "Run the precision-by-optimizer comparison with matched budgets."
       ],
       "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "guide": {
+        "title": "Can training control both the step and the amplifier?",
+        "summary": "Small weight updates do not guarantee that the whole layer stops amplifying numerical errors.",
+        "scene": "Think of a model layer as an amplifier. A training update makes a small change to its settings, but many small changes can still leave the amplifier too strong. With very low-precision numbers, rounding errors can then be amplified along with the signal.",
+        "question": "When training with four-bit weights and activations, does choosing updates that respect the layer's overall gain help more than rescaling afterward?",
+        "terms": [
+          [
+            "W4A4",
+            "Using four-bit representations for weights (W) and intermediate activations (A)."
+          ],
+          [
+            "BF16",
+            "A wider, 16-bit numerical format used as a comparison here."
+          ],
+          [
+            "Spectral norm",
+            "The maximum factor by which a matrix can amplify an input's length."
+          ],
+          [
+            "Joint constraint",
+            "Choose an update while accounting for both the step limit and the constraint on the current weight matrix."
+          ]
+        ],
+        "insights": [
+          {
+            "plain": "A matrix update has directions as well as a size. Choosing a direction while respecting the layer's constraint can differ from choosing freely and fixing the result afterward.",
+            "use": "Compare constraint-aware direction selection with post-update rescaling, rather than treating them as the same operation."
+          },
+          {
+            "plain": "Limiting each update does not itself limit the accumulated gain of the current weights.",
+            "use": "Track both the update and the weight matrix, then check the low-precision values actually used in the computation."
+          }
+        ],
+        "connection": "Choose the direction and the weight constraint together. The remaining question is whether that geometry helps actual four-bit computation beyond simpler normalization.",
+        "initial": "Combine spectral descent with a fixed spectral norm for the weights.",
+        "discovery": "SSO already makes this combination. The broad optimizer construction cannot be presented as a new mechanism.",
+        "revision": "Focus on low-precision behavior: at equal cost, does joint direction selection improve W4A4 training beyond rescaling the weights after each update? Separate ordinary optimization gains from quantization-specific gains.",
+        "recipe": [
+          [
+            "Constrain the update direction",
+            "Account for the current weight matrix when selecting a bounded update."
+          ],
+          [
+            "Return to the target gain",
+            "Map the updated matrix back to the chosen spectral radius. This coupled construction is already covered by SSO."
+          ],
+          [
+            "Measure what four-bit arithmetic changes",
+            "Compare against post-update normalization and wider-precision controls, using actual reconstructed weights and activations."
+          ]
+        ],
+        "claim": "A mechanism study of when existing joint spectral constraints help low-precision training, and whether any benefit survives their computation cost.",
+        "success": "The comparison isolates a reproducible reduction in the low-precision quality gap that simple rescaling and ordinary wider-precision gains do not explain.",
+        "failure": "The claim weakens if only the hidden high-precision weights stabilize, simple rescaling explains the gain, or extra computation removes the advantage.",
+        "tests": [
+          [
+            "Hold the numerical setup fixed",
+            "Specify quantization, target radius, and the precise update implementations.",
+            "Are methods being compared under the same constraints?"
+          ],
+          [
+            "Separate sources of error",
+            "Vary weight and activation precision independently and inspect reconstructed quantities.",
+            "Does the benefit concern low-precision computation or ordinary optimization?"
+          ],
+          [
+            "Count time as well as tokens",
+            "Compare joint constraints, post-update rescaling, and reference optimizers at matched budgets.",
+            "Does the quality improvement remain useful after paying for the solver?"
+          ]
+        ],
+        "outputs": [
+          "A distinction between a small update and controlled overall amplification.",
+          "A joint-constraint hypothesis about actual low-precision computation.",
+          "A narrowed mechanism study that explicitly acknowledges SSO.",
+          "A comparison-ready proposal with separate numerical and cost claims.",
+          "Precision controls and equal-time comparisons."
+        ]
+      },
       "references": [
         {
           "number": 1,
@@ -201,6 +280,85 @@
         "Measure held-out task gain and deployment cost for one final model."
       ],
       "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "guide": {
+        "title": "Can making a model smaller also teach it a task?",
+        "summary": "Instead of adding new trainable weights, choose which existing connections to keep and how to round them.",
+        "scene": "You want a model to fit on a small device and perform a particular task. Compression already forces choices: remove some connections and store the remaining numbers less precisely. Could task feedback help choose those compression settings?",
+        "question": "Can those limited choices improve the task beyond merely recovering quality lost during compression?",
+        "terms": [
+          [
+            "Weight",
+            "A number controlling the strength of a connection in the model."
+          ],
+          [
+            "Pruning / mask",
+            "Removing connections; a mask records which ones remain active."
+          ],
+          [
+            "Quantization",
+            "Representing weights with a limited set of numbers. In this example, a weight can be rounded to either neighboring allowed value."
+          ],
+          [
+            "Forward-only feedback",
+            "Try a candidate model and measure its task error without computing a full backward pass."
+          ]
+        ],
+        "insights": [
+          {
+            "plain": "You can compare candidate models by trying them on task examples. You do not always need the usual backward training calculation to get useful feedback.",
+            "use": "Borrow this try-and-compare loop, but generate candidates using only legal compression choices."
+          },
+          {
+            "plain": "Two compression choices can interact. A rounding change that helps one set of retained connections may hurt a different set.",
+            "use": "Test a connection swap and a rounding edit both separately and together, counting every evaluation."
+          }
+        ],
+        "connection": "Turn a compression setting into a candidate model. Try a legal edit, measure task error, and decide whether to keep it. Then test whether looking for useful pairs of edits is worth the extra trials.",
+        "initial": "Use task feedback to learn which connections to keep and how to quantize them.",
+        "discovery": "That broad idea is already partly covered: earlier work learns masks, adjusts quantized weights, and uses forward-only feedback. Calling compression a form of adaptation is not enough to claim a new contribution.",
+        "revision": "Fix the original weights, scale, bit width, and storage budget. Ask whether the remaining legal choices can produce useful task adaptation, and whether paired edits are more efficient than simple search at the same trial budget.",
+        "recipe": [
+          [
+            "Freeze what the device can store",
+            "Keep the original checkpoint and allowed numerical values fixed. Every candidate must fit the same deployment budget."
+          ],
+          [
+            "Change only legal choices",
+            "Swap a kept connection with a removed one, flip an adjacent rounding choice, or try both changes together."
+          ],
+          [
+            "Choose one model using task feedback",
+            "Measure each candidate on search data. Select one final compressed model and evaluate it on untouched test data."
+          ]
+        ],
+        "claim": "The proposed research is about when this restricted search can find genuine task improvements and when useful interactions justify their search cost.",
+        "success": "At the same storage and trial budgets, the selected model improves on simple search. For the stronger adaptation claim, it also improves on the original uncompressed base model on the held-out task.",
+        "failure": "If it only undoes compression damage, report compression recovery. If the gains require extra models, storage, or more trials than the baselines, the main claim is unsupported.",
+        "tests": [
+          [
+            "Check that useful choices exist",
+            "Sample legal candidates before building a complicated search method.",
+            "Are there enough helpful candidates for this search space to be useful?"
+          ],
+          [
+            "Test paired edits fairly",
+            "Compare separate edits, random paired edits, and interaction-guided edits with equal total evaluations.",
+            "Does measuring interactions buy enough improvement to justify its cost?"
+          ],
+          [
+            "Test one final model",
+            "Use fresh task data and count the complete deployed model size.",
+            "Is this real task adaptation, compression recovery, or selection overfitting?"
+          ]
+        ],
+        "outputs": [
+          "A bounded research question: adaptation through compression choices.",
+          "A search loop that connects task feedback to legal compression edits.",
+          "A narrower contribution about reachable improvements and search efficiency.",
+          "One explicit candidate procedure, with a fair comparison and a failure condition.",
+          "A plan to distinguish adaptation, recovery, and overfitting."
+        ]
+      },
       "references": [
         {
           "number": 1,
@@ -376,6 +534,85 @@
         "Measure the time-to-quality frontier and isolate nonlinear optimizer effects."
       ],
       "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "guide": {
+        "title": "Can occasional careful checks correct cheap training?",
+        "summary": "Use a cheap gradient most of the time, but correct its error with properly weighted reference replays.",
+        "scene": "Training normally saves intermediate values so it can work backward and calculate a weight update. Compressing those values saves memory but may distort the update. Recomputing a more accurate update costs time, and even the rare recomputation must fit in memory.",
+        "question": "Can a carefully weighted occasional correction improve the time–quality tradeoff under a memory limit that applies on every step?",
+        "terms": [
+          [
+            "Activation",
+            "An intermediate value produced inside the model during a forward computation."
+          ],
+          [
+            "Gradient",
+            "The vector telling training how changing each weight would affect the loss."
+          ],
+          [
+            "Replay / recomputation",
+            "Repeating a calculation from saved inputs and state instead of keeping every intermediate value."
+          ],
+          [
+            "Unbiased estimate",
+            "An estimate whose expected value matches the reference; individual samples can still be very noisy."
+          ]
+        ],
+        "insights": [
+          {
+            "plain": "Randomized calculations can have the correct average even if individual results are approximate. The probabilities and correction weights matter.",
+            "use": "Correct the full gradient difference with inverse-probability weighting. Occasional precise steps alone do not remove bias."
+          },
+          {
+            "plain": "Storing, compressing, and recomputing intermediate values trade memory, time, and error against one another.",
+            "use": "Design the correction schedule and the memory-feasible replay together, including the rare expensive branch."
+          }
+        ],
+        "connection": "Take the cheap update, then occasionally add a scaled correction. Match the same weights, batch, and randomness so the difference measures compression error, not a different computation.",
+        "initial": "Use compressed gradients most of the time and occasionally recompute a reference gradient.",
+        "discovery": "Randomized differentiation and activation compression already exist. Inverse-probability correction is an established identity. Also, an unbiased gradient does not make an adaptive optimizer's internal state identical to the reference.",
+        "revision": "Study whether the correction probability, compression level, and replay schedule jointly yield a useful memory–time–quality tradeoff, including variance and optimizer-state effects.",
+        "recipe": [
+          [
+            "Compute a cheap gradient",
+            "Use compressed saved values and retain enough information to replay the same computation."
+          ],
+          [
+            "Occasionally compute the reference",
+            "With a known probability p, replay with matching weights, inputs, and randomness. Every replay branch must fit the memory limit."
+          ],
+          [
+            "Correct and measure the tradeoff",
+            "Add the full gradient difference divided by p on correction steps. Test whether the resulting noise and replay time are worthwhile."
+          ]
+        ],
+        "claim": "A feasible correction policy that improves the cost–quality frontier, or a precise explanation of why correction is too expensive or too noisy.",
+        "success": "At equal memory limits and comparable runtime, the policy reaches useful training quality faster than checkpointing, compression alone, or higher precision.",
+        "failure": "A rare out-of-memory correction is still a failure. High-variance corrections, unmatched replay state, or slower time-to-quality can also defeat the idea.",
+        "tests": [
+          [
+            "Verify the estimator first",
+            "At a fixed small-model checkpoint, compare the mean and covariance of many corrected gradients with the reference.",
+            "Is the correction mathematically and numerically doing what it claims?"
+          ],
+          [
+            "Measure the worst memory branch",
+            "Execute the full correction schedule and measure peak memory, including temporary state.",
+            "Does every branch obey the hard limit?"
+          ],
+          [
+            "Compare training quality over time",
+            "Start with simple gradient descent, then inspect adaptive optimizer effects separately.",
+            "Does the correction help training rather than merely fixing an average?"
+          ]
+        ],
+        "outputs": [
+          "A question about average update quality under a hard memory constraint.",
+          "A weighted correction linked to an executable replay schedule.",
+          "A systems-and-variance question beyond an established estimator identity.",
+          "A complete correction procedure with explicit state and memory conditions.",
+          "Estimator checks, worst-case memory measurement, and training comparisons."
+        ]
+      },
       "references": [
         {
           "number": 1,
@@ -503,6 +740,85 @@
         "Test whether the diagnosed mechanism predicts a useful training intervention."
       ],
       "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "guide": {
+        "title": "Did the model change—or did its measuring scale?",
+        "summary": "A low-precision number can change because its weight moved, its shared scale moved, or both.",
+        "scene": "To store model weights with very few bits, a group of weights shares a scale. A stored code is like a mark on a ruler; the scale determines what that mark means. If the ruler changes, many stored codes or reconstructed values may change together—even when the underlying weights barely move.",
+        "question": "When low-precision training becomes unstable, how much comes from weight updates, scale updates, or their interaction?",
+        "terms": [
+          [
+            "FP4",
+            "A family of four-bit floating-point representations with very few representable values."
+          ],
+          [
+            "Master weight",
+            "The higher-precision weight used by the training process before quantization."
+          ],
+          [
+            "Shared scale",
+            "A multiplier used to represent a group of weights with the limited low-precision range."
+          ],
+          [
+            "Controlled replay",
+            "Repeat a computation with fixed inputs and change only selected factors."
+          ]
+        ],
+        "insights": [
+          {
+            "plain": "A small underlying weight update can cross a coarse rounding boundary. Low-precision behavior therefore need not change smoothly.",
+            "use": "Inspect the actual numerical transformation before blaming the optimizer for every jump."
+          },
+          {
+            "plain": "Stored codes, shared scales, reconstructed weights, and model outputs are different quantities. A change in one does not automatically imply damage in the others.",
+            "use": "Cross old/new weights with old/new scales, then measure output and loss changes—not just how many codes flipped."
+          }
+        ],
+        "connection": "Use a four-way controlled comparison. Holding weights fixed isolates scale changes; holding scales fixed isolates weight changes. The fourth combination reveals interactions.",
+        "initial": "Some apparent weight oscillation may actually be caused by shared-scale updates.",
+        "discovery": "Previous work already studies oscillation, scale sensitivity, and stabilization. A new label for instability is insufficient; the proposed explanation must beat competing explanations in controlled comparisons.",
+        "revision": "Build a reproducible diagnosis that separates weight, scale, and interaction effects. Test whether that diagnosis predicts which intervention actually helps.",
+        "recipe": [
+          [
+            "Capture two neighboring training states",
+            "Save old and new weights and scales, along with replayable inputs and other state."
+          ],
+          [
+            "Run all four combinations",
+            "Evaluate old/old, new weights/old scale, old weights/new scale, and new/new."
+          ],
+          [
+            "Follow the effect to the output",
+            "Measure reconstructed weights, layer outputs, and loss. Then test weight-focused and scale-focused interventions."
+          ]
+        ],
+        "claim": "The potential contribution is a reliable mechanism diagnosis that predicts effective interventions, rather than assuming scales are always the main cause.",
+        "success": "The diagnosis consistently identifies harmful disturbances and predicts when a scale intervention helps more than a weight intervention, or vice versa.",
+        "failure": "Reject scale dominance if scale changes do not reproduce output disturbances or fixing scales does not help. Code flips without functional effects are not evidence of harmful instability.",
+        "tests": [
+          [
+            "Make replay trustworthy",
+            "Freeze inputs, randomness, and all other state; check that crossed scale settings remain legal.",
+            "Are the comparisons isolating the intended factors?"
+          ],
+          [
+            "Measure consequences",
+            "Compare all four conditions at the reconstructed-weight, layer-output, and loss levels.",
+            "Which changes actually affect model behavior?"
+          ],
+          [
+            "Test the diagnosis",
+            "Compare scale smoothing or delays with weight-focused controls across several numerical formats.",
+            "Does the explanation predict a useful intervention beyond one replay window?"
+          ]
+        ],
+        "outputs": [
+          "A causal question with two plausible sources of disturbance.",
+          "A four-condition comparison motivated by the numerical representation.",
+          "A diagnosis claim that must be tested against competing explanations.",
+          "A repeatable procedure connecting numerical changes to model behavior.",
+          "Controlled replay followed by intervention tests."
+        ]
+      },
       "references": [
         {
           "number": 1,
@@ -636,6 +952,85 @@
         "Measure whether valid certificates are cheaper than full verification."
       ],
       "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "guide": {
+        "title": "Can a cheaper check give the same decision?",
+        "summary": "Sometimes a safe range is enough to decide. If the answer is ambiguous, do the precise check.",
+        "scene": "A small model proposes words and a larger target model checks them. That check can itself be expensive because the target must read a long record of previous tokens. Compressing that record is cheaper, but approximation can change which tokens get accepted.",
+        "question": "Can a guaranteed probability range settle some checks cheaply while preserving the complete reference sampling process?",
+        "terms": [
+          [
+            "Verifier",
+            "The target model that checks draft tokens."
+          ],
+          [
+            "KV cache",
+            "Saved attention information about previous tokens, reused when producing the next token."
+          ],
+          [
+            "Probability bound / certificate",
+            "A guaranteed interval containing a reference probability. An estimate without a guarantee is not a certificate."
+          ],
+          [
+            "Residual sampling",
+            "The corrected sampling step used after a draft token is rejected."
+          ]
+        ],
+        "insights": [
+          {
+            "plain": "Checking the draft can spend substantial time reading long-context memory. Making the draft faster does not remove that verifier cost.",
+            "use": "Look for savings in the verification computation itself."
+          },
+          {
+            "plain": "Speculative decoding preserves the target distribution through a specific acceptance and rejection correction. Approximations must respect that correction.",
+            "use": "Reuse the same random threshold and decide cheaply only when valid bounds force the same outcome as the precise calculation."
+          }
+        ],
+        "connection": "Replace an expensive exact probability with a valid interval when that interval is decisive. Refine uncertain cases and preserve rejection handling and future model state.",
+        "initial": "Compress the verifier's stored state and use probability bounds to accept or reject draft tokens.",
+        "discovery": "Compressed verification and dynamic precision already exist. Moreover, matching one acceptance decision does not ensure correct rejection sampling or correct probabilities on later tokens.",
+        "revision": "Require three linked guarantees: the current accept/reject event, the rejection correction, and the state used by every later step. Then count the total cost of producing and repairing certificates.",
+        "recipe": [
+          [
+            "Bound the reference probability",
+            "Compute a valid lower and upper bound using the cheaper representation."
+          ],
+          [
+            "Decide only when the bounds agree",
+            "Use the same random draw as the reference. If both bounds imply accept, accept; if both imply reject, reject; otherwise refine."
+          ],
+          [
+            "Keep the full process consistent",
+            "After rejection, use the correct residual distribution. Maintain certified state or restore the reference before future probabilities depend on it."
+          ]
+        ],
+        "claim": "A complete exactness argument plus a certificate that is cheap and tight enough to save time. The decision rule alone is not the new contribution.",
+        "success": "Valid certificates settle enough events to reduce total latency, including refinement and state repair, while preserving the specified sampling distribution.",
+        "failure": "An invalid bound breaks the guarantee. A valid but loose bound may save no work. Correct current decisions with corrupted future state are also insufficient.",
+        "tests": [
+          [
+            "Verify every small-model branch",
+            "Enumerate accept/reject and residual-sampling outcomes on a tiny vocabulary.",
+            "Does the algorithm preserve the reference distribution?"
+          ],
+          [
+            "Challenge later state",
+            "Construct long sequences where approximate saved state could accumulate error.",
+            "Does the guarantee survive beyond the current token?"
+          ],
+          [
+            "Count the complete cost",
+            "Measure bound tightness, cheap decisions, refinement, repair, memory, and latency.",
+            "Is certification actually cheaper than the precise verifier?"
+          ]
+        ],
+        "outputs": [
+          "A bottleneck in checking drafts, rather than in drafting alone.",
+          "An interval-based decision idea constrained by exact sampling.",
+          "A three-part guarantee that exposes the missing work.",
+          "A complete proposal with explicit ambiguous-case handling.",
+          "Correctness checks plus an end-to-end cost test."
+        ]
+      },
       "references": [
         {
           "number": 1,
@@ -769,6 +1164,85 @@
         "Validate online latency and unchanged model computation at equal memory."
       ],
       "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "guide": {
+        "title": "Which model parts should stay in fast memory?",
+        "summary": "Checking a discarded draft still needs computation. Keeping its model parts afterward is a separate decision.",
+        "scene": "A large model contains specialist modules called experts. Fast GPU memory can hold only some of them. A small model proposes several draft words; the large model checks them and may reject part of the draft. Loading experts from slower memory can be expensive.",
+        "question": "After a draft is checked, does knowing which part was rejected help predict which experts are worth keeping?",
+        "terms": [
+          [
+            "MoE expert",
+            "One specialist module inside a mixture-of-experts model. A router chooses which experts process each token."
+          ],
+          [
+            "Speculative decoding",
+            "A small model drafts tokens and the target model checks them before accepting or rejecting them."
+          ],
+          [
+            "Cache / residency",
+            "Keeping model data in fast memory to avoid loading it again."
+          ],
+          [
+            "Rollback",
+            "Discarding a rejected draft suffix after verification. Its verification work has already happened."
+          ]
+        ],
+        "insights": [
+          {
+            "plain": "The best item to keep in a small cache is one likely to save an expensive future load. Recent access is only a clue to that future value.",
+            "use": "Predict future waiting time saved per byte, instead of assuming that every recent access deserves equal priority."
+          },
+          {
+            "plain": "Even a draft token that is later rejected can require real expert computation during the check.",
+            "use": "Serve every expert needed now. Use acceptance or rejection information only for later retention decisions."
+          }
+        ],
+        "connection": "Separate two questions: which experts must execute right now, and which ones are useful to keep afterward. Draft outcomes might help with the second question without changing the model's computation.",
+        "initial": "Use draft tokens to predict expert demand; give more weight to tokens likely to be accepted.",
+        "discovery": "MoE-SpAc already uses speculative access signals, AcceptMoE already uses commitment-weighted demand, and SpecMD already manages expert lifetimes. Those ingredients alone are not new.",
+        "revision": "Test whether actual rollback information improves post-check retention beyond those existing signals. Keep the original router and all required expert computations unchanged.",
+        "recipe": [
+          [
+            "Load every expert needed for the check",
+            "Do not skip an expert just because its draft token may be rejected. Keep a page available until its final current use."
+          ],
+          [
+            "Record what happened to the draft",
+            "Once verification ends, separate accesses from accepted tokens, rejected-only tokens, and the fallback token."
+          ],
+          [
+            "Choose what stays for the next round",
+            "Use these observations to predict future load savings. An evicted expert must still be loaded if the model asks for it again."
+          ]
+        ],
+        "claim": "The research question is whether rollback labels add useful predictive information for caching, beyond existing access and lifetime signals.",
+        "success": "With the same cache size, routing, and draft outcomes, rollback-aware retention reduces real loading stalls and improves end-to-end speed.",
+        "failure": "There is no advantage if rejected and accepted paths use the same experts, labels add no information, or bookkeeping costs more than the waiting time it saves.",
+        "tests": [
+          [
+            "Replay exactly the same workload",
+            "Run competing cache policies on identical expert-access traces and the same memory budget.",
+            "Does the proposed retention rule improve decisions without changing the work?"
+          ],
+          [
+            "Scramble the draft outcomes",
+            "Shuffle accepted/rejected labels while leaving access traces fixed.",
+            "Does any benefit really come from rollback information?"
+          ],
+          [
+            "Measure an actual deployment",
+            "Measure waiting time, bytes transferred, throughput, and model-output consistency.",
+            "Do better cache decisions yield real speed without altering the target computation?"
+          ]
+        ],
+        "outputs": [
+          "Two separate decisions: execute now and retain afterward.",
+          "A hypothesis connecting draft outcomes to future cache value.",
+          "A narrower test of rollback information, beyond existing prefetching methods.",
+          "A cache policy that preserves required computation and has a measurable claim.",
+          "A fair trace replay, a shuffled-label control, and an online test."
+        ]
+      },
       "references": [
         {
           "number": 1,
