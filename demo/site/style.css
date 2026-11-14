@@ -9,3 +9,43 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .reference-toggle{display:flex;align-items:flex-start;gap:7px;font-size:9px;font-weight:400;color:var(--sub);margin-top:10px}.reference-toggle input{accent-color:var(--deep);margin:3px 0 0}@media(min-width:651px) and (max-width:1000px){.research-sidebar .reference-toggle{grid-column:2;grid-row:5}.research-sidebar form>.button{grid-row:6}}
 #document-dialog{width:min(1030px,calc(100% - 30px));padding:30px 40px}.document-actions{display:flex;gap:10px;margin:17px 0 25px;flex-wrap:wrap}.document-actions a{text-decoration:none;color:var(--ink)}.markdown-body{font-size:13px;line-height:1.95;overflow-wrap:anywhere;border-top:1px solid var(--line);padding-top:20px}.markdown-body h1{font-family:var(--serif);font-size:28px;line-height:1.45;margin:0 0 20px}.markdown-body h2{font-family:var(--font);font-size:19px;font-weight:600;margin:30px 0 14px}.markdown-body h3{font-size:15px;margin:23px 0 12px}.markdown-body p{font-size:13px;line-height:1.95;color:#52604e;margin:12px 0}.markdown-body a{font-size:inherit;overflow-wrap:anywhere}.markdown-body ul,.markdown-body ol{padding-left:24px}.markdown-body li{margin:8px 0}.markdown-body blockquote{margin:16px 0;padding:12px 18px;border-left:3px solid #bdcd8c;background:var(--light)}.markdown-body table{border-collapse:collapse;width:100%;font-size:11px;display:block;overflow:auto;margin:20px 0}.markdown-body th,.markdown-body td{border:1px solid var(--line);padding:9px 12px;min-width:140px;vertical-align:top}.markdown-body th{background:var(--light);font-weight:600}.markdown-body pre{background:#f0f2e8;padding:15px;border-radius:6px;overflow:auto;font-size:11px}.markdown-body code{font-size:.9em;background:#edf0e5;border-radius:3px;padding:2px 4px}.markdown-body pre code{padding:0}.markdown-body .katex-display{overflow-x:auto;overflow-y:hidden;padding:14px 3px;font-size:.94em}.markdown-body .katex-error{white-space:pre-wrap} @media(max-width:650px){#document-dialog{padding:22px 18px}.markdown-body{font-size:12px}.markdown-body p{font-size:12px}.markdown-body h1{font-size:22px}.markdown-body h2{font-size:17px}}
+
+/* Guided playback keeps its explanation and controls visible while the story unfolds. */
+.workspace{overflow:clip}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.walkthrough-guide{position:sticky;top:12px;z-index:3;margin:0 0 18px;padding:15px 17px 10px;border:1px solid #d3ddbd;border-radius:8px;background:#f0f3e7;box-shadow:0 3px 16px #26372f08;transition:box-shadow .3s,border-color .3s}
+.walkthrough-guide.has-started{box-shadow:0 6px 22px #26372f18;border-color:#a7b67d}
+.walkthrough-toolbar,.walkthrough-actions{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.walkthrough-status{display:flex;align-items:center;gap:9px;color:#647347;font-size:10px;font-weight:550}
+.walkthrough-actions{flex-shrink:0;gap:8px}
+.speed-control select{width:54px;min-height:31px;padding:5px;font-size:11px;background:#fafbf4;border-color:#d2dac2;cursor:pointer}
+#play-replay{min-width:86px;white-space:nowrap}
+.play-indicator{height:15px;display:flex;gap:3px;align-items:center}
+.play-indicator i{display:block;width:3px;height:5px;border-radius:2px;background:#81984e;transform-origin:center}
+.play-indicator i:nth-child(2){height:11px}
+.is-playing .play-indicator i{animation:play-bars 1s ease-in-out infinite alternate}
+.is-playing .play-indicator i:nth-child(2){animation-delay:-.35s}
+.is-playing .play-indicator i:nth-child(3){animation-delay:-.7s}
+.walkthrough-caption{margin:13px 0 12px;min-height:44px}
+#walkthrough-focus{font-size:13px;font-weight:600;line-height:1.5}
+#walkthrough-note{font-size:11px;color:#717a61;line-height:1.6;margin-top:4px}
+.walkthrough-track{height:3px;background:#dce3cc;overflow:hidden;border-radius:3px}
+#walkthrough-fill{height:100%;width:100%;display:block;background:#81974b;transform:scaleX(0);transform-origin:left}
+.walkthrough-timing{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:6px;color:#788169;font-size:9px;font-variant-numeric:tabular-nums}
+.walkthrough-timing .text-button{font-size:10px;padding:2px 0;text-decoration:none}
+.stage-tab:before{content:'';position:absolute;left:0;bottom:-1px;width:var(--step-progress,0%);height:3px;background:#879d54;z-index:1}
+.stage-tab[aria-selected=true]:after{background:#d5ddc4}
+.panel-inner{animation:panel-arrive .42s ease-out both}
+.walkthrough-target{position:relative;scroll-margin-top:200px;--cue-progress:0%;transition:opacity .45s,box-shadow .45s,outline-color .45s;outline:2px solid transparent;outline-offset:7px;border-radius:4px}
+.walkthrough-guided .walkthrough-ahead{opacity:.52}
+.walkthrough-guided .walkthrough-focus{opacity:1;outline-color:#9bb15f;box-shadow:0 0 0 7px #dce99e20;animation:focus-arrive .55s ease-out}
+.walkthrough-guided .walkthrough-focus:after{content:'';position:absolute;bottom:-6px;left:0;width:var(--cue-progress);height:2px;background:#8ea44d;border-radius:2px}
+.walkthrough-guided .reasoning-bridge.walkthrough-focus:before{content:'↓';position:absolute;right:17px;top:-28px;font-size:24px;line-height:1;color:#83974c;animation:connect-arrive .7s ease-out both}
+.walkthrough-guided .walkthrough-seen{opacity:1}
+@keyframes play-bars{from{transform:scaleY(.45)}to{transform:scaleY(1.25)}}
+@keyframes panel-arrive{from{opacity:.25;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes focus-arrive{from{outline-color:#cfdda6;transform:translateY(4px)}to{outline-color:#9bb15f;transform:translateY(0)}}
+@keyframes connect-arrive{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1200px){.walkthrough-toolbar{align-items:flex-start;flex-wrap:wrap}.walkthrough-actions{margin-left:auto}.walkthrough-status{padding-top:7px}}
+@media(max-width:650px){.walkthrough-guide{top:6px;padding:12px 12px 8px}.walkthrough-status{font-size:9px}.walkthrough-toolbar{gap:6px}.walkthrough-actions{gap:5px}.walkthrough-actions .button{font-size:10px;padding:8px 9px;min-width:74px}#walkthrough-focus{font-size:12px}#walkthrough-note{font-size:10px}.walkthrough-caption{min-height:48px}.speed-control select{width:48px;font-size:10px}.walkthrough-target{outline-offset:5px}}
+@media(prefers-reduced-motion:reduce){.panel-inner,.walkthrough-target,.play-indicator i,.walkthrough-focus:before{animation:none!important}.walkthrough-target{transition:none}.walkthrough-guided .walkthrough-ahead{opacity:1}}

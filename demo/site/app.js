@@ -8,7 +8,8 @@ const stages = [
   ['Idea Card', 'Make the mechanism and its limits explicit.'],
   ['Develop', 'Turn the proposal into a testable research plan.'],
 ];
-const state = {catalog: null, caseId: 'residency', stage: 0, playing: false, timer: null, toastTimer: null, brief: null, document: null, documentRequest: 0};
+const state = {catalog: null, caseId: 'residency', stage: 0, playing: false, frame: null, toastTimer: null, brief: null, document: null, documentRequest: 0,
+  elapsed: 0, lastTick: 0, speed: 1, cue: -1, cues: [], duration: 0, replayStarted: false, replayComplete: false};
 const escapeHTML = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeURL = (value) => {try {const u = new URL(value); return ['https:', 'http:'].includes(u.protocol) ? u.href : '#';} catch {return '#';}};
 const link = (url, text, cls='') => `<a class="${cls}" href="${escapeHTML(safeURL(url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(text)}</a>`;
@@ -85,6 +86,7 @@ function renderPanel() {
   document.querySelectorAll('[data-insight]').forEach((b)=>b.addEventListener('click',()=>showInsight(Number(b.dataset.insight))));
   document.querySelectorAll('[data-document]').forEach((b)=>b.addEventListener('click',()=>showDocument(b.dataset.document)));
   $('#download-card')?.addEventListener('click',()=>download(`ideax-${c.id}-card.md`,cardMarkdown(c)));
+  prepareWalkthrough(c);
 }
 function markdownRenderer() {
   const md=window.markdownit({html:false,linkify:false,typographer:false});
@@ -149,6 +151,7 @@ function cardMarkdown(c) {
   ].map(([h,t])=>`## ${h}\n\n${t}`).join('\n\n')}\n\n## Sources\n\n${c.neighbors.map(p=>`- [${p.title}](${p.url})`).join('\n')}\n\n[Full proposal](${c.proposal_url}) · [Process record](${c.process_url})\n`;
 }
 function showInsight(index) {
+  stopReplay();
   const c=currentCase(), i=c.insights[index];
   $('#source-title').textContent=i.title;
   $('#source-detail').innerHTML=`<span class="evidence-id">${escapeHTML(i.id)}</span><p>${escapeHTML(i.text)}</p><div class="note-box">This is an editorial summary of its role in the recorded exploration. The source entry and process record contain the original wording, scope, and reading-depth annotations.</div><h3 class="panel-section">Nearby papers in this case</h3>${c.neighbors.map(p=>link(p.url,p.title+' ↗','paper-link')).join('')}${link('https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/entries/'+encodeURIComponent(i.id),'Read the LitGraph entry ↗','button small')} ${link(c.process_url,'Inspect the full record ↗','button small')}<p class="small-note">The public LitGraph endpoint uses a temporary tunnel. The archived process record remains available if that endpoint changes.</p>`;
@@ -158,24 +161,138 @@ function updateHash() {
   const params=new URLSearchParams({case:state.caseId,step:String(state.stage+1)});
   history.replaceState(null,'','#'+params.toString());
 }
-function stopReplay() {
-  clearTimeout(state.timer); state.playing=false;
-  $('#play-replay').innerHTML='<span aria-hidden="true">▶</span> Play walkthrough';
+function prepareWalkthrough(c) {
+  state.cues=[]; state.cue=-1; state.elapsed=0; state.duration=0; state.replayComplete=false;
+  const add=(element,title,note,duration=4800)=>{
+    if(!element)return;
+    element.classList.add('walkthrough-target');
+    state.cues.push({element,title,note,start:state.duration,end:state.duration+duration});
+    state.duration+=duration;
+  };
+  const panel=$('#stage-panel');
+  const find=(s)=>panel.querySelector(s);
+  if(state.stage===0) {
+    add(find('.panel-copy'),'Find the unresolved problem',`Start with the limitation in ${c.topic.toLowerCase()}.`);
+    add(find('.question-box'),'Turn the gap into a research question','This question gives the literature exploration a direction.');
+  } else if(state.stage===1) {
+    panel.querySelectorAll('.evidence-card').forEach((el,i)=>add(el,`Read ${c.insights[i].id.includes('-P')?'problem':'insight'} ${i+1} of ${c.insights.length}`,c.insights[i].title));
+    add(find('.reasoning-bridge'),'Connect the insights to a design choice','The contribution starts with how these observations fit together.',5600);
+  } else if(state.stage===2) {
+    const rows=panel.querySelectorAll('.review-row');
+    add(rows[0],'Start with the initial candidate','An appealing starting point still needs a close prior-work check.');
+    add(rows[1],'Let the nearest papers challenge it','Compare the actual mechanism and conclusions, then identify the overlap.',6200);
+    add(rows[2],'Revise the remaining contribution','See what changes after that comparison. This is the recorded revision.',5600);
+  } else if(state.stage===3) {
+    const sections=panel.querySelectorAll('.panel-section');
+    add(sections[1],'Explain why this idea follows','Connect the literature observations to the proposed intervention.');
+    add(sections[2],'Make the core mechanism explicit','Identify what the proposal actually changes and why it could work.',6200);
+    add(find('.equation'),'Make the design concrete','The compact expression summarizes the proposed operation.');
+    add(sections[3],'State the remaining contribution','Keep the claim distinct from the nearest existing work.');
+    add(sections[4],'Describe a discriminating test','Ask what observation would separate this explanation from alternatives.');
+    add(sections[5],'Keep the failure conditions visible','A useful proposal states what would make its central claim fail.');
+  } else {
+    const steps=panel.querySelectorAll('.blueprint-list li');
+    steps.forEach((el,i)=>add(el,`Develop the plan · ${i+1} of ${steps.length}`,'Follow the development steps recorded in the complete proposal.'));
+    add(find('.reasoning-bridge'),'Your turn: challenge the proposal','Add a question or critique, then export your brief for a local research run.',5600);
+  }
+  $('#stage-panel').classList.remove('walkthrough-guided');
+  updatePlayer();
 }
-function setStage(n, fromTimer=false) {
-  if (!fromTimer) stopReplay();
-  state.stage=Math.max(0,Math.min(4,n)); renderPanel(); updateHash();
+function followElement(element) {
+  if(!state.playing||!element)return;
+  const guide=$('#walkthrough-guide').getBoundingClientRect(),rect=element.getBoundingClientRect();
+  const top=Math.max(16,guide.height+24);
+  if(rect.top<top||rect.bottom>innerHeight-32) {
+    const y=rect.top+scrollY-top;
+    window.scrollTo({top:Math.max(0,y),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+  }
+}
+function updatePlayer() {
+  const guide=$('#walkthrough-guide'),active=state.playing||state.replayStarted;
+  guide.classList.toggle('is-playing',state.playing);
+  guide.classList.toggle('has-started',active);
+  $('#play-replay').setAttribute('aria-pressed',String(state.playing));
+  $('#play-replay').innerHTML=state.playing?'<span aria-hidden="true">Ⅱ</span> Pause':state.replayComplete?'<span aria-hidden="true">↺</span> Replay':state.replayStarted?'<span aria-hidden="true">▶</span> Resume':'<span aria-hidden="true">▶</span> Play walkthrough';
+  $('#walkthrough-status').textContent=state.replayComplete?'Complete · Your turn to explore':state.playing?'Playing · Recorded case':state.replayStarted?'Paused · Read at your pace':'Ready · Recorded case';
+  if(!active) {
+    $('#walkthrough-focus').textContent='Follow the connections.';
+    $('#walkthrough-note').textContent='Play to follow the question, evidence, and design choices in this case.';
+  } else if(state.replayComplete) {
+    $('#walkthrough-focus').textContent='From a literature question to a research proposal.';
+    $('#walkthrough-note').textContent='Explore the complete case, or add your own question and critique.';
+  }
+  $('#skip-replay').textContent=state.stage===4?'Prepare my brief →':'Next step →';
+  updatePlayback();
+}
+function updatePlayback() {
+  const fraction=state.duration?Math.min(1,state.elapsed/state.duration):0;
+  $('#walkthrough-fill').style.transform=`scaleX(${fraction})`;
+  $('#walkthrough-progress').setAttribute('aria-valuenow',String(Math.round(fraction*100)));
+  const remaining=Math.ceil((state.duration-state.elapsed)/state.speed/1000);
+  $('#walkthrough-time').textContent=state.replayComplete?'5 steps explored':`Step ${state.stage+1} of 5 · ${remaining}s ${state.stage===4?'to finish':'to next step'}`;
+  document.querySelectorAll('.stage-tab').forEach((b,n)=>{
+    b.style.setProperty('--step-progress',n<state.stage?'100%':n===state.stage?`${fraction*100}%`:'0%');
+  });
+  if(!state.replayStarted&&!state.playing)return;
+  const next=state.cues.findIndex(c=>state.elapsed<c.end);
+  const index=next===-1?state.cues.length-1:next;
+  const current=state.cues[index];
+  if(current)current.element.style.setProperty('--cue-progress',`${Math.min(100,(state.elapsed-current.start)/(current.end-current.start)*100)}%`);
+  if(state.replayComplete||index===state.cue)return;
+  state.cue=index;
+  $('#stage-panel').classList.add('walkthrough-guided');
+  state.cues.forEach((c,i)=>{
+    c.element.classList.toggle('walkthrough-seen',i<index);
+    c.element.classList.toggle('walkthrough-focus',i===index);
+    c.element.classList.toggle('walkthrough-ahead',i>index);
+  });
+  const cue=state.cues[index];
+  $('#walkthrough-focus').textContent=`${index+1}/${state.cues.length} · ${cue.title}`;
+  $('#walkthrough-note').textContent=cue.note;
+  followElement(cue.element);
+}
+function accumulatePlayback() {
+  if(!state.playing)return;
+  const now=performance.now();
+  state.elapsed=Math.min(state.duration,state.elapsed+(now-state.lastTick)*state.speed);
+  state.lastTick=now;
+}
+function stopReplay() {
+  accumulatePlayback();
+  cancelAnimationFrame(state.frame);state.frame=null;state.playing=false;
+  updatePlayer();
+}
+function setStage(n, continuePlaying=false) {
+  const resume=continuePlaying&&state.playing;
+  stopReplay();state.replayStarted=resume;
+  state.stage=Math.max(0,Math.min(4,n));renderPanel();updateHash();
+  if(resume)startPlayback();
+}
+function playbackTick() {
+  if(!state.playing)return;
+  accumulatePlayback();
+  if(state.elapsed>=state.duration) {
+    if(state.stage<4){setStage(state.stage+1,true);return;}
+    state.replayComplete=true;state.playing=false;state.frame=null;
+    $('#stage-panel').classList.remove('walkthrough-guided');
+    state.cues.forEach(c=>c.element.classList.remove('walkthrough-focus','walkthrough-ahead'));
+    updatePlayer();return;
+  }
+  updatePlayback();state.frame=requestAnimationFrame(playbackTick);
+}
+function startPlayback() {
+  state.playing=true;state.replayStarted=true;state.lastTick=performance.now();
+  updatePlayer();followElement(state.cues[state.cue]?.element);
+  state.frame=requestAnimationFrame(playbackTick);
 }
 function play() {
-  if (state.playing) {stopReplay();return;}
-  if (state.stage===4) setStage(0);
-  state.playing=true; $('#play-replay').innerHTML='<span aria-hidden="true">Ⅱ</span> Pause walkthrough';
-  const tick=()=>{if(!state.playing)return;setStage(state.stage+1,true);if(state.stage===4)stopReplay();else state.timer=setTimeout(tick,7000);};
-  state.timer=setTimeout(tick,7000);
+  if(state.playing){stopReplay();return;}
+  if(state.replayComplete)setStage(0);
+  startPlayback();
 }
 function selectCase(id, restore=false, stage=0) {
   if(!state.catalog.cases.some(c=>c.id===id))return;
-  stopReplay();state.caseId=id;state.stage=stage;
+  stopReplay();state.replayStarted=false;state.caseId=id;state.stage=stage;
   const c=currentCase();
   $('#case-title').textContent=c.title;$('#case-perspective').textContent=c.perspective.toUpperCase();$('#case-topic').textContent=c.topic;
   document.querySelectorAll('.case-choice').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.case===id)));
@@ -211,7 +328,7 @@ function renderBrief() {
   $('#prompt-preview').value=prompt+briefAppendix(state.brief);
   $('#prompt-note').textContent=state.brief.access==='full' ? 'This portable Full adaptation asks your agent to fetch and read all domain insights/problems. The repository runner instead injects its frozen complete snapshot. This adaptation has not been separately benchmarked.' : 'The complete Single API prompt includes the public LitGraph interface, six research perspectives, prior-work checks, and your brief. Your agent needs HTTP access and its own model configuration.';
 }
-function openBrief(event) {event?.preventDefault();renderBrief();$('#brief-dialog').showModal();}
+function openBrief(event) {event?.preventDefault();stopReplay();renderBrief();$('#brief-dialog').showModal();}
 function switchInstructionTab(which) {
   for(const name of ['local','prompt']) {
     $(`#${name}-tab`).setAttribute('aria-selected',String(name===which));
@@ -220,9 +337,12 @@ function switchInstructionTab(which) {
 }
 function installEvents() {
   $('#play-replay').addEventListener('click',play);
-  $('#reset-replay').addEventListener('click',()=>setStage(0));
+  $('#reset-replay').addEventListener('click',()=>setStage(0,state.playing));
+  $('#skip-replay').addEventListener('click',()=>state.stage===4?openBrief():setStage(state.stage+1,state.playing));
+  $('#replay-speed').addEventListener('change',()=>{accumulatePlayback();state.speed=Number($('#replay-speed').value);updatePlayer();});
   $('#next-stage').addEventListener('click',()=>state.stage===4?openBrief():setStage(state.stage+1));
   $('#brief-form').addEventListener('submit',openBrief);
+  $('#brief-form').addEventListener('focusin',()=>{if(state.playing)stopReplay();});
   $('#brief-form').addEventListener('input',storeBrief);
   $('#brief-form').addEventListener('change',storeBrief);
   $('#suggest-critique').addEventListener('click',()=>{$('#critique').value=currentCase().critique;storeBrief();$('#critique').focus();});
