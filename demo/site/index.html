@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore how IdeaX connects literature problems and insights to research ideas. Replay six real cases, inspect prior work, and take your own research brief into a local run.">
+  <meta name="theme-color" content="#f6f5f0">
+  <title>IdeaX — From literature to a research idea</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="vendor/katex.min.css">
+  <script src="vendor/markdown-it.min.js" defer></script>
+  <script src="vendor/katex.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="IdeaX home"><span class="brand-icon" aria-hidden="true">i<span>×</span></span>IdeaX<span class="brand-caption">RESEARCH STUDIO</span></a>
+    <nav aria-label="Resources">
+      <a href="https://huggingface.co/datasets/Einsia/LitGraph" target="_blank" rel="noopener noreferrer">Explore LitGraph <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/Einsia/IdeaX" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <button class="button dark small" id="open-local">Run locally <span aria-hidden="true">↗</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <p class="eyebrow"><span class="dot"></span> AN OPEN WORKSPACE FOR RESEARCH IDEATION</p>
+        <h1>Good ideas start with<br><em>better connections.</em></h1>
+        <p class="intro-copy">Follow a problem into the literature. Connect useful insights.<br class="desktop-break"> Watch a research idea take shape—and challenge it along the way.</p>
+      </div>
+      <div class="intro-aside">
+        <span class="small-diagram" aria-hidden="true"><i>P</i><span>↗</span><i>I</i><span>↗</span><i>?</i></span>
+        <p>Problems → Insights → Ideas</p>
+        <span>Six real cases. Every connection has a source.</span>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="Interactive case replay">
+      <aside class="case-sidebar">
+        <div class="sidebar-heading"><span class="eyebrow">THE CASE LIBRARY</span><span class="count">06</span></div>
+        <h2>Six complete cases.</h2>
+        <p class="muted">One field: model efficiency.<br>Choose a research perspective.</p>
+        <div id="case-list" class="case-list" aria-label="Case selection"></div>
+        <div class="source-note"><span class="dot"></span><strong>Recorded cases</strong><p>These are literature checks and proposal revisions from November 13, 2026. No model or hardware results are claimed.</p></div>
+      </aside>
+
+      <div class="stage-workspace">
+        <div class="replay-meta"><span class="pill"><span class="dot"></span> SOURCE-LINKED REPLAY</span><span id="case-topic"></span></div>
+        <div class="case-heading"><div><p class="eyebrow" id="case-perspective"></p><h2 id="case-title">Loading the case library…</h2></div><button class="icon-button" id="share-case" aria-label="Copy a link to this case" title="Copy case link">↗</button></div>
+        <div class="stage-tabs" id="stage-tabs" role="tablist" aria-label="Research stages"></div>
+        <div class="stage-controls"><p id="stage-summary" aria-live="polite"></p><div><button class="text-button" id="reset-replay">Restart</button><button class="button small" id="play-replay"><span aria-hidden="true">▶</span> Play walkthrough</button></div></div>
+        <div class="stage-panel" id="stage-panel" role="tabpanel" tabindex="0"></div>
+        <div class="stage-footer"><span>Inspect the evidence. Make your own judgment.</span><button class="button dark" id="next-stage">Next: Connect insights <span aria-hidden="true">→</span></button></div>
+      </div>
+
+      <aside class="research-sidebar">
+        <div class="sidebar-heading"><span class="eyebrow">YOUR RESEARCH BRIEF</span><span class="edit-symbol" aria-hidden="true">↗</span></div>
+        <h2>Take it somewhere new.</h2>
+        <p class="muted">Set a direction or critique this case. Bring your brief into your own agent.</p>
+        <form id="brief-form">
+          <label for="domain">Research domain</label><select id="domain" name="domain"></select>
+          <label for="question">Your question</label><textarea id="question" name="question" rows="4" maxlength="4000" placeholder="What would you like to investigate?"></textarea>
+          <div class="label-line"><label for="critique">Your critique or constraint</label><button type="button" class="text-button" id="suggest-critique">Use a suggested critique</button></div>
+          <textarea id="critique" name="critique" rows="4" maxlength="4000" placeholder="Which assumption would you challenge? What should the agent check?"></textarea>
+          <label class="reference-toggle"><input type="checkbox" id="include-reference" checked> Include this case as starting material</label>
+          <fieldset class="access-field"><legend>Literature access</legend><label><input type="radio" name="access" value="api" checked><span><strong>Single API</strong><small>Explore as the question develops</small></span></label><label><input type="radio" name="access" value="full"><span><strong>Single Full</strong><small>Read all supplied domain insights first</small></span></label></fieldset>
+          <button class="button dark full" type="submit">Prepare my research brief <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="privacy-note">Your edits stay in this browser. Preparing a brief makes no model calls. Run it locally with your own configuration.</p>
+        <button class="text-button" id="reset-brief">Reset brief to this case</button>
+      </aside>
+    </section>
+
+    <section class="under-workspace">
+      <div><p class="eyebrow">OPEN BY DESIGN</p><h2>See the sources.<br>Then make it your own.</h2></div>
+      <a class="resource-card" href="https://huggingface.co/datasets/Einsia/LitGraph" target="_blank" rel="noopener noreferrer"><span class="resource-icon">↗</span><h3>LitGraph</h3><p>Domain insights and problems, connected to the papers behind them.</p><span>Explore the dataset →</span></a>
+      <a class="resource-card" href="https://github.com/Einsia/IdeaX/tree/main/case_studies/model_efficiency" target="_blank" rel="noopener noreferrer"><span class="resource-icon">≡</span><h3>The complete record</h3><p>Original proposals, literature queries, reading depth, and candidate revisions.</p><span>Read the six cases →</span></a>
+      <button class="resource-card" id="open-local-bottom"><span class="resource-icon">⌘</span><h3>Your own research run</h3><p>Clone the system. Use Full or API access. Generate five complete Idea Cards.</p><span>Get started locally →</span></button>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#">IdeaX</a><span>Research Ideation with Literature Graphs for Autonomous Scientific Discovery</span><a href="https://github.com/Einsia/IdeaX" target="_blank" rel="noopener noreferrer">Open source ↗</a></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="brief-dialog" aria-labelledby="brief-dialog-title">
+    <div class="dialog-top"><p class="eyebrow">FROM EXPLORATION TO A REAL RUN</p><button class="icon-button" data-close="brief-dialog" aria-label="Close brief">×</button></div>
+    <h2 id="brief-dialog-title">Your brief is ready.</h2><p id="brief-summary" class="muted"></p>
+    <div class="dialog-tabs" role="tablist" aria-label="Ways to use your brief"><button id="local-tab" role="tab" aria-selected="true">Run with the repository</button><button id="prompt-tab" role="tab" aria-selected="false">Copy into your agent</button></div>
+    <section id="local-instructions"><p>Download the request, place it in the cloned repository, and load your model configuration following the <a href="https://github.com/Einsia/IdeaX/blob/main/docs/RUNNING.md" target="_blank" rel="noopener noreferrer">running guide</a>.</p><div class="command-block"><pre id="run-command"></pre><button class="text-button" id="copy-command">Copy commands</button></div><p class="small-note">Preparation freezes your brief without calling a model. Add <code>--run</code> to start generation. The existing runtime records sources, validates all five cards, and preserves failed attempts.</p><button class="button dark" id="download-request">Download research request ↓</button></section>
+    <section id="prompt-instructions" hidden><p id="prompt-note"></p><textarea id="prompt-preview" rows="13" readonly aria-label="Complete research prompt"></textarea><div class="button-row"><button class="button dark" id="copy-prompt">Copy complete prompt</button><button class="button" id="download-prompt">Download prompt ↓</button></div></section>
+  </dialog>
+
+  <dialog id="source-dialog" aria-labelledby="source-title"><div class="dialog-top"><p class="eyebrow">EVIDENCE, WITH ITS SCOPE</p><button class="icon-button" data-close="source-dialog" aria-label="Close source details">×</button></div><h2 id="source-title"></h2><div id="source-detail"></div></dialog>
+  <dialog id="document-dialog" aria-labelledby="document-title"><div class="dialog-top"><p class="eyebrow">THE COMPLETE ORIGINAL CASE · 中文</p><button class="icon-button" data-close="document-dialog" aria-label="Close full document">×</button></div><h2 id="document-title"></h2><p id="document-caption"></p><div class="document-actions"><button class="button small" id="download-original">Download original Markdown ↓</button><a class="button small" id="original-on-github" target="_blank" rel="noopener noreferrer">Open on GitHub ↗</a></div><article id="document-body" class="markdown-body"></article></dialog>
+  <noscript><p class="fatal">Enable JavaScript to explore the interactive cases. The <a href="https://github.com/Einsia/IdeaX/tree/main/case_studies/model_efficiency">original case records</a> remain available directly.</p></noscript>
+</body>
+</html>

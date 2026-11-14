@@ -1,0 +1,1047 @@
+{
+  "schema": "ideax.demo.catalog.v1",
+  "default_case": "residency",
+  "cases": [
+    {
+      "id": "spectral",
+      "folder": "01_AB_mechanisms",
+      "perspective": "A + B mechanisms",
+      "number": "01",
+      "title": "Make the constraints work together.",
+      "card_title": "Joint spectral constraints for W4A4 training",
+      "topic": "Low-precision training",
+      "domain": "practical-adaptive-optimizers",
+      "question": "Can a joint spectral update reduce the W4A4-to-BF16 loss gap beyond normalizing weights after each update?",
+      "problem": "A small update does not guarantee a well-scaled weight matrix. In low-bit training, accumulated gain drift can amplify activation and quantization error.",
+      "insights": [
+        {
+          "id": "practical-adaptive-optimizers-I0054",
+          "title": "Choose an update using matrix geometry",
+          "text": "Spectral steepest descent controls the matrix update. A weight constraint can also change which directions are feasible."
+        },
+        {
+          "id": "practical-adaptive-optimizers-P0158",
+          "title": "Update scale and weight scale are different",
+          "text": "Controlling a single step does not automatically control the accumulated amplification of the current weights."
+        }
+      ],
+      "connection": "Put the weight constraint inside the direction-finding problem. Then ask whether this existing coupling helps the actual quantized computation.",
+      "initial": "Combine spectral descent with a fixed weight spectral norm.",
+      "finding": "SSO already makes this combination. It cannot be claimed as a new optimizer.",
+      "revision": "Narrow the question to W4A4: does joint direction selection help more than post-update normalization, at equal cost?",
+      "neighbors": [
+        {
+          "number": 1,
+          "title": "Controlled LLM Training on Spectral Sphere",
+          "url": "https://arxiv.org/html/2601.08393",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 5,
+          "title": "Quest: Stable training of llms with 1-bit weights and activations",
+          "url": "https://arxiv.org/html/2502.05003",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 6,
+          "title": "TetraJet-v2: Accurate NVFP4 Training for Large Language Models with Oscillation Suppression and Outlier Control",
+          "url": "https://arxiv.org/html/2510.27527",
+          "reading_note": "See the source process record for the actual reading scope."
+        }
+      ],
+      "mechanism": "Solve for a spectral-bounded update tangent to the weight spectral sphere, then retract to the target radius. Compare how the resulting geometry affects dequantized weights, activations, and loss.",
+      "equation": "maximize ⟨M, Φ⟩  subject to ‖Φ‖₂ ≤ 1 and ⟨u₁v₁ᵀ, Φ⟩ = 0",
+      "contribution": "A mechanism study of when joint spectral constraints improve low-precision training, separating the coupling from normalization and quantizer effects.",
+      "validation": "Compare Muon, Muon followed by normalization, SSO, and reference optimizers under BF16, W4A16, W16A4, and W4A4. Match both tokens and wall-clock budgets; measure the quantization loss gap and actual numerical error.",
+      "failure": "The hypothesis weakens if only the master weights stabilize, normalization explains all gains, or solver overhead removes the advantage.",
+      "critique": "Separate gains from better BF16 optimization from gains specific to quantization. Include equal-wall-clock comparisons.",
+      "blueprint": [
+        "Pin the quantizer, spectral radius, and numerical formats.",
+        "Verify tangency and retraction on small matrices.",
+        "Measure master-weight and dequantized-weight behavior separately.",
+        "Run the precision-by-optimizer comparison with matched budgets."
+      ],
+      "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "references": [
+        {
+          "number": 1,
+          "title": "Controlled LLM Training on Spectral Sphere",
+          "url": "https://arxiv.org/html/2601.08393",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 2,
+          "title": "Understanding Gradient Orthogonalization for Deep Learning via Non-Euclidean Trust-Region Optimization",
+          "url": "https://arxiv.org/html/2503.12645",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 3,
+          "title": "Training Deep Learning Models with Norm-Constrained LMOs",
+          "url": "https://arxiv.org/html/2502.07529",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 4,
+          "title": "Learning by Turning: Neural Architecture Aware Optimisation",
+          "url": "https://arxiv.org/html/2102.07227",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 5,
+          "title": "Quest: Stable training of llms with 1-bit weights and activations",
+          "url": "https://arxiv.org/html/2502.05003",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 6,
+          "title": "TetraJet-v2: Accurate NVFP4 Training for Large Language Models with Oscillation Suppression and Outlier Control",
+          "url": "https://arxiv.org/html/2510.27527",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 7,
+          "title": "Normalized Architectures are Natively 4-Bit",
+          "url": "https://arxiv.org/html/2605.06067",
+          "reading_note": "See the source process record for the actual reading scope."
+        }
+      ],
+      "queries": [
+        {
+          "label": "实际查询",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E8%B0%B1%E8%8C%83%E6%95%B0&kind=problem&unit=practical-adaptive-optimizers&mode=any&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E8%B0%B1%E7%90%83%E9%9D%A2&kind=insight&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E8%B0%B1%E7%90%83%E9%9D%A2&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=Spectral+Sphere&kind=insight&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=Spectral+Sphere&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E7%9F%A9%E9%98%B5+%E6%9D%83%E9%87%8D+%E8%B0%B1&kind=problem&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E7%9F%A9%E9%98%B5+%E6%9D%83%E9%87%8D+%E8%B0%B1&kind=problem&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=spectral+norm&kind=insight&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=spectral+norm&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E7%90%83%E9%9D%A2+%E7%BA%A6%E6%9D%9F&kind=insight&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E7%90%83%E9%9D%A2+%E7%BA%A6%E6%9D%9F&kind=insight&mode=all&limit=20"
+        }
+      ],
+      "process_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/01_AB_mechanisms/PROCESS.md",
+      "proposal_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/01_AB_mechanisms/PROPOSAL.md",
+      "source_sha256": {
+        "proposal": "67bae884ab84f36ab0850f70868f16a046d3d685bf40233464b87ba53c78df19",
+        "process": "9c22f45fb954a31910fbdc82f7b6def4631f28944279c3ab3dc23b1dd44156db"
+      },
+      "recorded_on": "2026-11-13",
+      "scope": "Editorial replay of recorded sources and candidate revisions; not a live model session or a private reasoning transcript."
+    },
+    {
+      "id": "compression",
+      "folder": "02_Cross_domain_transfer",
+      "perspective": "Cross-domain transfer",
+      "number": "02",
+      "title": "Treat compression choices as updates.",
+      "card_title": "Task adaptation through compression operations",
+      "topic": "Compression & adaptation",
+      "domain": "network-pruning",
+      "question": "Can legal rounding and pruning choices adapt a pretrained model to a task without adding free floating-point weights?",
+      "problem": "Good models near a checkpoint in continuous weight space may not be reachable through a fixed low-bit codebook and sparse deployment budget.",
+      "insights": [
+        {
+          "id": "zeroth-order-optimization-I0040",
+          "title": "Use task feedback to select perturbations",
+          "text": "Forward evaluations can guide adaptation without a full backward graph. The candidate model must still be executable."
+        },
+        {
+          "id": "network-pruning-P0055",
+          "title": "Compression operations interact",
+          "text": "The quality of separate compression choices does not determine the quality of their combination, and testing candidates costs queries."
+        }
+      ],
+      "connection": "Transfer candidate generation and feedback from perturbation search to legal mask swaps and adjacent rounding choices. Keep the deployment budget fixed throughout.",
+      "initial": "Adapt a model by choosing quantization and pruning operations using forward-only task feedback.",
+      "finding": "Mask learning, quantization-parameter tuning, discrete-code updates, and forward-only sparse adaptation already have direct prior work.",
+      "revision": "Study the restricted reachable set and whether reproducible mask–rounding interactions improve equal-query search efficiency.",
+      "neighbors": [
+        {
+          "number": 1,
+          "title": "Fine-Tuning Language Models with Just Forward Passes",
+          "url": "https://arxiv.org/html/2305.17333",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 8,
+          "title": "Pv-tuning: Beyond straight-through estimation for extreme llm compression",
+          "url": "https://arxiv.org/html/2405.14852",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 9,
+          "title": "Maskpro: Linear-space probabilistic learning for strict (n: M)-sparsity on large language models",
+          "url": "https://arxiv.org/html/2506.12876",
+          "reading_note": "See the source process record for the actual reading scope."
+        }
+      ],
+      "mechanism": "Freeze the checkpoint, scales, and bit widths. Search binary masks and adjacent rounding endpoints through feasible support swaps, rounding flips, and their joint edits. Use task loss to accept candidates.",
+      "equation": "Ŵᵢ(m,r) = mᵢ sɡ [(1 − rᵢ)ℓᵢ + rᵢuᵢ]",
+      "contribution": "Characterize when useful adaptation is reachable through compression alone, and when interaction-guided search earns its additional query cost.",
+      "validation": "Compare independent edits, sequential compression, random joint search, and interaction-guided search at equal query and deployment budgets. Separate search, selection, and test data; compare against the original base model.",
+      "failure": "Restoring only the base model's quality is compression recovery. Gains that require an ensemble, extra storage, or repeated test-set queries do not establish the proposed single-model adaptation.",
+      "critique": "Distinguish recovery of compression loss from adaptation beyond the original model. Count the cost of all four interaction evaluations.",
+      "blueprint": [
+        "Enumerate the legal representation and account for masks, scales, and restoration metadata.",
+        "Estimate useful-candidate density before building a complex searcher.",
+        "Test whether interaction estimates replicate on fresh batches.",
+        "Measure held-out task gain and deployment cost for one final model."
+      ],
+      "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "references": [
+        {
+          "number": 1,
+          "title": "Fine-Tuning Language Models with Just Forward Passes",
+          "url": "https://arxiv.org/html/2305.17333",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 2,
+          "title": "Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights",
+          "url": "https://arxiv.org/html/2603.12228",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 3,
+          "title": "PROTES: Probabilistic Optimization with Tensor Sampling",
+          "url": "https://arxiv.org/html/2301.12162",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 4,
+          "title": "Masking as an Efficient Alternative to Finetuning for Pretrained Language Models",
+          "url": "https://arxiv.org/html/2004.12406",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 5,
+          "title": "The Surprising Effectiveness of Deleting Weights in LLM Post-Training",
+          "url": "https://arxiv.org/html/2611.10866",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 6,
+          "title": "Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization",
+          "url": "https://arxiv.org/html/2305.14152",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 7,
+          "title": "Fine-tuning Quantized Neural Networks with Zeroth-order Optimization",
+          "url": "https://arxiv.org/html/2505.13430",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 8,
+          "title": "Pv-tuning: Beyond straight-through estimation for extreme llm compression",
+          "url": "https://arxiv.org/html/2405.14852",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 9,
+          "title": "Maskpro: Linear-space probabilistic learning for strict (n: M)-sparsity on large language models",
+          "url": "https://arxiv.org/html/2506.12876",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 10,
+          "title": "Unifying Sparsity and Discreteness: One-Shot Pruning for Quantized LLMs via Discrete Optimization",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/papers/205662",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 11,
+          "title": "Interaction Effects in Hybrid Compression of Small Language Models",
+          "url": "https://ijcai.org/proceedings/2026/631",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 12,
+          "title": "Q u ZO : Quantized Zeroth-Order Fine-Tuning for Large Language Models",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/papers/66903",
+          "reading_note": "See the source process record for the actual reading scope."
+        },
+        {
+          "number": 13,
+          "title": "Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/papers/243615",
+          "reading_note": "See the source process record for the actual reading scope."
+        }
+      ],
+      "queries": [
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E9%9A%8F%E6%9C%BA+%E6%89%B0%E5%8A%A8&kind=insight&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E9%9A%8F%E6%9C%BA+%E6%89%B0%E5%8A%A8&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=MeZO&kind=insight&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=MeZO&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=Piggyback&kind=insight&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=Piggyback&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=Diff+Pruning&kind=insight&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=Diff+Pruning&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E9%87%8F%E5%8C%96+%E5%BE%AE%E8%B0%83&kind=problem&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E9%87%8F%E5%8C%96+%E5%BE%AE%E8%B0%83&kind=problem&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E5%89%AA%E6%9E%9D+%E5%BE%AE%E8%B0%83&kind=problem&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E5%89%AA%E6%9E%9D+%E5%BE%AE%E8%B0%83&kind=problem&mode=all&limit=20"
+        }
+      ],
+      "process_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/02_Cross_domain_transfer/PROCESS.md",
+      "proposal_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/02_Cross_domain_transfer/PROPOSAL.md",
+      "source_sha256": {
+        "proposal": "0c8214512fd907c0c071d3cc86187c9834443eaa499492d78fd89f9d300bcf11",
+        "process": "f8dae65f3467452527944e4ce814acbf895b2f7fe9cbc50b07b0f5d23817bc32"
+      },
+      "recorded_on": "2026-11-13",
+      "scope": "Editorial replay of recorded sources and candidate revisions; not a live model session or a private reasoning transcript."
+    },
+    {
+      "id": "replay",
+      "folder": "03_Rethinking_assumptions",
+      "perspective": "Rethinking assumptions",
+      "number": "03",
+      "title": "Must every backward pass be accurate?",
+      "card_title": "Randomized replay for compressed backpropagation",
+      "topic": "Training memory",
+      "domain": "efficient_inference_long_context_serving",
+      "question": "Can occasional matched-state reference replay correct cheap compressed backpropagation while every execution branch fits a hard memory limit?",
+      "problem": "Activation compression reduces storage but can bias the final gradient. Exact recomputation costs time and can violate the memory limit on the very steps that need it.",
+      "insights": [
+        {
+          "id": "automatic-and-physics-differentiation-I0026",
+          "title": "Randomize an estimator, not its claim",
+          "text": "Randomized differentiation trades memory for estimator variance. Correct scaling matters; occasional exact steps alone do not remove bias."
+        },
+        {
+          "id": "efficient-model-compression-I0069",
+          "title": "Plan compression and recomputation together",
+          "text": "Saved activations, reconstruction, and approximation offer different memory–computation–error tradeoffs."
+        }
+      ],
+      "connection": "Correct the complete gradient residual with inverse-probability weighting, then plan a replay path that is feasible even on rare correction steps.",
+      "initial": "Use cheap compressed gradients most of the time and occasionally replay the reference calculation.",
+      "finding": "Randomized AD and activation compression already relax per-step fidelity. The inverse-probability identity is established, and an unbiased gradient does not preserve Adam's second moments.",
+      "revision": "Focus on the joint replay probability, compression level, and rematerialization schedule, including variance and optimizer-state effects.",
+      "neighbors": [
+        {
+          "number": 1,
+          "title": "Randomized Automatic Differentiation",
+          "url": "https://arxiv.org/abs/2007.10412",
+          "reading_note": "`source_card`，API abstract/insight/technique；arXiv HTML 404，未计全文。"
+        },
+        {
+          "number": 3,
+          "title": "GACT: Activation Compressed Training for Generic Network Architectures",
+          "url": "https://arxiv.org/html/2206.11357",
+          "reading_note": "`fulltext_selected`，原文§3.1–3.2、§4.2；API abstract/insight/technique/boundaries。"
+        },
+        {
+          "number": 4,
+          "title": "Checkmate: Breaking the memory wall with optimal tensor rematerialization",
+          "url": "https://arxiv.org/html/1910.02653",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        }
+      ],
+      "mechanism": "Keep parameters, data, randomness, and mutable state matched. With known probability p, reconstruct a reference gradient and apply the weighted residual to the compressed gradient. Release intermediate state before replay.",
+      "equation": "ĝ = gᶜ + (B / p)(g − gᶜ),  B ∼ Bernoulli(p)",
+      "contribution": "A feasible cost–quality policy for complete residual correction under hard peak-memory constraints, or a precise account of when it cannot help.",
+      "validation": "Check the conditional gradient mean and covariance at a fixed checkpoint. Measure every branch's peak memory. Compare checkpointing, ActNN/GACT, mixed precision, periodic uncorrected replay, and corrected replay under matched time and reference calls.",
+      "failure": "The proposal fails if reference replay does not fit memory, state cannot be reproduced, rare corrections destabilize training, or higher precision offers a better equal-time frontier.",
+      "critique": "Do not equate unbiased gradients with unchanged Adam dynamics. Test SGD first and report correction-step peak memory, not just average usage.",
+      "blueprint": [
+        "Define the reference numerical implementation and replayable state.",
+        "Verify the estimator on an enumerable model.",
+        "Implement an executable checkpoint/replay schedule under a hard limit.",
+        "Measure the time-to-quality frontier and isolate nonlinear optimizer effects."
+      ],
+      "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "references": [
+        {
+          "number": 1,
+          "title": "Randomized Automatic Differentiation",
+          "url": "https://arxiv.org/abs/2007.10412",
+          "reading_note": "`source_card`，API abstract/insight/technique；arXiv HTML 404，未计全文。"
+        },
+        {
+          "number": 2,
+          "title": "ActNN: Reducing Training Memory Footprint via 2-Bit Activation Compressed Training",
+          "url": "https://arxiv.org/html/2104.14129",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries；原文已下载，本轮不计通读。"
+        },
+        {
+          "number": 3,
+          "title": "GACT: Activation Compressed Training for Generic Network Architectures",
+          "url": "https://arxiv.org/html/2206.11357",
+          "reading_note": "`fulltext_selected`，原文§3.1–3.2、§4.2；API abstract/insight/technique/boundaries。"
+        },
+        {
+          "number": 4,
+          "title": "Checkmate: Breaking the memory wall with optimal tensor rematerialization",
+          "url": "https://arxiv.org/html/1910.02653",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        },
+        {
+          "number": 5,
+          "title": "AC-GC: Lossy Activation Compression with Guaranteed Convergence",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/papers/173423",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries；来源摘要。"
+        }
+      ],
+      "queries": [
+        {
+          "label": "activation compression",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=activation+compression&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "randomized automatic differentiation",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=randomized+automatic+differentiation&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "multifidelity gradient",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=multifidelity+gradient&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "无偏 激活",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E6%97%A0%E5%81%8F+%E6%BF%80%E6%B4%BB&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "重计算 校正",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E9%87%8D%E8%AE%A1%E7%AE%97+%E6%A0%A1%E6%AD%A3&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "control variate",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=control+variate&kind=insight&mode=all&limit=20&unit=efficient-model-compression"
+        }
+      ],
+      "process_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/03_Rethinking_assumptions/PROCESS.md",
+      "proposal_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/03_Rethinking_assumptions/PROPOSAL.md",
+      "source_sha256": {
+        "proposal": "09a51d35a7ef7cbec40de45ce5639012db271170983a5e56579b304a2006f08c",
+        "process": "0968eabc416f271f49378ddb54fbf8be94759f56fe5efd00eb25d061fc0f6a33"
+      },
+      "recorded_on": "2026-11-13",
+      "scope": "Editorial replay of recorded sources and candidate revisions; not a live model session or a private reasoning transcript."
+    },
+    {
+      "id": "attribution",
+      "folder": "04_Diagnosis_reattribution",
+      "perspective": "Diagnosis & reattribution",
+      "number": "04",
+      "title": "Is the weight moving—or the scale?",
+      "card_title": "Separating weight and scale effects in FP4",
+      "topic": "Numerical stability",
+      "domain": "efficient_inference_long_context_serving",
+      "question": "Which FP4 disturbances are caused by master-weight movement, which by shared-scale changes, and which actually affect model outputs?",
+      "problem": "Threshold crossings depend on W/s. Shared scale changes can move many codes together, so counting code flips can misidentify the source of functional instability.",
+      "insights": [
+        {
+          "id": "efficient-model-compression-P0033",
+          "title": "Small updates meet coarse numerical states",
+          "text": "Dynamic range, lost small updates, and quantization error can affect convergence."
+        },
+        {
+          "id": "efficient-model-compression-I0036",
+          "title": "Look at the numerical mechanism",
+          "text": "Weight trajectories, scaling, rounding, and actual dequantized values must be distinguished when analyzing low-bit behavior."
+        }
+      ],
+      "connection": "Hold the rest of the computation fixed and cross two adjacent weight states with two scale states. Measure output and loss effects, not only integer labels.",
+      "initial": "Shared-scale events may be mistaken for individual-weight or optimizer oscillation.",
+      "finding": "Oscillation, scale sensitivity, and several stabilization methods are already known. A scale-first explanation must be tested against alternatives.",
+      "revision": "Use four controlled replay conditions to distinguish weight, scale, interaction, and common-cause explanations across quantization formats.",
+      "neighbors": [
+        {
+          "number": 1,
+          "title": "Overcoming Oscillations in Quantization-Aware Training",
+          "url": "https://arxiv.org/html/2203.11086",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        },
+        {
+          "number": 2,
+          "title": "Oscillation-free Quantization for Low-bit Vision Transformers",
+          "url": "https://arxiv.org/html/2302.02210",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        },
+        {
+          "number": 3,
+          "title": "Oscillation-reduced mxfp4 training for vision transformers",
+          "url": "https://arxiv.org/html/2502.20853",
+          "reading_note": "`fulltext_selected`，原文§4–6，式(10)及Q-Ramping说明；API卡片。"
+        }
+      ],
+      "mechanism": "Replay Q(W₀,s₀), Q(W₁,s₀), Q(W₀,s₁), and Q(W₁,s₁) with fixed inputs and other state. Apply a symmetric two-factor attribution to dequantized tensors, layer outputs, and loss.",
+      "equation": "Dᵂ + Dˢ = Z₁₁ − Z₀₀;  I = Z₁₁ − Z₁₀ − Z₀₁ + Z₀₀",
+      "contribution": "A reproducible mechanism diagnosis and evidence for choosing interventions according to their actual cause, rather than another universally claimed stabilizer.",
+      "validation": "Compare fixed, delayed, and smoothed scales with weight resets and existing oscillation controls. Vary group sizes and formats. Use common randomness and legal crossed states, and track clipping alongside output drift.",
+      "failure": "Reject scale dominance if scale swaps do not reproduce disturbances, fixing scales does not help, or all gains are explained by one-step quantization error. Code-only changes without output effects are not functional instability.",
+      "critique": "Treat scale dominance as a competing hypothesis. Do not infer long-term training causality from one replay window.",
+      "blueprint": [
+        "Make neighboring training states fully replayable.",
+        "Validate crossed scale settings and record clipping.",
+        "Run weight, scale, and common-cause interventions.",
+        "Test whether the diagnosed mechanism predicts a useful training intervention."
+      ],
+      "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "references": [
+        {
+          "number": 1,
+          "title": "Overcoming Oscillations in Quantization-Aware Training",
+          "url": "https://arxiv.org/html/2203.11086",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        },
+        {
+          "number": 2,
+          "title": "Oscillation-free Quantization for Low-bit Vision Transformers",
+          "url": "https://arxiv.org/html/2302.02210",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        },
+        {
+          "number": 3,
+          "title": "Oscillation-reduced mxfp4 training for vision transformers",
+          "url": "https://arxiv.org/html/2502.20853",
+          "reading_note": "`fulltext_selected`，原文§4–6，式(10)及Q-Ramping说明；API卡片。"
+        },
+        {
+          "number": 4,
+          "title": "TetraJet-v2: Accurate NVFP4 Training for Large Language Models with Oscillation Suppression and Outlier Control",
+          "url": "https://arxiv.org/html/2510.27527",
+          "reading_note": "`fulltext_selected`，原文§3.1–3.3、Algorithm 1；API卡片。"
+        },
+        {
+          "number": 5,
+          "title": "Half-{S}: Halving the Scale for Near-Lossless 4-Bit {LLM} Training",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/papers/239846",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries；来源摘要。"
+        },
+        {
+          "number": 6,
+          "title": "Quartet II: Accurate LLM Pre-Training in NVFP4 by Improved Unbiased Gradient Estimation",
+          "url": "https://arxiv.org/html/2601.22813",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        }
+      ],
+      "queries": [
+        {
+          "label": "scale oscillation",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=scale+oscillation&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "量化 尺度 振荡",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E9%87%8F%E5%8C%96+%E5%B0%BA%E5%BA%A6+%E6%8C%AF%E8%8D%A1&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "threshold oscillation",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=threshold+oscillation&kind=problem&mode=all&limit=20"
+        },
+        {
+          "label": "activation scale",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=activation+scale&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "microscaling",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=microscaling&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=activation+recomputation&kind=insight&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=activation+recomputation&kind=insight&mode=all&limit=20"
+        }
+      ],
+      "process_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/04_Diagnosis_reattribution/PROCESS.md",
+      "proposal_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/04_Diagnosis_reattribution/PROPOSAL.md",
+      "source_sha256": {
+        "proposal": "ec531ac7a9cdfb790cf6174d64134729ae2c408d7fd0450855244a082dfb2c85",
+        "process": "7f10973ec396b1d8dff908988b2b3d24781a12f177baa4fb008b56f0e96ea12a"
+      },
+      "recorded_on": "2026-11-13",
+      "scope": "Editorial replay of recorded sources and candidate revisions; not a live model session or a private reasoning transcript."
+    },
+    {
+      "id": "verification",
+      "folder": "05_Extending_boundaries",
+      "perspective": "Extending capability boundaries",
+      "number": "05",
+      "title": "Compress the verifier. Keep the guarantee.",
+      "card_title": "Certified compressed speculative verification",
+      "topic": "Speculative decoding",
+      "domain": "speculative-decoding",
+      "question": "Can compressed target-model state resolve some speculative verification events without changing a specified reference distribution?",
+      "problem": "Verification can be dominated by long-context cache traffic. Approximate cache states reduce that cost but can also change target probabilities and all later states.",
+      "insights": [
+        {
+          "id": "speculative-decoding-P0030",
+          "title": "The verifier also has a cost",
+          "text": "Long-context attention and cache traffic make verification itself a resource bottleneck."
+        },
+        {
+          "id": "speculative-decoding-I0018",
+          "title": "Preserve the sampling correction",
+          "text": "Acceptance and rejection correction constrain how verification can be approximated without introducing distribution error."
+        }
+      ],
+      "connection": "A guaranteed probability interval can sometimes determine the same random acceptance event. Refine only ambiguous decisions, while handling rejection and future state consistently.",
+      "initial": "Use compressed verifier state and certify accept/reject decisions with probability intervals.",
+      "finding": "Compression plus verification and dynamic precision already exist. Correctly accepting one token does not certify residual sampling or the next KV state.",
+      "revision": "Require three linked guarantees: the current event, the residual distribution after rejection, and all future state-dependent probabilities.",
+      "neighbors": [
+        {
+          "number": 1,
+          "title": "Fast Inference from Transformers via Speculative Decoding",
+          "url": "https://arxiv.org/html/2211.17192",
+          "reading_note": "`fulltext_selected`，原文§2.1–2.3、Algorithm 1；API详情。"
+        },
+        {
+          "number": 2,
+          "title": "QuantSpec: Self-Speculative Decoding with Hierarchical Quantized KV Cache",
+          "url": "https://arxiv.org/html/2502.10424",
+          "reading_note": "`fulltext_selected`，原文§4.1–4.3、Table 2；API详情。"
+        },
+        {
+          "number": 4,
+          "title": "Speculative Verification: Exploiting Information Gain for Speculative Decoding",
+          "url": "https://arxiv.org/html/2509.24328",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        }
+      ],
+      "mechanism": "Bound the reference probability by [ℓ,u] and reuse one uniform draw. Decide only when both bounds agree; otherwise refine or restore the reference. Recover exact residual sampling and maintain certified or replayable cache state.",
+      "equation": "accept if U ≤ min(1, ℓ/q); reject if U > min(1, u/q); otherwise refine",
+      "contribution": "A useful certificate construction and complete state-consistency argument with an end-to-end cost advantage, or a rigorous boundary showing when that advantage is impossible.",
+      "validation": "Enumerate small-vocabulary outputs and every acceptance/rejection branch. Construct long-sequence cache-drift counterexamples. Measure certificate tightness, direct-decision rate, replay distance, latency, and peak memory against full verification.",
+      "failure": "Invalid bounds or incomplete state repair break exactness. Loose bounds and frequent replay can erase savings. Greedy agreement and sample frequencies alone do not prove the distribution guarantee.",
+      "critique": "Account for residual sampling and future KV consistency, not just the current acceptance decision. Count certificate and repair costs.",
+      "blueprint": [
+        "Specify the numerical reference distribution and sampling transformations.",
+        "Prove the interval decision rule with one reused random draw.",
+        "Close the residual-sampling and future-state arguments.",
+        "Measure whether valid certificates are cheaper than full verification."
+      ],
+      "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "references": [
+        {
+          "number": 1,
+          "title": "Fast Inference from Transformers via Speculative Decoding",
+          "url": "https://arxiv.org/html/2211.17192",
+          "reading_note": "`fulltext_selected`，原文§2.1–2.3、Algorithm 1；API详情。"
+        },
+        {
+          "number": 2,
+          "title": "QuantSpec: Self-Speculative Decoding with Hierarchical Quantized KV Cache",
+          "url": "https://arxiv.org/html/2502.10424",
+          "reading_note": "`fulltext_selected`，原文§4.1–4.3、Table 2；API详情。"
+        },
+        {
+          "number": 3,
+          "title": "FAFO: Lossy KV Cache Compression for Lossless Inference Acceleration via Draftless Fumble Decoding",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/papers/99385",
+          "reading_note": "`source_card`，API abstract/insight/technique；来源摘要。"
+        },
+        {
+          "number": 4,
+          "title": "Speculative Verification: Exploiting Information Gain for Speculative Decoding",
+          "url": "https://arxiv.org/html/2509.24328",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        },
+        {
+          "number": 5,
+          "title": "{MARS}: Unleashing the Power of Speculative Decoding via Margin-Aware Verification",
+          "url": "https://arxiv.org/html/2601.15498",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        },
+        {
+          "number": 6,
+          "title": "VIA-SD: Verification via Intra-Model Routing for Speculative Decoding",
+          "url": "https://arxiv.org/html/2606.12243",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        }
+      ],
+      "queries": [
+        {
+          "label": "quantized verification",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=quantized+verification&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "lossless cache",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=lossless+cache&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "certified decoding",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=certified+decoding&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "精确 缓存 验证",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E7%B2%BE%E7%A1%AE+%E7%BC%93%E5%AD%98+%E9%AA%8C%E8%AF%81&kind=problem&mode=all&limit=20"
+        },
+        {
+          "label": "early exit verification",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=early+exit+verification&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=activation+recomputation&kind=insight&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=activation+recomputation&kind=insight&mode=all&limit=20"
+        }
+      ],
+      "process_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/05_Extending_boundaries/PROCESS.md",
+      "proposal_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/05_Extending_boundaries/PROPOSAL.md",
+      "source_sha256": {
+        "proposal": "66ab9c3e85cf729cc088cd1a8faf79277b899a3924ea4fe11ab45f07e7ee7ed0",
+        "process": "ab91f7cee3dc6851c6d7e9718f559a83af4b962ddbe23f8e16b80cf1a53f983e"
+      },
+      "recorded_on": "2026-11-13",
+      "scope": "Editorial replay of recorded sources and candidate revisions; not a live model session or a private reasoning transcript."
+    },
+    {
+      "id": "residency",
+      "folder": "06_Free_exploration",
+      "perspective": "Free exploration",
+      "number": "06",
+      "title": "Needed now. Worth keeping later?",
+      "card_title": "Rollback-aware MoE expert residency",
+      "topic": "MoE systems",
+      "domain": "speculative-decoding",
+      "question": "Can committed and rolled-back speculative branches improve expert-cache decisions without changing the model's routing or verification?",
+      "problem": "Rejected draft tokens still require expert computation during verification. But their accesses may be poor predictors of which expert pages are useful afterward.",
+      "insights": [
+        {
+          "id": "sparse-mixture-of-experts-I0116",
+          "title": "Cache value depends on future benefit",
+          "text": "Expert replication, caching, and scheduling depend on hotspots and marginal utility under memory and bandwidth limits."
+        },
+        {
+          "id": "speculative-decoding-I0047",
+          "title": "Verification cost depends on real routing",
+          "text": "Expert overlap across tokens and execution dynamics shape verification cost; accepted-token counts alone do not explain it."
+        }
+      ],
+      "connection": "Separate mandatory execution from future residency. Serve all required experts now; use committed and rollback history only to decide what stays afterward.",
+      "initial": "Use speculative drafts to predict expert demand, then weight demand by commitment probability.",
+      "finding": "MoE-SpAc already uses speculative activation utility. AcceptMoE already weights demand by commitment. SpecMD already manages expert lifecycles.",
+      "revision": "Test whether rollback labels add predictive value for post-verification residency at unchanged routing, beyond those existing signals.",
+      "neighbors": [
+        {
+          "number": 1,
+          "title": "MoE-SpAc: Efficient MoE Inference Based on Speculative Activation Utility in Heterogeneous Edge Scenarios",
+          "url": "https://arxiv.org/html/2603.09983",
+          "reading_note": "`fulltext_selected`，原文§3.2及Algorithm 1、§3.4；API详情。"
+        },
+        {
+          "number": 2,
+          "title": "AcceptMoE: Commitment-Weighted Self-Sizing Verifier Expert Sets for Efficient MoE Speculative Decoding",
+          "url": "https://arxiv.org/html/2608.02989",
+          "reading_note": "`fulltext_selected`，原文Method、Verifier-Side Expert Selection、Commitment-Weighted Demand、式(1)–(6)。"
+        },
+        {
+          "number": 3,
+          "title": "SpecMD: A Comprehensive Study On Speculative Expert Prefetching",
+          "url": "https://arxiv.org/html/2602.03921",
+          "reading_note": "`fulltext_selected`，原文§3.1.1–3.1.4、§4.1–4.2；API详情。"
+        }
+      ],
+      "mechanism": "Pin pages until their last current verification use. After the result is known, predict future transfer stalls saved per byte using committed-prefix, rejected-only, and fallback-token features. Misses fetch or wait; they never skip required computation.",
+      "equation": "required execution = ⋃ experts requested now; retention value = expected future stalls saved / bytes",
+      "contribution": "Evidence that rollback information improves cache admission beyond access recency, frequency, and lifecycle signals, plus an online benefit without changing target semantics.",
+      "validation": "Replay identical routing and acceptance traces with fixed cache bytes. Compare LRU/LFU, Least-Stale, speculative-frequency utility, and the proposed policy. Shuffle rollback labels, then measure online stalls, transfers, throughput, and tail latency.",
+      "failure": "No gain if rejected and accepted branches use the same experts, labels add no predictive value, or scheduling overhead exceeds saved stalls. Gains requiring skipped experts or future information do not support the claim.",
+      "critique": "Preserve every required expert execution. Compare against equal-information Least-Stale and speculative-utility policies; shuffle rollback labels.",
+      "blueprint": [
+        "Collect unchanged-routing reference traces and acceptance outcomes.",
+        "Separate page execution lifetimes from retention decisions.",
+        "Ablate commitment/rollback labels on identical traces.",
+        "Validate online latency and unchanged model computation at equal memory."
+      ],
+      "blueprint_note": "Suggested development steps summarized from the original proposal; no new experiment is reported.",
+      "references": [
+        {
+          "number": 1,
+          "title": "MoE-SpAc: Efficient MoE Inference Based on Speculative Activation Utility in Heterogeneous Edge Scenarios",
+          "url": "https://arxiv.org/html/2603.09983",
+          "reading_note": "`fulltext_selected`，原文§3.2及Algorithm 1、§3.4；API详情。"
+        },
+        {
+          "number": 2,
+          "title": "AcceptMoE: Commitment-Weighted Self-Sizing Verifier Expert Sets for Efficient MoE Speculative Decoding",
+          "url": "https://arxiv.org/html/2608.02989",
+          "reading_note": "`fulltext_selected`，原文Method、Verifier-Side Expert Selection、Commitment-Weighted Demand、式(1)–(6)。"
+        },
+        {
+          "number": 3,
+          "title": "SpecMD: A Comprehensive Study On Speculative Expert Prefetching",
+          "url": "https://arxiv.org/html/2602.03921",
+          "reading_note": "`fulltext_selected`，原文§3.1.1–3.1.4、§4.1–4.2；API详情。"
+        },
+        {
+          "number": 4,
+          "title": "CECAR: Cache & Expert Co-Aware Routing Accelerates On-Device Inference of MoE LLMs",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/papers/205528",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries；来源摘要。"
+        },
+        {
+          "number": 5,
+          "title": "CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/papers/426525",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries；来源摘要。"
+        },
+        {
+          "number": 6,
+          "title": "ZipMoE: Efficient on-device MoE serving via lossless compression and cache-affinity scheduling",
+          "url": "https://arxiv.org/html/2601.21198",
+          "reading_note": "`source_card`，API abstract/insight/technique/boundaries。"
+        },
+        {
+          "number": 7,
+          "title": "Utility-Driven Speculative Decoding for Mixture-of-Experts",
+          "url": "https://arxiv.org/html/2506.20675",
+          "reading_note": "`fulltext_selected`，原文摘要、§4–5的效用/测试窗口/禁用与自适应策略说明。"
+        }
+      ],
+      "queries": [
+        {
+          "label": "speculative activation",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=speculative+activation&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "cache pollution",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=cache+pollution&kind=problem&mode=all&limit=20"
+        },
+        {
+          "label": "expert cache acceptance",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=expert+cache+acceptance&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "rejected draft",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=rejected+draft&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "投机 专家 缓存",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=%E6%8A%95%E6%9C%BA+%E4%B8%93%E5%AE%B6+%E7%BC%93%E5%AD%98&kind=insight&mode=all&limit=20"
+        },
+        {
+          "label": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=activation+recomputation&kind=insight&mode=all&limit=20",
+          "url": "https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search?q=activation+recomputation&kind=insight&mode=all&limit=20"
+        }
+      ],
+      "process_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/06_Free_exploration/PROCESS.md",
+      "proposal_url": "https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/06_Free_exploration/PROPOSAL.md",
+      "source_sha256": {
+        "proposal": "5b0d0824f43a49c4777e852c79e355d8d73f2e5a563c35618d8d6d9871a6d058",
+        "process": "40219802f43986e4bd68b4e8f575d175504637d142a0fe88071bbc9986e810f0"
+      },
+      "recorded_on": "2026-11-13",
+      "scope": "Editorial replay of recorded sources and candidate revisions; not a live model session or a private reasoning transcript."
+    }
+  ],
+  "domains": [
+    {
+      "id": "agent-memory",
+      "name": "智能体记忆与经验积累",
+      "category": "智能体"
+    },
+    {
+      "id": "agentic-rl",
+      "name": "多轮智能体强化学习与长程决策",
+      "category": "智能体"
+    },
+    {
+      "id": "swe-agent",
+      "name": "软件工程智能体",
+      "category": "智能体"
+    },
+    {
+      "id": "multi-agent-coordination",
+      "name": "LLM 多智能体协作与失败归因",
+      "category": "智能体"
+    },
+    {
+      "id": "agent-env-benchmark",
+      "name": "大模型智能体的真实环境评测",
+      "category": "智能体"
+    },
+    {
+      "id": "rlvr-reasoning",
+      "name": "可验证奖励强化学习（LLM 推理 RL）",
+      "category": "推理"
+    },
+    {
+      "id": "process-verification-search",
+      "name": "过程验证与测试时搜索",
+      "category": "推理"
+    },
+    {
+      "id": "adaptive-compute-termination",
+      "name": "输入自适应的计算终止与动态推理",
+      "category": "推理"
+    },
+    {
+      "id": "latent-reasoning",
+      "name": "隐空间连续推理",
+      "category": "推理"
+    },
+    {
+      "id": "llm-formal-logic-reasoning",
+      "name": "语言模型的形式逻辑演绎推理",
+      "category": "推理"
+    },
+    {
+      "id": "in-context-learning",
+      "name": "上下文学习",
+      "category": "学习与适配"
+    },
+    {
+      "id": "continual-learning",
+      "name": "持续学习与灾难性遗忘",
+      "category": "学习与适配"
+    },
+    {
+      "id": "knowledge-distillation",
+      "name": "知识蒸馏与紧凑学生模型构建",
+      "category": "学习与适配"
+    },
+    {
+      "id": "peft-structural-sparse-adaptation",
+      "name": "参数高效微调的结构化参数化与稀疏更新",
+      "category": "学习与适配"
+    },
+    {
+      "id": "generative-synthetic-data",
+      "name": "生成模型合成训练数据与标注",
+      "category": "学习与适配"
+    },
+    {
+      "id": "practical-adaptive-optimizers",
+      "name": "实用自适应优化器与学习率、批大小自动设置",
+      "category": "训练与理论"
+    },
+    {
+      "id": "training-dynamics-feature-learning",
+      "name": "神经网络训练动力学与特征学习",
+      "category": "训练与理论"
+    },
+    {
+      "id": "network-expressivity",
+      "name": "神经网络与Transformer的表达能力 / 循环（权重共享深度）Transformer",
+      "category": "训练与理论"
+    },
+    {
+      "id": "neural-scaling-laws",
+      "name": "神经缩放律",
+      "category": "训练与理论"
+    },
+    {
+      "id": "speculative-decoding",
+      "name": "投机解码与 LLM 解码加速",
+      "category": "效率与系统"
+    },
+    {
+      "id": "multi-llm-routing-ensemble",
+      "name": "多模型路由、级联与集成",
+      "category": "效率与系统"
+    },
+    {
+      "id": "network-pruning",
+      "name": "网络剪枝与稀疏化",
+      "category": "效率与系统"
+    },
+    {
+      "id": "dl-compilers-kernels",
+      "name": "深度学习编译、高性能算子与快速卷积算法",
+      "category": "效率与系统"
+    },
+    {
+      "id": "discrete-diffusion",
+      "name": "离散扩散与离散流（含扩散语言模型）",
+      "category": "生成与三维视觉"
+    },
+    {
+      "id": "diffusion-guidance",
+      "name": "扩散模型的条件引导",
+      "category": "生成与三维视觉"
+    },
+    {
+      "id": "consistent-local-editing",
+      "name": "局部一致编辑：二维图像与已重建三维场景",
+      "category": "生成与三维视觉"
+    },
+    {
+      "id": "dynamic-scene-reconstruction",
+      "name": "动态场景神经重建",
+      "category": "生成与三维视觉"
+    },
+    {
+      "id": "generative-evaluation",
+      "name": "生成模型评价与创造力度量",
+      "category": "生成与三维视觉"
+    },
+    {
+      "id": "cross-modal-retrieval",
+      "name": "跨模态检索（图文与文本-视频）",
+      "category": "多模态"
+    },
+    {
+      "id": "mllm-benchmarking",
+      "name": "多模态大模型能力评测基准与方法学",
+      "category": "多模态"
+    },
+    {
+      "id": "multimodal-reasoning-rl",
+      "name": "多模态推理的强化学习后训练",
+      "category": "多模态"
+    },
+    {
+      "id": "vision-language-action",
+      "name": "视觉-语言-动作模型（VLA）",
+      "category": "机器人与决策"
+    },
+    {
+      "id": "learned-legged-musculoskeletal-control",
+      "name": "学习式足式与肌骨系统运动控制",
+      "category": "机器人与决策"
+    },
+    {
+      "id": "generative-policies",
+      "name": "以序列和生成模型做决策",
+      "category": "机器人与决策"
+    },
+    {
+      "id": "preference-reward-alignment",
+      "name": "生成模型的偏好与奖励对齐（语言模型 RLHF/DPO 与扩散模型微调）",
+      "category": "对齐与安全"
+    },
+    {
+      "id": "ai-control-deception",
+      "name": "AI 控制与欺骗性失准监控",
+      "category": "对齐与安全"
+    },
+    {
+      "id": "llm-evolutionary-heuristic-design",
+      "name": "LLM 引导的启发式与程序进化",
+      "category": "算法发现"
+    },
+    {
+      "id": "efficient_inference_long_context_serving",
+      "name": "LLM Efficiency：高效推理、长上下文与模型 serving",
+      "category": "效率与系统"
+    }
+  ],
+  "api_prompt": "你是一个独立研究者。本轮是 single-agent research idea generation：提交五个相互有区分、新的、值得发展为论文的研究 ideas。\n不要调用子代理。可以自行比较和淘汰候选，但最终交付五个完整想法，不得只交付其中的最佳候选。当前日期以运行环境的实际日期为准；文献检索不另设历史截止日。\n领域：【在这里填写你希望研究的领域】。\n领域 ID：先通过下方 LitGraph API 查询并确认实际 domain ID，不要根据领域名称自行编造。若涉及多个领域，请说明主领域与交叉领域。\n领域目标：围绕本领域，自主选择值得研究的具体问题和技术路线，提出 5 个相互有实质区别的研究想法。\n\n我们将最近十年的 AI 论文整理为 LitGraph 论文库，并按研究领域组织。在各领域的论文基础上，我们总结了共性的 insights 和 problems：insights 包含已有研究揭示的机制、规律、可借鉴的认识及其适用条件；problems 包含该领域反复出现的重要问题、瓶颈和未解决的挑战。这些条目提供了探索领域的入口，也可以追溯到相关来源论文。\n\n本轮不预先注入领域 insights/problems，也不要求先获取全域材料。请根据研究需要主动使用 LitGraph API 调查问题、机制与来源论文；检索范围、顺序和读取深度由你决定。你可以按需读取完整领域，但不应把全量读取作为强制前置步骤。库中的历史问题可能已被解决，insight 也不直接构成新贡献，仍需结合相关工作判断。\n\n每条新 idea 都必须以解决本领域至少一个核心 problem 为目标，提出具体的解决思路，说明这个问题为什么重要、现有方法的关键障碍是什么，以及你的设想如何作用于这一障碍。这里要求提出有依据的解决方案，不要求在生成阶段已经用实验完成证明。可以从 problem 出发寻找有用的 insight，也可以由 insight 发现解决本领域核心 problem 的新路径。\n\ninsights 可以来自本领域或任意其他领域。鼓励多领域交叉，也鼓励你主动进行多轮探索以获取更多有用的 insights。当你发现其他领域的 insights 或 problems 对当前问题重要时，可按需读取相关条目、来源论文或完整领域，理解其机制、前提与问题背景，再判断能否形成有价值的交叉。交叉领域由你自主选择，不预设候选子领域或要求覆盖的方向。\n\n除领域材料外，我们提供了六种常见的研究构思方式（下文 G01–G06）。生成过程中，应参照这些 rules 探索论文库、寻找机制联系和构造研究设想；它们可以组合、转向或超出，不是依次完成的检查清单。探索重点是找到能解决本领域核心 problem 的新路径，而不是为某条规则拼凑一个例子。\n\n当你认为需要核实某个 insight 的含义、适用条件或已有证据时，可以直接搜索并阅读它关联的论文，也可以按机制和问题检索其他相关工作。必要时沿来源论文继续追踪近邻工作。区分已经读到的内容和自己的推论；条目中列出的论文 ID 不代表你已经读过论文全文。在最终想法中说明核心 problem、借用的 insights 及其来源，并解释这些材料如何启发你的机制或判断。\n\n鼓励大胆但有依据的尝试。认真发展那些一旦成立就可能带来重要新能力、新方法或新认识的想法，不要只选择最稳妥、最容易实现或最容易写完整的小改进。依据可以来自真实文献、已观察到的现象、合理推导或跨领域的结构联系；这些依据支持探索，不代表你的新假设已经成立。\n大胆而新颖的想法受到鼓励。不要因为一个 idea 之前没有被做过，或因为它尚未完成实验、实验设计尚不完善、数据与资源安排尚待确定，就对它作负面评价或提前淘汰。对于较大胆的想法，写清具体设想、为什么值得尝试、关键假设、尚未解决的环节和可检验的预测；允许合理的不确定性，先尝试发展机制、替代构造或更有价值的问题表述。仍需认真核查已有方向；已确认的核心重复、事实错误或逻辑矛盾需要实质修复，不能用“大胆”掩盖。\n\n参照以下六种研究思路探索论文库、寻找 insights 和构思想法：\n1. G01 — A+B 组合与互补机制：从重要问题出发，寻找能共同解除障碍的机制，说明 A、B 为什么互补、如何相互作用，以及组合可能带来的独立价值。已有组件可以形成新贡献；仅仅“还没有人把 A 和 B 放在一起”不足以证明新颖性。\n2. G02 — 跨领域迁移：寻找其他领域的方法、机制或认识与当前问题的结构联系，说明它在原领域为何有效、哪些前提在这里仍成立、哪些需要适配。迁移的价值取决于新增的能力或认识，不以改动多少作为标准。\n3. G03 — Rethinking 默认前提：重新审视领域中被默认接受的假设、问题定义或解释，调查它们的依据与适用边界，思考放松、替换或修正前提后会出现什么新方法、预测或理解。不要求结论一定推翻前作。\n4. G04 — 诊断、重测与重新归因：从反常现象、矛盾证据或未解释的规律出发，寻找真正起作用的因素，提出能区分竞争解释的测量或对照，并考虑由此导出的改进。正结果和负结果都可以有价值，关键是回答重要问题并增加认识。\n5. G05 — 扩展能力与适用边界：考察已有方法的作用单位、自适应量、表示方式或理论适用范围能否扩展，解释原边界由什么限制、如何跨越，以及可能获得什么新能力。根据问题选择必要构造，不局限于调一个参数或做最小改动。\n6. G06 — 自由探索：直接从本领域最值得解决的问题或未解事实出发，自主提出上述思路之外的构造，也可以组合多种思路。不需要证明其他规则不适用，仍须交代真实依据、实质贡献和可检验预测。\n\n这些是帮助打开思路的探索视角，可以组合、转向或超出，不是必须依次完成的流程，也不要求最终五条 idea 覆盖全部思路。最终根据问题价值、潜在贡献、具体机制、依据和新颖性综合取舍，不设置类型或冒险程度配额。\n\n联网是可选渠道，由你判断是否必要。请通过 LitGraph 和／或公开文献真正检索和阅读近邻工作，再确定最终想法；不能仅凭记忆声称新颖。\n可使用公共论文库、arXiv、OpenReview、出版社和普通网页。使用当前环境实际提供的联网或 HTTP 工具；如果有终端，可用 curl 或 Python 访问公开 HTTPS 检索接口、网页和论文全文。不要假设环境中已经安装专用检索脚本。工具返回不理想时改关键词或来源。若当前环境不能实际请求 API，请明确报告，不能假装已完成检索。\n至少用三组有区别的查询词调查相近机制、已有组合与最强基线，实读最相关来源。无命中不能证明新颖。\n不要访问与本任务无关的私有本地论文库、旧实验想法或其他会话。本任务明确提供的 LitGraph 公网服务可以使用。\n\n新颖性判断要调查前人已经完成的核心机制与结论，说明自己的实质增量。熟悉组件的组合或跨领域迁移可以形成新贡献，但只换名字、重复已有结论或仅以组合尚无人尝试为依据，都不足以证明新颖性。\n明确给出问题、核心机制及必要公式、因果或可证伪预测、与最相近工作的差异，以及为何足够支撑一篇论文。\n实验部分只需简短说明未来如何区分核心假设与已有解释、可能观察到什么，以及哪些结果会促使你修正判断。数据、任务、指标、对照和资源安排可按需要提出初步设想；尚未确定的部分如实注明。不要求现阶段给出完整实验协议、预算或已有结果，也不以实验完善程度作为候选准入或排序依据。\n不要伪造实验结果。区分文献事实、你的推论、待验证假设和检索未排除的风险。\n\n生成 idea 后、确定最终五条之前，请逐条复查 novelty，并诚实评价其贡献是否有潜力成长为一篇独立的研究论文。\n\n先用一两句话明确自己真正声称的核心贡献：解决哪个问题，提出什么机制、能力或认识，相对已有工作增加了什么。围绕这一核心贡献，通过 LitGraph 和公开文献检索最相近的前作，使用不同术语和等价表述补查，实际阅读关键来源。比较研究问题、核心操作、机制与主要结论，不能只看标题、名称或应用场景是否不同，也不能把检索无命中当作已经证明新颖。\n\n若发现已有前作完成了相同的核心贡献，必须明确承认重合，实质修改或更换候选，并重新检查；不能通过换名、换表述或补充次要细节继续认领相同贡献。若仍有独立增量，准确界定它是什么、为什么重要，以及是否足以支撑一篇论文。尚不能排除的重复风险要如实记录，不能为了保留自己的 idea 淡化最接近的前作。\n\n诚实自评：假设核心设想成立，它能为本领域增加什么重要能力或认识？相对最强相关工作，剩余贡献是否实质且足够独立？目前最有力的依据、最薄弱的环节和仍待验证的关键假设分别是什么？不要给所有候选套上肯定评价，也不要承诺论文录用。贡献不足时继续发展机制或更换候选；有论文潜力但仍存在关键未知时，明确给出带条件的判断。研究潜力与实验完成度分别判断，不因尚无实验结果、实验细节未定或想法此前未被尝试，就否定其潜力。\n\n将实际检索、最接近前作、重合、独立增量与未排除风险写入 novelty_check；在 scientific_potential 中写明诚实结论、具体理由、已知不足和成立所需的关键条件。IDEA.md 中呈现这些判断。自评结论必须由前作对比和具体论证支持，不能用自我打分替代证据。\n\n在当前工作目录下创建 ideax-output/，将以下交付物写入其中：\n1. IDEAS.json：严格为长度 5 的 JSON 数组，每个对象的字段 title, problem, mechanism, previous_work,\n   novelty_check, experiment, failure_conditions, scientific_potential，均不可为空。\n   previous_work 至少 3 篇最相关真实工作；每项须含 title（完整标题）, url（实际来源）, read_depth,\n   source_location（实际读到的摘要/章节/字段）, overlap, difference。\n   novelty_check 含 search_queries、closest_work、already_done_test、remaining_contribution、unresolved_risks。\n   problem 写明至少一个本领域核心 problem 的真实 LitGraph 条目 ID、重要性及待解决的障碍；mechanism 说明所用 insights 的真实条目 ID、来源领域，以及它们如何启发你的解决思路。\n   experiment 可以是简短的未来验证设想，并明确尚待确定的部分；failure_conditions 写出可能推翻核心假设的条件或观察，不要求已完成实验。\n2. IDEA.md：可供其他研究者直接阅读的中文说明，分别完整论证五个想法、各自的 Previous work 和验证方案，并说明五者的区别与推荐顺序。\n3. SEARCH_LOG.md：真实查询、来源 URL、读取深度、候选取舍和未排除风险。工具失败也如实记录。\n可在 ideax-output/ 存放检索材料和脚本，不要修改其他项目文件。结束前自行检查 JSON 和三份交付物完整。如果环境没有文件写入工具，请在回答中按三个文件名分别输出完整内容。\n\n五个候选都须达到上述要求；不能把同一机制的五个应用算成五个想法。请实际使用 LitGraph API；公开网络访问可选，不因未联网而判为未完成。\n\n额外资源：只读 live LitGraph API（本轮无预注入领域材料，按需主动检索条目和原始证据）。\nBASE=https://kevin-wake-stuffed-anti.trycloudflare.com\n当前服务公开可读，无需 API key；模型调用由你所在的 agent 环境提供。\n先阅读 https://kevin-wake-stuffed-anti.trycloudflare.com/llms.txt 了解接口；完整规范在 https://kevin-wake-stuffed-anti.trycloudflare.com/openapi.json 。这两份资源用于解释接口，研究目标与交付要求以本提示词为准。\n\n通过当前环境的 HTTP 工具直接调用以下路由（在路径前加上 BASE，并对查询参数进行 URL 编码）：\n1. GET /api/v1/stats\n2. GET /api/v1/domains?q=领域关键词&limit=20\n3. GET /api/v1/domains/DOMAIN_ID\n4. GET /api/v1/domains/DOMAIN_ID/insights?limit=100\n5. GET /api/v1/domains/DOMAIN_ID/problems?limit=100\n6. GET /api/v1/domains/DOMAIN_ID/papers\n7. GET /api/v1/search?q=机制关键词&kind=insight&mode=all&limit=20\n8. GET /api/v1/search?q=问题关键词&kind=problem&mode=any&limit=20\n9. GET /api/v1/entries/ENTRY_ID\n10. GET /api/v1/papers/NUMERIC_PAPER_ID\n11. POST /api/v1/papers/batch，JSON 请求体为 {\"ids\": [NUMERIC_PAPER_ID_1, NUMERIC_PAPER_ID_2]}。\n批量 POST 只用于读取，不会修改数据库。示例中的 DOMAIN_ID、ENTRY_ID 和数字论文 ID 都必须替换为实际返回的标识。\n\n有终端时，可这样搜索（将“你的查询词”替换为实际问题或机制）：\ncurl -G \"https://kevin-wake-stuffed-anti.trycloudflare.com/api/v1/search\" \\\n  --data-urlencode \"q=你的查询词\" \\\n  --data-urlencode \"kind=insight\" \\\n  --data-urlencode \"mode=all\" \\\n  --data-urlencode \"limit=20\"\n\n成功的接口响应包含 ok=true 和 data。请实际读取返回内容，不要只根据标题或论文数量推断内容。paper_count 是支撑论文数，不是外部引用次数。\n\n本轮无需强制全量读取领域。如果你决定获取某个领域的全量材料，应先读取领域信息中的 insight/problem 数量，再遍历两类条目的全部分页。对于条目列表，检查 page.has_more；为 true 时将 page.next_after 作为下一次请求的 after 参数，直至 has_more=false。其他列表按接口返回的分页字段及文档翻页。检查游标不重复、条目 ID 不重复，并核对最终数量与领域统计一致；读取结束后复查统计，以发现导出期间的变化。将实际取得的全部条目保存为 JSONL 并完整阅读，必要时分段读取，不要把下载完成等同于已经阅读。材料缺失或读取不完整时如实报告。\n\n从 API 核对的 previous_work 增加 paper_id，并在 IDEA.md 中写《数字 paper_id》完整标题，便于复查；数字编号不等于 OpenAlex 的 W 编号。仍可引用库外网络文献，但不得编造其 LitGraph 编号。\n论文接口可能返回摘要和结构化论文卡，不能把这些内容声称为已读全文。请根据实际取得的内容填写 read_depth 和 source_location，必要时再读取原论文。\n在 SEARCH_LOG.md 记录实际 API 查询和阅读深度。API 不可用时如实报告，不回退私有本地数据库，也不猜测新的服务域名。\n\n本轮没有预先提供 full_domain_context.jsonl，不要寻找或假设其存在。条目 ID 只能来自本轮实际检索返回的证据，不得编造。\n",
+  "prompt_sha256": "ec089d93d805ed4ebce7e9451119c9a3135c528fa2e9b5007fce084b085cc33b",
+  "source_collection": "https://github.com/Einsia/IdeaX/tree/main/case_studies/model_efficiency"
+}

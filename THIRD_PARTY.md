@@ -27,3 +27,7 @@ Files copied or adapted from experiment sources are listed by original hash in
 the release manifest. Changes made during packaging are described in
 `docs/RELEASE.md`. Third-party code retains its own license; no blanket license
 is asserted over all included projects or external paper texts.
+
+# Demo rendering libraries
+
+The static demo bundles markdown-it 14.1.0 and KaTeX 0.16.22 under the MIT license. Their license texts are included in `demo/site/vendor/markdown-it.LICENSE` and `demo/site/vendor/katex.LICENSE`. KaTeX font assets are included for local equation rendering. DM Sans and Libre Caslon Display are requested from Google Fonts with system-font fallbacks; they are not required for the demo to function.
