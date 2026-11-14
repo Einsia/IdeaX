@@ -221,8 +221,8 @@ function prepareWalkthrough(c) {
   $('#stage-panel').classList.remove('walkthrough-guided');
   updatePlayer();
 }
-function followElement(element) {
-  if(!state.playing||!element)return;
+function followElement(element, manual=false) {
+  if((!state.playing&&!manual)||!element)return;
   const guide=$('#walkthrough-guide').getBoundingClientRect(),rect=element.getBoundingClientRect();
   const top=Math.max(16,guide.height+24);
   if(rect.top<top||rect.bottom>innerHeight-32) {
@@ -244,7 +244,8 @@ function updatePlayer() {
     $('#walkthrough-focus').textContent='From a literature question to a research proposal.';
     $('#walkthrough-note').textContent='Explore the complete case, or add your own question and critique.';
   }
-  $('#skip-replay').textContent=state.stage===4?'Prepare my brief →':'Next step →';
+  $('#skip-replay').textContent=state.replayComplete?'Prepare my brief →':'Next step →';
+  $('#skip-replay').title=state.replayComplete?'Prepare a research brief':!state.replayStarted?'Show the first block':state.stage===4&&state.cue===state.cues.length-1?'Finish the walkthrough':'Pause at the next block in the walkthrough';
   updatePlayback();
 }
 function updatePlayback() {
@@ -252,7 +253,7 @@ function updatePlayback() {
   $('#walkthrough-fill').style.transform=`scaleX(${fraction})`;
   $('#walkthrough-progress').setAttribute('aria-valuenow',String(Math.round(fraction*100)));
   const remaining=Math.ceil((state.duration-state.elapsed)/state.speed/1000);
-  $('#walkthrough-time').textContent=state.replayComplete?'5 steps explored':`Step ${state.stage+1} of 5 · ${remaining}s ${state.stage===4?'to finish':'to next step'}`;
+  $('#walkthrough-time').textContent=state.replayComplete?'5 stages explored':`Stage ${state.stage+1} of 5 · ${state.replayStarted?`Block ${Math.max(0,state.cue)+1} of ${state.cues.length}`:`${state.cues.length} blocks`} ${state.playing?`· ${remaining}s in this stage`:''}`;
   document.querySelectorAll('.stage-tab').forEach((b,n)=>{
     b.style.setProperty('--step-progress',n<state.stage?'100%':n===state.stage?`${fraction*100}%`:'0%');
   });
@@ -263,6 +264,7 @@ function updatePlayback() {
   if(current)current.element.style.setProperty('--cue-progress',`${Math.min(100,(state.elapsed-current.start)/(current.end-current.start)*100)}%`);
   if(state.replayComplete||index===state.cue)return;
   state.cue=index;
+  $('#walkthrough-time').textContent=`Stage ${state.stage+1} of 5 · Block ${index+1} of ${state.cues.length}${state.playing?` · ${remaining}s in this stage`:''}`;
   $('#stage-panel').classList.add('walkthrough-guided');
   state.cues.forEach((c,i)=>{
     c.element.classList.toggle('walkthrough-seen',i<index);
@@ -296,12 +298,29 @@ function playbackTick() {
   accumulatePlayback();
   if(state.elapsed>=state.duration) {
     if(state.stage<4){setStage(state.stage+1,true);return;}
-    state.replayComplete=true;state.playing=false;state.frame=null;
-    $('#stage-panel').classList.remove('walkthrough-guided');
-    state.cues.forEach(c=>c.element.classList.remove('walkthrough-focus','walkthrough-ahead'));
-    updatePlayer();return;
+    finishWalkthrough();return;
   }
   updatePlayback();state.frame=requestAnimationFrame(playbackTick);
+}
+function finishWalkthrough() {
+  cancelAnimationFrame(state.frame);state.frame=null;
+  state.elapsed=state.duration;state.replayComplete=true;state.playing=false;
+  $('#stage-panel').classList.remove('walkthrough-guided');
+  state.cues.forEach(c=>c.element.classList.remove('walkthrough-focus','walkthrough-ahead'));
+  updatePlayer();
+}
+function nextWalkthroughBlock() {
+  if(state.replayComplete){openBrief();return;}
+  stopReplay();
+  let next=state.replayStarted?state.cue+1:0;
+  if(next>=state.cues.length) {
+    if(state.stage===4){finishWalkthrough();return;}
+    setStage(state.stage+1);next=0;
+  }
+  state.replayStarted=true;
+  state.elapsed=state.cues[next].start;
+  updatePlayer();
+  followElement(state.cues[next].element,true);
 }
 function startPlayback() {
   state.playing=true;state.replayStarted=true;state.lastTick=performance.now();
@@ -363,7 +382,7 @@ function switchInstructionTab(which) {
 function installEvents() {
   $('#play-replay').addEventListener('click',play);
   $('#reset-replay').addEventListener('click',()=>setStage(0,state.playing));
-  $('#skip-replay').addEventListener('click',()=>state.stage===4?openBrief():setStage(state.stage+1,state.playing));
+  $('#skip-replay').addEventListener('click',nextWalkthroughBlock);
   $('#case-glossary').addEventListener('toggle',()=>{if($('#case-glossary').open&&state.playing)stopReplay();});
   $('#replay-speed').addEventListener('change',()=>{accumulatePlayback();state.speed=Number($('#replay-speed').value);updatePlayer();});
   $('#next-stage').addEventListener('click',()=>state.stage===4?openBrief():setStage(state.stage+1));

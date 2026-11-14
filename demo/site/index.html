@@ -7,12 +7,12 @@
   <meta name="theme-color" content="#f6f5f0">
   <title>IdeaX — From literature to a research idea</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261114-guide">
+  <link rel="stylesheet" href="style.css?v=20261114-blocks">
   <link rel="stylesheet" href="vendor/katex.min.css">
   <script src="vendor/markdown-it.min.js" defer></script>
   <script src="vendor/katex.min.js" defer></script>
   <script src="examples.js?v=20261114-guide" defer></script>
-  <script src="app.js?v=20261114-guide" defer></script>
+  <script src="app.js?v=20261114-blocks" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -59,7 +59,7 @@
           <div class="walkthrough-toolbar"><span class="walkthrough-status"><span class="play-indicator" aria-hidden="true"><i></i><i></i><i></i></span><span id="walkthrough-status">Ready · Recorded case</span></span><div class="walkthrough-actions"><label class="speed-control"><span class="sr-only">Walkthrough speed</span><select id="replay-speed"><option value="1">1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label><button class="button dark small" id="play-replay" aria-pressed="false"><span aria-hidden="true">▶</span> Play walkthrough</button></div></div>
           <div class="walkthrough-caption" aria-live="polite" aria-atomic="true"><p id="walkthrough-focus">Follow the connections.</p><p id="walkthrough-note">Play to follow the question, evidence, and design choices in this case.</p></div>
           <div class="walkthrough-track" id="walkthrough-progress" role="progressbar" aria-label="Current step playback" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="walkthrough-fill"></span></div>
-          <div class="walkthrough-timing"><span id="walkthrough-time">Step 1 of 5</span><button class="text-button" id="skip-replay">Next step →</button></div>
+          <div class="walkthrough-timing"><span id="walkthrough-time">Stage 1 of 5</span><button class="button small" id="skip-replay">Next step →</button></div>
         </section>
         <div class="stage-panel" id="stage-panel" role="tabpanel" tabindex="0"></div>
         <div class="stage-footer"><span>Inspect the evidence. Make your own judgment.</span><button class="button dark" id="next-stage">Next: Connect insights <span aria-hidden="true">→</span></button></div>
