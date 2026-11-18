@@ -1,0 +1,1002 @@
+{
+  "files": [
+    {
+      "path": "snapshot/adapters/common.py",
+      "source_relative_to_campaign": "adapters/common.py",
+      "sha256": "7c4d6dfdabff4619bf35b3212b1f84ce0e82bda754907b71edf26a88b08f20bb",
+      "source_sha256": "7c4d6dfdabff4619bf35b3212b1f84ce0e82bda754907b71edf26a88b08f20bb",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/arc_offline_literature.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/arc_offline_literature.py",
+      "sha256": "92fe6cb4b741dcfb01b71a1ba45738b0c52f76caef6a8cadc7521fe7a7bb7e4e",
+      "source_sha256": "92fe6cb4b741dcfb01b71a1ba45738b0c52f76caef6a8cadc7521fe7a7bb7e4e",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/autoresearchclaw.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/autoresearchclaw.py",
+      "sha256": "1243fd69d4b00a05ab512536a3c9fee384157347f347d68355cd42521fc34733",
+      "source_sha256": "1243fd69d4b00a05ab512536a3c9fee384157347f347d68355cd42521fc34733",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/common.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/common.py",
+      "sha256": "1d076a6851b8b2b38b57bd4303a8c746319caf0a72a3bd9ac0932a1316baefef",
+      "source_sha256": "1d076a6851b8b2b38b57bd4303a8c746319caf0a72a3bd9ac0932a1316baefef",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/deepscientist.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/deepscientist.py",
+      "sha256": "614f6e2609990683fc1d4345486a45053aa310c665a31a5f6c1177efb6e78381",
+      "source_sha256": "614f6e2609990683fc1d4345486a45053aa310c665a31a5f6c1177efb6e78381",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/dr_claw.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/dr_claw.py",
+      "sha256": "8cb1eb8702f085a509e825ed8546cfd9a601acd9b6c3572cec17bf4d1c8dc2bc",
+      "source_sha256": "8cb1eb8702f085a509e825ed8546cfd9a601acd9b6c3572cec17bf4d1c8dc2bc",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/offline_support.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/offline_support.py",
+      "sha256": "c0e4518f5d1aba425851f24980c384776c0d6a1ef59c6f5a554e7fe0bd18ce91",
+      "source_sha256": "c0e4518f5d1aba425851f24980c384776c0d6a1ef59c6f5a554e7fe0bd18ce91",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/researchagent.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/researchagent.py",
+      "sha256": "6575e9910cfcba289f7480d6f3fc597669f928857c4b1e1f909b2e5dd7aa51db",
+      "source_sha256": "6575e9910cfcba289f7480d6f3fc597669f928857c4b1e1f909b2e5dd7aa51db",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/researchagent_domain_dispatch.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/researchagent_domain_dispatch.py",
+      "sha256": "129591c70daa652c3025d09c23530486654dcda700978e22ae813580cee605b4",
+      "source_sha256": "129591c70daa652c3025d09c23530486654dcda700978e22ae813580cee605b4",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/researchagent_versioned.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/researchagent_versioned.py",
+      "sha256": "32b8f2cbe1ebaca12fa6f9453e5a40da90bc745c73802d4ab425408fd90e0fc7",
+      "source_sha256": "32b8f2cbe1ebaca12fa6f9453e5a40da90bc745c73802d4ab425408fd90e0fc7",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/sciagents.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/sciagents.py",
+      "sha256": "884bc860688efb4e267258c77b4cd23c9c731e29de329276dc20567da66f46ee",
+      "source_sha256": "884bc860688efb4e267258c77b4cd23c9c731e29de329276dc20567da66f46ee",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/sciagents_corrected_validation.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/sciagents_corrected_validation.py",
+      "sha256": "95634a2ade84328e98b578d023e7322493103e94ff76d7e1775c94e876b3669d",
+      "source_sha256": "95634a2ade84328e98b578d023e7322493103e94ff76d7e1775c94e876b3669d",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/sciagents_matched_graph.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/sciagents_matched_graph.py",
+      "sha256": "be772dd8dade17503e3611aa62ebe9571c0b708c88265b6c246ddfb7f5628d16",
+      "source_sha256": "be772dd8dade17503e3611aa62ebe9571c0b708c88265b6c246ddfb7f5628d16",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/adapters/sciagents_offline_literature.py",
+      "source_relative_to_campaign": "phases/offline-20261117/adapters/sciagents_offline_literature.py",
+      "sha256": "d0e216435765079cfbca941c77fa145dc504b10d4fae34b279552c92488dfdcb",
+      "source_sha256": "d0e216435765079cfbca941c77fa145dc504b10d4fae34b279552c92488dfdcb",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/campaign.py",
+      "source_relative_to_campaign": "phases/offline-20261117/campaign.py",
+      "sha256": "139ac2713d6ea5454411ad884b1aeb18e67c125a2fe78d5e7fdaf16118334e1a",
+      "source_sha256": "139ac2713d6ea5454411ad884b1aeb18e67c125a2fe78d5e7fdaf16118334e1a",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/adapter.py",
+      "source_relative_to_campaign": "phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/adapter.py",
+      "sha256": "0f6bda1eebdef94db9666e77b2b3d4ca315b0e05e47ad2d016df0763a8650b94",
+      "source_sha256": "0f6bda1eebdef94db9666e77b2b3d4ca315b0e05e47ad2d016df0763a8650b94",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/format_compatibility.py",
+      "source_relative_to_campaign": "phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/format_compatibility.py",
+      "sha256": "30f7b8d91ca6574c768de71f7d2ea34ad9f6610c647f5a6654bbe9cdcea2ee4f",
+      "source_sha256": "30f7b8d91ca6574c768de71f7d2ea34ad9f6610c647f5a6654bbe9cdcea2ee4f",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/format_compatibility_v2.py",
+      "source_relative_to_campaign": "phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/format_compatibility_v2.py",
+      "sha256": "93baad636ffa0f1d3b24d8487b31c43b156b11776b678f0f94ba0e3b85af8ea5",
+      "source_sha256": "93baad636ffa0f1d3b24d8487b31c43b156b11776b678f0f94ba0e3b85af8ea5",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/format_compatibility_v3.py",
+      "source_relative_to_campaign": "phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/format_compatibility_v3.py",
+      "sha256": "2332add3aa571d77b30b20aba6a6486f05ccfd365856fdd0aa5229baa92b06c4",
+      "source_sha256": "2332add3aa571d77b30b20aba6a6486f05ccfd365856fdd0aa5229baa92b06c4",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/host_launch.py",
+      "source_relative_to_campaign": "phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/host_launch.py",
+      "sha256": "4c3deea044227d9314182692323ac0a6ee8aa8793cdac84c4d5e10874db96a83",
+      "source_sha256": "4c3deea044227d9314182692323ac0a6ee8aa8793cdac84c4d5e10874db96a83",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/strict_format_candidate.py",
+      "source_relative_to_campaign": "phases/offline-20261117/environments/cycleresearcher_revisions/native-n10-standard4-source-spans-v4/strict_format_candidate.py",
+      "sha256": "f9c0e9e4b08622f719ac0190cb33e5db494502a9032c1f88bb6081c965ca8b63",
+      "source_sha256": "f9c0e9e4b08622f719ac0190cb33e5db494502a9032c1f88bb6081c965ca8b63",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/environments/researchagent/build_seed_bundle.py",
+      "source_relative_to_campaign": "phases/offline-20261117/environments/researchagent/build_seed_bundle.py",
+      "sha256": "3c2dc4280ebd5868ef12dd065a9b63ce7933ea7489e9aba667318327f39a536a",
+      "source_sha256": "3c2dc4280ebd5868ef12dd065a9b63ce7933ea7489e9aba667318327f39a536a",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/environments/researchagent/native_inputs.py",
+      "source_relative_to_campaign": "phases/offline-20261117/environments/researchagent/native_inputs.py",
+      "sha256": "95b8f2a3610df1f1b415bdb9521ab7b2587062a25e61d210fd0d29e609adcd99",
+      "source_sha256": "95b8f2a3610df1f1b415bdb9521ab7b2587062a25e61d210fd0d29e609adcd99",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/environments/researchagent/specter_runtime.py",
+      "source_relative_to_campaign": "phases/offline-20261117/environments/researchagent/specter_runtime.py",
+      "sha256": "6c38e9413c802ed8bc6847482570754bc90b20af7a75a90ba098d4e669ffd394",
+      "source_sha256": "6c38e9413c802ed8bc6847482570754bc90b20af7a75a90ba098d4e669ffd394",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/environments/researchagent/verify_adapter.py",
+      "source_relative_to_campaign": "phases/offline-20261117/environments/researchagent/verify_adapter.py",
+      "sha256": "8500068d2ba8eb80dfc1ea3aa42e38a5cd359b717141f0f80a7ecdbdc079f9aa",
+      "source_sha256": "8500068d2ba8eb80dfc1ea3aa42e38a5cd359b717141f0f80a7ecdbdc079f9aa",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/environments/researchagent/verify_environment.py",
+      "source_relative_to_campaign": "phases/offline-20261117/environments/researchagent/verify_environment.py",
+      "sha256": "9d8059169bd6643b218f3eb630d7c7c26e2db20a0255809e0618d0ec3f8aa13f",
+      "source_sha256": "9d8059169bd6643b218f3eb630d7c7c26e2db20a0255809e0618d0ec3f8aa13f",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/offline_gates.py",
+      "source_relative_to_campaign": "phases/offline-20261117/offline_gates.py",
+      "sha256": "10920f21f64d2b3b4b2496b1eb8bf8d20729147272d0aa47a1f9acb60bfe46ce",
+      "source_sha256": "10920f21f64d2b3b4b2496b1eb8bf8d20729147272d0aa47a1f9acb60bfe46ce",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/protocol/network_policy.json",
+      "source_relative_to_campaign": "phases/offline-20261117/protocol/network_policy.json",
+      "sha256": "185455dbf48ec14e7abb270a581b2b8e6fc05fff38acdee8dcc1e8ecddc002d1",
+      "source_sha256": "185455dbf48ec14e7abb270a581b2b8e6fc05fff38acdee8dcc1e8ecddc002d1",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/protocol/offline_environment.txt",
+      "source_relative_to_campaign": "phases/offline-20261117/protocol/offline_environment.txt",
+      "sha256": "06f3acee1271294c789211489ececc16d180254319ba15db761422e8fd4cdf61",
+      "source_sha256": "06f3acee1271294c789211489ececc16d180254319ba15db761422e8fd4cdf61",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/protocol/offline_evaluation.json",
+      "source_relative_to_campaign": "phases/offline-20261117/protocol/offline_evaluation.json",
+      "sha256": "33b578a7cce75184264e2715fe1502c4e80eafb99aa9b39cfb29ab1e10fd5809",
+      "source_sha256": "33b578a7cce75184264e2715fe1502c4e80eafb99aa9b39cfb29ab1e10fd5809",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/runtime/inside.py",
+      "source_relative_to_campaign": "phases/offline-20261117/runtime/inside.py",
+      "sha256": "e1b0c3c898e8a442ee8b7557999b17bc1bdcb65e22ad377d9c2dd67271bf7f10",
+      "source_sha256": "e1b0c3c898e8a442ee8b7557999b17bc1bdcb65e22ad377d9c2dd67271bf7f10",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/runtime/material_task.py",
+      "source_relative_to_campaign": "phases/offline-20261117/runtime/material_task.py",
+      "sha256": "9f2f5056ab94e93a285ad4697dcecefc95909f1e9b061a88db2df4c9be3268d8",
+      "source_sha256": "9f2f5056ab94e93a285ad4697dcecefc95909f1e9b061a88db2df4c9be3268d8",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/runtime/model_gateway.py",
+      "source_relative_to_campaign": "phases/offline-20261117/runtime/model_gateway.py",
+      "sha256": "bc34f9df43bff35951fb76119b12a4076cc5e23dd5c94f7c46795a682465826e",
+      "source_sha256": "bc34f9df43bff35951fb76119b12a4076cc5e23dd5c94f7c46795a682465826e",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/runtime/offline_exec.py",
+      "source_relative_to_campaign": "phases/offline-20261117/runtime/offline_exec.py",
+      "sha256": "93d47f09f615e4bb3824e3bb8b8fe5541c814781a1474bf067ca888b97c999ab",
+      "source_sha256": "93d47f09f615e4bb3824e3bb8b8fe5541c814781a1474bf067ca888b97c999ab",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/runtime/offline_exec_material.py",
+      "source_relative_to_campaign": "phases/offline-20261117/runtime/offline_exec_material.py",
+      "sha256": "c66cd1c5d26def38e58aeac04a6425428af8765f950f597e35a86c5b9ce59c51",
+      "source_sha256": "c66cd1c5d26def38e58aeac04a6425428af8765f950f597e35a86c5b9ce59c51",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/runtime/scoring_material_launch.py",
+      "source_relative_to_campaign": "phases/offline-20261117/runtime/scoring_material_launch.py",
+      "sha256": "ff69bce3f4ea42fdd025572e53051053b15061dd362ba43e9d8a34ed44ccb80f",
+      "source_sha256": "ff69bce3f4ea42fdd025572e53051053b15061dd362ba43e9d8a34ed44ccb80f",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/material_versions.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/material_versions.py",
+      "sha256": "ee9ef03e6ac0c3f4b85eee8f0a6aded98c14fe4d0aadf9f666ed7c66611d401d",
+      "source_sha256": "ee9ef03e6ac0c3f4b85eee8f0a6aded98c14fe4d0aadf9f666ed7c66611d401d",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/novelty_prompt.md",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/novelty_prompt.md",
+      "sha256": "47497fe983b8268dc0ada554ec6ddf89e609f50804123fc2531babc6eaf7a695",
+      "source_sha256": "47497fe983b8268dc0ada554ec6ddf89e609f50804123fc2531babc6eaf7a695",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/offline_evidence.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/offline_evidence.py",
+      "sha256": "6ddfee7d762ee8f3f818a23df51936156268a7d0991b03e3717359519eb42a79",
+      "source_sha256": "6ddfee7d762ee8f3f818a23df51936156268a7d0991b03e3717359519eb42a79",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/reviewer_prompt.md",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/reviewer_prompt.md",
+      "sha256": "30e4d06a5351e39f3611907b645fc69fc4c40bae6d7325bbb77a2eb980f8c1ee",
+      "source_sha256": "30e4d06a5351e39f3611907b645fc69fc4c40bae6d7325bbb77a2eb980f8c1ee",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/revisions/comparison-scopes-20261117/host_scoring_scope_launch.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/revisions/comparison-scopes-20261117/host_scoring_scope_launch.py",
+      "sha256": "f440b23bc492ce52f0467dcebea709b21baffeb164056b74fa3b19c53e2e8d12",
+      "source_sha256": "f440b23bc492ce52f0467dcebea709b21baffeb164056b74fa3b19c53e2e8d12",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/revisions/comparison-scopes-20261117/material_versions_scoped.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/revisions/comparison-scopes-20261117/material_versions_scoped.py",
+      "sha256": "0432c775f49f6b51ff15f2740e1ca436b2d337a36ef045aa7a076f3e89b389a4",
+      "source_sha256": "0432c775f49f6b51ff15f2740e1ca436b2d337a36ef045aa7a076f3e89b389a4",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/revisions/comparison-scopes-20261117/summarize_scoped.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/revisions/comparison-scopes-20261117/summarize_scoped.py",
+      "sha256": "bb98fa6859f4f98084fe146806cec3ae6653b0d968399bd2c36e2f1bac3cd805",
+      "source_sha256": "bb98fa6859f4f98084fe146806cec3ae6653b0d968399bd2c36e2f1bac3cd805",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/revisions/comparison-scopes-20261117/versioned_runtime_scoped.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/revisions/comparison-scopes-20261117/versioned_runtime_scoped.py",
+      "sha256": "73714da740e355313291638e1a9f41726a944cd79929caadf4a3cecac4319306",
+      "source_sha256": "73714da740e355313291638e1a9f41726a944cd79929caadf4a3cecac4319306",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/runtime.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/runtime.py",
+      "sha256": "0aba19d89f9d70b6c7348c12c2215a3547c6236cffaf1c56cc388e2412ceeddd",
+      "source_sha256": "0aba19d89f9d70b6c7348c12c2215a3547c6236cffaf1c56cc388e2412ceeddd",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/sciagents_transfer_runtime.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/sciagents_transfer_runtime.py",
+      "sha256": "d82e17b6b3980859272357bf2cecf40a5df99f378c3475c0a0d2a77ffb1db5d0",
+      "source_sha256": "d82e17b6b3980859272357bf2cecf40a5df99f378c3475c0a0d2a77ffb1db5d0",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/summarize.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/summarize.py",
+      "sha256": "827e6e08f19ebe59693b5eaa1beb785092873a3708e3d4a6ebddcfbd5801fd78",
+      "source_sha256": "827e6e08f19ebe59693b5eaa1beb785092873a3708e3d4a6ebddcfbd5801fd78",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/api_shapes.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/api_shapes.py",
+      "sha256": "7b485f0bb2c40b0439c980cafea87cc81e210271ebcab5d5be9a010ea305a08e",
+      "source_sha256": "7b485f0bb2c40b0439c980cafea87cc81e210271ebcab5d5be9a010ea305a08e",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/evaluate.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/evaluate.py",
+      "sha256": "110dca4f2b8760d64f17589693f5e8175998dabd708e01919ea529bd080a3cdc",
+      "source_sha256": "110dca4f2b8760d64f17589693f5e8175998dabd708e01919ea529bd080a3cdc",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/__init__.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/idea_benchmark/__init__.py",
+      "sha256": "aa10ac55de0b4cc7caf040fd73d93c95e54af94b4a736840ff1e1dbaa88ffff0",
+      "source_sha256": "aa10ac55de0b4cc7caf040fd73d93c95e54af94b4a736840ff1e1dbaa88ffff0",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/core.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/idea_benchmark/core.py",
+      "sha256": "e36478b6155dfbbf350e427312cae9648a01707ffb24d2b542192a0157bd5eee",
+      "source_sha256": "e36478b6155dfbbf350e427312cae9648a01707ffb24d2b542192a0157bd5eee",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/interesting/__init__.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/idea_benchmark/interesting/__init__.py",
+      "sha256": "5c278ad1b4936658b1584e44fd8cef90ef8cb6755b13626fd1a9ca34220b4472",
+      "source_sha256": "5c278ad1b4936658b1584e44fd8cef90ef8cb6755b13626fd1a9ca34220b4472",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/interesting/evaluate.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/idea_benchmark/interesting/evaluate.py",
+      "sha256": "f74689426fa8ca66ead71ac5dc9b350f101d146decd552756b51baee075c6c92",
+      "source_sha256": "f74689426fa8ca66ead71ac5dc9b350f101d146decd552756b51baee075c6c92",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/panel/__init__.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/idea_benchmark/panel/__init__.py",
+      "sha256": "5a80a34cb54905b1e67c711ade637d9d6bcaae6779f101e0a6589354bd834901",
+      "source_sha256": "5a80a34cb54905b1e67c711ade637d9d6bcaae6779f101e0a6589354bd834901",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/panel/interesting_sequential.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/idea_benchmark/panel/interesting_sequential.py",
+      "sha256": "e7aad993c0f29e52a15867e63a7741fb9a7bf2528c723de980f39d844be966ff",
+      "source_sha256": "e7aad993c0f29e52a15867e63a7741fb9a7bf2528c723de980f39d844be966ff",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/panel/pilot.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/idea_benchmark/panel/pilot.py",
+      "sha256": "3d4e0877a40f16483db62d52c3427c90af409dd7699ef618660c4b29539a66eb",
+      "source_sha256": "3d4e0877a40f16483db62d52c3427c90af409dd7699ef618660c4b29539a66eb",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/panel/sequential.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/idea_benchmark/panel/sequential.py",
+      "sha256": "f8586802301d8d9abe5cb08bbb085ab6789b6bd6e98ca6ab421dd25d9a6435a7",
+      "source_sha256": "f8586802301d8d9abe5cb08bbb085ab6789b6bd6e98ca6ab421dd25d9a6435a7",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/runner.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/idea_benchmark/runner.py",
+      "sha256": "d7bf0db3631d6a4aa7154601578f8af5ab6651ff1a26f58efa884b2898ef4d2c",
+      "source_sha256": "d7bf0db3631d6a4aa7154601578f8af5ab6651ff1a26f58efa884b2898ef4d2c",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/vendor/library_client.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/library_client.py",
+      "sha256": "1440c4805b7af59de8a34b8c3b50fd2c8aa7f1660a7f17d7db630d70a5458ffc",
+      "source_sha256": "1440c4805b7af59de8a34b8c3b50fd2c8aa7f1660a7f17d7db630d70a5458ffc",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/scoring/versioned_runtime.py",
+      "source_relative_to_campaign": "phases/offline-20261117/scoring/versioned_runtime.py",
+      "sha256": "12f7d7c97b6bb2c6abdcdded825c8457c4ad5e7de176d5a59b6505f12dba3b86",
+      "source_sha256": "12f7d7c97b6bb2c6abdcdded825c8457c4ad5e7de176d5a59b6505f12dba3b86",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/services/local_literature/README.md",
+      "source_relative_to_campaign": "phases/offline-20261117/services/local_literature/README.md",
+      "sha256": "e04fb529b2e69deb0f2b3190259eee4838f634107604807282417138ee128734",
+      "source_sha256": "e04fb529b2e69deb0f2b3190259eee4838f634107604807282417138ee128734",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/services/local_literature/build_corpus.py",
+      "source_relative_to_campaign": "phases/offline-20261117/services/local_literature/build_corpus.py",
+      "sha256": "99eab9b8b82c088ec6d9eec4c7e46c0324ae70f4d9a9059c755e6b9e594ef66d",
+      "source_sha256": "99eab9b8b82c088ec6d9eec4c7e46c0324ae70f4d9a9059c755e6b9e594ef66d",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/services/local_literature/build_corpus_executed_v1.py",
+      "source_relative_to_campaign": "phases/offline-20261117/services/local_literature/build_corpus_executed_v1.py",
+      "sha256": "83c4c326c25dd22a926011ccfc94d6a6bb4f45c8e7d53d4d600ada0ebb3bef9f",
+      "source_sha256": "83c4c326c25dd22a926011ccfc94d6a6bb4f45c8e7d53d4d600ada0ebb3bef9f",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/services/local_literature/cli.py",
+      "source_relative_to_campaign": "phases/offline-20261117/services/local_literature/cli.py",
+      "sha256": "2d8e21451b4a6b2ffbccf9e9ccab94fa9ae5680d586d3aaa4535f411cbd02a66",
+      "source_sha256": "2d8e21451b4a6b2ffbccf9e9ccab94fa9ae5680d586d3aaa4535f411cbd02a66",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/services/local_literature/coverage.py",
+      "source_relative_to_campaign": "phases/offline-20261117/services/local_literature/coverage.py",
+      "sha256": "59d68a19031415e60fa8811019b928f7139dfd46ca94b390430b256def0a8067",
+      "source_sha256": "59d68a19031415e60fa8811019b928f7139dfd46ca94b390430b256def0a8067",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/services/local_literature/server.py",
+      "source_relative_to_campaign": "phases/offline-20261117/services/local_literature/server.py",
+      "sha256": "19f66de9cf0af989113fb4759e364e2324aae13fefad6e359f79d7fe3a0e3d8a",
+      "source_sha256": "19f66de9cf0af989113fb4759e364e2324aae13fefad6e359f79d7fe3a0e3d8a",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/services/local_literature/verify_corpus.py",
+      "source_relative_to_campaign": "phases/offline-20261117/services/local_literature/verify_corpus.py",
+      "sha256": "7d33da76ba63bda7a784846d54efb831f0128eb953cfb79457519f7409b04bc1",
+      "source_sha256": "7d33da76ba63bda7a784846d54efb831f0128eb953cfb79457519f7409b04bc1",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/services/local_literature/verify_http.py",
+      "source_relative_to_campaign": "phases/offline-20261117/services/local_literature/verify_http.py",
+      "sha256": "1645e126df8b7316c42fa9894eee919a934e74cbf8cdf24943ec61503d90538b",
+      "source_sha256": "1645e126df8b7316c42fa9894eee919a934e74cbf8cdf24943ec61503d90538b",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/activate.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/activate.py",
+      "sha256": "a5b8c97001bf5b64d8d4365afecc27604d8485e5d3ffe113e855c15a44400ca5",
+      "source_sha256": "a5b8c97001bf5b64d8d4365afecc27604d8485e5d3ffe113e855c15a44400ca5",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/contracts.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/contracts.py",
+      "sha256": "7e1df8a0fd271116152e466d8b386ac1ea421bfd0cb240ca1cc126914dedc83e",
+      "source_sha256": "7e1df8a0fd271116152e466d8b386ac1ea421bfd0cb240ca1cc126914dedc83e",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/dynamic_report.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/dynamic_report.py",
+      "sha256": "4547a238e506d76c523f315a485c971684e5c5369447491f501544a175a9d222",
+      "source_sha256": "4547a238e506d76c523f315a485c971684e5c5369447491f501544a175a9d222",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/exec_locked.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/exec_locked.py",
+      "sha256": "051ad8005910e972943cc4bf9c00ae0c4df85879b0d7fcaab9bfcd104eca7574",
+      "source_sha256": "051ad8005910e972943cc4bf9c00ae0c4df85879b0d7fcaab9bfcd104eca7574",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/file_tools.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/file_tools.py",
+      "sha256": "fd2139e439252910c1de156dcab5a17b5f22170d44b9bc80117f424a94a0b3de",
+      "source_sha256": "fd2139e439252910c1de156dcab5a17b5f22170d44b9bc80117f424a94a0b3de",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/headless_capture.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/headless_capture.py",
+      "sha256": "bf4307a767ae68167da11f7c89e48a9e7732d72f43d4c531ae91af2b059aa909",
+      "source_sha256": "bf4307a767ae68167da11f7c89e48a9e7732d72f43d4c531ae91af2b059aa909",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/host_launch.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/host_launch.py",
+      "sha256": "3c16a2a7b68373b2239fe14b0f62c8053bdf619a64511d7bc7164bc606806c3d",
+      "source_sha256": "3c16a2a7b68373b2239fe14b0f62c8053bdf619a64511d7bc7164bc606806c3d",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/prepare_candidate.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/prepare_candidate.py",
+      "sha256": "0ba640d32e7b170f637044f8db7ac7f40e6ef18aa43fb8309a37cb9aac548b7f",
+      "source_sha256": "0ba640d32e7b170f637044f8db7ac7f40e6ef18aa43fb8309a37cb9aac548b7f",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/probe_inside.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/probe_inside.py",
+      "sha256": "61ba0302b12ad3c0e9cb91701312bab7eb2c67d218b8ae713ea5b3283d8d4e94",
+      "source_sha256": "61ba0302b12ad3c0e9cb91701312bab7eb2c67d218b8ae713ea5b3283d8d4e94",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/release_domain.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/release_domain.py",
+      "sha256": "33654e764e81999a0f4259947ccc119d1f5ea3b454843a5526e5e2a1aa1834ba",
+      "source_sha256": "33654e764e81999a0f4259947ccc119d1f5ea3b454843a5526e5e2a1aa1834ba",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/result_export.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/result_export.py",
+      "sha256": "f64de8575ad312e7654f47e67ef55767a6ecbbddbc7a31d28136a67bb6cccae9",
+      "source_sha256": "f64de8575ad312e7654f47e67ef55767a6ecbbddbc7a31d28136a67bb6cccae9",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/runtime_launch.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/runtime_launch.py",
+      "sha256": "6f4b5a13b8c6dcfc3c2b846c141b3a44b27baa5da6d57ab54f9c0af79a88c04b",
+      "source_sha256": "6f4b5a13b8c6dcfc3c2b846c141b3a44b27baa5da6d57ab54f9c0af79a88c04b",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/scheduler_entry.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/scheduler_entry.py",
+      "sha256": "8c9d4ad358620e2d56916688f3f1ae88af45ffe9961f506783d3665eac35ae38",
+      "source_sha256": "8c9d4ad358620e2d56916688f3f1ae88af45ffe9961f506783d3665eac35ae38",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/transport_policy.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/transport_policy.py",
+      "sha256": "58e4dcc9540796ce442d7f6b0106dfb535cd504fa0581124a6f30c6f065f3703",
+      "source_sha256": "58e4dcc9540796ce442d7f6b0106dfb535cd504fa0581124a6f30c6f065f3703",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/verify_candidate.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/verify_candidate.py",
+      "sha256": "21dcc145a7ff74b5b25d80915bb80c9dd7f6203fa7725f681547330e2f173a37",
+      "source_sha256": "21dcc145a7ff74b5b25d80915bb80c9dd7f6203fa7725f681547330e2f173a37",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/adapter.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/adapter.py",
+      "sha256": "f6f5f8e26910f5923e3ae71ad683522f3fff8612b1e612814fa98bf3bc0745be",
+      "source_sha256": "f6f5f8e26910f5923e3ae71ad683522f3fff8612b1e612814fa98bf3bc0745be",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/controlled_gate.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/controlled_gate.py",
+      "sha256": "e773445c2a0775a205014e24125d474d8e5459b9c0225b14a8a618eb15e0cdcc",
+      "source_sha256": "e773445c2a0775a205014e24125d474d8e5459b9c0225b14a8a618eb15e0cdcc",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/dispatch.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/dispatch.py",
+      "sha256": "8cf29eddb73922a79bb9673feadb16cbbb2d3bec00e8a6d17351e5ab49ea6797",
+      "source_sha256": "8cf29eddb73922a79bb9673feadb16cbbb2d3bec00e8a6d17351e5ab49ea6797",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/evidence.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/evidence.py",
+      "sha256": "eb9042f5bc95c871844aec20a1d165ce1161d7d8f7d1646ff180f5e5fd6c0c85",
+      "source_sha256": "eb9042f5bc95c871844aec20a1d165ce1161d7d8f7d1646ff180f5e5fd6c0c85",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/fixture_transport.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/fixture_transport.py",
+      "sha256": "552cab4b386e1513647ec55ac9b2da622b1be3a6f545382fe2ca0485855faf2b",
+      "source_sha256": "552cab4b386e1513647ec55ac9b2da622b1be3a6f545382fe2ca0485855faf2b",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/journal_client.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/journal_client.py",
+      "sha256": "9c0c037723f6f0847155a5dce46e9813c61032dc21f8185eb31258c76ed73214",
+      "source_sha256": "9c0c037723f6f0847155a5dce46e9813c61032dc21f8185eb31258c76ed73214",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/launcher.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/launcher.py",
+      "sha256": "7f51f45b9bcb20e752514a7df87fb5e8e40a141e332906956c200adc64a45d8a",
+      "source_sha256": "7f51f45b9bcb20e752514a7df87fb5e8e40a141e332906956c200adc64a45d8a",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/local_client.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/local_client.py",
+      "sha256": "acc2d4bfdd681c3327267ea2ae5c48323c399ffbcf997344ea33ef6fa9b0fc18",
+      "source_sha256": "acc2d4bfdd681c3327267ea2ae5c48323c399ffbcf997344ea33ef6fa9b0fc18",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/prepare.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/prepare.py",
+      "sha256": "e0380ae0f541c8eb9f81f63a4115d6ff360478533eb737f48de1acdc0fe68d84",
+      "source_sha256": "e0380ae0f541c8eb9f81f63a4115d6ff360478533eb737f48de1acdc0fe68d84",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/stream_transport.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/stream_transport.py",
+      "sha256": "0c548bef5b22c6b2bc42d3865e54f634fb60b343a18903336fbf7a2d55221953",
+      "source_sha256": "0c548bef5b22c6b2bc42d3865e54f634fb60b343a18903336fbf7a2d55221953",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/verify_domains.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/verify_domains.py",
+      "sha256": "77cb01bbbc9c8fd61ee68a6b70e329e6536e005643ec23a73fa8c6aea3b100d9",
+      "source_sha256": "77cb01bbbc9c8fd61ee68a6b70e329e6536e005643ec23a73fa8c6aea3b100d9",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/sci_strict_json_domains_v1/package/binding.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/sci_strict_json_domains_v1/package/binding.py",
+      "sha256": "b4dd285b4a59ed777d759c3cf22b66caf135f1f71f2a04d7a896653ef6067ee6",
+      "source_sha256": "b4dd285b4a59ed777d759c3cf22b66caf135f1f71f2a04d7a896653ef6067ee6",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/sci_strict_json_domains_v1/package/driver.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/sci_strict_json_domains_v1/package/driver.py",
+      "sha256": "e9af54855a93ef121c444d0767fcce08e3932bb19e9748d948db5437627da413",
+      "source_sha256": "e9af54855a93ef121c444d0767fcce08e3932bb19e9748d948db5437627da413",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/sci_strict_json_domains_v1/package/host_dispatch.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/sci_strict_json_domains_v1/package/host_dispatch.py",
+      "sha256": "6bb237988026d7846e304eb7ba378a7e8ced74ca11a534ecd18bd6a0c1d484e4",
+      "source_sha256": "6bb237988026d7846e304eb7ba378a7e8ced74ca11a534ecd18bd6a0c1d484e4",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/staging/sci_strict_json_domains_v1/package/verify_domains.py",
+      "source_relative_to_campaign": "phases/offline-20261117/staging/sci_strict_json_domains_v1/package/verify_domains.py",
+      "sha256": "e16a72e4ea71b3b38313422c4feeb82ecdd448634dd0a525b566df9a59538302",
+      "source_sha256": "e16a72e4ea71b3b38313422c4feeb82ecdd448634dd0a525b566df9a59538302",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/hook.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/hook.py",
+      "sha256": "f2a1154f5121749bd9d67c1003dea1e767f271ece2e467f8607d3507ccb29436",
+      "source_sha256": "f2a1154f5121749bd9d67c1003dea1e767f271ece2e467f8607d3507ccb29436",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/prepare_activate.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/prepare_activate.py",
+      "sha256": "885aab1c66a20b8816ce4890d8a98ef5fb19ac946f51faeb6529d7857cfe1d52",
+      "source_sha256": "885aab1c66a20b8816ce4890d8a98ef5fb19ac946f51faeb6529d7857cfe1d52",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/review_cycle.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/review_cycle.py",
+      "sha256": "31591ebf1fbf148eecbe80e58b2a761ed8b9c7c5a21b10981f77b70026b543c9",
+      "source_sha256": "31591ebf1fbf148eecbe80e58b2a761ed8b9c7c5a21b10981f77b70026b543c9",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/review_insight.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/review_insight.py",
+      "sha256": "aafbff81fa441e1976e9a712a62533f6285b987a6e312efb78ce70158a790f00",
+      "source_sha256": "aafbff81fa441e1976e9a712a62533f6285b987a6e312efb78ce70158a790f00",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/review_insight_outcome.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/review_insight_outcome.py",
+      "sha256": "8aa935b9632e0ca2ac0b2c2d2faf867c17d920c3c58af8147e7e034a766bae6c",
+      "source_sha256": "8aa935b9632e0ca2ac0b2c2d2faf867c17d920c3c58af8147e7e034a766bae6c",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/review_order.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/review_order.py",
+      "sha256": "d2f3bde46c0de8f7d5f37e9c32a3982e02cf135150ac277480291f88ba238b9a",
+      "source_sha256": "d2f3bde46c0de8f7d5f37e9c32a3982e02cf135150ac277480291f88ba238b9a",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/review_sci.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/review_sci.py",
+      "sha256": "effa28559c4f2025325d5ada41c34e4e78034991bfea164f0b10df9fed2c8f70",
+      "source_sha256": "effa28559c4f2025325d5ada41c34e4e78034991bfea164f0b10df9fed2c8f70",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/snapshot_ready.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/snapshot_ready.py",
+      "sha256": "3ce45c2c93c7ada5dbabdc1e94c1188886be131edc1f68d34c1df642ebbefdd1",
+      "source_sha256": "3ce45c2c93c7ada5dbabdc1e94c1188886be131edc1f68d34c1df642ebbefdd1",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/verify_guards.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/ar_baselines_automatic_successors_v2_20261118/verify_guards.py",
+      "sha256": "117dc45d0aa9b395a22a3de4b3ca28c3145d00dcd191b24fa94b6e3dfd0b36a6",
+      "source_sha256": "117dc45d0aa9b395a22a3de4b3ca28c3145d00dcd191b24fa94b6e3dfd0b36a6",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/ar_baselines_normal_recovery_owner_20261118T0020/owner_v4.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/ar_baselines_normal_recovery_owner_20261118T0020/owner_v4.py",
+      "sha256": "6368e0455917bea2b192ed02673bcc57bbf5555c32de62c68affa042b311ff22",
+      "source_sha256": "6368e0455917bea2b192ed02673bcc57bbf5555c32de62c68affa042b311ff22",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/ar_baselines_normal_recovery_owner_20261118T0020/owner_v4_base.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/ar_baselines_normal_recovery_owner_20261118T0020/owner_v4_base.py",
+      "sha256": "f83451450dbe1113ee0897b03a469c21878c2a32d91e53d14ae5f77cb3cfff54",
+      "source_sha256": "f83451450dbe1113ee0897b03a469c21878c2a32d91e53d14ae5f77cb3cfff54",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/adapter_v5.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/adapter_v5.py",
+      "sha256": "a3b79bfdb373b001aa0cf5aa49417e78434f434ae94f0d443ec4f9fc90fb46af",
+      "source_sha256": "a3b79bfdb373b001aa0cf5aa49417e78434f434ae94f0d443ec4f9fc90fb46af",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/builder.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/builder.py",
+      "sha256": "57c08632e53850f868f2a19373c3cee256811b7074c3a4baada7862b65ef3e86",
+      "source_sha256": "57c08632e53850f868f2a19373c3cee256811b7074c3a4baada7862b65ef3e86",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/checkpoint_utils.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/checkpoint_utils.py",
+      "sha256": "f458c1aee88a2dd1ae48ec6d5a3be145e64b063c11506381a46b12d14059086f",
+      "source_sha256": "f458c1aee88a2dd1ae48ec6d5a3be145e64b063c11506381a46b12d14059086f",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/health_verifier.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/health_verifier.py",
+      "sha256": "92544d8fbd6ce833873f5a63a4635661a00bcf72b9e4fa33d7874716d2493eda",
+      "source_sha256": "92544d8fbd6ce833873f5a63a4635661a00bcf72b9e4fa33d7874716d2493eda",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/host.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/host.py",
+      "sha256": "1673fb608ac256ce6271fc57c917155ba65c2aa1110f465c3b1a5cfcae5190fd",
+      "source_sha256": "1673fb608ac256ce6271fc57c917155ba65c2aa1110f465c3b1a5cfcae5190fd",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/runner.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/runner.py",
+      "sha256": "49c4e29a5c2b66c99b6087e0db5d92a1fd688a4d082b3083500fd2ab78946d48",
+      "source_sha256": "49c4e29a5c2b66c99b6087e0db5d92a1fd688a4d082b3083500fd2ab78946d48",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/verify.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_automatic_successors_20261118_A/verify.py",
+      "sha256": "ec05478c8ca97e5fd3c9c5eb5e27ba6c9affb2e6cc7e64584ff73cb7b4c75a2c",
+      "source_sha256": "ec05478c8ca97e5fd3c9c5eb5e27ba6c9affb2e6cc7e64584ff73cb7b4c75a2c",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/adapter_v5.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/adapter_v5.py",
+      "sha256": "becea2cd8879edfb44bd143407ff2d94f5c03bd6c29cc8f57fbe4dcce0628a3f",
+      "source_sha256": "becea2cd8879edfb44bd143407ff2d94f5c03bd6c29cc8f57fbe4dcce0628a3f",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/derive_on_success.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/derive_on_success.py",
+      "sha256": "d598c972416179a988605b869976e7f7cf0a78ba54155b1a8c138012b5df284e",
+      "source_sha256": "d598c972416179a988605b869976e7f7cf0a78ba54155b1a8c138012b5df284e",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/health_verifier.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/health_verifier.py",
+      "sha256": "73ac6d0a084d2aa150ec720fa0bdf0617ea6a83bad71da8f9eb85e419945b47d",
+      "source_sha256": "73ac6d0a084d2aa150ec720fa0bdf0617ea6a83bad71da8f9eb85e419945b47d",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/host.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/host.py",
+      "sha256": "d6bdd18aa9ca5642ceba9cb3fe7fce046d90ccd3c7d956eb42efa4d8ea5e5ae6",
+      "source_sha256": "d6bdd18aa9ca5642ceba9cb3fe7fce046d90ccd3c7d956eb42efa4d8ea5e5ae6",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/prepare.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/prepare.py",
+      "sha256": "4f684c12353adaa455bb7e5cf8faf4ebcebf9c14f90cd1e3e9354f7e9b06655a",
+      "source_sha256": "4f684c12353adaa455bb7e5cf8faf4ebcebf9c14f90cd1e3e9354f7e9b06655a",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/runner.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/runner.py",
+      "sha256": "d2c7302c60d79dee82d40e0080cca0471aaf2166fc15903225fe50462e1c2aa8",
+      "source_sha256": "d2c7302c60d79dee82d40e0080cca0471aaf2166fc15903225fe50462e1c2aa8",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/verify.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/verify.py",
+      "sha256": "127166cad30b101611f2fa87eec32cb2206661b8c76fee437bac94e195d16ccc",
+      "source_sha256": "127166cad30b101611f2fa87eec32cb2206661b8c76fee437bac94e195d16ccc",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/verify_health.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/verify_health.py",
+      "sha256": "240f71fd18ca157e97410decb742f631010336a48499c0779784d9bbbce168f0",
+      "source_sha256": "240f71fd18ca157e97410decb742f631010336a48499c0779784d9bbbce168f0",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/cycle_upstream_parser_full189_20261118_B/replay.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/cycle_upstream_parser_full189_20261118_B/replay.py",
+      "sha256": "fe80c8339dcc4a43542aaf0ce86aed4a8f82a6c3ee4e0cd9c026a09fa8d783ce",
+      "source_sha256": "fe80c8339dcc4a43542aaf0ce86aed4a8f82a6c3ee4e0cd9c026a09fa8d783ce",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/builder.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/builder.py",
+      "sha256": "d2b3c36012f4f774e71033d63cbb88ca3979a798077af350ea8c04b297b2282e",
+      "source_sha256": "d2b3c36012f4f774e71033d63cbb88ca3979a798077af350ea8c04b297b2282e",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/ledger_reconciliation.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/ledger_reconciliation.py",
+      "sha256": "463ce8752f076c64653680f4e907cf9efc83330be6ada25daea2fdb9b86ba34a",
+      "source_sha256": "463ce8752f076c64653680f4e907cf9efc83330be6ada25daea2fdb9b86ba34a",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/provider_failure.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/provider_failure.py",
+      "sha256": "de7f006ba3b27d1887a18864f542458c4170286c7215c4ec2d90a40ad719d084",
+      "source_sha256": "de7f006ba3b27d1887a18864f542458c4170286c7215c4ec2d90a40ad719d084",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/scope_guard.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/scope_guard.py",
+      "sha256": "ab97298675709c8feea2166da55af8c770f0089398e88bf1b6667332d861f0d1",
+      "source_sha256": "ab97298675709c8feea2166da55af8c770f0089398e88bf1b6667332d861f0d1",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/templates/driver.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/templates/driver.py",
+      "sha256": "9629eaf89fa445fdb49b111821c33a9adb85fa9dfd0ecd95fe228b590d814fee",
+      "source_sha256": "9629eaf89fa445fdb49b111821c33a9adb85fa9dfd0ecd95fe228b590d814fee",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/templates/finalize.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/templates/finalize.py",
+      "sha256": "082379d76ffb41f8808f2447a90cc4d7b90a6dea617a10f9b8463279a339aba8",
+      "source_sha256": "082379d76ffb41f8808f2447a90cc4d7b90a6dea617a10f9b8463279a339aba8",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/templates/health_verifier.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/templates/health_verifier.py",
+      "sha256": "2b630ef485c07af06bd52924711dac37870b2c2f45a7ee4ccc7ce8e9469d1633",
+      "source_sha256": "2b630ef485c07af06bd52924711dac37870b2c2f45a7ee4ccc7ce8e9469d1633",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/templates/host.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/templates/host.py",
+      "sha256": "9ffeeb615427bf173450fdb6b11b047969c381dd6b5e0dd455a2056af6320190",
+      "source_sha256": "9ffeeb615427bf173450fdb6b11b047969c381dd6b5e0dd455a2056af6320190",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/test_scope.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/insight_successor_builder_v5_20261118_B/test_scope.py",
+      "sha256": "d9378f260b6a27cfd77b80e90314bf2af386cc74146ce7e55fa5937b0bed3e2e",
+      "source_sha256": "d9378f260b6a27cfd77b80e90314bf2af386cc74146ce7e55fa5937b0bed3e2e",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/native_failure_evidence_expansion_20261117T2055/cycle_official_selection_semantics_20261118T0645_v2/REPLAY_SPEC.zh.md",
+      "source_relative_to_campaign": "phases/offline-20261117/state/native_failure_evidence_expansion_20261117T2055/cycle_official_selection_semantics_20261118T0645_v2/REPLAY_SPEC.zh.md",
+      "sha256": "d69d58d864c7c0fa3a690487544c6df5d1c97e446fd43726de13ca0a9d8692d0",
+      "source_sha256": "d69d58d864c7c0fa3a690487544c6df5d1c97e446fd43726de13ca0a9d8692d0",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/builder.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/builder.py",
+      "sha256": "53b049d31eefa2bb4e02e965a73baaebecb71a16f16b5db1d2d20d6c8b614869",
+      "source_sha256": "53b049d31eefa2bb4e02e965a73baaebecb71a16f16b5db1d2d20d6c8b614869",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/scope_guard.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/scope_guard.py",
+      "sha256": "ab97298675709c8feea2166da55af8c770f0089398e88bf1b6667332d861f0d1",
+      "source_sha256": "ab97298675709c8feea2166da55af8c770f0089398e88bf1b6667332d861f0d1",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/templates/finalize_ready.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/templates/finalize_ready.py",
+      "sha256": "ea2f53ff7388d8778925bf759b1eaa1ac76bbd467f2a9fe8bb31b49b94d8d06f",
+      "source_sha256": "ea2f53ff7388d8778925bf759b1eaa1ac76bbd467f2a9fe8bb31b49b94d8d06f",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/templates/health_verifier.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/templates/health_verifier.py",
+      "sha256": "b56f794f9b98c003866e2d530e3a418b3cfb7f99e46609e6a5e71aded5ee9dcc",
+      "source_sha256": "b56f794f9b98c003866e2d530e3a418b3cfb7f99e46609e6a5e71aded5ee9dcc",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/templates/host.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/templates/host.py",
+      "sha256": "b0e2a923b32154c1f1676cc2fb7ac25e657e565ebc1fea1d794a73a4d1389b46",
+      "source_sha256": "b0e2a923b32154c1f1676cc2fb7ac25e657e565ebc1fea1d794a73a4d1389b46",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/templates/sci_runner.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/templates/sci_runner.py",
+      "sha256": "8a8629f5c2a3a0fcd6d5f4c45d1a7d0da2cbd34f680f15b365dbaf550389133d",
+      "source_sha256": "8a8629f5c2a3a0fcd6d5f4c45d1a7d0da2cbd34f680f15b365dbaf550389133d",
+      "mode": "verbatim"
+    },
+    {
+      "path": "snapshot/phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/test_scope.py",
+      "source_relative_to_campaign": "phases/offline-20261117/state/sci_successor_builder_v2_20261118_B/test_scope.py",
+      "sha256": "d9378f260b6a27cfd77b80e90314bf2af386cc74146ce7e55fa5937b0bed3e2e",
+      "source_sha256": "d9378f260b6a27cfd77b80e90314bf2af386cc74146ce7e55fa5937b0bed3e2e",
+      "mode": "verbatim"
+    }
+  ],
+  "source_protocol": "offline-common-corpus-20261117",
+  "snapshot_type": "source_only_deployed_adapters",
+  "published_runtime_approval": false,
+  "native_prompts_or_selection_changed_by_export": false
+}

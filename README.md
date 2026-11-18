@@ -11,6 +11,7 @@ LitGraph 驱动的研究 idea 生成系统及评测代码。此仓库整理了�
 | `system/multi-full/` | 6 位 Full 作者，每人 5 个候选；讨论 → 修订一轮 → 独立选 Top5 |
 | `system/multi-api/` | 相同协作流程；作者使用 API 访问方式 |
 | `system/runtime/` | 共享原生执行、阶段检查、失败重试、来源验证及 Blueprint 写作 |
+| `system/baselines/` | 当前八套离线 AR baseline 的原生适配、共享模型桥、恢复与评分源码 |
 | `baselines/ideascientist/` | IdeaScientist 原生多角色流程与适配源码 |
 | `baselines/coi/` | CoI 论文链、查新及内部审阅流程与适配源码 |
 | `benchmarks/reviewer/` | 三维 N/I/S Reviewer，权重 40% / 40% / 20% |
@@ -58,6 +59,12 @@ python demo/run_local.py --request ideax-request.json --out runs/my-idea --run
 [六类研究案例](case_studies/README.md)提供六份完整研究提案和六份探索过程记录，覆盖机制组合、跨领域迁移、重审假设、诊断归因、扩展能力边界及自由探索。提案包含公式、实现方案、前作比较与验证设计；过程记录包含 LitGraph 查询、insight/problem 来源、阅读深度及候选调整。
 
 这些材料用于展示研究构思与文献探索，尚未报告新的模型训练或硬件性能结果；包内不含可执行实现和原始 API 响应。
+
+## 当前离线 AR baselines
+
+[八套 baseline 源码](system/baselines/README.md)包括 AutoResearchClaw、Dr. Claw、ResearchAgent、CycleResearcher、SciAgents、DeepScientist、InsightAgents，以及单列的 AI-Scientist v3 ideation。它们采用统一离线语料、Astra/xhigh 和生成/评分共用的 250 实际请求上限。每套实现附固定上游 commit、原生规则和源码校验清单。
+
+这是当前部署适配器的源码快照；语料、上游依赖、机器路径和逐槽准入需另行准备，不能将旧批次的运行凭据直接用于新任务。完整说明及零模型调用检查见该目录 README。
 
 ## 安装与配置
 

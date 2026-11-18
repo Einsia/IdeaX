@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/lamm-mit/SciAgentsDiscovery",
+  "commit": "c5c30451b29cba813a11b5ce078909a214dad9f2",
+  "required_checkout": "sources/sciagents",
+  "bundled_upstream_source": false,
+  "license_notices": [
+    "sciagents/upstream-notices/LICENSE.txt"
+  ],
+  "license_note": "See upstream license and notices; no blanket license is asserted."
+}

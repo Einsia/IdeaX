@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/MichelleMa8/InsightAgents",
+  "commit": "64df251f897811b8b48976c3f464f6df4e7dd1f5",
+  "required_checkout": "sources/insightagents",
+  "bundled_upstream_source": false,
+  "license_notices": [
+    "insightagents/upstream-notices/NOTICE",
+    "insightagents/upstream-notices/LICENSE"
+  ],
+  "license_note": "See upstream license and notices; no blanket license is asserted."
+}

@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/OpenLAIR/dr-claw.git",
+  "commit": "37493cd93b12fbf34bed68c6c6402b6e19aaf6d2",
+  "required_checkout": "sources/dr_claw",
+  "bundled_upstream_source": false,
+  "license_notices": [
+    "dr_claw/upstream-notices/NOTICE",
+    "dr_claw/upstream-notices/LICENSE"
+  ],
+  "license_note": "See upstream license and notices; no blanket license is asserted."
+}

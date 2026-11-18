@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/JinheonBaek/ResearchAgent",
+  "commit": "babb49b51ebfcebedc39ccde12c9785be7bef46c",
+  "required_checkout": "sources/researchagent",
+  "bundled_upstream_source": false,
+  "license_notices": [],
+  "license_note": "No top-level license found in the pinned checkout; upstream code is not redistributed here."
+}

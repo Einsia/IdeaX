@@ -1,0 +1,21 @@
+{
+  "protocol_id": "offline-common-corpus-20261117",
+  "evidence_protocol": "offline-common-raw-evidence-v1",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "independent_planner_queries": [6, 8],
+  "raw_hits_per_query_per_mode": 5,
+  "fallback_any_when_all_hits_below": 3,
+  "maximum_selected_raw_papers": 16,
+  "source_views": ["raw"],
+  "read_depths": ["full_text", "abstract", "metadata"],
+  "online_entry_kind_or_domain_filter": false,
+  "full_text_read_when_available": true,
+  "public_network_retrieval": false,
+  "original_score_rubric_unchanged": true,
+  "cis_mapping": {"C":"N", "I":"I", "S":"S"},
+  "repetitions": 1,
+  "novelty_panel": "Exactly the same method and domain's five accepted fresh offline proposals; native read-all then score; normalize 0–100 by dividing by 20",
+  "old_online_scores_combined": false,
+  "limitations": "The evidence acquisition protocol differs from the old online compressed-entry/source-card protocol. Report offline results separately. Missing full text and unverified claims retain their uncertainty."
+}

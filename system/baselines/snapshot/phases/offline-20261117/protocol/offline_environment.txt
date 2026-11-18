@@ -1,0 +1,3 @@
+Research environment: all research tools operate offline. Use only the common frozen literature collection supplied for this phase through its local search and read tools. Public websites, external search engines, downloads, and other public Internet access are unavailable. The model service remains available through the provided model connection.
+
+Preserve the native research workflow and the supplied domain task. Identify sources using the local collection identifiers, distinguish full text from abstracts or metadata, and state when the available material cannot verify a claim. Do not claim that live web retrieval occurred. No earlier online research conversation or proposal is provided as generation context.

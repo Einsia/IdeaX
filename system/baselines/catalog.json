@@ -1,0 +1,174 @@
+{
+  "release": "offline-baselines-20261118",
+  "protocol": "offline-common-corpus-20261117",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "shared_physical_request_limit": 250,
+  "methods": [
+    {
+      "id": "autoresearchclaw",
+      "label": "AutoResearchClaw",
+      "comparison": "main",
+      "native_rules": "原生 stages 1–9，止于研究提案；本地语料检索，原生阶段与候选选择保持。",
+      "entrypoints": [
+        "snapshot/phases/offline-20261117/adapters/autoresearchclaw.py",
+        "snapshot/phases/offline-20261117/adapters/arc_offline_literature.py"
+      ],
+      "upstream": {
+        "repository": "https://github.com/aiming-lab/AutoResearchClaw.git",
+        "commit": "be4ba4755bf1b52220f25e13b2293b5956590070",
+        "required_checkout": "sources/autoresearchclaw",
+        "bundled_upstream_source": false,
+        "license_notices": [
+          "autoresearchclaw/upstream-notices/LICENSE"
+        ],
+        "license_note": "See upstream license and notices; no blanket license is asserted."
+      }
+    },
+    {
+      "id": "dr_claw",
+      "label": "Dr. Claw",
+      "comparison": "main",
+      "native_rules": "原生 idea generation / review / selection；离线协议取消我方额外的 30 轮硬上限，保留其他原生停止规则。",
+      "entrypoints": [
+        "snapshot/phases/offline-20261117/adapters/dr_claw.py"
+      ],
+      "upstream": {
+        "repository": "https://github.com/OpenLAIR/dr-claw.git",
+        "commit": "37493cd93b12fbf34bed68c6c6402b6e19aaf6d2",
+        "required_checkout": "sources/dr_claw",
+        "bundled_upstream_source": false,
+        "license_notices": [
+          "dr_claw/upstream-notices/NOTICE",
+          "dr_claw/upstream-notices/LICENSE"
+        ],
+        "license_note": "See upstream license and notices; no blanket license is asserted."
+      }
+    },
+    {
+      "id": "researchagent",
+      "label": "ResearchAgent",
+      "comparison": "main",
+      "native_rules": "保留原生研究问题、方法、实验设计及验证流程；seed、引用边、实体与 SPECTER 输入逐域验收。",
+      "entrypoints": [
+        "snapshot/phases/offline-20261117/adapters/researchagent.py",
+        "snapshot/phases/offline-20261117/adapters/researchagent_versioned.py",
+        "snapshot/phases/offline-20261117/adapters/researchagent_domain_dispatch.py"
+      ],
+      "upstream": {
+        "repository": "https://github.com/JinheonBaek/ResearchAgent",
+        "commit": "babb49b51ebfcebedc39ccde12c9785be7bef46c",
+        "required_checkout": "sources/researchagent",
+        "bundled_upstream_source": false,
+        "license_notices": [],
+        "license_note": "No top-level license found in the pinned checkout; upstream code is not redistributed here."
+      }
+    },
+    {
+      "id": "cycleresearcher",
+      "label": "CycleResearcher",
+      "comparison": "main",
+      "native_rules": "每槽 10 个原生候选、Standard Mode / 4 reviewers、官方教程 Top1。v5 使用 upstream parser、教程 fallback 和原顺序 first-max；v4 仅作为历史请求载体依赖，兼容映射不参与 v5 选择。",
+      "entrypoints": [
+        "snapshot/phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/adapter_v5.py",
+        "snapshot/phases/offline-20261117/state/cycle_slot190_v5_continuation_v2_20261118_A/runner.py",
+        "snapshot/phases/offline-20261117/state/cycle_upstream_parser_full189_20261118_B/replay.py"
+      ],
+      "upstream": {
+        "repository": "https://github.com/zhu-minjun/Researcher",
+        "commit": "8c1b253092f3f41b3efc414fb189004855bb49f8",
+        "required_checkout": "sources/cycleresearcher",
+        "bundled_upstream_source": false,
+        "license_notices": [
+          "cycleresearcher/upstream-notices/LICENSE.md"
+        ],
+        "license_note": "See upstream license and notices; no blanket license is asserted."
+      }
+    },
+    {
+      "id": "sciagents",
+      "label": "SciAgents",
+      "comparison": "main",
+      "native_rules": "保留原生图工具、对话管理器及终止规则；匹配领域图逐域验收，原图迁移单列。新领域 driver 首槽门禁不能仅靠修改并发参数跳过。",
+      "entrypoints": [
+        "snapshot/phases/offline-20261117/staging/sci_strict_json_domains_v1/package/driver.py",
+        "snapshot/phases/offline-20261117/adapters/sciagents_matched_graph.py",
+        "snapshot/phases/offline-20261117/adapters/sciagents.py"
+      ],
+      "upstream": {
+        "repository": "https://github.com/lamm-mit/SciAgentsDiscovery",
+        "commit": "c5c30451b29cba813a11b5ce078909a214dad9f2",
+        "required_checkout": "sources/sciagents",
+        "bundled_upstream_source": false,
+        "license_notices": [
+          "sciagents/upstream-notices/LICENSE.txt"
+        ],
+        "license_note": "See upstream license and notices; no blanket license is asserted."
+      }
+    },
+    {
+      "id": "deepscientist",
+      "label": "DeepScientist",
+      "comparison": "main",
+      "native_rules": "原生 idea stage、文献检索、候选比较与选择；实验执行阶段不属于本提案 baseline，proposal-only 边界在 adapter 中显式记录。",
+      "entrypoints": [
+        "snapshot/phases/offline-20261117/adapters/deepscientist.py"
+      ],
+      "upstream": {
+        "repository": "https://github.com/ResearAI/DeepScientist",
+        "commit": "b36624417f0c6b8238ec02db37b94d6db2faa5b0",
+        "required_checkout": "sources/deepscientist",
+        "bundled_upstream_source": false,
+        "license_notices": [
+          "deepscientist/upstream-notices/TRADEMARK.md",
+          "deepscientist/upstream-notices/LICENSE"
+        ],
+        "license_note": "See upstream license and notices; no blanket license is asserted."
+      }
+    },
+    {
+      "id": "insightagents",
+      "label": "InsightAgents",
+      "comparison": "main",
+      "native_rules": "保留原生专家推荐、讨论与最终提案流程；本地文献与原生工具返回逐步回放，成功模型调用按原请求缓存复用。",
+      "entrypoints": [
+        "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/adapter.py",
+        "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/dispatch.py",
+        "snapshot/phases/offline-20261117/staging/insightagents_domain_admission_candidate_v2_20261118T0045/journal_client.py"
+      ],
+      "upstream": {
+        "repository": "https://github.com/MichelleMa8/InsightAgents",
+        "commit": "64df251f897811b8b48976c3f464f6df4e7dd1f5",
+        "required_checkout": "sources/insightagents",
+        "bundled_upstream_source": false,
+        "license_notices": [
+          "insightagents/upstream-notices/NOTICE",
+          "insightagents/upstream-notices/LICENSE"
+        ],
+        "license_note": "See upstream license and notices; no blanket license is asserted."
+      }
+    },
+    {
+      "id": "ai_scientist_v3_native_ideation",
+      "label": "AI-Scientist v3 native ideation",
+      "comparison": "additional",
+      "native_rules": "仅原生 ideation 阶段，完整研究/实验能力不在此 scope；作为 additional 系统单列，不混入主比较。",
+      "entrypoints": [
+        "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/host_launch.py",
+        "snapshot/phases/offline-20261117/staging/ai_scientist_v3_domain_runtime_candidate_v2_20261117T1330/result_export.py"
+      ],
+      "upstream": {
+        "repository": "https://github.com/SakanaAI/AI-Scientist-v3",
+        "commit": "c95861ee97d2bc60a61de5fe4609329482c00a7d",
+        "required_checkout": "sources/ai_scientist_v3_native_ideation",
+        "bundled_upstream_source": false,
+        "license_notices": [
+          "ai_scientist_v3_native_ideation/upstream-notices/LICENSE"
+        ],
+        "license_note": "See upstream license and notices; no blanket license is asserted."
+      }
+    }
+  ],
+  "old_online_source_probes_and_retired_ai_researcher_excluded": true,
+  "runtime_inputs_and_acceptance_receipts_not_bundled": true
+}

@@ -3,6 +3,7 @@
 import ast
 from collections import Counter
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 
@@ -44,6 +45,11 @@ def main():
     if manifest.exists():
         for filename,expected in json.loads(manifest.read_text()).items():
             assert sha(ROOT/filename)==expected,filename
-    print(json.dumps({'ok':True,'python_files':count,'systems':4,'domains':38,'full_entries':total,'model_calls':0}))
+    baseline_check = ROOT/'system/baselines/check.py'
+    spec = importlib.util.spec_from_file_location('offline_baseline_source_check', baseline_check)
+    validator = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(validator)
+    baseline = validator.validate()
+    print(json.dumps({'ok':True,'python_files':count,'systems':4,'offline_baseline_methods':baseline['methods'],'domains':38,'full_entries':total,'model_calls':0}))
 
 if __name__=='__main__':main()

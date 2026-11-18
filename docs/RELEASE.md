@@ -1,5 +1,28 @@
 # Code organization revision — 2026-11-12
 
+## Offline AR baseline source snapshot — 2026-11-18
+
+The eight current offline baseline adapters are now indexed under
+[`system/baselines/`](../system/baselines/README.md). The snapshot includes native
+integration code, the local literature service, the isolated model bridge,
+same-input recovery code and the current scoring implementation. Its own
+`source_manifest.json` records original and published hashes; source files are
+copied byte for byte. CycleResearcher v5 retains upstream parsing and tutorial
+selection, and Dr. Claw retains the uncapped offline workflow.
+
+This is a deployed-source snapshot, not an additional portable installation
+target for `system/run.py`. Machine paths and binding checks remain explicit.
+Upstream checkouts, corpora, domain materials, environments and fresh acceptance
+receipts must be prepared separately. Live queues, credentials, historical
+requests, results and checkpoint data are excluded. Packaging does not grant
+runtime approval, restart an experiment or establish benchmark completion.
+
+Run `python system/baselines/check.py` for an offline source integrity check.
+The existing portable four-system entry points and their frozen prompts are
+unchanged.
+
+## Original portable release
+
 This is a source-code release assembled from the completed IdeaX experiments.
 It does not overwrite or restart the original experiments.
 

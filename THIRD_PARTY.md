@@ -28,6 +28,26 @@ the release manifest. Changes made during packaging are described in
 `docs/RELEASE.md`. Third-party code retains its own license; no blanket license
 is asserted over all included projects or external paper texts.
 
+# Offline AR baseline adapters — 2026-11-18
+
+`system/baselines/` publishes the local integration and recovery code for the
+current offline protocol. Upstream repositories are dependencies, not bundled
+source trees. Each method's `source.json` records the exact commit and repository;
+available license and notice files are preserved in `upstream-notices/`.
+
+* AutoResearchClaw: `aiming-lab/AutoResearchClaw` (MIT).
+* Dr. Claw: `OpenLAIR/dr-claw` (combined-work licensing; consult its LICENSE and NOTICE).
+* ResearchAgent: `JinheonBaek/ResearchAgent` (no top-level license in the pinned checkout; no upstream source redistributed).
+* CycleResearcher: `zhu-minjun/Researcher` (CycleResearcher research license).
+* SciAgents: `lamm-mit/SciAgentsDiscovery` (Apache-2.0).
+* DeepScientist: `ResearAI/DeepScientist` (Apache-2.0, with trademark notice).
+* InsightAgents: `MichelleMa8/InsightAgents` (Apache-2.0, with NOTICE).
+* AI-Scientist v3: `SakanaAI/AI-Scientist-v3` (see the preserved upstream license).
+
+The adapters retain native method identities and stage boundaries. The shared
+evaluator snapshot derives from this project's evaluation implementation. No
+license is claimed over external papers, corpora, graph datasets or model weights.
+
 # Demo rendering libraries
 
 The static demo bundles markdown-it 14.1.0 and KaTeX 0.16.22 under the MIT license. Their license texts are included in `demo/site/vendor/markdown-it.LICENSE` and `demo/site/vendor/katex.LICENSE`. KaTeX font assets are included for local equation rendering. DM Sans and Libre Caslon Display are requested from Google Fonts with system-font fallbacks; they are not required for the demo to function.

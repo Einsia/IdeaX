@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/SakanaAI/AI-Scientist-v3",
+  "commit": "c95861ee97d2bc60a61de5fe4609329482c00a7d",
+  "required_checkout": "sources/ai_scientist_v3_native_ideation",
+  "bundled_upstream_source": false,
+  "license_notices": [
+    "ai_scientist_v3_native_ideation/upstream-notices/LICENSE"
+  ],
+  "license_note": "See upstream license and notices; no blanket license is asserted."
+}

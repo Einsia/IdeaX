@@ -1,0 +1,11 @@
+{
+  "research_egress": "deny_all_public_network",
+  "allowed_research_data": "frozen_common_corpus_only",
+  "model_transport": "host-owned allowlisted modelAPI via isolated bridge",
+  "local_corpus_transport": "local search/read only",
+  "oldonlineproxy_endpoints": "not_allowed",
+  "phase_proposals": "freshnativecontexts",
+  "shared_environment_text_sha256": "06f3acee1271294c789211489ececc16d180254319ba15db761422e8fd4cdf61",
+  "implementation_owner": "root",
+  "status": "awaiting_enforcement_verification"
+}

@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/ResearAI/DeepScientist",
+  "commit": "b36624417f0c6b8238ec02db37b94d6db2faa5b0",
+  "required_checkout": "sources/deepscientist",
+  "bundled_upstream_source": false,
+  "license_notices": [
+    "deepscientist/upstream-notices/TRADEMARK.md",
+    "deepscientist/upstream-notices/LICENSE"
+  ],
+  "license_note": "See upstream license and notices; no blanket license is asserted."
+}

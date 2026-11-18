@@ -1,3 +1,6 @@
 # Preserve upstream prompt strings and source snapshots byte for byte.
 baselines/coi/source/** whitespace=-blank-at-eol,-blank-at-eof
 baselines/ideascientist/source/** whitespace=-blank-at-eof
+# Preserve deployed source and upstream notice bytes, including original whitespace.
+system/baselines/snapshot/** -whitespace
+system/baselines/**/upstream-notices/** -whitespace

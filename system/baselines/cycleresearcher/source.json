@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/zhu-minjun/Researcher",
+  "commit": "8c1b253092f3f41b3efc414fb189004855bb49f8",
+  "required_checkout": "sources/cycleresearcher",
+  "bundled_upstream_source": false,
+  "license_notices": [
+    "cycleresearcher/upstream-notices/LICENSE.md"
+  ],
+  "license_note": "See upstream license and notices; no blanket license is asserted."
+}
