@@ -105,10 +105,10 @@ class PaperBenchmarkTests(unittest.TestCase):
 
     def test_worker_limit_rejects_before_starting_any_judge(self):
         proc = self.command('generation', 'cis', 'run', '--out', 'does-not-exist',
-                            '--astra-concurrency', '20', '--opus-concurrency', '1', success=False)
-        self.assertIn('within 20', proc.stderr)
-        proc = self.command('is', 'run', '--out', 'does-not-exist', '--workers', '21', success=False)
-        self.assertIn('within 20', proc.stderr)
+                            '--astra-concurrency', '200', '--opus-concurrency', '1', success=False)
+        self.assertIn('within 200', proc.stderr)
+        proc = self.command('is', 'run', '--out', 'does-not-exist', '--workers', '201', success=False)
+        self.assertIn('within 200', proc.stderr)
 
 
 if __name__ == '__main__':

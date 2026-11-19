@@ -46,6 +46,6 @@ python benchmarks/evaluate.py generation report --reviewer runs/cis --novelty ru
 python benchmarks/evaluate.py generation cis prepare --from-evaluation frozen-cis --out runs/cis
 ```
 
-上述 run 顺序执行；并行多个命令须另外协调共享评分20/物理请求250上限。`scores.json` 每个系统保留GPT、Claude两行及每指标分母/覆盖/成功均值；`REPORT.md` 每格顺序 **GPT / Claude**，不完整均值显示pending。
+上述 run 顺序执行；并行多个命令须另外协调所有生成、评分、子代理的物理请求合计200上限；当前评分worker配额合计144（GPT128、Claude12、R/IS4）。`scores.json` 每个系统保留GPT、Claude两行及每指标分母/覆盖/成功均值；`REPORT.md` 每格顺序 **GPT / Claude**，不完整均值显示pending。
 
 源码：[C/S/I pipeline](../reviewer/pipeline.py)、[rubric](../reviewer/reviewer_prompt.md)、[Novelty预读](../interesting/read_all.py)、[评分循环](../run.py)、[报告映射](../shared/paper_report.py)。

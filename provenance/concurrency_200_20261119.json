@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-19T11:26:41.135488+00:00",
+  "base_commit": "57cc01814df9f6087028c7d3cfd2e098c6efc58a",
+  "authorization": "User: gpt评测并发也可以加大昂 总并发不超过200就行",
+  "HTTP_global_ceiling": 200,
+  "active_worker_allocations": {
+    "GPT": 128,
+    "Claude": 12,
+    "Reconstruction_IS": 4
+  },
+  "scientific_rubrics_unchanged": true,
+  "cross_process_admission_required": true,
+  "changed_files": {
+    "benchmarks/evaluate.py": {
+      "before": "4d99ba38ae0307ddd74838fb16d60d74b92c031d83a56759d5123cf9ccd6263f",
+      "after": "d9ff36562af19b9d3e62510b700eec8b0e970a241934d7524e9f817d0fde923c"
+    },
+    "benchmarks/README.md": {
+      "before": "53ce28dc8bf3af0e9b24b844a255fe0a31aedca7dea7c53e3fd524ef21454736",
+      "after": "68ca9a2a250973da1b66257178bfd3ca6fffb40ba0398b5964df047282072398"
+    },
+    "benchmarks/generation/README.md": {
+      "before": "ec43a1538a00d8ac25c8dd496bedc29b1aea2bff986d6e822585151901c5f5cc",
+      "after": "923ac6884cb0bf38d073486be6d477387900616472ad2e02a97652e24921b6e2"
+    },
+    "tests/test_paper_benchmarks.py": {
+      "before": "6f4d58c91ea2325e80abfcb3732327dc6aa96c9f92239eec9a7c4082a3b46d0d",
+      "after": "b24c68eb84460820040f5468f1ae7e2dc8a98798c43c8401080fd32777a6e209"
+    }
+  }
+}

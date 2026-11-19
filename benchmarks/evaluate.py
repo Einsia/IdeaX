@@ -129,8 +129,8 @@ def main(argv=None):
         if legacy == 'reviewer':
             astra = int(argument(args, '--astra-concurrency', '8'))
             opus = int(argument(args, '--opus-concurrency', '8'))
-            if astra < 1 or opus < 1 or astra + opus > 20:
-                raise ValueError('Combined scoring workers must be within 20')
+            if astra < 1 or opus < 1 or astra + opus > 200:
+                raise ValueError('Combined scoring workers must be within 200')
             for name, value in [('--astra-concurrency', astra), ('--opus-concurrency', opus)]:
                 if argument(args, name) is None: args.extend([name, str(value)])
             out = Path(argument(args, '--out'))
@@ -138,8 +138,8 @@ def main(argv=None):
             needs_acquisition = any(not (out / 'evidence' / i['id'] / 'receipt.json').exists() for i in m['items'])
             if needs_acquisition and urlparse(os.environ.get('LITGRAPH_API_BASE_URL', '')).hostname not in ('127.0.0.1', 'localhost', '::1'):
                 raise ValueError('Use frozen evidence or a local offline literature service')
-        elif not 1 <= int(argument(args, '--workers', '8')) <= 20:
-            raise ValueError('Scoring workers must be within 20')
+        elif not 1 <= int(argument(args, '--workers', '8')) <= 200:
+            raise ValueError('Scoring workers must be within 200')
     run_legacy(legacy, args)
     if args and args[0] in ('run', 'report') and benchmark in ('reconstruction', 'is'):
         out = Path(argument(args, '--out'))
