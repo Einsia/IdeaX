@@ -1,6 +1,6 @@
 # IdeaX
 
-LitGraph 驱动的研究 idea 生成系统及评测代码。此仓库整理了当前使用的 **Single Full / Single API、Multi Full / Multi API、IdeaScientist、CoI**，包含原始 prompt、38 个领域任务、生成流程、Research Blueprint 写作阶段和四套 benchmark。
+LitGraph 驱动的研究 idea 生成系统及评测代码。此仓库整理了当前使用的 **Single Full / Single API、Multi Full / Multi API、IdeaScientist、CoI**，包含原始 prompt、38 个领域任务、生成流程、Research Blueprint 写作阶段，以及 **Generation、Reconstruction、IS** 三类评测，均分别报告 GPT 和 Claude 分数。
 
 ## 目录
 
@@ -14,10 +14,10 @@ LitGraph 驱动的研究 idea 生成系统及评测代码。此仓库整理了�
 | `system/baselines/` | 当前八套离线 AR baseline 的原生适配、共享模型桥、恢复与评分源码 |
 | `baselines/ideascientist/` | IdeaScientist 原生多角色流程与适配源码 |
 | `baselines/coi/` | CoI 论文链、查新及内部审阅流程与适配源码 |
-| `benchmarks/reviewer/` | 三维 N/I/S Reviewer，权重 40% / 40% / 20% |
-| `benchmarks/interesting/` | 同领域全部卡片通读后评分的 Interesting Bench |
-| `benchmarks/founder/` | 截止日之前、禁止联网的 Founder 重建评测任务、答案及评分 |
-| `benchmarks/ideascientist/` | IS 六维质量、新颖性及跨领域结构迁移评分 |
+| `benchmarks/generation/` | Generation：C（贡献）、N（新颖性）、S（论证可靠性）、I（重要性）；原 Reviewer 与 Interesting 源码保留 |
+| `benchmarks/reconstruction/` | Reconstruction：历史贡献重建的等级、方向与机制命中；Founder 任务、答案及评分源码保留 |
+| `benchmarks/is/` | IS：六维质量、文献新颖性及结构迁移；IdeaScientist 原始 rubric 与源码保留 |
+| `benchmarks/evaluate.py` | 三类评测的统一入口与 GPT / Claude 独立报告 |
 | `data/` | 38 个领域定义及 Full 使用的 7,641 条领域材料快照 |
 | `provenance/` | 源文件与发布文件的校验信息 |
 | `case_studies/` | 六个模型效率研究提案、机制与实现方案，以及对应的 LitGraph 检索记录 |

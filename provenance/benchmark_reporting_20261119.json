@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-19T10:16:14.528713+00:00",
+  "base_commit": "71d3b5f7ace981fb43876a497dae708116edde87",
+  "scope": "Paper-facing three-benchmark entry and independent GPT/Claude reports; no scientific prompt or accepted run rewritten",
+  "report_metric_order": [
+    "C",
+    "N",
+    "S",
+    "I"
+  ],
+  "generation_mapping": {
+    "C": "Reviewer.N",
+    "N": "Interesting / 20",
+    "S": "Reviewer.S",
+    "I": "Reviewer.I"
+  },
+  "unchanged_scientific_sources": {
+    "benchmarks/run.py": "ab146127f951e379c78eafe9cf6f1864b14a2d9211f8f44f1460cae6a3606b13",
+    "benchmarks/reviewer/pipeline.py": "f04ddc4906bd6547706840ccd53385b31f9e6f542b147d7b7f88a6b756649acc",
+    "benchmarks/reviewer/reviewer_prompt.md": "30e4d06a5351e39f3611907b645fc69fc4c40bae6d7325bbb77a2eb980f8c1ee",
+    "benchmarks/interesting/read_all.py": "17e903df89352d46bf4fa96f7bf0936d06dca5316bdece1c4f5e0f29a0929826",
+    "benchmarks/ideascientist/rescore.py": "a99fc6559356512f8651270247266557a3281eaed65ef78245640d088f90b53b",
+    "benchmarks/ideascientist/vendor/prompts.py": "60f6e3cfae2276eb5d5447003aeebc844d654a551885f0f0c9ea0d2314f0968c",
+    "benchmarks/founder/rubric.py": "5a1e8d1877b194f556663cc0730f869a37effd578f7fc8893c81c5f414a23326",
+    "benchmarks/shared/native_judge.py": "62381852e2e7a02e6b5f2861a41cb14953a7ae144a955b63471862dd8df8f37f"
+  },
+  "published_files": {
+    "README.md": "28385ef4d0cd92a91831c2ec1fe795e65b8de8d08c6179eb31f85b17bb56c838",
+    "benchmarks/README.md": "da57f16f687b85caf2d1c33c5a6a5b22663e40e5ee6a9921a980792f74b84c1d",
+    "benchmarks/reviewer/README.md": "37ba1d5da2e84566b560756715a6824d64729ae5bdc0bf4cba1a37b526a4f3df",
+    "docs/RUNNING.md": "c6faff33e31c6b419784541ca3a831e8782a3897665e1fa8990dd5a3c08efabf",
+    "benchmarks/evaluate.py": "aba9054c7de4f483a7cb49f88f18222437e4c55e4125692aa9dd75136deb763f",
+    "benchmarks/generation/README.md": "e8e54fba2cf3d55e1de630b9fa1221d27e01272c86772a0d5c4754d04693733d",
+    "benchmarks/reconstruction/README.md": "7970489d007d085acbdfc49af56cdde506ed15f2359e9d43f8f1b4eaad594b54",
+    "benchmarks/is/README.md": "f23ad22821ec965a0283815caabbb166320034cc056c99b4bdff16a4b505364b",
+    "benchmarks/shared/paper_report.py": "2a5f3ddc6f5b1c65b0f53d2f9386748e8d03c8d12e40b7bc7155522a81a6ab39",
+    "tests/test_paper_benchmarks.py": "45779c3e31a6c32cbdf9424cb6bcbec6fb1a59736b7a9df89cbc0a0c3a13b72d"
+  },
+  "private_run_outputs_included": false
+}

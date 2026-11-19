@@ -104,6 +104,15 @@ model availability affect exact reproduction.
 
 ## Benchmark commands
 
+The paper-facing entry is `python benchmarks/evaluate.py`: see
+[Generation C/N/S/I](../benchmarks/generation/README.md),
+[Reconstruction](../benchmarks/reconstruction/README.md), and
+[IS](../benchmarks/is/README.md) for commands and separate GPT/Claude reports.
+Generation C maps to the old Reviewer `N` field; Generation N is Interesting / 20.
+The legacy commands below retain their frozen protocols and raw field names.
+New offline experiments use frozen evidence or a local offline literature service;
+they do not restart historical online queues.
+
 All regular generation exports are arrays with `system`, `task_id`, `idea_id`,
 `domain`, `domain_ids`, `task_context`, `idea_text`, and optional source texts
 and `selector_top1`. Reviewer needs real LitGraph domain IDs. IS transfer needs
