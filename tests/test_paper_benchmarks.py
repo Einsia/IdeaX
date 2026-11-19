@@ -63,7 +63,7 @@ class PaperBenchmarkTests(unittest.TestCase):
             self.assertNotEqual(proc.returncode, 0)
         return proc
 
-    def test_five_original_inputs_prepare_and_report_without_api_calls(self):
+    def test_independent_inputs_prepare_and_report_without_api_calls(self):
         scratch = ROOT / '.scratch'; scratch.mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=scratch) as name:
             p = Path(name)
@@ -73,6 +73,15 @@ class PaperBenchmarkTests(unittest.TestCase):
             source = p / 'cards.json'; source.write_text(json.dumps(rows))
             self.command('generation', 'cis', 'prepare', '--input', source, '--out', p / 'cis')
             self.command('generation', 'novelty', 'prepare', '--input', source, '--out', p / 'novelty')
+            manifest = json.loads((p / 'novelty/manifest.json').read_text())
+            self.assertEqual(manifest['protocol'], 'interesting-independent-single-card-v1')
+            self.assertEqual(len(manifest['jobs']), 5)
+            for job in manifest['jobs']:
+                payload = json.loads((p / 'novelty/inputs' / (job['id'] + '.json')).read_text())
+                self.assertEqual(len(payload['cards']), 1)
+                self.assertEqual(len(payload['mapping']), 1)
+                self.assertEqual([s['kind'] for s in payload['stages']], ['read', 'score'])
+                self.assertTrue(all(s['card_ids'] == ['card_01'] for s in payload['stages']))
             self.command('generation', 'report', '--reviewer', p / 'cis', '--novelty', p / 'novelty',
                          '--generation-model', 'fixture', '--out', p / 'report')
             result = json.loads((p / 'report/scores.json').read_text())
@@ -84,9 +93,15 @@ class PaperBenchmarkTests(unittest.TestCase):
             failed = self.command('generation', 'report', '--reviewer', p / 'cis', '--novelty', p / 'different',
                                   '--generation-model', 'fixture', '--out', p / 'invalid', success=False)
             self.assertIn('proposal inputs differ', failed.stderr)
-            source.write_text(json.dumps(rows[:4]))
-            failed = self.command('generation', 'novelty', 'prepare', '--input', source, '--out', p / 'four', success=False)
-            self.assertIn('five original proposals', failed.stderr)
+            four = p / 'four-cards.json'; four.write_text(json.dumps(rows[:4]))
+            self.command('generation', 'novelty', 'prepare', '--input', four, '--out', p / 'four')
+            self.assertEqual(len(json.loads((p / 'four/manifest.json').read_text())['jobs']), 4)
+            # Historical panel results cannot enter a report for the new protocol.
+            manifest['protocol'] = 'interesting-read-all-then-score-v2'
+            (p / 'novelty/manifest.json').write_text(json.dumps(manifest))
+            failed = self.command('generation', 'report', '--reviewer', p / 'cis', '--novelty', p / 'novelty',
+                                  '--generation-model', 'fixture', '--out', p / 'mixed', success=False)
+            self.assertIn('old panel scores stay separate', failed.stderr)
 
     def test_worker_limit_rejects_before_starting_any_judge(self):
         proc = self.command('generation', 'cis', 'run', '--out', 'does-not-exist',

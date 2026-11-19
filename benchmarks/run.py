@@ -45,7 +45,9 @@ def prepare(a):
             key=(row['system'],row['task_id'],row['idea_id'])
             if key in identities:raise ValueError('Duplicate idea identity')
             identities.add(key)
-            panels[(row['system'],row['task_id'])].append(row)
+            # The independent version never exposes another proposal or its notes.
+            panel_key=key if a.novelty_unit=='single' else key[:2]
+            panels[panel_key].append(row)
         for key,rows in sorted(panels.items()):
             random.Random(int(digest(key)[:16],16)).shuffle(rows)
             cards=[];mapping=[]
@@ -58,7 +60,12 @@ def prepare(a):
             payload={'cards':cards,'mapping':mapping,'stages':rules.stages([c['card_id'] for c in cards]),
                      'prompt':RULE+'\n'+rules.PROTOCOL}
             jobs.append({'id':'panel_'+digest(key)[:20],'system':key[0],'domain':key[1],'payload':payload})
-        m['protocol']='interesting-read-all-then-score-v2';m['scope']='per_system_per_domain'
+        if a.novelty_unit=='single':
+            m['protocol']='interesting-independent-single-card-v1'
+            m['scope']='per_proposal_independent_context'
+        else:
+            m['protocol']='interesting-read-all-then-score-v2';m['scope']='per_system_per_domain'
+        m['novelty_unit']=a.novelty_unit
     elif a.benchmark=='ideascientist':
         # Reuse exactly the independent frozen evidence from Reviewer.
         source=read(a.input/'manifest.json');m['zero_outcomes']=source.get('zero_outcomes',[]);r=load('isci_rubric',HERE/'ideascientist/rescore.py')
@@ -219,6 +226,8 @@ def main():
     p.add_argument('action',choices=('prepare','run','report'))
     p.add_argument('--out',type=Path,required=True);p.add_argument('--input',type=Path)
     p.add_argument('--mechanisms',type=Path,help='Optional idea_id -> native mechanism text for non-JSON cards')
+    p.add_argument('--novelty-unit',choices=('single','panel'),default='panel',
+                   help='Interesting input unit; Generation uses single, panel preserves the historical entry point')
     p.add_argument('--judges',nargs='+',choices=tuple(MODELS),default=list(MODELS))
     p.add_argument('--workers',type=int,default=8)
     a=p.parse_args();a.out=a.out.resolve()

@@ -29,7 +29,7 @@ def argument(args, name, default=None):
     return next((s.split('=', 1)[1] for s in args if s.startswith(name + '=')), default)
 
 
-def validate_panels(source):
+def validate_proposals(source):
     groups = defaultdict(list)
     identities = set()
     models = set()
@@ -40,8 +40,8 @@ def validate_panels(source):
         identities.add(key)
         groups[key[:2]].append(row)
         models.add(row.get('generation_model'))
-    if not groups or any(len(v) != 5 for v in groups.values()):
-        raise ValueError('Novelty requires five original proposals per system/model/domain; incomplete panels remain missing')
+    if not groups:
+        raise ValueError('Novelty requires original proposals')
     if len(models) != 1:
         raise ValueError('Use separate evaluation directories for different generation models')
 
@@ -57,6 +57,7 @@ def generation_report(args):
     run_legacy('reviewer', ['report', '--out', str(a.reviewer)])
     run_legacy('interesting', ['report', '--out', str(a.novelty)])
     rm, nm = read(a.reviewer / 'manifest.json'), read(a.novelty / 'manifest.json')
+    require_independent_novelty(nm)
     from idea_benchmark.core import blind_text
     original = {}
     for item in rm['items']:
@@ -65,8 +66,8 @@ def generation_report(args):
     for job in nm['jobs']:
         payload = read(a.novelty / 'inputs' / (job['id'] + '.json'))
         cards = {c['card_id']: c for c in payload['cards']}
-        if len(payload['mapping']) != 5:
-            raise ValueError('Not a five-original-proposal Novelty panel')
+        if len(payload['mapping']) != 1 or len(cards) != 1:
+            raise ValueError('Independent Novelty must contain exactly one original proposal')
         for card in payload['mapping']:
             key = (job['system'], job['domain'], card['idea_id'])
             if key not in original or original[key] != cards[card['card_id']]['idea_text']:
@@ -74,6 +75,7 @@ def generation_report(args):
     if rm.get('zero_outcomes', []) != nm.get('zero_outcomes', []):
         raise ValueError('Native-zero provenance differs between the two evaluations')
     report = {'benchmark': 'Generation', 'generation_model': a.generation_model,
+              'novelty_protocol': nm['protocol'],
               'metric_order': list(paper_report.GENERATION),
               'raw_mapping': {'C': 'Reviewer.N', 'N': 'Interesting.score / 20', 'S': 'Reviewer.S', 'I': 'Reviewer.I'},
               'manifest_sha256': {'reviewer': digest(rm), 'novelty': digest(nm)},
@@ -91,6 +93,12 @@ def generation_report(args):
     print(json.dumps({'report': str(a.out / 'scores.json'), 'model_calls': 0}))
 
 
+def require_independent_novelty(manifest):
+    if (manifest.get('protocol') != 'interesting-independent-single-card-v1'
+            or manifest.get('scope') != 'per_proposal_independent_context'):
+        raise ValueError('Generation N requires the independent single-proposal version; old panel scores stay separate')
+
+
 def main(argv=None):
     args = list(sys.argv[1:] if argv is None else argv)
     if not args or args[0] in ('-h', '--help'):
@@ -104,8 +112,15 @@ def main(argv=None):
         if stage not in ('cis', 'novelty'):
             raise ValueError('Generation stage must be cis, novelty, or report')
         legacy = 'reviewer' if stage == 'cis' else 'interesting'
-        if args and args[0] == 'prepare' and stage == 'novelty':
-            validate_panels(argument(args, '--input'))
+        if args and stage == 'novelty':
+            if args[0] == 'prepare':
+                validate_proposals(argument(args, '--input'))
+                if argument(args, '--novelty-unit') not in (None, 'single'):
+                    raise ValueError('Generation N uses independent single-proposal contexts')
+                if argument(args, '--novelty-unit') is None:
+                    args.extend(['--novelty-unit', 'single'])
+            else:
+                require_independent_novelty(read(Path(argument(args, '--out')) / 'manifest.json'))
     elif benchmark in ('reconstruction', 'is'):
         legacy = {'reconstruction': 'founder', 'is': 'ideascientist'}[benchmark]
     else:
