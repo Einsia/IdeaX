@@ -276,9 +276,9 @@
     {
       "path": "snapshot/phases/offline-20261117/scoring/reviewer_prompt.md",
       "source_relative_to_campaign": "phases/offline-20261117/scoring/reviewer_prompt.md",
-      "sha256": "30e4d06a5351e39f3611907b645fc69fc4c40bae6d7325bbb77a2eb980f8c1ee",
+      "sha256": "2718dc91bbb60faf8c7429d2cb534ae9c4dd6e6a0e4e31875cd4cc8e977c03a7",
       "source_sha256": "30e4d06a5351e39f3611907b645fc69fc4c40bae6d7325bbb77a2eb980f8c1ee",
-      "mode": "verbatim"
+      "mode": "renamed"
     },
     {
       "path": "snapshot/phases/offline-20261117/scoring/revisions/comparison-scopes-20261117/host_scoring_scope_launch.py",
@@ -388,9 +388,9 @@
     {
       "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/panel/pilot.py",
       "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/idea_benchmark/panel/pilot.py",
-      "sha256": "3d4e0877a40f16483db62d52c3427c90af409dd7699ef618660c4b29539a66eb",
+      "sha256": "57bef2406cdaabb00d33fd313681d51648e874dd23df5194897535d509268825",
       "source_sha256": "3d4e0877a40f16483db62d52c3427c90af409dd7699ef618660c4b29539a66eb",
-      "mode": "verbatim"
+      "mode": "renamed"
     },
     {
       "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/panel/sequential.py",
@@ -402,16 +402,16 @@
     {
       "path": "snapshot/phases/offline-20261117/scoring/vendor/idea_benchmark/runner.py",
       "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/idea_benchmark/runner.py",
-      "sha256": "d7bf0db3631d6a4aa7154601578f8af5ab6651ff1a26f58efa884b2898ef4d2c",
+      "sha256": "27e6868ee651fff50e431c6ed9b1923a64e424230026b946a88f1ac89ddcde58",
       "source_sha256": "d7bf0db3631d6a4aa7154601578f8af5ab6651ff1a26f58efa884b2898ef4d2c",
-      "mode": "verbatim"
+      "mode": "renamed"
     },
     {
       "path": "snapshot/phases/offline-20261117/scoring/vendor/library_client.py",
       "source_relative_to_campaign": "phases/offline-20261117/scoring/vendor/library_client.py",
-      "sha256": "1440c4805b7af59de8a34b8c3b50fd2c8aa7f1660a7f17d7db630d70a5458ffc",
+      "sha256": "efd223d0d406c713d580251dfbe98573df0179f4807f489f937b2b93022f0a9d",
       "source_sha256": "1440c4805b7af59de8a34b8c3b50fd2c8aa7f1660a7f17d7db630d70a5458ffc",
-      "mode": "verbatim"
+      "mode": "renamed"
     },
     {
       "path": "snapshot/phases/offline-20261117/scoring/versioned_runtime.py",

@@ -73,7 +73,7 @@ def build():
     if '```' in prompt:
         prompt = prompt.split('```', 1)[0].rstrip()
     catalog = {
-        'schema': 'ideax.demo.catalog.v1',
+        'schema': 'insightpro.demo.catalog.v1',
         'default_case': 'residency',
         'cases': targets,
         'domains': [{'id': d['id'], 'name': d['name'], 'category': d.get('category', '')} for d in domains],

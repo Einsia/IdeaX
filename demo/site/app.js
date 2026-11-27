@@ -37,11 +37,11 @@ function download(filename, content, mime='text/plain;charset=utf-8') {
 function storeBrief() {
   const value={case_id:state.caseId,domain:$('#domain').value,question:$('#question').value,critique:$('#critique').value,
     access:$('input[name=access]:checked').value,include_reference:$('#include-reference').checked};
-  try {localStorage.setItem('ideax.demo.brief.v1', JSON.stringify(value));} catch {}
+  try {localStorage.setItem('insightpro.demo.brief.v1', JSON.stringify(value));} catch {}
 }
 function fillBrief(c, restore=false) {
   let saved=null;
-  if (restore) {try {saved=JSON.parse(localStorage.getItem('ideax.demo.brief.v1'));} catch {}}
+  if (restore) {try {saved=JSON.parse(localStorage.getItem('insightpro.demo.brief.v1'));} catch {}}
   if (saved && saved.case_id===c.id && state.catalog.domains.some((d) => d.id===saved.domain)) {
     $('#domain').value=saved.domain;
     $('#question').value=typeof saved.question==='string' ? saved.question.slice(0,4000) : c.question;
@@ -74,26 +74,26 @@ function renderPanel() {
   html+=`<div class="step-purpose"><p class="panel-kicker">STEP ${state.stage+1} / 5</p><h3 class="panel-title">${escapeHTML(step[0])}</h3><p>${escapeHTML(step[2])}</p></div>`;
   if(state.stage===0) {
     html+=`<section class="scene-card"><h4>Imagine this situation</h4><p>${escapeHTML(g.scene)}</p></section>`;
-    html+=window.IdeaXExamples.render(c.id);
-    html+=`<div class="stage-task"><p class="eyebrow">WHAT IDEAX DOES HERE</p><p>Uses the domain's problems to turn this setting into a question worth investigating:</p><blockquote class="question-box">${escapeHTML(g.question)}</blockquote></div>`;
+    html+=window.InsightProExamples.render(c.id);
+    html+=`<div class="stage-task"><p class="eyebrow">WHAT INSIGHTPRO DOES HERE</p><p>Uses the domain's problems to turn this setting into a question worth investigating:</p><blockquote class="question-box">${escapeHTML(g.question)}</blockquote></div>`;
     html+=technicalDetails('See the precise research question',section('Original question',c.question)+section('Technical setting',c.problem));
   } else if(state.stage===1) {
-    html+=`<div class="stage-task"><p class="eyebrow">WHAT IDEAX DOES HERE</p><p>Looks for observations that can help with the question, including in other domains. Here are two entries from the recorded exploration and how each changes the design.</p></div>`;
-    html+=c.insights.map((i,n)=>`<article class="evidence-explained"><p class="eyebrow">${i.id.includes('-P')?'PROBLEM':'INSIGHT'} ${n+1} · FROM LITGRAPH</p><h4>${escapeHTML(i.title)}</h4><p>${escapeHTML(g.insights[n].plain)}</p><div class="insight-use"><strong>How IdeaX uses it</strong><p>${escapeHTML(g.insights[n].use)}</p></div><button class="text-button" data-insight="${n}">Inspect the source entry ↗</button></article>`).join('');
+    html+=`<div class="stage-task"><p class="eyebrow">WHAT INSIGHTPRO DOES HERE</p><p>Looks for observations that can help with the question, including in other domains. Here are two entries from the recorded exploration and how each changes the design.</p></div>`;
+    html+=c.insights.map((i,n)=>`<article class="evidence-explained"><p class="eyebrow">${i.id.includes('-P')?'PROBLEM':'INSIGHT'} ${n+1} · FROM LITGRAPH</p><h4>${escapeHTML(i.title)}</h4><p>${escapeHTML(g.insights[n].plain)}</p><div class="insight-use"><strong>How InsightPro uses it</strong><p>${escapeHTML(g.insights[n].use)}</p></div><button class="text-button" data-insight="${n}">Inspect the source entry ↗</button></article>`).join('');
     html+=`<div class="reasoning-bridge"><p class="eyebrow">PUT THE OBSERVATIONS TOGETHER</p>${escapeHTML(g.connection)}</div>`;
     if(c.queries.length)html+=technicalDetails('See recorded literature searches',`<p>These links come from the original process record. The complete record preserves reading scope and candidate revisions.</p>${c.queries.slice(0,3).map(q=>link(q.url,q.label+' ↗','paper-link')).join('')}`);
   } else if(state.stage===2) {
-    html+=`<div class="stage-task"><p class="eyebrow">WHAT IDEAX DOES HERE</p><p>Checks whether previous papers already do the same thing. The result can change the research question itself.</p></div>`;
+    html+=`<div class="stage-task"><p class="eyebrow">WHAT INSIGHTPRO DOES HERE</p><p>Checks whether previous papers already do the same thing. The result can change the research question itself.</p></div>`;
     html+=`<div class="revision-path"><section class="review-row"><span class="path-number">1</span><h4>The first idea</h4><p>${escapeHTML(g.initial)}</p></section><section class="review-row"><span class="path-number">2</span><h4>What reading earlier papers reveals</h4><p>${escapeHTML(g.discovery)}</p><details class="nearby-papers"><summary>Read selected neighboring papers (${c.neighbors.length})</summary>${c.neighbors.map(p=>link(p.url,p.title+' ↗','paper-link')).join('')}<p class="small-note">The complete case includes the broader comparison and actual reading scope.</p></details></section><section class="review-row revision"><span class="path-number">3</span><h4>The revised question</h4><p>${escapeHTML(g.revision)}</p></section></div>`;
     html+=`<p class="scope-note">This records how the proposal was narrowed. It does not establish that the remaining idea is novel or that it will succeed.</p>`;
   } else if(state.stage===3) {
-    html+=`<div class="stage-task"><p class="eyebrow">WHAT IDEAX DOES HERE</p><p>Writes an Idea Card: a compact, testable claim with a concrete mechanism, its connection to the evidence, and the closest-work distinction.</p></div>`;
+    html+=`<div class="stage-task"><p class="eyebrow">WHAT INSIGHTPRO DOES HERE</p><p>Writes an Idea Card: a compact, testable claim with a concrete mechanism, its connection to the evidence, and the closest-work distinction.</p></div>`;
     html+=`<h4 class="plain-card-title">${escapeHTML(g.title)}</h4><ol class="recipe-list">${g.recipe.map((x,n)=>`<li><span class="recipe-number">${n+1}</span><div><h4>${escapeHTML(x[0])}</h4><p>${escapeHTML(x[1])}</p></div></li>`).join('')}</ol>`;
     html+=section('What the paper would need to contribute',g.claim);
     html+=technicalDetails('Open the technical mechanism and formula',section('Core mechanism',c.mechanism)+`<div class="equation">${escapeHTML(c.equation)}</div>`+section('Why this idea',c.connection)+section('Remaining contribution',c.contribution));
     html+=`<div class="source-actions"><button class="button dark small" data-document="PROPOSAL">Read the complete Idea Card ↗</button><button class="button small" id="download-card">Download technical overview ↓</button></div>`;
   } else {
-    html+=`<div class="stage-task"><p class="eyebrow">WHAT IDEAX DOES HERE</p><p>Develops the evidence and mechanism into a Research Blueprint: why the idea follows, how to investigate it, what to compare, and what would overturn the claim. Below is the development plan summarized from this case.</p></div>`;
+    html+=`<div class="stage-task"><p class="eyebrow">WHAT INSIGHTPRO DOES HERE</p><p>Develops the evidence and mechanism into a Research Blueprint: why the idea follows, how to investigate it, what to compare, and what would overturn the claim. Below is the development plan summarized from this case.</p></div>`;
     html+=`<div class="test-list">${g.tests.map((x,n)=>`<section class="test-step"><p class="eyebrow">TEST ${n+1}</p><h4>${escapeHTML(x[0])}</h4><p>${escapeHTML(x[1])}</p><p class="test-reason"><strong>What this tells us</strong> ${escapeHTML(x[2])}</p></section>`).join('')}</div>`;
     html+=`<section class="judgment-pair"><div><h4>Evidence that would support it</h4><p>${escapeHTML(g.success)}</p></div><div><h4>A result that would weaken it</h4><p>${escapeHTML(g.failure)}</p></div></section><p class="scope-note">${escapeHTML(c.blueprint_note)}</p>`;
   }
@@ -107,8 +107,8 @@ function renderPanel() {
   document.querySelectorAll('[data-insight]').forEach((b)=>b.addEventListener('click',()=>showInsight(Number(b.dataset.insight))));
   document.querySelectorAll('[data-document]').forEach((b)=>b.addEventListener('click',()=>showDocument(b.dataset.document)));
   document.querySelectorAll('#stage-panel details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open&&state.playing)stopReplay();}));
-  $('#download-card')?.addEventListener('click',()=>download(`ideax-${c.id}-card.md`,cardMarkdown(c)));
-  if(state.stage===0)window.IdeaXExamples.bind(c.id,()=>{if(state.playing)stopReplay();});
+  $('#download-card')?.addEventListener('click',()=>download(`insightpro-${c.id}-card.md`,cardMarkdown(c)));
+  if(state.stage===0)window.InsightProExamples.bind(c.id,()=>{if(state.playing)stopReplay();});
   prepareWalkthrough(c);
 }
 function markdownRenderer() {
@@ -158,7 +158,7 @@ async function showDocument(kind) {
     if(!response.ok)throw new Error('Source unavailable');
     const text=await response.text();
     if(request!==state.documentRequest)return;
-    state.document={name:`ideax-${c.id}-${kind.toLowerCase()}.md`,text};
+    state.document={name:`insightpro-${c.id}-${kind.toLowerCase()}.md`,text};
     $('#document-body').innerHTML=markdownRenderer().render(text);
     $('#download-original').disabled=false;
     $('#document-dialog').scrollTop=0;
@@ -200,7 +200,7 @@ function prepareWalkthrough(c) {
     add(find('.teaching-example'),'Make it concrete','Try the controls to pause and explore this illustrative example.');
     add(find('.stage-task'),'Form the research question','The setting becomes a specific question to investigate.');
   } else {
-    add(find('.stage-task'),stepTeaching[state.stage][1],'Follow what IdeaX adds at this step.');
+    add(find('.stage-task'),stepTeaching[state.stage][1],'Follow what InsightPro adds at this step.');
     if(state.stage===1) {
       panel.querySelectorAll('.evidence-explained').forEach((el,i)=>add(el,`Read the evidence · ${i+1} of ${c.insights.length}`,c.insights[i].title));
       add(find('.reasoning-bridge'),'Connect evidence to a possible mechanism','Read how each observation contributes to the proposed design.');
@@ -344,7 +344,7 @@ function selectCase(id, restore=false, stage=0) {
 }
 function buildBrief() {
   const c=currentCase();
-  const brief={schema:'ideax.research-brief.v1',domain:$('#domain').value,access:$('input[name=access]:checked').value,
+  const brief={schema:'insightpro.research-brief.v1',domain:$('#domain').value,access:$('input[name=access]:checked').value,
     question:$('#question').value.trim(),critique:$('#critique').value.trim()};
   if($('#include-reference').checked)brief.reference_case={id:c.id,title:c.card_title,question:c.question,
     mechanism:c.mechanism,previous_work_check:c.finding,remaining_contribution:c.contribution,
@@ -360,7 +360,7 @@ function renderBrief() {
   state.brief=buildBrief(); storeBrief();
   const d=state.catalog.domains.find(d=>d.id===state.brief.domain);
   $('#brief-summary').textContent=`${d.name} · Single ${state.brief.access==='full'?'Full':'API'} · Five complete Idea Cards`;
-  $('#run-command').textContent='git clone https://github.com/Einsia/InsightPro.git\ncd InsightPro\n# Install dependencies and load your configuration (see running guide).\n# Place the downloaded ideax-request.json here.\npython demo/run_local.py --request ideax-request.json --out runs/my-idea\n\n# Start real generation after inspecting the prepared request:\npython demo/run_local.py --request ideax-request.json --out runs/my-idea --run';
+  $('#run-command').textContent='git clone https://github.com/Einsia/InsightPro.git\ncd InsightPro\n# Install dependencies and load your configuration (see running guide).\n# Place the downloaded insightpro-request.json here.\npython demo/run_local.py --request insightpro-request.json --out runs/my-idea\n\n# Start real generation after inspecting the prepared request:\npython demo/run_local.py --request insightpro-request.json --out runs/my-idea --run';
   let prompt=state.catalog.api_prompt.replace('【在这里填写你希望研究的领域】',d.name);
   if(state.brief.access==='full') {
     const marker='本轮不预先注入领域 insights/problems，也不要求先获取全域材料。';
@@ -395,9 +395,9 @@ function installEvents() {
   for(const id of ['open-local','open-local-bottom'])$(`#${id}`).addEventListener('click',openBrief);
   $('#share-case').addEventListener('click',()=>copy(location.href));
   $('#copy-command').addEventListener('click',()=>copy($('#run-command').textContent));
-  $('#download-request').addEventListener('click',()=>download('ideax-request.json',JSON.stringify(state.brief,null,2)+'\n','application/json'));
+  $('#download-request').addEventListener('click',()=>download('insightpro-request.json',JSON.stringify(state.brief,null,2)+'\n','application/json'));
   $('#copy-prompt').addEventListener('click',()=>copy($('#prompt-preview').value));
-  $('#download-prompt').addEventListener('click',()=>download('ideax-prompt.md',$('#prompt-preview').value));
+  $('#download-prompt').addEventListener('click',()=>download('insightpro-prompt.md',$('#prompt-preview').value));
   $('#download-original').addEventListener('click',()=>{if(state.document)download(state.document.name,state.document.text);});
   $('#local-tab').addEventListener('click',()=>switchInstructionTab('local'));
   $('#prompt-tab').addEventListener('click',()=>switchInstructionTab('prompt'));

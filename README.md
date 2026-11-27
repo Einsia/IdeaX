@@ -34,9 +34,9 @@ Multi 的讨论和修订合为一轮。Top1 取外部评审之前 selector 选�
 
 ## 交互式 Demo
 
-[在线打开 IdeaX Research Studio](https://einsia-ideax-demo.static.hf.space/) · [Hugging Face Space](https://huggingface.co/spaces/Einsia/IdeaX-Demo)
+[在线打开 InsightPro Research Studio](https://einsia-ideax-demo.static.hf.space/) · [Hugging Face Space](https://huggingface.co/spaces/Einsia/IdeaX-Demo)
 
-**IdeaX Research Studio** 展示六个完整 specific cases：W4A4 谱约束、压缩操作适配、随机回放反传、FP4 归因、带证书的投机解码和 MoE 回滚缓存。可以回放“问题 → insights → 查新修订 → Idea Card → 研究方案”的路径，在网页内阅读完整原始提案和检索记录，并添加自己的问题与 critique。
+**InsightPro Research Studio** 展示六个完整 specific cases：W4A4 谱约束、压缩操作适配、随机回放反传、FP4 归因、带证书的投机解码和 MoE 回滚缓存。可以回放“问题 → insights → 查新修订 → Idea Card → 研究方案”的路径，在网页内阅读完整原始提案和检索记录，并添加自己的问题与 critique。
 
 ```bash
 # 本地打开案例回放；不需要模型 key，也不调用模型。
@@ -47,9 +47,9 @@ python demo/serve.py
 从网站下载研究任务后，可用现有 Single Full/API 流程真正生成五张卡：
 
 ```bash
-python demo/run_local.py --request ideax-request.json --out runs/my-idea
+python demo/run_local.py --request insightpro-request.json --out runs/my-idea
 # 检查准备好的 prompt 后，显式开始生成：
-python demo/run_local.py --request ideax-request.json --out runs/my-idea --run
+python demo/run_local.py --request insightpro-request.json --out runs/my-idea --run
 ```
 
 真实运行需要先完成下文安装及模型配置。网页回放不冒充实时生成；自定义问题和案例会记录为新的输入，不作为论文实验的复现。[Demo 使用与部署说明](demo/README.md)。

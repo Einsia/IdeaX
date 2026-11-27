@@ -31,7 +31,7 @@ def configure():
     cfg = isolate.sub2api_env()
     if cfg.get('SUB2API_BASE_URL', '').rstrip('/') != PROVIDER or not cfg.get('SUB2API_API_KEY'):
         raise ValueError('Configured sbtunnel profile is required')
-    isolate.CODEX_DIR = str(Path(os.environ['IDEAX_CODEX_RAW_BIN']).parent)
+    isolate.CODEX_DIR = str(Path(os.environ['INSIGHTPRO_CODEX_RAW_BIN']).parent)
     isolate.CODEX_CONFIG = 'model_context_window = 1050000\nmodel_auto_compact_token_limit = 900000\n' + isolate.CODEX_CONFIG
     os.environ.update(LITGRAPH_CODEX_NATIVE_WEB='0', LITGRAPH_CODEX_REQUIRE_CLEAN_TRANSPORT='1',
                       LITGRAPH_CODEX_ATOMIC_RESPONSES='1', LITGRAPH_WEB_DENY_HOSTS=','.join(denied_hosts()))
@@ -105,7 +105,7 @@ def prepare_work(run, domain):
     if ACCESS!='web':
         for name in ('library_client.py','idea_provenance.py'):
             shutil.copy2(SYSTEM/'litgraph/tools'/name,run/'work/tools'/name)
-    shutil.copy2(SYSTEM/'ideax/scripts/single_web_search.py',run/'work/tools/web_search.py')
+    shutil.copy2(SYSTEM/'insightpro/scripts/single_web_search.py',run/'work/tools/web_search.py')
     if ACCESS!='web': save(run/'work/library_api.json',{'base_url':os.environ['LITGRAPH_API_BASE_URL'],'request_log':'out/api_requests.jsonl'})
 
 

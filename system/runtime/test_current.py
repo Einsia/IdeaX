@@ -20,7 +20,7 @@ def idea(n):
 
 class Contracts(unittest.TestCase):
     def setUp(self):
-        self.temp=tempfile.TemporaryDirectory(dir=os.environ['IDEAX_SCRATCH']);self.root=Path(self.temp.name)
+        self.temp=tempfile.TemporaryDirectory(dir=os.environ['INSIGHTPRO_SCRATCH']);self.root=Path(self.temp.name)
         # Source-evidence validation is tested separately in test_conditions.
         self.source_check=patch.object(single,'check_sources',return_value=[]);self.source_check.start()
         self.addCleanup(self.source_check.stop)

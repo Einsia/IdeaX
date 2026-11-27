@@ -72,7 +72,7 @@ curl -fsS --max-time 20 --get "$LITGRAPH_REVIEW_BASE/api/v1/search" \
 
 示例关键词只展示调用方法，评审时替换成当前 idea 的问题和核心操作。将本轮提供的地址或 library_api.json 中的 base_url 赋给 LITGRAPH_REVIEW_BASE 后，也可复用以上 HTTP 命令。
 
-如果在现有 IdeaX `/work` 沙箱内，优先使用已安装的客户端，它会读取本轮 `library_api.json` / 环境配置：
+如果在现有 InsightPro `/work` 沙箱内，优先使用已安装的客户端，它会读取本轮 `library_api.json` / 环境配置：
 
 ```bash
 python3 /work/tools/library_client.py domains --q "领域关键词" --limit 20

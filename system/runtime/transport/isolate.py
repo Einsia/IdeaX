@@ -51,7 +51,7 @@ def _resolve_claude_real():
     # 集群侧
     return _resolve_bin('claude')
 
-CLAUDE_BIN = os.environ.get('IDEAX_CLAUDE_RAW_BIN') or _resolve_claude_real()
+CLAUDE_BIN = os.environ.get('INSIGHTPRO_CLAUDE_RAW_BIN') or _resolve_claude_real()
 
 def _resolve_codex_real():
     """AWS 侧：wrapper 在 ai-home/bin/codex，真实二进制在 ai-home/.local/lib/ai-tools/codex。"""
@@ -62,7 +62,7 @@ def _resolve_codex_real():
     if os.path.isfile(real_bin):
         return real_bin
     return _resolve_bin('codex')
-_CODEX_REAL = os.environ.get('IDEAX_CODEX_RAW_BIN') or _resolve_codex_real()
+_CODEX_REAL = os.environ.get('INSIGHTPRO_CODEX_RAW_BIN') or _resolve_codex_real()
 CODEX_DIR = os.path.dirname(_CODEX_REAL)   # codex 真实二进制目录，同目录还有 codex-code-mode-host
 def _find_py_prefix():
     # 优先环境变量覆盖
@@ -182,7 +182,7 @@ class Gate:
         # AF_UNIX path limit is 108 chars; use a stable short symlink under /tmp
         import hashlib
         h = hashlib.md5(self.run.encode()).hexdigest()[:8]
-        short_dir = os.path.join(os.environ.get('IDEAX_SCRATCH', os.path.dirname(ROOT) + '/.scratch'), f'g-{h}')
+        short_dir = os.path.join(os.environ.get('INSIGHTPRO_SCRATCH', os.path.dirname(ROOT) + '/.scratch'), f'g-{h}')
         os.makedirs(short_dir, exist_ok=True)
         return f'{short_dir}/{agent}.sock'
 
@@ -507,7 +507,7 @@ def bwrap(run, tag, agent, prog='/opt/claude/claude'):
     if len(sock_path) > 107:
         import hashlib
         h = hashlib.md5(run.encode()).hexdigest()[:8]
-        short_dir = os.path.join(os.environ.get('IDEAX_SCRATCH', os.path.dirname(ROOT) + '/.scratch'), f'g-{h}')
+        short_dir = os.path.join(os.environ.get('INSIGHTPRO_SCRATCH', os.path.dirname(ROOT) + '/.scratch'), f'g-{h}')
         os.makedirs(short_dir, exist_ok=True)
         sock_path = f'{short_dir}/{agent}.sock'
     launch = (f'{PY_PREFIX}/bin/python3 /opt/gate/uds_fwd.py {PORT} /run/gate/egress.sock & '

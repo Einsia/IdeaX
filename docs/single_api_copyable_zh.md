@@ -49,7 +49,7 @@ insights 可以来自本领域或任意其他领域。鼓励多领域交叉，�
 
 将实际检索、最接近前作、重合、独立增量与未排除风险写入 novelty_check；在 scientific_potential 中写明诚实结论、具体理由、已知不足和成立所需的关键条件。IDEA.md 中呈现这些判断。自评结论必须由前作对比和具体论证支持，不能用自我打分替代证据。
 
-在当前工作目录下创建 ideax-output/，将以下交付物写入其中：
+在当前工作目录下创建 insightpro-output/，将以下交付物写入其中：
 1. IDEAS.json：严格为长度 5 的 JSON 数组，每个对象的字段 title, problem, mechanism, previous_work,
    novelty_check, experiment, failure_conditions, scientific_potential，均不可为空。
    previous_work 至少 3 篇最相关真实工作；每项须含 title（完整标题）, url（实际来源）, read_depth,
@@ -59,7 +59,7 @@ insights 可以来自本领域或任意其他领域。鼓励多领域交叉，�
    experiment 可以是简短的未来验证设想，并明确尚待确定的部分；failure_conditions 写出可能推翻核心假设的条件或观察，不要求已完成实验。
 2. IDEA.md：可供其他研究者直接阅读的中文说明，分别完整论证五个想法、各自的 Previous work 和验证方案，并说明五者的区别与推荐顺序。
 3. SEARCH_LOG.md：真实查询、来源 URL、读取深度、候选取舍和未排除风险。工具失败也如实记录。
-可在 ideax-output/ 存放检索材料和脚本，不要修改其他项目文件。结束前自行检查 JSON 和三份交付物完整。如果环境没有文件写入工具，请在回答中按三个文件名分别输出完整内容。
+可在 insightpro-output/ 存放检索材料和脚本，不要修改其他项目文件。结束前自行检查 JSON 和三份交付物完整。如果环境没有文件写入工具，请在回答中按三个文件名分别输出完整内容。
 
 五个候选都须达到上述要求；不能把同一机制的五个应用算成五个想法。请实际使用 LitGraph API；公开网络访问可选，不因未联网而判为未完成。
 

@@ -1,4 +1,4 @@
-"""Read-only litgraph API client used by IdeaX, including inside its sandbox.
+"""Read-only litgraph API client used by InsightPro, including inside its sandbox.
 
 Configuration: --base-url, a run's library_api.json, or LITGRAPH_API_BASE_URL.
 No local-database fallback: a failed API request remains an explicit failure.
@@ -82,7 +82,7 @@ class LibraryClient:
         payload = json.dumps(body).encode() if body is not None else None
         method = 'POST' if payload is not None else 'GET'
         req = Request(url, data=payload, headers={'Accept': 'application/json',
-                      'Content-Type': 'application/json', 'User-Agent': 'IdeaX-litgraph/1.0'})
+                      'Content-Type': 'application/json', 'User-Agent': 'InsightPro-litgraph/1.0'})
         request_id = uuid.uuid4().hex
         for attempt in range(self.retries + 1):
             details = dict(request_id=request_id, attempt=attempt + 1, max_attempts=self.retries + 1)

@@ -21,7 +21,7 @@ def main():
     directory = Path(__file__).resolve().parent / 'site'
     handler = partial(StaticHandler, directory=str(directory))
     server = ThreadingHTTPServer(('127.0.0.1', args.port), handler)
-    print(f'IdeaX demo: http://127.0.0.1:{server.server_port}', flush=True)
+    print(f'InsightPro demo: http://127.0.0.1:{server.server_port}', flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

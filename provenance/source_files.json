@@ -777,7 +777,7 @@
     "file": "baselines/runtime/coi_worker.py",
     "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/coi_worker.py",
     "source_sha256": "c777c4ed2d42aa583c5ad169b79366d08e64975544898b0efb8d3e50b474b429",
-    "release_sha256": "6963a70c8f76cbf9ca308452d5d74fd5a5053eaf3b16ce86974884e798fb60ca",
+    "release_sha256": "8e55619696aa380d3563aefa1eebfbc6380555eda71cceb8fa9f49b4a29ae4b4",
     "status": "adapted"
   },
   {
@@ -819,7 +819,7 @@
     "file": "baselines/runtime/native_worker.py",
     "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/native_worker.py",
     "source_sha256": "41f815263508ca0dc411c9d0d6b008f060495e946b6f13a8a0ccdbad80eed2d2",
-    "release_sha256": "bb2166647f9f612c15afc27b84069335bdecffe5937f4198f2b6f1361ad088c0",
+    "release_sha256": "e6c7a32608e4cba226a7745664ed8ea608a1336e1b3cdc51a08430544bfdac83",
     "status": "adapted"
   },
   {
@@ -840,14 +840,14 @@
     "file": "baselines/runtime/retrieval_recovery.py",
     "source": "benchmarks/baselines-full38-20261107/runtime-recovery-v3/retrieval_recovery.py",
     "source_sha256": "a5332efe0fcbb1c5826a6b091d2ac0dd510baaf28791136771eee2e925d8bfbd",
-    "release_sha256": "0bdef7c2e27533984f25cd615441f1ab83004570fb0f53391a2ddf16c4955787",
+    "release_sha256": "7b83be1c4bab3b135ee6a7df3ec2f75854a39bb60d4f7e3d222165063205dcab",
     "status": "adapted"
   },
   {
     "file": "baselines/runtime/test_chain_recovery.py",
     "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/test_chain_recovery.py",
     "source_sha256": "e074f01e9a0e6bb52141820569af0098b33018916058e83babe2631374150bb6",
-    "release_sha256": "9795ec0989d5608329a57496a064d405804d3d7488146383fd280845033376da",
+    "release_sha256": "7735fd4273b74284277177f1d42b621c99b7bdbc7abbf07675ec3a5b5c595bd0",
     "status": "adapted"
   },
   {
@@ -868,15 +868,15 @@
     "file": "baselines/runtime/test_recovery.py",
     "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/test_recovery.py",
     "source_sha256": "2d213ad96c36649f198ce9ce75cd696c29bf1c886a936e801782437075bb8448",
-    "release_sha256": "8bbbeba1c997ad2dae66cbc5af5f4e3a12a86290c0bf131ef8d78120e297e4fb",
+    "release_sha256": "54a084a6a274407dbcb409c6257bc263ba3a7cc33d2d5d938f52aa70d4cef361",
     "status": "adapted"
   },
   {
     "file": "baselines/runtime/test_validation_metadata.py",
     "source": "benchmarks/baselines-full38-20261107/runtime-delivery-v10/test_validation_metadata.py",
     "source_sha256": "0ae0d427a830ab2d4f2b6141a771b0723c9580c548d736f3ce0729749cd694b5",
-    "release_sha256": "0ae0d427a830ab2d4f2b6141a771b0723c9580c548d736f3ce0729749cd694b5",
-    "status": "unchanged"
+    "release_sha256": "3b02d2568dbd971d0c671e3e5488a515fe9bc379bf917617fed6092fbcb7ede0",
+    "status": "adapted"
   },
   {
     "file": "baselines/runtime/validation_metadata.py",
@@ -889,21 +889,21 @@
     "file": "benchmarks/founder/data/libraries.json",
     "source": "benchmarks/founder_bench_v1/data/libraries.json",
     "source_sha256": "e399a533eaa942bdca58753c1a2b30ebb75867a47c383e460a8e4ba4b991977a",
-    "release_sha256": "3507e4482c03d047e8f02510f70f80a2c6e6520bdbf6801e48660ae917002a76",
+    "release_sha256": "54324b5348a900cc65619692c86c2c172f8e1f58950e2ad9c2a39bde0f4db718",
     "status": "adapted"
   },
   {
     "file": "benchmarks/founder/data/plans/efficiency_per_target_plan.jsonl",
     "source": "benchmarks/founder_bench_v1/data/plans/efficiency_per_target_plan.jsonl",
     "source_sha256": "9793569d5c7db05fe0d01fe115f783f140b9d9b1a37520bf3ad128531ac8cb84",
-    "release_sha256": "09a5eb1b378eafe74398dfdb9066cb7d04ef80a8d4eb348642a396277896d888",
+    "release_sha256": "6dc6e41ccb9f02772e931045a4f623f050a38058d3ac93a6766d5b896076b6de",
     "status": "adapted"
   },
   {
     "file": "benchmarks/founder/data/plans/main_min2_per_target_plan.jsonl",
     "source": "benchmarks/founder_bench_v1/data/plans/main_min2_per_target_plan.jsonl",
     "source_sha256": "06419e227156811381e738b42a8477a2c12b4d40a68d44019cce155bf0bbaa8e",
-    "release_sha256": "ca5cf445dde4191ab101bbaa8eaa34b4e20f7dbff2849fae950f65b2823fce56",
+    "release_sha256": "d8702afc7a3a89fd7e434b3db994911eb8708c1f472d2371ce67115c6b2617cc",
     "status": "adapted"
   },
   {
@@ -938,46 +938,46 @@
     "file": "benchmarks/founder/prompts/PROMPTS.md",
     "source": "benchmarks/founder_bench_v1/prompts/PROMPTS.md",
     "source_sha256": "4e672662c58c85c856a07b384ec8b13ce860a37231b77308d364054b74cc9ffe",
-    "release_sha256": "19bb724ac6479f6934a446b8c3418a231dd4e4f0cbe5930e2915a49b43a9cf28",
+    "release_sha256": "0f7b6bd9ddf5ecaf1dfc1e1ed1c7fa3b5b76f360063f8b6f40617b341de9c7d8",
     "status": "adapted"
   },
   {
-    "file": "benchmarks/founder/prompts/ideax_single_r_api.zh.txt",
+    "file": "benchmarks/founder/prompts/insightpro_single_r_api.zh.txt",
     "source": "benchmarks/founder_bench_v1/prompts/ideax_single_r_api.zh.txt",
     "source_sha256": "161af26aef03ca21c99943545e2b4ae67030c8891e981a1b11f05371067d5152",
-    "release_sha256": "161af26aef03ca21c99943545e2b4ae67030c8891e981a1b11f05371067d5152",
-    "status": "unchanged"
+    "release_sha256": "d12864491747b16dac7edec5471d2b92377a9c9461437551ed9ce73fb5e9b1ec",
+    "status": "adapted"
   },
   {
-    "file": "benchmarks/founder/prompts/ideax_system.zh.txt",
+    "file": "benchmarks/founder/prompts/insightpro_system.zh.txt",
     "source": "benchmarks/founder_bench_v1/prompts/ideax_system.zh.txt",
     "source_sha256": "38f67e749a8c6cf3849f72016bfb3edf651bbc9292dd343b6a4411d20a68a950",
-    "release_sha256": "38f67e749a8c6cf3849f72016bfb3edf651bbc9292dd343b6a4411d20a68a950",
-    "status": "unchanged"
+    "release_sha256": "0d06d9ce0dd93ea79e2ba034159d7a35317bb11caddaad4c55f7b25ec8822d6e",
+    "status": "adapted"
   },
   {
-    "file": "benchmarks/founder/prompts/ideax_system_api.zh.txt",
+    "file": "benchmarks/founder/prompts/insightpro_system_api.zh.txt",
     "source": "benchmarks/founder_bench_v1/prompts/ideax_system_api.zh.txt",
     "source_sha256": "133825f8dd16a524adbeb84bb8af46c1460a6fb57780d5a3030e46e9cc5ea64b",
-    "release_sha256": "133825f8dd16a524adbeb84bb8af46c1460a6fb57780d5a3030e46e9cc5ea64b",
-    "status": "unchanged"
+    "release_sha256": "91f2cd118b7ee6b958aa1dd90f2948cc904d7ec73d78f0e9e93a723eeb77e7c1",
+    "status": "adapted"
   },
   {
-    "file": "benchmarks/founder/prompts/ideax_v7_recon.md",
+    "file": "benchmarks/founder/prompts/insightpro_v7_recon.md",
     "source": "benchmarks/founder_bench_v1/prompts/ideax_v7_recon.md",
     "source_sha256": "c2370c7cd47678414bfcfa51a02f43524d4a534739ddd3b6d03a15eacb1e9665",
     "release_sha256": "c2370c7cd47678414bfcfa51a02f43524d4a534739ddd3b6d03a15eacb1e9665",
     "status": "unchanged"
   },
   {
-    "file": "benchmarks/founder/prompts/ideax_v7g_recon.md",
+    "file": "benchmarks/founder/prompts/insightpro_v7g_recon.md",
     "source": "benchmarks/founder_bench_v1/prompts/ideax_v7g_recon.md",
     "source_sha256": "31c363cfbc2fd7822e3f312d3bd570d34aaf022cdffe7aba9937ae307489a92c",
-    "release_sha256": "31c363cfbc2fd7822e3f312d3bd570d34aaf022cdffe7aba9937ae307489a92c",
-    "status": "unchanged"
+    "release_sha256": "72a2ace0551503155f024f059cfce48d401d54e0a20768c09c420a1bea97e6f4",
+    "status": "adapted"
   },
   {
-    "file": "benchmarks/founder/prompts/ideax_v7r_recon.md",
+    "file": "benchmarks/founder/prompts/insightpro_v7r_recon.md",
     "source": "benchmarks/founder_bench_v1/prompts/ideax_v7r_recon.md",
     "source_sha256": "f004cff4666e4697748649cc9524fda22d314aa6ebb1084dd45fd17d03dac5fc",
     "release_sha256": "f004cff4666e4697748649cc9524fda22d314aa6ebb1084dd45fd17d03dac5fc",
@@ -1232,8 +1232,8 @@
     "file": "benchmarks/interesting/idea_benchmark/panel/focused60_coi.py",
     "source": "benchmarks/idea_gen/idea_benchmark/panel/focused60_coi.py",
     "source_sha256": "c59e1cdbc79fc3a0fa04f8636984be67bdddba06a57a9540307fd7383669a554",
-    "release_sha256": "c59e1cdbc79fc3a0fa04f8636984be67bdddba06a57a9540307fd7383669a554",
-    "status": "unchanged"
+    "release_sha256": "9e086367afd5539b11309aeb4850e4db9d15721bcf7279cebe9899bb8d28da70",
+    "status": "adapted"
   },
   {
     "file": "benchmarks/interesting/idea_benchmark/panel/interesting_sequential.py",
@@ -1246,8 +1246,8 @@
     "file": "benchmarks/interesting/idea_benchmark/panel/pilot.py",
     "source": "benchmarks/idea_gen/idea_benchmark/panel/pilot.py",
     "source_sha256": "3d4e0877a40f16483db62d52c3427c90af409dd7699ef618660c4b29539a66eb",
-    "release_sha256": "3d4e0877a40f16483db62d52c3427c90af409dd7699ef618660c4b29539a66eb",
-    "status": "unchanged"
+    "release_sha256": "57bef2406cdaabb00d33fd313681d51648e874dd23df5194897535d509268825",
+    "status": "adapted"
   },
   {
     "file": "benchmarks/interesting/idea_benchmark/panel/sequential.py",
@@ -1295,14 +1295,14 @@
     "file": "benchmarks/interesting/idea_benchmark/runner.py",
     "source": "benchmarks/idea_gen/idea_benchmark/runner.py",
     "source_sha256": "d7bf0db3631d6a4aa7154601578f8af5ab6651ff1a26f58efa884b2898ef4d2c",
-    "release_sha256": "d7bf0db3631d6a4aa7154601578f8af5ab6651ff1a26f58efa884b2898ef4d2c",
-    "status": "unchanged"
+    "release_sha256": "27e6868ee651fff50e431c6ed9b1923a64e424230026b946a88f1ac89ddcde58",
+    "status": "adapted"
   },
   {
     "file": "benchmarks/reviewer/README.md",
     "source": "benchmarks/reviewer_three_axis_once_v1/README.md",
     "source_sha256": "83e17c3b2ecabab0f2abf7266f973fa67620b1cb18cb29e52a5bf20d3681d5a5",
-    "release_sha256": "4ef2cf0fb07cdcbd4e242cbacd3e2885dbc2bef1277f746a4b7ce18e31e91f5f",
+    "release_sha256": "37ba1d5da2e84566b560756715a6824d64729ae5bdc0bf4cba1a37b526a4f3df",
     "status": "adapted"
   },
   {
@@ -1323,8 +1323,8 @@
     "file": "benchmarks/reviewer/reviewer_prompt.md",
     "source": "benchmarks/reviewer_three_axis_once_v1/reviewer_prompt.md",
     "source_sha256": "30e4d06a5351e39f3611907b645fc69fc4c40bae6d7325bbb77a2eb980f8c1ee",
-    "release_sha256": "30e4d06a5351e39f3611907b645fc69fc4c40bae6d7325bbb77a2eb980f8c1ee",
-    "status": "unchanged"
+    "release_sha256": "2718dc91bbb60faf8c7429d2cb534ae9c4dd6e6a0e4e31875cd4cc8e977c03a7",
+    "status": "adapted"
   },
   {
     "file": "benchmarks/reviewer/vendor/api_shapes.py",
@@ -1368,7 +1368,7 @@
     "file": "data/domains.json",
     "source": "benchmarks/six-condition-live20-20261105/domains.json",
     "source_sha256": "fc68196f8d38cd51c3995d44646f3b5f20722eaad828310ddf0216be4e299819",
-    "release_sha256": "498a2eb668daa426087f9be2b6122987f4cb090cbb3639f3989b2b665c6295b9",
+    "release_sha256": "23a83498a61ca4d1e880445f7540763d777a7315f0b9b9a19a3ccfb91aea994b",
     "status": "adapted"
   },
   {
@@ -1641,8 +1641,8 @@
     "file": "docs/single_full_copyable_en.txt",
     "source": "paper/manuscript/prompts_reusable/single_full_en.txt",
     "source_sha256": "a36456a5a2a4060e6d4c77785817d6289e5f27cbe32bf36ae104f5b0a56c7725",
-    "release_sha256": "a36456a5a2a4060e6d4c77785817d6289e5f27cbe32bf36ae104f5b0a56c7725",
-    "status": "unchanged"
+    "release_sha256": "408c68f80522c388217b4f04240a4d305d60cd81aa0cefbf12724686566e6db6",
+    "status": "adapted"
   },
   {
     "file": "system/multi-api/domains/adaptive-compute-termination/task.json",
@@ -1911,31 +1911,31 @@
     "status": "adapted"
   },
   {
-    "file": "system/multi-api/ideax/scripts/single_web_search.py",
+    "file": "system/multi-api/insightpro/scripts/single_web_search.py",
     "source": "system/current-six-v4-20261108/light-multi-api/ideax/scripts/single_web_search.py",
     "source_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
-    "release_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
-    "status": "unchanged"
+    "release_sha256": "f045775a8ae0044afba4bc9016dcaaaa85c2a69fe24454f31e77a2c3f93b7bf8",
+    "status": "adapted"
   },
   {
     "file": "system/multi-api/litgraph/tools/idea_provenance.py",
     "source": "system/current-six-v4-20261108/light-multi-api/litgraph/tools/idea_provenance.py",
     "source_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
-    "release_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
-    "status": "unchanged"
+    "release_sha256": "d2ef1af8360ba2fc4d9aea2fef3dd798c8ac196201ed8511eca98cb8525c8c2a",
+    "status": "adapted"
   },
   {
     "file": "system/multi-api/litgraph/tools/library_client.py",
     "source": "system/current-six-v4-20261108/light-multi-api/litgraph/tools/library_client.py",
     "source_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
-    "release_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
-    "status": "unchanged"
+    "release_sha256": "9826e0a9994df81bf3afe972d364e522db2ce53f7ba3a92c7bd33e303d5de122",
+    "status": "adapted"
   },
   {
     "file": "system/multi-api/prompts/blueprint.md",
     "source": "system/current-six-v4-20261108/light-multi-api/prompts/blueprint.md",
     "source_sha256": "ec6e757db9979d2b8f0d62c26ee501168f24901dbd749beb59ad242bad3c1f23",
-    "release_sha256": "1ae10e3267b1beb3565ec2effe29be9c82b0a0471895f15f3bbc438c6187f87a",
+    "release_sha256": "f04ba2a8683c1bcdc562f6383191e34711d341f69288a62161be77f30a4c7521",
     "status": "adapted"
   },
   {
@@ -1970,7 +1970,7 @@
     "file": "system/multi-api/release.json",
     "source": "system/current-six-v4-20261108/light-multi-api/release.json",
     "source_sha256": "73bcb6c0ab6ffbaa63a80b04eb04033397a24194fce42e33e591756d48d4cbcd",
-    "release_sha256": "4755d525352869ccfed854605bf404b548da1b9b0118e1262501ca9b89a54129",
+    "release_sha256": "896a45e785410978f37d436d8ea9ef31e855d581e9766f30e1b49af1fc2d5eb7",
     "status": "adapted"
   },
   {
@@ -2240,31 +2240,31 @@
     "status": "adapted"
   },
   {
-    "file": "system/multi-full/ideax/scripts/single_web_search.py",
+    "file": "system/multi-full/insightpro/scripts/single_web_search.py",
     "source": "system/current-six-v4-20261108/light-multi-full/ideax/scripts/single_web_search.py",
     "source_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
-    "release_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
-    "status": "unchanged"
+    "release_sha256": "f045775a8ae0044afba4bc9016dcaaaa85c2a69fe24454f31e77a2c3f93b7bf8",
+    "status": "adapted"
   },
   {
     "file": "system/multi-full/litgraph/tools/idea_provenance.py",
     "source": "system/current-six-v4-20261108/light-multi-full/litgraph/tools/idea_provenance.py",
     "source_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
-    "release_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
-    "status": "unchanged"
+    "release_sha256": "d2ef1af8360ba2fc4d9aea2fef3dd798c8ac196201ed8511eca98cb8525c8c2a",
+    "status": "adapted"
   },
   {
     "file": "system/multi-full/litgraph/tools/library_client.py",
     "source": "system/current-six-v4-20261108/light-multi-full/litgraph/tools/library_client.py",
     "source_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
-    "release_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
-    "status": "unchanged"
+    "release_sha256": "9826e0a9994df81bf3afe972d364e522db2ce53f7ba3a92c7bd33e303d5de122",
+    "status": "adapted"
   },
   {
     "file": "system/multi-full/prompts/blueprint.md",
     "source": "system/current-six-v4-20261108/light-multi-full/prompts/blueprint.md",
     "source_sha256": "55971f84c71307e2aba2d97ed8763bc5c76a0439d15ebde754c3f86c6ce306a3",
-    "release_sha256": "c718cf9507710005aed929d6b53fd9808b56ae12e6bfd47e3df9559f72b7c181",
+    "release_sha256": "1f8340738724c64220773852b6eda7c7621c1ad87e002ee5c403cbc25c2f8b09",
     "status": "adapted"
   },
   {
@@ -2299,7 +2299,7 @@
     "file": "system/multi-full/release.json",
     "source": "system/current-six-v4-20261108/light-multi-full/release.json",
     "source_sha256": "754807801ad3d2e7b303e4941906d281368c405d8a546dba49a354f1ed3de76c",
-    "release_sha256": "9b20e8dd1f40b8774c3c1209085f6b4ac1e01f0766d2334722fcf608b5ed7fd8",
+    "release_sha256": "39d9af796d01aa87d79dfb5868b49799bf2196a0e55fdd4d1dac6d3f97d3d0f8",
     "status": "adapted"
   },
   {
@@ -2320,14 +2320,14 @@
     "file": "system/runtime/cli.py",
     "source": "benchmarks/generation_six_v4_20261108/cli.py",
     "source_sha256": "d727e74ad773feb7f83e53cd3766b4a87d8051ab582c4982297c9963eb89398b",
-    "release_sha256": "fd3e24c0eb6d641931dd318df55ebeebab917b438d42371344a3d31ffdaa8857",
+    "release_sha256": "f445b45c24b3a15a3ecdeb2f0eceab3e40621c91b152580bff42d0b44830857c",
     "status": "adapted"
   },
   {
     "file": "system/runtime/common.py",
     "source": "benchmarks/generation_six_v4_20261108/common.py",
     "source_sha256": "61e513af5021faed2e98649eac8123158126e69d69b9f67e041d5c7afe665ddd",
-    "release_sha256": "5580360f78b62b13aaf50718e27aea54880ae7ab372490f955e92f4985715c8f",
+    "release_sha256": "715a2b2222dcef02260f172e87ad49e54f52ba06e0c03e85efcdbb30de349066",
     "status": "adapted"
   },
   {
@@ -2376,8 +2376,8 @@
     "file": "system/runtime/single.py",
     "source": "benchmarks/generation_six_v4_20261108/single.py",
     "source_sha256": "0efd972dab2bae04194563fe3a55323af9cc90620a07633b8bca02eff1e26464",
-    "release_sha256": "0efd972dab2bae04194563fe3a55323af9cc90620a07633b8bca02eff1e26464",
-    "status": "unchanged"
+    "release_sha256": "73c2b0b81c1cabcf5416a0fe3047743d491e4cecda0d1d2dc60d5cfa75757080",
+    "status": "adapted"
   },
   {
     "file": "system/runtime/single_selector.py",
@@ -2390,28 +2390,28 @@
     "file": "system/runtime/test_conditions.py",
     "source": "benchmarks/generation_six_v4_20261108/test_conditions.py",
     "source_sha256": "09858ed2c053cfa1dad82124c0d7efd7817c9aef5b0a505ff9afc5da65ac790f",
-    "release_sha256": "94b3a8d6af7032f8e9a95010742be0976a2a10ff82176ee8c30ed01735bb8f2e",
+    "release_sha256": "d95b52749de0aadee4740f6cd982fa8cfc90545925763a865e470e93917169d8",
     "status": "adapted"
   },
   {
     "file": "system/runtime/test_current.py",
     "source": "benchmarks/generation_six_v4_20261108/test_current.py",
     "source_sha256": "c6dde836722709df5d2ec1e2f7cc77787ecfbd308e4e4931bf97379c3ca1431e",
-    "release_sha256": "6dc65a6c069cacf1098e9f6631cd5e81c7b084e32dcd3aaf9d6b82030ec11bac",
+    "release_sha256": "24287adc79e15493888aa8950125242418996743695d4eec52689a96a6150f1b",
     "status": "adapted"
   },
   {
     "file": "system/runtime/transport/api_gate.py",
     "source": "benchmarks/generation_six_v4_20261108/transport/api_gate.py",
     "source_sha256": "9730d5d79230437979c0c882262a7f56b4554aae932fed35288b37bfcbb6f451",
-    "release_sha256": "480b7d6016af7f6829e308ac86acbd191131031f42653c8388d5cfbb3b88518f",
+    "release_sha256": "9708b5c2fc9bdd385103dee675e7862b749cfca80994b8d02f0dc41d71b5ba8d",
     "status": "adapted"
   },
   {
     "file": "system/runtime/transport/isolate.py",
     "source": "benchmarks/generation_six_v4_20261108/transport/isolate.py",
     "source_sha256": "ec6bf7665543636a17336e941ea86a83091dfdaac8347991fb2968332a6c6314",
-    "release_sha256": "df62e8a1fbcd6feb7f90118e870866bdf92562934540c5650f4a647fb16eae37",
+    "release_sha256": "f14a8ea898dfb9ac145bbe03cf02b191515e61531dc2f6a926ee3d6821cf2484",
     "status": "adapted"
   },
   {
@@ -2709,31 +2709,31 @@
     "status": "unchanged"
   },
   {
-    "file": "system/single-api/ideax/scripts/single_web_search.py",
+    "file": "system/single-api/insightpro/scripts/single_web_search.py",
     "source": "system/current-six-v4-20261108/single-api/ideax/scripts/single_web_search.py",
     "source_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
-    "release_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
-    "status": "unchanged"
+    "release_sha256": "f045775a8ae0044afba4bc9016dcaaaa85c2a69fe24454f31e77a2c3f93b7bf8",
+    "status": "adapted"
   },
   {
     "file": "system/single-api/litgraph/tools/idea_provenance.py",
     "source": "system/current-six-v4-20261108/single-api/litgraph/tools/idea_provenance.py",
     "source_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
-    "release_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
-    "status": "unchanged"
+    "release_sha256": "d2ef1af8360ba2fc4d9aea2fef3dd798c8ac196201ed8511eca98cb8525c8c2a",
+    "status": "adapted"
   },
   {
     "file": "system/single-api/litgraph/tools/library_client.py",
     "source": "system/current-six-v4-20261108/single-api/litgraph/tools/library_client.py",
     "source_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
-    "release_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
-    "status": "unchanged"
+    "release_sha256": "9826e0a9994df81bf3afe972d364e522db2ce53f7ba3a92c7bd33e303d5de122",
+    "status": "adapted"
   },
   {
     "file": "system/single-api/prompts/blueprint.md",
     "source": "system/current-six-v4-20261108/single-api/prompts/blueprint.md",
     "source_sha256": "ec6e757db9979d2b8f0d62c26ee501168f24901dbd749beb59ad242bad3c1f23",
-    "release_sha256": "1ae10e3267b1beb3565ec2effe29be9c82b0a0471895f15f3bbc438c6187f87a",
+    "release_sha256": "f04ba2a8683c1bcdc562f6383191e34711d341f69288a62161be77f30a4c7521",
     "status": "adapted"
   },
   {
@@ -2768,7 +2768,7 @@
     "file": "system/single-api/release.json",
     "source": "system/current-six-v4-20261108/single-api/release.json",
     "source_sha256": "7f0beffe8e277cc40ce34010fc75d19a1ceb8f0078c3dda3b428dfad8f14768e",
-    "release_sha256": "ecdb055525c1c2bbc65d6b3ca7d9d5e78a6ac504773c8a6cb4d1122b6663c246",
+    "release_sha256": "abb7e058c79de3260ccfc99f5a54d53ad1ad3e10dbbc8f93a23c6dc50a5fce7e",
     "status": "adapted"
   },
   {
@@ -3038,31 +3038,31 @@
     "status": "unchanged"
   },
   {
-    "file": "system/single-full/ideax/scripts/single_web_search.py",
+    "file": "system/single-full/insightpro/scripts/single_web_search.py",
     "source": "system/current-six-v4-20261108/single-full/ideax/scripts/single_web_search.py",
     "source_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
-    "release_sha256": "3e449f6dcf056c1f3a982b4f9bd840def29bc095edcefe15fa08cc2ab31de3db",
-    "status": "unchanged"
+    "release_sha256": "f045775a8ae0044afba4bc9016dcaaaa85c2a69fe24454f31e77a2c3f93b7bf8",
+    "status": "adapted"
   },
   {
     "file": "system/single-full/litgraph/tools/idea_provenance.py",
     "source": "system/current-six-v4-20261108/single-full/litgraph/tools/idea_provenance.py",
     "source_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
-    "release_sha256": "19d9b6a3685a47d8fdbb25a2949892c3b594a17f5d235ab87209a261cd2b2be1",
-    "status": "unchanged"
+    "release_sha256": "d2ef1af8360ba2fc4d9aea2fef3dd798c8ac196201ed8511eca98cb8525c8c2a",
+    "status": "adapted"
   },
   {
     "file": "system/single-full/litgraph/tools/library_client.py",
     "source": "system/current-six-v4-20261108/single-full/litgraph/tools/library_client.py",
     "source_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
-    "release_sha256": "e3cde2c5bcdfa8a9af138f4957f0b50d7c847b014b98e7e50d925a1e9fa52f41",
-    "status": "unchanged"
+    "release_sha256": "9826e0a9994df81bf3afe972d364e522db2ce53f7ba3a92c7bd33e303d5de122",
+    "status": "adapted"
   },
   {
     "file": "system/single-full/prompts/blueprint.md",
     "source": "system/current-six-v4-20261108/single-full/prompts/blueprint.md",
     "source_sha256": "55971f84c71307e2aba2d97ed8763bc5c76a0439d15ebde754c3f86c6ce306a3",
-    "release_sha256": "c718cf9507710005aed929d6b53fd9808b56ae12e6bfd47e3df9559f72b7c181",
+    "release_sha256": "1f8340738724c64220773852b6eda7c7621c1ad87e002ee5c403cbc25c2f8b09",
     "status": "adapted"
   },
   {
@@ -3097,7 +3097,7 @@
     "file": "system/single-full/release.json",
     "source": "system/current-six-v4-20261108/single-full/release.json",
     "source_sha256": "44df9fa4fa3fcf8b91071f5d2f7ec80e0dd45fff6ef3402354676a78f9eb4012",
-    "release_sha256": "f879764f173b4c954785f01bac67a0babe77a0f5679894db08af0b5e1869f9ae",
+    "release_sha256": "84e921ce005907a99c3133ad3b8ec5266122c1f076e29f97a87460a0e37a8a16",
     "status": "adapted"
   }
 ]

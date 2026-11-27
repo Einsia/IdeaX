@@ -145,7 +145,7 @@ def report():
    vs=[r[d] for r in records if r['method']==method and r[d] is not None];lines.append(f'|{method}|{d}|{len(vs)}|{len(set(vs))}|{statistics.pstdev(vs) if vs else 0:.2f}|')
  first={method:{r['card_id']:r for r in records if r['method']==method and r['judge']=='judge_a' and r['rep']=='r1'} for method in ['single','panel']}
  if first['panel']:
-  names={'ideax_old':'旧 IdeaX','ideax_new':'新 IdeaX（10-19版）','ideax_current':'IdeaX current（单 agent＋Insight）','coi_astra':'CoI-Agent/Astra','scientist_astra':'IdeaScientist/Astra'}
+  names={'ideax_old':'旧 InsightPro','ideax_new':'新 InsightPro（10-19版）','ideax_current':'InsightPro current（单 agent＋Insight）','coi_astra':'CoI-Agent/Astra','scientist_astra':'IdeaScientist/Astra'}
   lines+=['','## 第一轮同评委配对：单卡 vs 多卡','','仅比较评委 A、第一轮、相同百分制规则。单卡每次只见当前卡；多卡先读10卡，再结合原卡及本人笔记评分。不是与历史1–5分制比较。表中为单卡 → 多卡；缺评不填零，也不借用其他评委或轮次。Interesting 不计入总分。','','|卡片|任务|系统|总分：单卡 → 多卡|总分变化|Impact：单卡 → 多卡|Interesting：单卡 → 多卡|','|---|---|---|---:|---:|---:|---:|']
   for ident,p in sorted(first['panel'].items()):
    s=first['single'].get(ident,{})
@@ -160,9 +160,9 @@ def report():
    values=[[first[m][i][d] for i in ids] for m in ['single','panel']]
    for stat,fn in [('均值',lambda v:f'{statistics.mean(v):.2f}'),('标准差',lambda v:f'{statistics.pstdev(v):.2f}'),('范围',lambda v:f'{min(v):.2f}–{max(v):.2f}')]:
     lines.append(f'|{label}{stat}|{len(ids)}|{fn(values[0])}|{fn(values[1])}|')
-  lines+=['','初步解读：本轮 IdeaX 卡片总分变化较小，CoI 与 IdeaScientist 卡片降分较明显；Interesting 有升有降。card_07 的 Interesting 上升而总分下降，其多卡评审指出可复现后端与控制接口尚未落实；card_05 的 Impact 与 Interesting 上升，评委认可用明确梯度偏差交换辅助计算的构思。分差有具体评审理由，但这些理由不构成独立验证。','', '限制：本节仅一位评委的一轮、两道任务。分布更分散不等于更准确，也不能证明重复一致性；新颖性未核验近邻论文原文。需结合另一位独立评委的判断，不能据此给框架作总体排名。']
+  lines+=['','初步解读：本轮 InsightPro 卡片总分变化较小，CoI 与 IdeaScientist 卡片降分较明显；Interesting 有升有降。card_07 的 Interesting 上升而总分下降，其多卡评审指出可复现后端与控制接口尚未落实；card_05 的 Impact 与 Interesting 上升，评委认可用明确梯度偏差交换辅助计算的构思。分差有具体评审理由，但这些理由不构成独立验证。','', '限制：本节仅一位评委的一轮、两道任务。分布更分散不等于更准确，也不能证明重复一致性；新颖性未核验近邻论文原文。需结合另一位独立评委的判断，不能据此给框架作总体排名。']
  lines+=['','## 逐卡评分与理由','','按评委与轮次分表，每张表中一张卡片只占一行。系统使用纯文本；总分、I、Interesting 各分多卡和单卡两列。点击卡片查看原文，点击分数查看对应评审理由；— 表示缺评，不可评单独标注；多卡第二轮标为不适用。']
- system_cells={'ideax_old':'IdeaX 旧版','ideax_new':'IdeaX 新版（10-19）','ideax_current':'IdeaX current（单 agent＋Insight）','coi_astra':'CoI-Agent / Astra','scientist_astra':'IdeaScientist / Astra'}
+ system_cells={'ideax_old':'InsightPro 旧版','ideax_new':'InsightPro 新版（10-19）','ideax_current':'InsightPro current（单 agent＋Insight）','coi_astra':'CoI-Agent / Astra','scientist_astra':'IdeaScientist / Astra'}
  indexed={(r['card_id'],r['method'],r['judge'],r['rep']):r for r in records}
  for j,rep in [(j,rep) for j in ['judge_a','judge_b'] for rep in ['r1','r2']]:
   label=('A' if j=='judge_a' else 'B')+' · '+('第一轮' if rep=='r1' else '第二轮')

@@ -260,7 +260,7 @@ def export_top5(path):
     config = root / 'work/library_api.json'
     base = json.loads(config.read_text())['base_url'] if config.exists() else ''
     top = json.loads((ideas / 'top5.json').read_text())['top5']
-    lines = ['# IdeaX Top-5', '', '候选想法尚需实验验证；检索未命中不能证明新颖性。', '']
+    lines = ['# InsightPro Top-5', '', '候选想法尚需实验验证；检索未命中不能证明新颖性。', '']
     for item in top:
         card = json.loads((ideas / 'pool' / (item['card'] + '.json')).read_text())
         if card.get('status') != 'active':

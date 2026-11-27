@@ -21,7 +21,7 @@ from pathlib import Path
 import cli,single,prompts
 from common import *
 assert cli.check()['domain_count']==38
-with tempfile.TemporaryDirectory(dir=os.environ['IDEAX_SCRATCH']) as tmp:
+with tempfile.TemporaryDirectory(dir=os.environ['INSIGHTPRO_SCRATCH']) as tmp:
  run=Path(tmp)/'run';single.prepare(run,'agent-memory')
  content=(run/'initial_prompt.md').read_text()
  assert (run/'work/full_domain_context.jsonl').exists()==(ACCESS=='full')
@@ -39,7 +39,7 @@ with tempfile.TemporaryDirectory(dir=os.environ['IDEAX_SCRATCH']) as tmp:
 print(json.dumps({'condition':CONDITION,'ok':True}))
 '''
         for system in sorted(p for p in SYSTEMS.iterdir() if (p/'release.json').is_file()):
-            env=dict(os.environ,IDEAX_CURRENT_SYSTEM=str(system))
+            env=dict(os.environ,INSIGHTPRO_CURRENT_SYSTEM=str(system))
             result=subprocess.run([sys.executable,'-B','-c',code],env=env,cwd=RUNTIME,capture_output=True,text=True)
             self.assertEqual(result.returncode,0,system.name+': '+result.stderr)
 
@@ -50,7 +50,7 @@ from pathlib import Path
 from common import *
 from access_policy import check_sources
 import single
-with tempfile.TemporaryDirectory(dir=os.environ['IDEAX_SCRATCH']) as tmp:
+with tempfile.TemporaryDirectory(dir=os.environ['INSIGHTPRO_SCRATCH']) as tmp:
  run=Path(tmp)/'run';single.prepare(run,'agent-memory')
  card={'problem':'agent-memory-P0001','mechanism':'agent-memory-I0001'}
  assert check_sources(card,run)
@@ -63,7 +63,7 @@ with tempfile.TemporaryDirectory(dir=os.environ['IDEAX_SCRATCH']) as tmp:
  assert not check_sources(card,run)
  card['problem']='other-domain-P0001';assert check_sources(card,run)
 '''
-        env=dict(os.environ,IDEAX_CURRENT_SYSTEM=str(SYSTEMS/'single-api'))
+        env=dict(os.environ,INSIGHTPRO_CURRENT_SYSTEM=str(SYSTEMS/'single-api'))
         r=subprocess.run([sys.executable,'-B','-c',code],env=env,cwd=RUNTIME,capture_output=True,text=True)
         self.assertEqual(r.returncode,0,r.stderr)
 
@@ -81,7 +81,7 @@ with tempfile.TemporaryDirectory(dir=os.environ['IDEAX_SCRATCH']) as tmp:
         sys.path.insert(0,str(RUNTIME/'transport'))
         import quota
         saved=quota.ROOT
-        with tempfile.TemporaryDirectory(dir=os.environ['IDEAX_SCRATCH']) as tmp:
+        with tempfile.TemporaryDirectory(dir=os.environ['INSIGHTPRO_SCRATCH']) as tmp:
             quota.ROOT=Path(tmp)
             (quota.ROOT/'control.json').write_text(json.dumps({'limits':dict.fromkeys(quota.LIMITS,2)}))
             a=quota.acquire('astra_generation');b=quota.acquire('astra_generation')

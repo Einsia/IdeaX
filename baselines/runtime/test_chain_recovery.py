@@ -37,7 +37,7 @@ class ChainRecoveryTests(unittest.TestCase):
         self.assertTrue(valid_chain(row,2,3))
     def test_native_stops_before_ideation_when_both_directions_fail(self):
         previous=Path.cwd()
-        with tempfile.TemporaryDirectory(dir=os.environ['IDEAX_SCRATCH']) as folder:
+        with tempfile.TemporaryDirectory(dir=os.environ['INSIGHTPRO_SCRATCH']) as folder:
             try:
                 os.chdir(folder);Path('logs').mkdir();agent=self.agent(None);agent.log_save_file='logs'
                 anchor=Result('isolated anchor','abstract',{'body':'actual'},0,2025)

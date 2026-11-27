@@ -22,7 +22,7 @@ class RecoveryTests(unittest.TestCase):
         with self.assertRaises(ValueError):canonical({'proposal':{'title':'Only title'}})
 
     def test_only_terminal_novelty_rejection_creates_zero_slot(self):
-        with tempfile.TemporaryDirectory(dir=__import__('os').environ.get('IDEAX_SCRATCH')) as tmp:
+        with tempfile.TemporaryDirectory(dir=__import__('os').environ.get('INSIGHTPRO_SCRATCH')) as tmp:
             run=Path(tmp);native=run/'native/run-01';native.mkdir(parents=True);log=native/'attempt-1.log'
             log.write_text('TimeoutError: provider timed out\n')
             with self.assertRaises(ValueError):record_rejection(native,'domain',1,log)

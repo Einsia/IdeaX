@@ -15,7 +15,7 @@ from urllib.request import Request, urlopen
 def get(url):
     record = {'at': datetime.now(timezone.utc).isoformat(), 'url': url}
     try:
-        with urlopen(Request(url, headers={'User-Agent': 'IdeaX-research/1.0'}), timeout=45) as r:
+        with urlopen(Request(url, headers={'User-Agent': 'InsightPro-research/1.0'}), timeout=45) as r:
             raw = r.read(4_000_000)
             record.update(status=r.status, bytes=len(raw), sha256=hashlib.sha256(raw).hexdigest())
         return raw.decode('utf-8', errors='replace')

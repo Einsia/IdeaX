@@ -164,10 +164,10 @@
   "discussion_rounds": 1,
   "ideas_per_domain": 5,
   "access": "api",
-  "blueprint_scope": "IdeaX-only; frozen core idea and condition-specific evidence",
+  "blueprint_scope": "InsightPro-only; frozen core idea and condition-specific evidence",
   "prompt_files": {
     "discuss.md": "5ea88967ee6a5e76995fd42465bdf9854f9449fb0f43d64606f5582c2a07f668",
-    "blueprint.md": "1ae10e3267b1beb3565ec2effe29be9c82b0a0471895f15f3bbc438c6187f87a",
+    "blueprint.md": "f04ba2a8683c1bcdc562f6383191e34711d341f69288a62161be77f30a4c7521",
     "generation.md": "d94255591c1d84336ffbd95c8b994f92d21743ed4c41920beff033eaadc3bf9b",
     "respond.md": "31244a3168f4c125384cdd3ad66cb199fe8f8cefef49c6d0e96acfcb3d372011",
     "select.md": "39bc127e12a7c64ddfc640374945f7bcc39366098101678b68e856ede2252186"

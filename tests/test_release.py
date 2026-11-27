@@ -12,7 +12,7 @@ from types import SimpleNamespace
 
 ROOT=Path(__file__).resolve().parents[1]
 SCRATCH=ROOT/'.scratch';SCRATCH.mkdir(exist_ok=True)
-os.environ.setdefault('IDEAX_SCRATCH',str(SCRATCH))
+os.environ.setdefault('INSIGHTPRO_SCRATCH',str(SCRATCH))
 os.environ.setdefault('TMPDIR',str(SCRATCH))
 tempfile.tempdir=str(SCRATCH)
 
@@ -30,8 +30,8 @@ class ReleaseTests(unittest.TestCase):
 
     def test_native_system_regressions(self):
         env=dict(os.environ,LITGRAPH_API_BASE_URL='https://litgraph.invalid',
-                 IDEAX_CURRENT_SYSTEM=str(ROOT/'system/single-full'),
-                 IDEAX_CODEX_RAW_BIN='/usr/bin/true',LITGRAPH_PY_PREFIX=sys.base_prefix)
+                 INSIGHTPRO_CURRENT_SYSTEM=str(ROOT/'system/single-full'),
+                 INSIGHTPRO_CODEX_RAW_BIN='/usr/bin/true',LITGRAPH_PY_PREFIX=sys.base_prefix)
         self.command('-m','unittest','discover','-s','system/runtime','-p','test_*.py',env=env)
 
     def test_native_baseline_regressions(self):

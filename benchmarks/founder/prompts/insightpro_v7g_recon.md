@@ -4,7 +4,7 @@
 
 domain 定义研究范围；insight 是前作的机制、事实或观察及其适用条件；problem 是文献中记录的限制，未必今天仍未解决。它们不是新颖性标签，也不是待拼装的功能清单。supporting_papers 仅是来源导航，一个归并条目的不同主张未必得到每篇来源共同支持。引用编号不等于读过全文。
 
-目标领域全部 insights/problems 原样注入本轮输入，同时保存在只读 /work/full_domain_context.jsonl。先综合所有材料再选择有希望的方向，不能用 top-k 代替全量。insight 是“已观察到的机制/事实/边界”，problem 是“文献记录的限制或未决问题”；先写出它们之间的模式、冲突和条件，再决定候选。每条最终卡至少要能指出一个具体条目如何改变了问题、机制或实验设计。最有用的用法是：从材料中的问题、机制和近期发展，判断这个领域接下来最可能出现的工作。构造想法时按 IdeaX 的基本做法：选一个目标 problem，借用一个 insight（可以来自其他领域），写清原有机制和适配步骤。每个候选必须先写“为什么这篇论文会在接下来几个月出现”，再写方法；不要为了体现用了库而给每个想法添加更多模块。
+目标领域全部 insights/problems 原样注入本轮输入，同时保存在只读 /work/full_domain_context.jsonl。先综合所有材料再选择有希望的方向，不能用 top-k 代替全量。insight 是“已观察到的机制/事实/边界”，problem 是“文献记录的限制或未决问题”；先写出它们之间的模式、冲突和条件，再决定候选。每条最终卡至少要能指出一个具体条目如何改变了问题、机制或实验设计。最有用的用法是：从材料中的问题、机制和近期发展，判断这个领域接下来最可能出现的工作。构造想法时按 InsightPro 的基本做法：选一个目标 problem，借用一个 insight（可以来自其他领域），写清原有机制和适配步骤。每个候选必须先写“为什么这篇论文会在接下来几个月出现”，再写方法；不要为了体现用了库而给每个想法添加更多模块。
 
 如果决定借助另一个领域的 insight/problem 发展机制，必须先把该领域的全部 insight 和 problem 列出来并完整分页读取；不能只拿搜索结果中的一句话，也不能只读引用最多的几条。先用 domains 确认 ID，然后运行：
 python3 tools/library_client.py domain-context <真实domain_id> --output-dir /work/out/exploration/<新目录>
@@ -32,7 +32,7 @@ DOMAIN_MAP.json 的 entry_ids 只能使用本轮初始 `/work/full_domain_contex
 <!-- STAGE 2 -->
 基于完整材料构造约 20 个候选，覆盖 DOMAIN_MAP 里每个主要机制簇（每簇至少一个），写 CANDIDATE_FUNNEL.json：{"candidates":[{"id":"h01","rank":1,"title":"...","problem":"...","mechanism":"...","source_entry_ids":{"problems":[],"insights":[]},"novel_core":"...","why_paper":"...","hardest_baseline":"...","reason":"...","decision":"revise|drop","final_index":null}]}。这是对象包装格式。
 
-先广后精：先写出这个领域接下来最可能出现的工作，包括直接、自然的下一步，再排序。每个候选按 IdeaX 的基本做法构造：选一个目标 problem，借用一个 insight（可以来自其他领域），写清原有机制和适配步骤。title 写一句论文标题；mechanism 写清实际要做什么；novel_core 写相对截止前工作的新步骤；why_paper 写为什么这篇论文会在接下来几个月出现；hardest_baseline 用一句话写最直接的已有做法；rank 是出现可能性的名次（1 最可能，不重复）。
+先广后精：先写出这个领域接下来最可能出现的工作，包括直接、自然的下一步，再排序。每个候选按 InsightPro 的基本做法构造：选一个目标 problem，借用一个 insight（可以来自其他领域），写清原有机制和适配步骤。title 写一句论文标题；mechanism 写清实际要做什么；novel_core 写相对截止前工作的新步骤；why_paper 写为什么这篇论文会在接下来几个月出现；hardest_baseline 用一句话写最直接的已有做法；rank 是出现可能性的名次（1 最可能，不重复）。
 
 新颖性预筛只淘汰一种情况：用 LitGraph 检索核实，截止前已经有论文完成了相同的核心贡献，这时 decision 为 drop，reason 写明论文编号。只是有相近工作时不要淘汰：decision 写 revise，并在 novel_core 写清差别。不要因为想法简洁、直接或与已有工作相近就拒绝它。
 

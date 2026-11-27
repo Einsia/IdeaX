@@ -31,7 +31,7 @@ def digest(value):
 
 def credentials(judge):
     """Load a profile OR its paired environment values; never mix providers."""
-    path = os.environ.get('IDEAX_GPT_PROFILE_FILE' if judge == 'astra' else 'IDEAX_OPUS_PROFILE_FILE')
+    path = os.environ.get('INSIGHTPRO_GPT_PROFILE_FILE' if judge == 'astra' else 'INSIGHTPRO_OPUS_PROFILE_FILE')
     if path:
         profile = json.loads(Path(path).expanduser().read_text())
         if 'api_key_env_file' in profile:
@@ -85,7 +85,7 @@ def model_call(judge, prompt, packet, attempt):
     save(attempt/'binding.json', {'model':model,'effort':'xhigh','endpoint':base,
          'prompt_sha256':hashlib.sha256(prompt.encode()).hexdigest(),'input_sha256':digest(packet),
          'transport':'portable-native-cli-v1'})
-    scratch = Path(os.environ.get('IDEAX_SCRATCH', str(ROOT/'.scratch')))
+    scratch = Path(os.environ.get('INSIGHTPRO_SCRATCH', str(ROOT/'.scratch')))
     scratch.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='judge-', dir=scratch) as private:
         env = {k:v for k,v in os.environ.items() if k in ('PATH','LANG','LC_ALL','HTTPS_PROXY','HTTP_PROXY','NO_PROXY')}
@@ -93,14 +93,14 @@ def model_call(judge, prompt, packet, attempt):
                    DISABLE_AUTOUPDATER='1', CLAUDE_CODE_DISABLE_AUTO_MEMORY='1',
                    CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC='1')
         if judge == 'astra':
-            env['IDEAX_BENCH_GPT_KEY'] = key
-            command = [os.environ.get('IDEAX_CODEX_RAW_BIN') or shutil.which('codex') or 'codex',
+            env['INSIGHTPRO_BENCH_GPT_KEY'] = key
+            command = [os.environ.get('INSIGHTPRO_CODEX_RAW_BIN') or shutil.which('codex') or 'codex',
                 'exec','--json','--skip-git-repo-check','--sandbox','read-only','--model',model,
                 '--ignore-user-config','-c','model_reasoning_effort="xhigh"','-c','approval_policy="never"',
-                '-c','model_provider="ideax_judge"','-c','model_providers.ideax_judge.name="IdeaX judge"',
-                '-c','model_providers.ideax_judge.base_url='+json.dumps(base),
-                '-c','model_providers.ideax_judge.wire_api="responses"',
-                '-c','model_providers.ideax_judge.env_key="IDEAX_BENCH_GPT_KEY"',
+                '-c','model_provider="insightpro_judge"','-c','model_providers.insightpro_judge.name="InsightPro judge"',
+                '-c','model_providers.insightpro_judge.base_url='+json.dumps(base),
+                '-c','model_providers.insightpro_judge.wire_api="responses"',
+                '-c','model_providers.insightpro_judge.env_key="INSIGHTPRO_BENCH_GPT_KEY"',
                 '-c','project_doc_max_bytes=0','-c','web_search="disabled"',
                 '--enable','skip_host_skill_discovery']
             for feature in ('multi_agent','shell_tool','apps','plugins','skill_search','sleep_tool',
@@ -123,7 +123,7 @@ def model_call(judge, prompt, packet, attempt):
             env.update(ANTHROPIC_BASE_URL=base, ANTHROPIC_AUTH_TOKEN=key,
                        CLAUDE_CODE_MAX_OUTPUT_TOKENS='64000', API_TIMEOUT_MS='3600000')
             session = str(uuid.uuid4())
-            command = [os.environ.get('IDEAX_CLAUDE_RAW_BIN') or shutil.which('claude') or 'claude',
+            command = [os.environ.get('INSIGHTPRO_CLAUDE_RAW_BIN') or shutil.which('claude') or 'claude',
                 '--bare','-p','--model',model,'--effort','xhigh','--output-format','json',
                 '--tools','','--strict-mcp-config','--mcp-config','{"mcpServers":{}}',
                 '--disable-slash-commands','--setting-sources','','--session-id',session,

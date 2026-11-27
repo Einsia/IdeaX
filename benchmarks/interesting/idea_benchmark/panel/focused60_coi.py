@@ -14,7 +14,7 @@ from ..core import judge_packet
 
 DEFAULT_OUT = ROOT / 'idea_benchmark/evaluations/focused60-coi-interesting-panel-20261102'
 GEN = ROOT / 'idea_runs/focused60-coi-astra-20261101'
-IDEAX = ROOT / 'idea_benchmark/evaluations/focused60-interesting-panel-20261031'
+INSIGHTPRO = ROOT / 'idea_benchmark/evaluations/focused60-interesting-panel-20261031'
 MODELS = {'astra': 'gpt-6-astra'}
 
 
@@ -39,21 +39,21 @@ def prepare(out):
     tasks, generation = generation_audit()
     tasks = {t['task_id']: t for t in tasks}
     accepted = {a['task_id']: a for a in generation['items']}
-    order = read(IDEAX / 'mapping.json')
+    order = read(INSIGHTPRO / 'mapping.json')
     if len(order) != 60 or {m['task_id'] for m in order} != set(tasks):
-        raise ValueError('IdeaX paired task order does not cover these 60 tasks')
-    if (IDEAX / 'prompt.txt').read_text() != RULE + '\n' + PROTOCOL:
-        raise ValueError('Rubric changed relative to IdeaX')
+        raise ValueError('InsightPro paired task order does not cover these 60 tasks')
+    if (INSIGHTPRO / 'prompt.txt').read_text() != RULE + '\n' + PROTOCOL:
+        raise ValueError('Rubric changed relative to InsightPro')
     out.mkdir(parents=True)
     cards, mapping, provenance = [], [], []
-    old_cards = {c['card_id']: c for c in read(IDEAX / 'cards.json')}
+    old_cards = {c['card_id']: c for c in read(INSIGHTPRO / 'cards.json')}
     for m in order:
         ident, task_id = m['card_id'], m['task_id']
         t, a = tasks[task_id], accepted[task_id]
         raw = Path(a['card']).read_text()
         context = Path(t['coi_prompt']).read_text()
         if old_cards[ident]['task_context'] != context:
-            raise ValueError('Task input differs from paired IdeaX input')
+            raise ValueError('Task input differs from paired InsightPro input')
         packet = judge_packet({'idea_text': raw, 'task_context': context, 'domain': t['domain']}, ident)
         packet['card_id'] = packet.pop('item_id')
         cards.append(packet)
@@ -71,11 +71,11 @@ def prepare(out):
     (out / 'prompt.txt').write_text(RULE + '\n' + PROTOCOL)
     write(out / 'config.json', {'protocol': 'interesting-sequential-v1-coi-astra', 'models': MODELS,
                                'effort': 'high', 'read_seconds': 2700, 'score_seconds': 5400,
-                               'order_source': str(IDEAX / 'mapping.json'),
+                               'order_source': str(INSIGHTPRO / 'mapping.json'),
                                'scope': 'Astra only; Opus not requested'})
     # Comparison is offline: the judge never receives these previous scores.
-    write(out / 'comparison_baseline.json', {'scores': read(IDEAX / 'scores.json'),
-                                           'mapping': order, 'report': str(IDEAX / 'REPORT.md')})
+    write(out / 'comparison_baseline.json', {'scores': read(INSIGHTPRO / 'scores.json'),
+                                           'mapping': order, 'report': str(INSIGHTPRO / 'REPORT.md')})
     files = [Path(__file__), Path(base.__file__), Path(__file__).with_name('audit_focused60_coi.py'),
              Path(__file__).with_name('sequential.py'), Path(__file__).with_name('pilot.py'),
              ROOT / 'idea_benchmark/core.py', ROOT / 'idea_benchmark/runner.py', GEN / 'tools/batch.py']
@@ -123,7 +123,7 @@ def report(out):
                          'initial_score': history[0]['new']['score'], 'final_score': v, 'revisions': len(history) - 1})
         lines.append(f'|[{ident}]({m["text_path"]})|{m["task_id"]}|{cell}|')
     lines += ['', '缺评不作零分。完整理由链接包括首次评分及改分记录。依据提供材料，未独立联网查新。', '',
-              '与IdeaX使用相同任务顺序及rubric，两个批次独立校准；同题分差不等于已证明框架因果效果。']
+              '与InsightPro使用相同任务顺序及rubric，两个批次独立校准；同题分差不等于已证明框架因果效果。']
     (out / 'REPORT.md').write_text('\n'.join(lines) + '\n')
     write(out / 'scores.json', rows)
     if len(rows) == 60:
@@ -134,16 +134,16 @@ def report(out):
         for domain in sorted({r['domain'] for r in rows}) + ['all']:
             selected = [r for r in paired if domain == 'all' or r['domain'] == domain]
             summary.append({'domain': domain, 'paired_numeric': len(selected),
-                            'ideax_mean': statistics.mean(old[r['task_id']]['final_score'] for r in selected) if selected else None,
+                            'insightpro_mean': statistics.mean(old[r['task_id']]['final_score'] for r in selected) if selected else None,
                             'coi_mean': statistics.mean(r['final_score'] for r in selected) if selected else None})
         write(out / 'comparison.json', summary)
-        lines = ['# 同输入60题：IdeaX 与 CoI Interesting', '',
+        lines = ['# 同输入60题：InsightPro 与 CoI Interesting', '',
                  '相同Astra/high、多卡百分制rubric及任务顺序；两批独立校准，不是混合盲评，不能单独归因框架优劣。', '',
-                 '|领域|共同数值评分|IdeaX|CoI|', '|---|---:|---:|---:|']
+                 '|领域|共同数值评分|InsightPro|CoI|', '|---|---:|---:|---:|']
         for r in summary:
-            cells = [f'{r[k]:.2f}' if r[k] is not None else '—' for k in ['ideax_mean', 'coi_mean']]
+            cells = [f'{r[k]:.2f}' if r[k] is not None else '—' for k in ['insightpro_mean', 'coi_mean']]
             lines.append(f'|{r["domain"]}|{r["paired_numeric"]}|{cells[0]}|{cells[1]}|')
-        lines += ['', f'[CoI逐卡评分与理由]({out}/REPORT.md)', f'[IdeaX逐卡评分与理由]({baseline["report"]})']
+        lines += ['', f'[CoI逐卡评分与理由]({out}/REPORT.md)', f'[InsightPro逐卡评分与理由]({baseline["report"]})']
         (out / 'COMPARISON.md').write_text('\n'.join(lines) + '\n')
 
 

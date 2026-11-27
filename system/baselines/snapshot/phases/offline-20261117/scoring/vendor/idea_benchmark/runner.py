@@ -54,9 +54,9 @@ def request_payload(model, prompt, packet, config):
 
 
 def codex_command(model, effort="medium"):
-    """Build the same Codex CLI command as IdeaX's gpt_transport adapter.
+    """Build the same Codex CLI command as InsightPro's gpt_transport adapter.
 
-    IdeaX deliberately lets Codex own authentication and provider transport. The
+    InsightPro deliberately lets Codex own authentication and provider transport. The
     benchmark must use that path too; copying an API key into requests.py bypasses
     the working transport and is what caused the Cloudflare 403.
     """
@@ -106,7 +106,7 @@ def call_codex(model, prompt, packet, attempt, config):
                                                 "transport": "codex-cli", "prompt_sha256": sha(full_prompt.encode())})
     env = os.environ.copy()
     # Do not leak direct API credentials into the child; Codex authenticates via
-    # CODEX_HOME just as IdeaX does.
+    # CODEX_HOME just as InsightPro does.
     for key in ("OPENAI_API_KEY", "CODEX_API_KEY", "OPENAI_BASE_URL"):
         env.pop(key, None)
     (attempt / "codex_prompt.md").write_text(full_prompt)
@@ -146,7 +146,7 @@ def call_codex(model, prompt, packet, attempt, config):
     if process.returncode != 0 or failure or not final_text or usage is None:
         detail = failure or (attempt / "codex.stderr.log").read_text(errors="replace")[-1000:]
         raise RuntimeError(f"Codex CLI failed ({process.returncode}): {detail}")
-    # IdeaX's turn usage uses flattened cached/reasoning fields. Normalize into
+    # InsightPro's turn usage uses flattened cached/reasoning fields. Normalize into
     # the Responses usage shape consumed by the accounting/report code.
     normalized = normalize_codex_usage(usage)
     result = {"id": thread_id or "codex-cli", "status": "completed", "model": model,

@@ -32,7 +32,7 @@ def check():
         if counts['insight']!=d['insights'] or counts['problem']!=d['problems'] or len({x['id'] for x in rows})!=len(rows):
             raise ValueError('Domain material incomplete: '+d['id'])
         total+=len(rows)
-    for path in (os.environ['IDEAX_CODEX_RAW_BIN'],single.isolate.PY_PREFIX):
+    for path in (os.environ['INSIGHTPRO_CODEX_RAW_BIN'],single.isolate.PY_PREFIX):
         if not Path(path).exists(): raise ValueError('Runtime dependency missing: '+str(path))
     if not shutil.which('bwrap'): raise ValueError('bubblewrap is required')
     import multi

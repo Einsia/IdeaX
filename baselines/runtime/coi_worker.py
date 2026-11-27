@@ -33,7 +33,7 @@ def init_credentials():
     os.environ.update(OPENAI_BASE_URL=base, OPENAI_API_KEY=key,
                       IDEASCIENTIST_BASE_URL=base, IDEASCIENTIST_API_KEY=key,
                       PYTHONUNBUFFERED='1', PYTHONDONTWRITEBYTECODE='1',
-                      TMPDIR=os.environ['IDEAX_SCRATCH'])
+                      TMPDIR=os.environ['INSIGHTPRO_SCRATCH'])
     return base, key
 
 def coi_export(native, domain, index):
@@ -83,7 +83,7 @@ def run_coi(run, domain):
         save(native/'config.yaml', config)
         (native/'effective_topic.txt').write_text(prompt)
         save(native/'run_config.json', dict(model=MODEL,effort='xhigh',base_url=PROVIDER,
-             credential_source=os.environ.get('IDEAX_GPT_PROFILE_FILE','environment'),domain_id=domain,index=index,
+             credential_source=os.environ.get('INSIGHTPRO_GPT_PROFILE_FILE','environment'),domain_id=domain,index=index,
              task_sha256=sha(run/'prompt_effective.md'),source=str(source),
              retrieval='arxiv_openalex',chain_length=[2,3],chain_count=1,review_improvements=1))
         update(run, phase='coi_native_workflow', active_idea_index=index, native_run=str(native))
@@ -136,7 +136,7 @@ def isci_one(run, domain, index):
     os.environ.update(IDEASCIENTIST_HTTP_TIMEOUT='1200',IDEASCIENTIST_MAX_RETRIES='6',CONTEXT_WINDOW='828400',
         IDEASCIENTIST_EVIDENCE_DIR=str(native/'evidence'),IDEASCIENTIST_CALL_CACHE=str(native/'request_cache'),
         IDEASCIENTIST_PUBLIC_READER_CHAR_CAP='180000')
-    config.update(recovery_version='retrieval-v2', credential_source=os.environ.get('IDEAX_GPT_PROFILE_FILE','environment'),
+    config.update(recovery_version='retrieval-v2', credential_source=os.environ.get('INSIGHTPRO_GPT_PROFILE_FILE','environment'),
         reader_source='public_original_with_explicit_structured_fallback',full_text_available='per_source_provenance',
         independent_run_index=index,domain_id=domain,transport_recovery_cycles=3)
     prompt=(ROOT/'inputs'/domain/'task-one.md').read_text()+(

@@ -27,7 +27,7 @@ insights 可以来自本领域或任意其他领域。鼓励多领域交叉，�
 
 这些是帮助打开思路的探索视角，可以组合、转向或超出，不是必须依次完成的流程，也不要求最终十条 idea 覆盖全部思路。最终按接下来几个月出现的可能性取舍和排序，不设置类型或冒险程度配额；十条尽量来自领域里不同的方向。
 
-本轮没有网络，不能访问公开网页或论文全文；近邻调查通过 ideax_api 工具（只读的截断 LitGraph API）完成。请真正检索和阅读近邻工作，再确定最终想法；不能仅凭记忆声称新颖。
+本轮没有网络，不能访问公开网页或论文全文；近邻调查通过 insightpro_api 工具（只读的截断 LitGraph API）完成。请真正检索和阅读近邻工作，再确定最终想法；不能仅凭记忆声称新颖。
 至少用三组有区别的查询词调查相近机制、已有组合与最强基线，实读最相关来源。无命中不能证明新颖。
 
 新颖性判断要调查前人已经完成的核心机制与结论，说明自己的实质增量。熟悉组件的组合或跨领域迁移可以形成新贡献，但只换名字、重复已有结论或仅以组合尚无人尝试为依据，都不足以证明新颖性。
@@ -45,6 +45,6 @@ insights 可以来自本领域或任意其他领域。鼓励多领域交叉，�
 
 将实际检索、最接近前作、重合、独立增量与未排除风险写进卡片的 predicted_contribution 与 evidence；在 why_now 中写明它在接下来几个月出现的可能性判断、具体理由（依据哪些截止前的进展）、已知不足和成立所需的关键条件。自评结论必须由前作对比和具体论证支持，不能用自我打分替代证据。
 
-只读 LitGraph API（截至 {cutoff}（不含）的历史截断库）：BASE={base}，只能通过 ideax_api 工具访问（path 以 /api/v1/ 开头，或 /llms.txt、/openapi.json）；没有 shell、文件或其他网络。常规路由是 /api/v1/domains、/api/v1/domains/{{id}}/insights、/problems、/papers、/api/v1/search、/api/v1/entries/{{id}}、/api/v1/papers/{{数字id}}；只读 POST /api/v1/papers/batch 支持批量查询。获取交叉领域全量材料时，按 /api/v1/domains/{{domain_id}}/insights 与 /problems 翻页读完。paper_count 是支撑论文数，不是外部引用次数。数字编号不等于 W 编号。库外文献只能凭已有知识引用并注明未读，不得编造其 LitGraph 编号。API 不可用时如实报告。
+只读 LitGraph API（截至 {cutoff}（不含）的历史截断库）：BASE={base}，只能通过 insightpro_api 工具访问（path 以 /api/v1/ 开头，或 /llms.txt、/openapi.json）；没有 shell、文件或其他网络。常规路由是 /api/v1/domains、/api/v1/domains/{{id}}/insights、/problems、/papers、/api/v1/search、/api/v1/entries/{{id}}、/api/v1/papers/{{数字id}}；只读 POST /api/v1/papers/batch 支持批量查询。获取交叉领域全量材料时，按 /api/v1/domains/{{domain_id}}/insights 与 /problems 翻页读完。paper_count 是支撑论文数，不是外部引用次数。数字编号不等于 W 编号。库外文献只能凭已有知识引用并注明未读，不得编造其 LitGraph 编号。API 不可用时如实报告。
 
 最后调用 submit_cards 一次提交全部十张卡片，按出现可能性排序（第 1 张最可能）。字段：title；core_claim（一句话核心贡献）；problem（核心 problem 的条目 ID、重要性及待解决的障碍）；mechanism（所用 insights 的条目 ID、来源领域，以及它们如何启发解决思路，含必要公式）；why_now（见上）；predicted_contribution（与最接近工作的差异与剩余贡献、可证伪预测、简短验证设想和失败条件）；evidence（Previous work：至少 3 篇最相关真实工作，数字 paper_id、完整标题、作用）。source_entry_ids（problems / insights 两个数组）与 entry_usage 填在 provenance 字段，用于溯源，不参与评分。

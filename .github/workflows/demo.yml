@@ -6,7 +6,7 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: ideax-demo-pages
+  group: insightpro-demo-pages
   cancel-in-progress: false
 jobs:
   deploy:

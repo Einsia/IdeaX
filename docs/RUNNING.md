@@ -72,7 +72,7 @@ python baselines/run.py export --method coi --out runs/coi-38
 ```
 
 Each domain contains five sequential independent native proposals. Different
-domains may run in parallel. `IDEAX_BASELINE_GPT_CONCURRENCY` limits actual model
+domains may run in parallel. `INSIGHTPRO_BASELINE_GPT_CONCURRENCY` limits actual model
 requests across baseline roles and readers. `COI_PYTHON` / `ISCI_PYTHON` can
 select separate Python environments; their defaults are the current interpreter.
 

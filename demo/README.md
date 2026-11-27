@@ -1,4 +1,4 @@
-# IdeaX Research Studio
+# InsightPro Research Studio
 
 A static interactive replay of six recorded model-efficiency explorations, with an explicit handoff to real local generation.
 
@@ -27,14 +27,14 @@ Visitors can inspect source links, switch among all six perspectives, download c
 
 ## Start a real local run
 
-Install and configure the system as described in the root README and [running guide](../docs/RUNNING.md). Download `ideax-request.json` from the site and place it in the repository root.
+Install and configure the system as described in the root README and [running guide](../docs/RUNNING.md). Download `insightpro-request.json` from the site and place it in the repository root.
 
 ```bash
 # Prepare only. No model calls.
-python demo/run_local.py --request ideax-request.json --out runs/my-idea
+python demo/run_local.py --request insightpro-request.json --out runs/my-idea
 
 # Inspect runs/my-idea/runs/DOMAIN/initial_prompt.md, then start generation.
-python demo/run_local.py --request ideax-request.json --out runs/my-idea --run
+python demo/run_local.py --request insightpro-request.json --out runs/my-idea --run
 ```
 
 Use a new output directory for each changed request. If other jobs use the same GPT account, declare their reservations with `--external-gpt-reserved N`.

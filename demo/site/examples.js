@@ -1,7 +1,7 @@
 'use strict';
 
 // Explicitly illustrative teaching examples. They are not measured case results.
-window.IdeaXExamples = {
+window.InsightProExamples = {
   render(id) {
     const frame=(title,body,note)=>`<section class="teaching-example" aria-label="Interactive teaching example"><p class="eyebrow">TRY A SMALL EXAMPLE · ILLUSTRATIVE ONLY</p><h4>${title}</h4>${body}<p class="example-caveat">${note}</p></section>`;
     if(id==='compression')return frame('Same model budget. Different choices.',

@@ -9,7 +9,7 @@ import uuid
 
 HERE = Path(__file__).resolve().parent
 BENCH = HERE.parent
-SYSTEM = Path(os.environ.get('IDEAX_CURRENT_SYSTEM', str(HERE.parent/'single-full'))).resolve()
+SYSTEM = Path(os.environ.get('INSIGHTPRO_CURRENT_SYSTEM', str(HERE.parent/'single-full'))).resolve()
 PROVIDER = 'https://sbtunnel.xiaoaojianghu.fun/v1'
 RELEASE = json.loads((SYSTEM/'release.json').read_text())
 ACCESS = RELEASE['access']

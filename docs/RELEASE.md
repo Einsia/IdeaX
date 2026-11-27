@@ -63,6 +63,27 @@ functions are marked `adapted`. `provenance/release_files.json` records the
 published artifact hashes. The release excludes Web, Mixed and no-tools
 generation conditions from its supported system list.
 
+## Project rename — 2026-11-27
+
+The project was renamed from IdeaX to InsightPro (GitHub repository
+`Einsia/IdeaX` → `Einsia/InsightPro`). Every occurrence of the old name in the
+release was replaced, including the frozen prompts (`system/*/prompts/blueprint.md`,
+the founder prompts now named `benchmarks/founder/prompts/insightpro_*`), the
+reviewer prompt, the judge code, environment variables (`IDEAX_*` →
+`INSIGHTPRO_*`), tool and schema identifiers and the `system/*/insightpro/`
+directories. Only the name changed; no instruction, rubric, selection rule or
+parameter changed. Affected entries in `provenance/source_files.json` are marked
+`adapted`, and renamed baseline snapshot files are marked `renamed` in
+`system/baselines/source_manifest.json` (their `source_sha256` still records the
+original file).
+
+Evaluation outputs prepared before the rename pin the old implementation and
+prompt hashes; verify them with the pre-rename commit `a98d491`.
+`provenance/benchmark_reporting_20261119.json` is a dated record and keeps the
+pre-rename hashes. Names of things outside the release are unchanged: the
+Hugging Face Space, server paths, archived run directories, archived system ids
+in earlier mapping files and the source archive name.
+
 ## Standalone Single API prompt — 2026-11-12
 
 `docs/single_api_copyable_zh.md` derives from the original Chinese Single API

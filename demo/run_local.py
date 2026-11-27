@@ -10,7 +10,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-SCHEMA = 'ideax.research-brief.v1'
+SCHEMA = 'insightpro.research-brief.v1'
 
 
 def digest(path):
@@ -30,7 +30,7 @@ def save(path, value):
 
 def validate_request(value):
     if not isinstance(value, dict) or value.get('schema') != SCHEMA:
-        raise ValueError('Expected an ideax.research-brief.v1 request from the demo.')
+        raise ValueError('Expected an insightpro.research-brief.v1 request from the demo.')
     allowed = {'schema', 'domain', 'access', 'question', 'critique', 'reference_case'}
     if set(value) - allowed:
         raise ValueError('Unknown request fields: ' + ', '.join(sorted(set(value) - allowed)))
@@ -107,7 +107,7 @@ def prepare(request, output):
     receipt = output / 'demo_request.json'
     save(receipt, request)
     customization = {
-        'schema': 'ideax.demo-customization.v1',
+        'schema': 'insightpro.demo-customization.v1',
         'request_sha256': digest(receipt),
         'base_prompt_sha256': digest(original_path),
         'effective_prompt_sha256': digest(prompt),
@@ -123,7 +123,7 @@ def prepare(request, output):
     manifest['demo_customization'] = customization
     save(output / 'manifest.json', manifest)
     (output / 'README.md').write_text(
-        '# Custom IdeaX demo run\n\nThis run includes an explicit user question, critique, and optional '
+        '# Custom InsightPro demo run\n\nThis run includes an explicit user question, critique, and optional '
         'recorded case. It is not a reproduction of the paper benchmark.\n\n'
         'The original prompt, effective prompt, request, and their hashes are retained. '
         'The published system prompt files have not been changed.\n\n'
@@ -161,7 +161,7 @@ def main():
         print('Completed cards: ' + str(output / 'runs' / request['domain'] / 'accepted/IDEAS.json'))
         return 0
     except (ValueError, OSError, subprocess.CalledProcessError) as exc:
-        print('IdeaX demo: ' + str(exc), file=sys.stderr)
+        print('InsightPro demo: ' + str(exc), file=sys.stderr)
         return 1
 
 

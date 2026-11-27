@@ -44,8 +44,10 @@ def validate(root=ROOT):
         path = root/relative
         assert not path.is_symlink(), relative
         data = path.read_bytes()
-        assert hashlib.sha256(data).hexdigest() == row['sha256'] == row['source_sha256'], relative
-        assert row['mode'] == 'verbatim'
+        assert hashlib.sha256(data).hexdigest() == row['sha256'], relative
+        # 'renamed': only the project name was changed (IdeaX -> InsightPro, 2026-11-27); the hash is still pinned.
+        assert row['mode'] in ('verbatim', 'renamed'), relative
+        assert (row['sha256'] == row['source_sha256']) == (row['mode'] == 'verbatim'), relative
         assert not any(re.search(pattern, data) for pattern in patterns), relative
         if path.suffix == '.py':
             ast.parse(data, filename=str(relative))

@@ -311,7 +311,7 @@ def main():
                             effort=(request.get('reasoning') or {}).get('effort'),
                             policy='complete_response_before_any_model_output_v1')
                 return await relay(send_identical_request, writer, atomic_note,
-                                   os.environ.get('IDEAX_SCRATCH') or os.path.dirname(a.log))
+                                   os.environ.get('INSIGHTPRO_SCRATCH') or os.path.dirname(a.log))
             note(agent=agent, event='atomic_bypass', target=path,
                  reason='Only streaming requests without mutable conversation state or server tools are eligible')
         try:
@@ -335,7 +335,7 @@ def main():
 
     async def openai_forward(reader, writer, agent, method, path, headers):
         if method == 'POST' and path.split('?',1)[0] == '/v1/responses':
-            role=os.environ.get('IDEAX_REQUEST_ROLE','astra_generation')
+            role=os.environ.get('INSIGHTPRO_REQUEST_ROLE','astra_generation')
             async with async_slot(role,label=a.log+'/'+agent):
                 return await unguarded_openai_forward(reader,writer,agent,method,path,headers)
         return await unguarded_openai_forward(reader,writer,agent,method,path,headers)

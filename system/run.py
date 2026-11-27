@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Select a complete IdeaX condition and invoke its native runtime."""
+"""Select a complete InsightPro condition and invoke its native runtime."""
 import os
 from pathlib import Path
 import shutil
@@ -16,13 +16,13 @@ def main():
         print('Actions: check, prepare, run, status, export, prepare-review, blueprint')
         return 0 if len(sys.argv) < 2 or sys.argv[1] in ('-h', '--help') else 2
     env = os.environ.copy()
-    env['IDEAX_CURRENT_SYSTEM'] = str(ROOT/'system'/sys.argv[1])
-    env.setdefault('IDEAX_CODEX_RAW_BIN', shutil.which('codex') or 'codex')
+    env['INSIGHTPRO_CURRENT_SYSTEM'] = str(ROOT/'system'/sys.argv[1])
+    env.setdefault('INSIGHTPRO_CODEX_RAW_BIN', shutil.which('codex') or 'codex')
     env.setdefault('LITGRAPH_PY_PREFIX', sys.base_prefix)
-    env.setdefault('IDEAX_SCRATCH', str(ROOT/'.scratch'))
-    if env.get('IDEAX_GPT_PROFILE_FILE'):
-        env['LITGRAPH_CODEX_ENV_FILE'] = env['IDEAX_GPT_PROFILE_FILE']
-    Path(env['IDEAX_SCRATCH']).mkdir(parents=True, exist_ok=True)
+    env.setdefault('INSIGHTPRO_SCRATCH', str(ROOT/'.scratch'))
+    if env.get('INSIGHTPRO_GPT_PROFILE_FILE'):
+        env['LITGRAPH_CODEX_ENV_FILE'] = env['INSIGHTPRO_GPT_PROFILE_FILE']
+    Path(env['INSIGHTPRO_SCRATCH']).mkdir(parents=True, exist_ok=True)
     args=sys.argv[2:]
     entry='cli.py'
     if args and args[0]=='blueprint':entry='blueprint_cli.py';args=args[1:]

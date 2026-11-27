@@ -8,7 +8,7 @@ import os
 import random
 import time
 
-ROOT = Path(os.environ.get('IDEAX_STATE_DIR', str(Path(__file__).resolve().parents[3]/'.state'))) / 'admission'
+ROOT = Path(os.environ.get('INSIGHTPRO_STATE_DIR', str(Path(__file__).resolve().parents[3]/'.state'))) / 'admission'
 LIMITS = {'astra_generation':300, 'astra_evaluation':100, 'opus_evaluation':100}
 
 def config():

@@ -7,7 +7,7 @@ from common import save
 
 class MetadataTests(unittest.TestCase):
     def setUp(self):
-        self.temp=tempfile.TemporaryDirectory(dir=os.environ['IDEAX_SCRATCH']);self.root=Path(self.temp.name)
+        self.temp=tempfile.TemporaryDirectory(dir=os.environ['INSIGHTPRO_SCRATCH']);self.root=Path(self.temp.name)
         self.config=dict(vault_api_url='http://vault.test',cutoff_date='2027-01-01',reader_source='test')
         self.patch=patch.object(vm,'ROOT',self.root);self.patch.start()
         self.admission=patch.object(vm,'slot',lambda *args:contextlib.nullcontext());self.admission.start()

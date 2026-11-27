@@ -14,7 +14,7 @@ import hashlib
 import importlib.util
 from datetime import datetime, timezone
 
-ROOT = Path(os.environ.get('IDEAX_BASELINE_STATE', str(Path(__file__).resolve().parents[2]/'.state/baselines')))
+ROOT = Path(os.environ.get('INSIGHTPRO_BASELINE_STATE', str(Path(__file__).resolve().parents[2]/'.state/baselines')))
 REPO = Path(__file__).resolve().parents[2]
 MODEL = 'gpt-6-astra'
 PROVIDER = 'https://sbtunnel.xiaoaojianghu.fun/v1'
@@ -65,7 +65,7 @@ def safe(exc):
     return re.sub(r'\bsk-[A-Za-z0-9_-]{12,}', '[REDACTED]', str(exc))[:2000]
 
 def acquire(kind):
-    limits={'gpt':int(os.environ.get('IDEAX_BASELINE_GPT_CONCURRENCY','12')),'retrieval':8,'vault':2,'metadata':2}
+    limits={'gpt':int(os.environ.get('INSIGHTPRO_BASELINE_GPT_CONCURRENCY','12')),'retrieval':8,'vault':2,'metadata':2}
     n=limits[kind]
     if n<1:raise ValueError('Baseline concurrency must be positive')
     slots=list(range(n));random.shuffle(slots)

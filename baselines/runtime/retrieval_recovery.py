@@ -17,7 +17,7 @@ class RetrievalUnavailable(RuntimeError): pass
 @lru_cache(maxsize=1)
 def openalex_credential():
     if os.environ.get('OPENALEX_API_KEY'): return os.environ['OPENALEX_API_KEY'], 'environment:OPENALEX_API_KEY'
-    directory=Path(os.environ.get('LITGRAPH_SECRETS_DIR', str(Path(os.environ.get('IDEAX_GPT_PROFILE_FILE', str(Path.home()/'.config/litgraph/profile.json'))).parent)))
+    directory=Path(os.environ.get('LITGRAPH_SECRETS_DIR', str(Path(os.environ.get('INSIGHTPRO_GPT_PROFILE_FILE', str(Path.home()/'.config/litgraph/profile.json'))).parent)))
     path=directory/'openalex.env'
     values={}
     for line in path.read_text().splitlines():

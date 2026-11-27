@@ -1,5 +1,5 @@
 {
-  "format": "ideax.generation_domain_selection.v4",
+  "format": "insightpro.generation_domain_selection.v4",
   "selection_id": "recon37-plus-efficiency-20261105",
   "created_at": "2026-11-05T13:00:21.254875+08:00",
   "evaluation_target": "Interesting and Reviewer research idea generation",

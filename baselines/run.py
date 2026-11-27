@@ -32,8 +32,8 @@ def main():
     m=json.loads((out/'manifest.json').read_text())
     if m['method']!=a.method:raise ValueError('Wrong method for this execution')
     if a.action=='run':
-        env=dict(os.environ,IDEAX_BASELINE_STATE=str(out),PYTHONPATH=str(ROOT/'baselines/runtime'))
-        env.setdefault('IDEAX_SCRATCH',str(ROOT/'.scratch'));Path(env['IDEAX_SCRATCH']).mkdir(parents=True,exist_ok=True)
+        env=dict(os.environ,INSIGHTPRO_BASELINE_STATE=str(out),PYTHONPATH=str(ROOT/'baselines/runtime'))
+        env.setdefault('INSIGHTPRO_SCRATCH',str(ROOT/'.scratch'));Path(env['INSIGHTPRO_SCRATCH']).mkdir(parents=True,exist_ok=True)
         (out/'concurrency').mkdir(exist_ok=True)
         def run(d):
             entry='coi_worker.py' if a.method=='coi' else 'delivery_worker.py'

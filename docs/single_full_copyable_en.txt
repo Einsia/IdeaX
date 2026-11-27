@@ -1,4 +1,4 @@
-BEGIN IDEAX SINGLE-AGENT FULL PROMPT
+BEGIN INSIGHTPRO SINGLE-AGENT FULL PROMPT
 
 1. ROLE, TASK, AND INPUTS
 
@@ -160,4 +160,4 @@ Entries contain API-returned fields such as statement, mechanism, scope, techniq
 
 The complete context above is part of this task. Continue under the same generation requirements: deliver five complete candidates in {output_dir}/IDEAS.json, together with IDEA.md and SEARCH_LOG.md. Do not silently truncate the material to top-k or rephrase existing entries as innovations. Actually check the closest work and distinguish established findings, your deductions, and unresolved risks.
 
-END IDEAX SINGLE-AGENT FULL PROMPT
+END INSIGHTPRO SINGLE-AGENT FULL PROMPT
