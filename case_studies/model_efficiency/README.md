@@ -1,4 +1,4 @@
-# IdeaX / LitGraph：Efficiency领域六类研究示例
+# InsightPro / LitGraph：Efficiency领域六类研究示例
 
 整理与打包日期：2026年11月13日（Asia/Shanghai）。
 

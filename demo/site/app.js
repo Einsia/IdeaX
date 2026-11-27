@@ -360,7 +360,7 @@ function renderBrief() {
   state.brief=buildBrief(); storeBrief();
   const d=state.catalog.domains.find(d=>d.id===state.brief.domain);
   $('#brief-summary').textContent=`${d.name} · Single ${state.brief.access==='full'?'Full':'API'} · Five complete Idea Cards`;
-  $('#run-command').textContent='git clone https://github.com/Einsia/IdeaX.git\ncd IdeaX\n# Install dependencies and load your configuration (see running guide).\n# Place the downloaded ideax-request.json here.\npython demo/run_local.py --request ideax-request.json --out runs/my-idea\n\n# Start real generation after inspecting the prepared request:\npython demo/run_local.py --request ideax-request.json --out runs/my-idea --run';
+  $('#run-command').textContent='git clone https://github.com/Einsia/InsightPro.git\ncd InsightPro\n# Install dependencies and load your configuration (see running guide).\n# Place the downloaded ideax-request.json here.\npython demo/run_local.py --request ideax-request.json --out runs/my-idea\n\n# Start real generation after inspecting the prepared request:\npython demo/run_local.py --request ideax-request.json --out runs/my-idea --run';
   let prompt=state.catalog.api_prompt.replace('【在这里填写你希望研究的领域】',d.name);
   if(state.brief.access==='full') {
     const marker='本轮不预先注入领域 insights/problems，也不要求先获取全域材料。';

@@ -1,4 +1,4 @@
-# IdeaX
+# InsightPro
 
 LitGraph 驱动的研究 idea 生成系统及评测代码。此仓库整理了当前使用的 **Single Full / Single API、Multi Full / Multi API、IdeaScientist、CoI**，包含原始 prompt、38 个领域任务、生成流程、Research Blueprint 写作阶段，以及 **Generation、Reconstruction、IS** 三类评测，均分别报告 GPT 和 Claude 分数。
 
@@ -71,8 +71,8 @@ python demo/run_local.py --request ideax-request.json --out runs/my-idea --run
 需要 Linux、Python 3.12、`bubblewrap` 和支持当前模型/effort 参数的 Codex、Claude CLI。生成使用原生 Codex 会话，评分使用独立的 Codex / Claude 会话。默认模型为 Astra / xhigh 与 Opus 5.5 / xhigh。
 
 ```bash
-git clone git@github.com:Einsia/IdeaX.git
-cd IdeaX
+git clone git@github.com:Einsia/InsightPro.git
+cd InsightPro
 python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -85,7 +85,7 @@ set +a
 
 Full 的领域快照随代码提供；运行中读取关联论文和跨领域材料仍需要有效 LitGraph API。API 组工作区不会获得 Full 的材料。完整 LitGraph 论文库、Svalbard 数据库、历史运行日志和个人凭据不在此仓库。
 
-## IdeaX 生成
+## InsightPro 生成
 
 ```bash
 # 校验 38 领域材料、prompt 和运行依赖；不调用模型。

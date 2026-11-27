@@ -6,7 +6,7 @@ model. `run` does. Generation defaults to Astra/xhigh through sbtunnel; judges
 use their separately configured GPT and Opus profiles. Credentials remain
 outside the repository and are never passed in command-line arguments.
 
-## Four IdeaX conditions
+## Four InsightPro conditions
 
 ```bash
 python system/run.py single-full prepare --domains all --out runs/single-full-38

@@ -1,8 +1,8 @@
 # Sources and attribution
 
-This repository packages the IdeaX experiment implementations and their local
+This repository packages the InsightPro experiment implementations and their local
 adaptations. The upstream baseline identities are retained; they are not
-reimplemented as IdeaX prompts.
+reimplemented as InsightPro prompts.
 
 * **CoI-Agent**: [DAMO-NLP-SG/CoI-Agent](https://github.com/DAMO-NLP-SG/CoI-Agent).
   Apache-2.0; the complete license is in `baselines/coi/LICENSE`.

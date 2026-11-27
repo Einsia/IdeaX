@@ -23,10 +23,10 @@ unchanged.
 
 ## Original portable release
 
-This is a source-code release assembled from the completed IdeaX experiments.
+This is a source-code release assembled from the completed InsightPro experiments.
 It does not overwrite or restart the original experiments.
 
-* Four IdeaX configurations come from `current-six-v4-20261108`. Their Chinese
+* Four InsightPro configurations come from `current-six-v4-20261108`. Their Chinese
   generation prompts retain their original bytes and hashes. Multi uses six
   authors, one discussion/revision round and independent selection. The heavy
   v10 workflow is not substituted for multi.

@@ -1,4 +1,4 @@
-# IdeaX case studies
+# InsightPro case studies
 
 [Model efficiency: six research perspectives](model_efficiency/README.md) contains six single-agent research proposals and their documented literature exploration. The original material is in Chinese, with paper titles and identifiers preserved.
 

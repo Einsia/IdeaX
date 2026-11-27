@@ -19,7 +19,7 @@
     <a class="brand" href="#" aria-label="IdeaX home"><span class="brand-icon" aria-hidden="true">i<span>×</span></span>IdeaX<span class="brand-caption">RESEARCH STUDIO</span></a>
     <nav aria-label="Resources">
       <a href="https://huggingface.co/datasets/Einsia/LitGraph" target="_blank" rel="noopener noreferrer">Explore LitGraph <span aria-hidden="true">↗</span></a>
-      <a href="https://github.com/Einsia/IdeaX" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/Einsia/InsightPro" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       <button class="button dark small" id="open-local">Run locally <span aria-hidden="true">↗</span></button>
     </nav>
   </header>
@@ -86,24 +86,24 @@
     <section class="under-workspace">
       <div><p class="eyebrow">OPEN BY DESIGN</p><h2>See the sources.<br>Then make it your own.</h2></div>
       <a class="resource-card" href="https://huggingface.co/datasets/Einsia/LitGraph" target="_blank" rel="noopener noreferrer"><span class="resource-icon">↗</span><h3>LitGraph</h3><p>Domain insights and problems, connected to the papers behind them.</p><span>Explore the dataset →</span></a>
-      <a class="resource-card" href="https://github.com/Einsia/IdeaX/tree/main/case_studies/model_efficiency" target="_blank" rel="noopener noreferrer"><span class="resource-icon">≡</span><h3>The complete record</h3><p>Original proposals, literature queries, reading depth, and candidate revisions.</p><span>Read the six cases →</span></a>
+      <a class="resource-card" href="https://github.com/Einsia/InsightPro/tree/main/case_studies/model_efficiency" target="_blank" rel="noopener noreferrer"><span class="resource-icon">≡</span><h3>The complete record</h3><p>Original proposals, literature queries, reading depth, and candidate revisions.</p><span>Read the six cases →</span></a>
       <button class="resource-card" id="open-local-bottom"><span class="resource-icon">⌘</span><h3>Your own research run</h3><p>Clone the system. Use Full or API access. Generate five complete Idea Cards.</p><span>Get started locally →</span></button>
     </section>
   </main>
 
-  <footer><a class="brand" href="#">IdeaX</a><span>Research Ideation with Literature Graphs for Autonomous Scientific Discovery</span><a href="https://github.com/Einsia/IdeaX" target="_blank" rel="noopener noreferrer">Open source ↗</a></footer>
+  <footer><a class="brand" href="#">IdeaX</a><span>Research Ideation with Literature Graphs for Autonomous Scientific Discovery</span><a href="https://github.com/Einsia/InsightPro" target="_blank" rel="noopener noreferrer">Open source ↗</a></footer>
   <div id="toast" role="status" aria-live="polite"></div>
 
   <dialog id="brief-dialog" aria-labelledby="brief-dialog-title">
     <div class="dialog-top"><p class="eyebrow">FROM EXPLORATION TO A REAL RUN</p><button class="icon-button" data-close="brief-dialog" aria-label="Close brief">×</button></div>
     <h2 id="brief-dialog-title">Your brief is ready.</h2><p id="brief-summary" class="muted"></p>
     <div class="dialog-tabs" role="tablist" aria-label="Ways to use your brief"><button id="local-tab" role="tab" aria-selected="true">Run with the repository</button><button id="prompt-tab" role="tab" aria-selected="false">Copy into your agent</button></div>
-    <section id="local-instructions"><p>Download the request, place it in the cloned repository, and load your model configuration following the <a href="https://github.com/Einsia/IdeaX/blob/main/docs/RUNNING.md" target="_blank" rel="noopener noreferrer">running guide</a>.</p><div class="command-block"><pre id="run-command"></pre><button class="text-button" id="copy-command">Copy commands</button></div><p class="small-note">Preparation freezes your brief without calling a model. Add <code>--run</code> to start generation. The existing runtime records sources, validates all five cards, and preserves failed attempts.</p><button class="button dark" id="download-request">Download research request ↓</button></section>
+    <section id="local-instructions"><p>Download the request, place it in the cloned repository, and load your model configuration following the <a href="https://github.com/Einsia/InsightPro/blob/main/docs/RUNNING.md" target="_blank" rel="noopener noreferrer">running guide</a>.</p><div class="command-block"><pre id="run-command"></pre><button class="text-button" id="copy-command">Copy commands</button></div><p class="small-note">Preparation freezes your brief without calling a model. Add <code>--run</code> to start generation. The existing runtime records sources, validates all five cards, and preserves failed attempts.</p><button class="button dark" id="download-request">Download research request ↓</button></section>
     <section id="prompt-instructions" hidden><p id="prompt-note"></p><textarea id="prompt-preview" rows="13" readonly aria-label="Complete research prompt"></textarea><div class="button-row"><button class="button dark" id="copy-prompt">Copy complete prompt</button><button class="button" id="download-prompt">Download prompt ↓</button></div></section>
   </dialog>
 
   <dialog id="source-dialog" aria-labelledby="source-title"><div class="dialog-top"><p class="eyebrow">EVIDENCE, WITH ITS SCOPE</p><button class="icon-button" data-close="source-dialog" aria-label="Close source details">×</button></div><h2 id="source-title"></h2><div id="source-detail"></div></dialog>
   <dialog id="document-dialog" aria-labelledby="document-title"><div class="dialog-top"><p class="eyebrow">THE COMPLETE ORIGINAL CASE · 中文</p><button class="icon-button" data-close="document-dialog" aria-label="Close full document">×</button></div><h2 id="document-title"></h2><p id="document-caption"></p><div class="document-actions"><button class="button small" id="download-original">Download original Markdown ↓</button><a class="button small" id="original-on-github" target="_blank" rel="noopener noreferrer">Open on GitHub ↗</a></div><article id="document-body" class="markdown-body"></article></dialog>
-  <noscript><p class="fatal">Enable JavaScript to explore the interactive cases. The <a href="https://github.com/Einsia/IdeaX/tree/main/case_studies/model_efficiency">original case records</a> remain available directly.</p></noscript>
+  <noscript><p class="fatal">Enable JavaScript to explore the interactive cases. The <a href="https://github.com/Einsia/InsightPro/tree/main/case_studies/model_efficiency">original case records</a> remain available directly.</p></noscript>
 </body>
 </html>

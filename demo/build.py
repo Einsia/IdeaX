@@ -56,7 +56,7 @@ def build():
             if item['url'] not in [q['url'] for q in queries]:
                 queries.append(item)
         story['queries'] = queries[:6]
-        story['process_url'] = f'https://github.com/Einsia/IdeaX/blob/main/case_studies/model_efficiency/{story["folder"]}/PROCESS.md'
+        story['process_url'] = f'https://github.com/Einsia/InsightPro/blob/main/case_studies/model_efficiency/{story["folder"]}/PROCESS.md'
         story['proposal_url'] = story['process_url'].replace('PROCESS.md', 'PROPOSAL.md')
         story['source_sha256'] = {'proposal': sha(proposal), 'process': sha(process)}
         story['recorded_on'] = '2026-11-13'
@@ -79,7 +79,7 @@ def build():
         'domains': [{'id': d['id'], 'name': d['name'], 'category': d.get('category', '')} for d in domains],
         'api_prompt': prompt,
         'prompt_sha256': sha(ROOT / 'docs/single_api_copyable_zh.md'),
-        'source_collection': 'https://github.com/Einsia/IdeaX/tree/main/case_studies/model_efficiency',
+        'source_collection': 'https://github.com/Einsia/InsightPro/tree/main/case_studies/model_efficiency',
     }
     SITE.mkdir(parents=True, exist_ok=True)
     (SITE / 'catalog.json').write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + '\n')
